@@ -1,0 +1,41 @@
+{
+	"video": [
+
+		{
+			"width": 4096,
+			"height": 2160,
+			"name": "wall_resolution.mp4",
+			"alias": "wall",
+			"drawx": 0,
+			"drawy": 0
+		},
+		{
+			"width": 4096,
+			"height": 2160,
+			"name": "table_resolution.mp4",
+			"alias": "table",
+			"drawx": 0,
+			"drawy": 0
+		},
+
+		{
+			"width": 4096,
+			"height": 2160,
+			"name": "table_resolution.mp4",
+			"alias": "table",
+			"drawx": 0,
+			"drawy": 0
+		},
+
+		{
+			"width": 4096,
+			"height": 2160,
+			"name": "table_resolution.mp4",
+			"alias": "table",
+			"drawx": 0,
+			"drawy": 0
+		}
+
+
+	]
+}
