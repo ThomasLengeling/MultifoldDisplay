@@ -36,6 +36,7 @@ public:
     void loadVideo(std::string name);
     void startPlay();
     void update(int64_t currFrame);
+    int getTotalNumFrames();
     
 private:
     

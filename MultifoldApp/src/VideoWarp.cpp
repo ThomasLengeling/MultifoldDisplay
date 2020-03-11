@@ -22,6 +22,10 @@ void VideoWarp::update(int64_t currFrame){
     mVideoPlayer.seekToFrame(currFrame);
 }
 
+int VideoWarp::getTotalNumFrames(){
+    return mVideoPlayer.getTotalNumFrames();
+}
+
 void VideoWarp::startPlay(){
     mVideoPlayer.play();
 }
