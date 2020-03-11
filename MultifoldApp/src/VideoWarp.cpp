@@ -10,4 +10,20 @@
 
 namespace inn {
 
+void VideoWarp::loadVideo(std::string name){
+    mVideoName = name;
+    
+    mVideoPlayer.init(HPV::NewPlayer());
+    mVideoPlayer.load(mVideoName);
+    mVideoPlayer.setLoopState(OF_LOOP_NORMAL);
+}
+
+void VideoWarp::update(int64_t currFrame){
+    mVideoPlayer.seekToFrame(currFrame);
+}
+
+void VideoWarp::startPlay(){
+    mVideoPlayer.play();
+}
+
 }

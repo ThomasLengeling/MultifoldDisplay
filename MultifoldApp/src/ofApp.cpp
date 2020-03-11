@@ -2,7 +2,12 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
-
+    ofSetVerticalSync(false);
+    ofSetFrameRate(120);
+    ofBackground(0);
+    
+    mVideoWapTest = inn::VideoWap::create();
+    mVideoWapTest->loadVideo();
 }
 
 //--------------------------------------------------------------
@@ -68,4 +73,8 @@ void ofApp::gotMessage(ofMessage msg){
 //--------------------------------------------------------------
 void ofApp::dragEvent(ofDragInfo dragInfo){ 
 
+}
+
+void ofApp::exit(){
+        HPV::DestroyHPVEngine();
 }
