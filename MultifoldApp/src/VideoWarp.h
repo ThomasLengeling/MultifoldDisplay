@@ -35,6 +35,7 @@ public:
     
     void loadVideo(std::string name);
     void startPlay();
+    void setPaused(bool status);
     void update(int64_t currFrame);
     int getTotalNumFrames();
     int getFrameRate();
