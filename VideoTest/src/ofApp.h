@@ -1,12 +1,8 @@
 #pragma once
 
 #include "ofMain.h"
-#include "VideoWarp.h"
-#include "Mapping.h"
 #include "ofxHPVPlayer.h"
-
-#define WIDTH_4K    3840
-#define HEIGHT_4K   2160
+#include "Mapping.h"
 
 #define WIDTH_HD    1920
 #define HEIGHT_HD   1080
@@ -31,13 +27,13 @@ public:
     void dragEvent(ofDragInfo dragInfo);
     void gotMessage(ofMessage msg);
     
+    ofxHPVPlayer mVideoPlayer01;
+    ofxHPVPlayer mVideoPlayer02;
+    ofxHPVPlayer mVideoPlayer03;
+    ofxHPVPlayer mVideoPlayer04;
     
-    void playVideos4K();
+    int mWidthVideo;
+    int mHeightVideo;
+    
     void playVideosHD();
-    
-    
-    inn::VideoWarpRef mVideoWarpLeft;
-    inn::VideoWarpRef mVideoWarpRight;
-    inn::VideoWarpRef mVideoWarpUp;
-    inn::VideoWarpRef mVideoWarpDown;
 };

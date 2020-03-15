@@ -16,6 +16,10 @@ void VideoWarp::loadVideo(std::string name){
     mVideoPlayer.init(HPV::NewPlayer());
     mVideoPlayer.load(mVideoName);
     mVideoPlayer.setLoopState(OF_LOOP_NORMAL);
+    mVideoPlayer.play();
+    mVideoPlayer.setDoubleBuffered(true);
+    
+    ofLog(OF_LOG_NOTICE)<<"Loaded Video"<<mVideoName<<std::endl;
 }
 
 void VideoWarp::update(int64_t currFrame){
@@ -28,6 +32,14 @@ int VideoWarp::getTotalNumFrames(){
 
 void VideoWarp::startPlay(){
     mVideoPlayer.play();
+}
+
+int VideoWarp::getFrameRate(){
+    return mVideoPlayer.getCurrentFrame();
+}
+
+void VideoWarp::draw(int x, int y, int width, int height){
+    mVideoPlayer.draw(x, y, width, height);
 }
 
 }

@@ -21,15 +21,15 @@ int main( ){
         windwoPos.x = js["position"]["x"];
         windwoPos.y = js["position"]["y"];
         
-        windwoPos.x = js["window"]["width"];
-        windwoPos.y = js["window"]["height"];
+        windowSize.x = js["window"]["width"];
+        windowSize.y = js["window"]["height"];
         
         decorated = (js["window"]["decorated"] == 1 ? true : false);
         
-        std::cout<<"size: "<< windwoPos.x<<" "<<windwoPos.y<<" "<<decorated<<std::endl;
+        ofLog(OF_LOG_NOTICE)<<"Size: "<< windowSize.x<<" "<<windowSize.y<<" "<<decorated<<std::endl;
         
     }else{
-        std::cout<<"ERROR Reading Config File"<<std::endl;
+        ofLog(OF_LOG_NOTICE)<<"ERROR Reading Config File"<<std::endl;
         decorated  = false;
         windowSize = glm::vec2(1920, 1080);
         windwoPos  = glm::vec2(0, 0 );
@@ -37,11 +37,12 @@ int main( ){
     
     //ofGLWindowSettings
     ofGLFWWindowSettings settings;
-    settings.setGLVersion(4,0);
+    settings.setGLVersion(4,1);
     
-    settings.setSize(windwoPos.x, windwoPos.y);
+    settings.setSize(windowSize.x, windowSize.y);
     settings.setPosition(windwoPos);
     settings.decorated = decorated;
+    settings.resizable = false;
     ofCreateWindow(settings);
     
     // this kicks off the running of my app
