@@ -36,8 +36,8 @@ public:
     void playVideosHD();
     
     
-    inn::VideoWarpRef mVideoWarpLeft;
-    inn::VideoWarpRef mVideoWarpRight;
-    inn::VideoWarpRef mVideoWarpUp;
-    inn::VideoWarpRef mVideoWarpDown;
+    inn::VideoWarpRef mVideoWarp01;
+    inn::VideoWarpRef mVideoWarp02;
+    inn::VideoWarpRef mVideoWarp03;
+    inn::VideoWarpRef mVideoWarp04;
 };

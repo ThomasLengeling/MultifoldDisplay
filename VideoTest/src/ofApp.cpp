@@ -13,14 +13,13 @@ void ofApp::setup(){
     mVideoPlayer01.init(HPV::NewPlayer());
     mVideoPlayer01.load(videoName01);
     mVideoPlayer01.setLoopState(OF_LOOP_NORMAL);
-    mVideoPlayer01.play();
     mVideoPlayer01.setDoubleBuffered(true);
     
     std::string videoName02 = "Videos/top_right.hpv";
     mVideoPlayer02.init(HPV::NewPlayer());
     mVideoPlayer02.load(videoName02);
     mVideoPlayer02.setLoopState(OF_LOOP_NORMAL);
-    mVideoPlayer02.play();
+    
     mVideoPlayer02.setDoubleBuffered(true);
     
     std::string videoName03 = "Videos/bottom_left.hpv";
@@ -37,8 +36,18 @@ void ofApp::setup(){
     mVideoPlayer04.play();
     mVideoPlayer04.setDoubleBuffered(true);
     
+    mVideoPlayer01.play();
+    mVideoPlayer02.play();
+    mVideoPlayer03.play();
+    mVideoPlayer04.play();
+    
+    mVideoPlayer01.setPaused(true);
+    mVideoPlayer02.setPaused(true);
+    mVideoPlayer03.setPaused(true);
+    mVideoPlayer04.setPaused(true);
+    
     ofSetVerticalSync(false);
-    ofSetFrameRate(120);
+    ofSetFrameRate(25);
     
     mWidthVideo  = ofGetWidth() / 2;
     mHeightVideo = ofGetHeight() / 2;
@@ -73,7 +82,7 @@ void ofApp::draw(){
     ofBackground(0, 0, 0);
     
     playVideosHD();
-
+    
     ofDrawBitmapString( mVideoPlayer01.getFrameRate(), 10, 30);
     ofDrawBitmapString( mVideoPlayer02.getFrameRate(), 10, 50);
     ofDrawBitmapString( mVideoPlayer03.getFrameRate(), 10, 70);

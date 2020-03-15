@@ -7,30 +7,38 @@ static uint8_t offset = 1;
 //--------------------------------------------------------------
 void ofApp::setup(){
     //start HPV engine
-       HPV::InitHPVEngine();
+    HPV::InitHPVEngine();
     
     ofSetVerticalSync(true);
-    ofSetFrameRate(60);
+    ofSetFrameRate(25);
     ofBackground(0);
     
-   
     
-    std::string displayVide01 = "Videos/top_right.hpv";
+    std::string displayVide01 = "Videos/test_cook_01.hpv";
+    mVideoWarp01 = inn::VideoWarp::create();
+    mVideoWarp01->loadVideo(displayVide01);
     
-    mVideoWarpLeft = inn::VideoWarp::create();
-    mVideoWarpLeft->loadVideo(displayVide01);
+    std::string displayVide02 = "Videos/test_cook_02.hpv";
+    mVideoWarp02 = inn::VideoWarp::create();
+    mVideoWarp02->loadVideo(displayVide02);
     
-    std::string displayVide02 = "Videos/top_left.hpv";
-    mVideoWarpRight = inn::VideoWarp::create();
-    mVideoWarpRight->loadVideo(displayVide02);
+    std::string displayVide03 = "Videos/test_cook_03.hpv";
+    mVideoWarp03 = inn::VideoWarp::create();
+    mVideoWarp03->loadVideo(displayVide03);
     
-    std::string displayVide03 = "Videos/bottom_right.hpv";
-    mVideoWarpUp = inn::VideoWarp::create();
-    mVideoWarpUp->loadVideo(displayVide03);
+    std::string displayVide04 = "Videos/test_cook_04.hpv";
+    mVideoWarp04 = inn::VideoWarp::create();
+    mVideoWarp04->loadVideo(displayVide04);
     
-    std::string displayVide04 = "Videos/bottom_left.hpv";
-    mVideoWarpDown = inn::VideoWarp::create();
-    mVideoWarpDown->loadVideo(displayVide04);
+    mVideoWarp01->startPlay();
+    mVideoWarp02->startPlay();
+    mVideoWarp03->startPlay();
+    mVideoWarp04->startPlay();
+    
+    mVideoWarp01->setPaused(true);
+    mVideoWarp02->setPaused(true);
+    mVideoWarp03->setPaused(true);
+    mVideoWarp04->setPaused(true);
     
     std::cout<<"Finishing setup"<<std::endl;
     
@@ -45,16 +53,16 @@ void ofApp::update(){
     
     if (cur_frame != prev_frame)
     {
-        mVideoWarpLeft->update(cur_frame);
-        mVideoWarpRight->update(cur_frame);
-        mVideoWarpUp->update(cur_frame);
-        mVideoWarpDown->update(cur_frame);
+        mVideoWarp01->update(cur_frame);
+        mVideoWarp02->update(cur_frame);
+        mVideoWarp03->update(cur_frame);
+        mVideoWarp04->update(cur_frame);
         prev_frame = cur_frame;
     }
     
     cur_frame++;
     
-    if (cur_frame >= mVideoWarpLeft->getTotalNumFrames())
+    if (cur_frame >= mVideoWarp01->getTotalNumFrames())
     {
         cur_frame = 0;
     }
@@ -67,29 +75,29 @@ void ofApp::draw(){
     ofBackground(0, 0, 0);
     
     playVideosHD();
-
-    ofDrawBitmapString( mVideoWarpLeft->getFrameRate(), 10, 30);
-    ofDrawBitmapString( mVideoWarpRight->getFrameRate(), 10, 50);
-    ofDrawBitmapString( mVideoWarpUp->getFrameRate(), 10, 70);
-    ofDrawBitmapString( mVideoWarpDown->getFrameRate(), 10, 90);
+    
+    ofDrawBitmapString( mVideoWarp01->getFrameRate(), 10, 30);
+    ofDrawBitmapString( mVideoWarp02->getFrameRate(), 10, 50);
+    ofDrawBitmapString( mVideoWarp03->getFrameRate(), 10, 70);
+    ofDrawBitmapString( mVideoWarp04->getFrameRate(), 10, 90);
     
     ofDrawBitmapString(ofToString(ofGetFrameRate()), 10, 10);
     
 }
 //--------------------------------------------------------------
 void ofApp::playVideos4K(){
-    mVideoWarpRight->draw(0, 0, WIDTH_4K/4.0, HEIGHT_4K/4.0);
-    mVideoWarpLeft->draw(WIDTH_4K/4.0, 0, WIDTH_4K/4.0, HEIGHT_4K/4.0);
-    mVideoWarpDown->draw(0, HEIGHT_4K/4.0, WIDTH_4K/4.0, HEIGHT_4K/4.0);
-    mVideoWarpUp->draw(WIDTH_4K/4.0, HEIGHT_4K/4.0, WIDTH_4K/4.0, HEIGHT_4K/4.0);
+    mVideoWarp01->draw(0, 0, WIDTH_4K/4.0, HEIGHT_4K/4.0);
+    mVideoWarp02->draw(WIDTH_4K/4.0, 0, WIDTH_4K/4.0, HEIGHT_4K/4.0);
+    mVideoWarp03->draw(0, HEIGHT_4K/4.0, WIDTH_4K/4.0, HEIGHT_4K/4.0);
+    mVideoWarp04->draw(WIDTH_4K/4.0, HEIGHT_4K/4.0, WIDTH_4K/4.0, HEIGHT_4K/4.0);
     
 }
 //--------------------------------------------------------------
 void ofApp::playVideosHD(){
-    mVideoWarpRight->draw(0, 0, WIDTH_HD/2.0 - offset, HEIGHT_HD/2.0 - offset) ;
-    mVideoWarpLeft->draw(WIDTH_HD/2.0 + offset, 0, WIDTH_HD/2.0 -offset, HEIGHT_HD/2.0-offset);
-    mVideoWarpDown->draw(0, HEIGHT_HD/2.0 + offset, WIDTH_HD/2.0 - offset, HEIGHT_HD/2.0 - offset);
-    mVideoWarpUp->draw(WIDTH_HD/2.0 + offset, HEIGHT_HD/2.0 + offset, WIDTH_HD/2.0 + offset, HEIGHT_HD/2.0 + offset);
+    mVideoWarp01->draw(0, 0, WIDTH_HD/2.0 - offset, HEIGHT_HD/2.0 - offset) ;
+    mVideoWarp02->draw(WIDTH_HD/2.0 + offset, 0, WIDTH_HD/2.0 -offset, HEIGHT_HD/2.0-offset);
+    mVideoWarp03->draw(0, HEIGHT_HD/2.0 + offset, WIDTH_HD/2.0 - offset, HEIGHT_HD/2.0 - offset);
+    mVideoWarp04->draw(WIDTH_HD/2.0 + offset, HEIGHT_HD/2.0 + offset, WIDTH_HD/2.0 + offset, HEIGHT_HD/2.0 + offset);
     
 }
 
