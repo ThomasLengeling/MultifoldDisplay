@@ -33,3 +33,7 @@
 
 #ignore folders
 MultifoldApp/bin/data/Videos/
+
+*.hpv
+
+VideoTest/bin/data/Videos/

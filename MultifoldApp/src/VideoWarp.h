@@ -37,6 +37,9 @@ public:
     void startPlay();
     void update(int64_t currFrame);
     int getTotalNumFrames();
+    int getFrameRate();
+    
+    void draw(int x, int y, int width, int height);
     
 private:
     
