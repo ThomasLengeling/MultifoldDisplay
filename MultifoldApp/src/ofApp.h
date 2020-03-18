@@ -32,12 +32,27 @@ public:
     void gotMessage(ofMessage msg);
     
     
-    void playVideos4K();
-    void playVideosHD();
-    
-    
+    //Video Warp
     inn::VideoWarpRef mVideoWarp01;
     inn::VideoWarpRef mVideoWarp02;
     inn::VideoWarpRef mVideoWarp03;
     inn::VideoWarpRef mVideoWarp04;
+    
+    
+    //play videos in 4K resolution
+    void playVideos4K();
+    
+    //play videos in HD resolution
+    void playVideosHD();
+    
+    
+
+    //number of displays output
+    int numDisplays;
+    
+    //single mode display mode
+    int simpleMode;
+    
+    //multi display mode
+    int multiMode;
 };

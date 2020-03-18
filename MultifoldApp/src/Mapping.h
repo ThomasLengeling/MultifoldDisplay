@@ -51,9 +51,7 @@ namespace inn {
 
 		bool useBeginEnd;
 		ofxWarpController warpController;
-		vector<ofRectangle> srcAreas;
         
-		int areaMode;
 		string areaName;
 
 		int mPixelBlends;
@@ -62,6 +60,10 @@ namespace inn {
 		int projectionHeight;
 
 		ParamMapRef paramWarp;
+        
+        std::vector<ParamMapRef> paramScreens;
+        
+        int numDisplays;
         
         int mId;
 	};

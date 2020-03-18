@@ -10,10 +10,19 @@
 /*
  Thomas Sanchez Lengeling Mapping
  MIT 2020
+ 
+ 
+ Config file config.json
+ 
+ video:{
+ type:
+ }
+ 
+ type = 0 HPV Video fast encoding for installation
+ tyep = 1 HAP Video fast enconding for testing
  */
 
 #include "ofMain.h"
-#include "Mapping.h"
 #include "ofxHPVPlayer.h"
 
 namespace inn {
@@ -22,7 +31,7 @@ class VideoWarp;
 
 typedef std::shared_ptr<VideoWarp> VideoWarpRef;
 
-class VideoWarp : public Mapping{
+class VideoWarp{
 public:
     VideoWarp(){
         
@@ -41,6 +50,7 @@ public:
     int getFrameRate();
     
     void draw(int x, int y, int width, int height);
+    ofTexture * getTexture();
     
 private:
     
