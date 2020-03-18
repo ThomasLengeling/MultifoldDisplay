@@ -1,8 +1,7 @@
-ofxOpenCv
-ofxCv
 ofxDatGui
-ofxHPVPlayer
 ofxHapPlayer
+ofxHPVPlayer
 ofxNetwork
+ofxOpenCv
 ofxWarp
 ofxXmlSettings
