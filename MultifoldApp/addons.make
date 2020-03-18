@@ -2,6 +2,7 @@ ofxOpenCv
 ofxCv
 ofxDatGui
 ofxHPVPlayer
+ofxHapPlayer
 ofxNetwork
 ofxWarp
 ofxXmlSettings
