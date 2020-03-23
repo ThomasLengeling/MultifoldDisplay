@@ -13,41 +13,83 @@ namespace inn {
 void VideoWarp::loadVideo(std::string name){
     mVideoName = name;
     
-    mVideoPlayer.init(HPV::NewPlayer());
-    mVideoPlayer.load(mVideoName);
-    mVideoPlayer.setLoopState(OF_LOOP_NORMAL);
-    mVideoPlayer.setDoubleBuffered(true);
+    
+    if(mPlayerType == 1){
+        ofLog(OF_LOG_NOTICE)<<"Player HPV";
+        mHPVPlayer.init(HPV::NewPlayer());
+        mHPVPlayer.load(mVideoName);
+        mHPVPlayer.setLoopState(OF_LOOP_NORMAL);
+        mHPVPlayer.setDoubleBuffered(true);
+    }
+    
+    if(mPlayerType == 0){
+        ofLog(OF_LOG_NOTICE)<<"Player HAP";
+        mHAPPlayer.load(mVideoName);
+        mHAPPlayer.setLoopState(OF_LOOP_NORMAL);
+        mHAPPlayer.setDoubleBuffered(true);
+    }
 
     ofLog(OF_LOG_NOTICE)<<"Loaded Video "<<mVideoName<<std::endl;
 
 }
 
 void VideoWarp::update(int64_t currFrame){
-    mVideoPlayer.seekToFrame(currFrame);
+    if(mPlayerType == 0){
+        mHAPPlayer.seekToFrame(currFrame);
+    }else{
+        mHPVPlayer.seekToFrame(currFrame);
+    }
 }
 
 int VideoWarp::getTotalNumFrames(){
-    return mVideoPlayer.getTotalNumFrames();
+    if(mPlayerType == 0){
+        return mHAPPlayer.getTotalNumFrames();
+    }else{
+        return mHPVPlayer.getTotalNumFrames();
+    }
+    return -1;
 }
 
 void VideoWarp::startPlay(){
-    mVideoPlayer.play();
+    if(mPlayerType == 0){
+        mHAPPlayer.play();
+    }else{
+        mHPVPlayer.play();
+    }
 }
 
 void VideoWarp::setPaused(bool status){
-    mVideoPlayer.setPaused(status);
+    if(mPlayerType == 0){
+        mHAPPlayer.setPaused(status);
+    }else{
+        mHPVPlayer.setPaused(status);
+    }
 }
 
 int VideoWarp::getFrameRate(){
-    return mVideoPlayer.getCurrentFrame();
+    if(mPlayerType == 0){
+        return mHAPPlayer.getCurrentFrame();
+    }else{
+        return mHPVPlayer.getCurrentFrame();
+    }
+    return -1;
 }
 
 void VideoWarp::draw(int x, int y, int width, int height){
-    mVideoPlayer.draw(x, y, width, height);
+    if(mPlayerType == 0){
+        mHAPPlayer.draw(x, y, width, height);
+    }else{
+        mHPVPlayer.draw(x, y, width, height);
+    }
 }
 
 ofTexture * VideoWarp::getTexture(){
-    return  mVideoPlayer.getTexturePtr();
+    if(mPlayerType == 0){
+        return mHAPPlayer.getTexturePtr();
+    }else{
+        return  mHPVPlayer.getTexturePtr();
+    }
+    return new ofTexture;
 }
 
 }

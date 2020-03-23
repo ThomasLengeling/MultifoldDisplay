@@ -34,7 +34,7 @@ typedef std::shared_ptr<VideoWarp> VideoWarpRef;
 class VideoWarp{
 public:
     VideoWarp(){
-        
+        mPlayerType = 0;
     }
     
     static VideoWarpRef create() {
@@ -55,7 +55,19 @@ public:
 private:
     
     std::string mVideoName;
-    ofxHPVPlayer mVideoPlayer;
+    
+    //type of player
+    int mPlayerType;
+    
+    //fast encoder player
+    //mPlayerType = 1
+    ofxHPVPlayer mHPVPlayer;
+    
+    //multiplatfor .mov fast enconder
+    //mPlayerType = 0
+    //default
+    ofxHapPlayer mHAPPlayer;
+    
 };
 
 }
