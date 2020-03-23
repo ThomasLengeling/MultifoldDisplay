@@ -10,7 +10,7 @@ void ofApp::setup(){
     HPV::InitHPVEngine();
     
     ofSetVerticalSync(true);
-    ofSetFrameRate(25);
+    ofSetFrameRate(120);
     ofBackground(0);
     
     
