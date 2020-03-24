@@ -13,7 +13,6 @@ namespace inn {
 void VideoWarp::loadVideo(std::string name){
     mVideoName = name;
     
-    
     if(mPlayerType == 1){
         ofLog(OF_LOG_NOTICE)<<"Player HPV";
         mHPVPlayer.init(HPV::NewPlayer());
@@ -26,7 +25,6 @@ void VideoWarp::loadVideo(std::string name){
         ofLog(OF_LOG_NOTICE)<<"Player HAP";
         mHAPPlayer.load(mVideoName);
         mHAPPlayer.setLoopState(OF_LOOP_NORMAL);
-        mHAPPlayer.setDoubleBuffered(true);
     }
 
     ofLog(OF_LOG_NOTICE)<<"Loaded Video "<<mVideoName<<std::endl;
@@ -35,7 +33,10 @@ void VideoWarp::loadVideo(std::string name){
 
 void VideoWarp::update(int64_t currFrame){
     if(mPlayerType == 0){
-        mHAPPlayer.seekToFrame(currFrame);
+        mHAPPlayer.setFrame(currFrame);
+        
+        float pos = mHAPPlayer.getPosition();
+        mHAPPlayer.setPosition(pos + (1.0/25.0));
     }else{
         mHPVPlayer.seekToFrame(currFrame);
     }
@@ -68,7 +69,7 @@ void VideoWarp::setPaused(bool status){
 
 int VideoWarp::getFrameRate(){
     if(mPlayerType == 0){
-        return mHAPPlayer.getCurrentFrame();
+        //return mHAPPlayer.getCurrentFrame();
     }else{
         return mHPVPlayer.getCurrentFrame();
     }

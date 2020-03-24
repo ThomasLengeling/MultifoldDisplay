@@ -5,6 +5,11 @@
 #include "Mapping.h"
 #include "ofxHPVPlayer.h"
 
+#include "ofxDatGui.h"
+#include "ofParameterGroup.h"
+#include "ofParameter.h"
+#include "ofxGui.h"
+
 #define WIDTH_4K    3840
 #define HEIGHT_4K   2160
 
@@ -38,6 +43,8 @@ public:
     inn::VideoWarpRef mVideoWarp03;
     inn::VideoWarpRef mVideoWarp04;
     
+    void syncVideos();
+    
     
     //play videos in 4K resolution
     void playVideos4K();
@@ -45,7 +52,7 @@ public:
     //play videos in HD resolution
     void playVideosHD();
     
-    
+    int mPlayerType;
 
     //number of displays output
     int numDisplays;
@@ -55,4 +62,17 @@ public:
     
     //multi display mode
     int multiMode;
+    
+    //debug and release mode
+    ofParameterGroup      parameters;
+    ofParameter<ofColor>  mBkgColor;
+    ofParameter<bool>     mWarpSave;
+    ofParameter<bool>     mPlayMovie;
+    ofParameter<bool>     mResetMovie;
+    ofParameter<bool>     mDebug;
+    
+    ofxPanel               mGui;
+    bool                   mDrawGUI;
+    void                   setupGui();
+    void                   drawGui();
 };

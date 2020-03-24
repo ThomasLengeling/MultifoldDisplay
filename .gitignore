@@ -44,6 +44,7 @@
 MultifoldApp/bin/data/Videos/
 
 *.hpv
+*.mov
 
 VideoTest/bin/data/Videos/
 
