@@ -24,6 +24,7 @@
 
 #include "ofMain.h"
 #include "ofxHPVPlayer.h"
+#include "ofxHapPlayer.h"
 
 namespace inn {
 
@@ -33,12 +34,12 @@ typedef std::shared_ptr<VideoWarp> VideoWarpRef;
 
 class VideoWarp{
 public:
-    VideoWarp(){
-        mPlayerType = 0;
+    VideoWarp(int playerType){
+        mPlayerType = playerType;
     }
     
-    static VideoWarpRef create() {
-        return std::make_shared<VideoWarp>();
+    static VideoWarpRef create(int playerType = 0) {
+        return std::make_shared<VideoWarp>(playerType);
         
     }
     

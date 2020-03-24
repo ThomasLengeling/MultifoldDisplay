@@ -13,21 +13,25 @@ void ofApp::setup(){
     ofSetFrameRate(120);
     ofBackground(0);
     
+    //player type
+    //1 -> HAP
+    //0 ->HVP
+    mPlayerType = 0;
     
-    std::string displayVide01 = "Videos/test_cook_01.hpv";
-    mVideoWarp01 = inn::VideoWarp::create();
+    std::string displayVide01 = "Videos/mov_01_02.mov";
+    mVideoWarp01 = inn::VideoWarp::create(mPlayerType);
     mVideoWarp01->loadVideo(displayVide01);
     
-    std::string displayVide02 = "Videos/test_cook_02.hpv";
-    mVideoWarp02 = inn::VideoWarp::create();
+    std::string displayVide02 = "Videos/mov_02_02.mov";
+    mVideoWarp02 = inn::VideoWarp::create(mPlayerType);
     mVideoWarp02->loadVideo(displayVide02);
     
-    std::string displayVide03 = "Videos/test_cook_03.hpv";
-    mVideoWarp03 = inn::VideoWarp::create();
+    std::string displayVide03 = "Videos/mov_03_02.mov";
+    mVideoWarp03 = inn::VideoWarp::create(mPlayerType);
     mVideoWarp03->loadVideo(displayVide03);
     
-    std::string displayVide04 = "Videos/test_cook_04.hpv";
-    mVideoWarp04 = inn::VideoWarp::create();
+    std::string displayVide04 = "Videos/mov_04_02.mov";
+    mVideoWarp04 = inn::VideoWarp::create(mPlayerType);
     mVideoWarp04->loadVideo(displayVide04);
     
     mVideoWarp01->startPlay();
@@ -35,39 +39,50 @@ void ofApp::setup(){
     mVideoWarp03->startPlay();
     mVideoWarp04->startPlay();
     
-    mVideoWarp01->setPaused(true);
-    mVideoWarp02->setPaused(true);
-    mVideoWarp03->setPaused(true);
-    mVideoWarp04->setPaused(true);
+    if(mPlayerType==1){
+        mVideoWarp01->setPaused(true);
+        mVideoWarp02->setPaused(true);
+        mVideoWarp03->setPaused(true);
+        mVideoWarp04->setPaused(true);
+    }
+    
+    setupGui();
     
     std::cout<<"Finishing setup"<<std::endl;
     
     std::cout<<"Size"<<ofGetWindowWidth()<<" "<<ofGetWindowHeight()<<std::endl;
     
+
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
     ofSetWindowTitle(ofToString(ofGetFrameRate()));
     
+    syncVideos();
+}
+
+void ofApp::syncVideos(){
     
-    if (cur_frame != prev_frame)
-    {
-        mVideoWarp01->update(cur_frame);
-        mVideoWarp02->update(cur_frame);
-        mVideoWarp03->update(cur_frame);
-        mVideoWarp04->update(cur_frame);
-        prev_frame = cur_frame;
+    if(mPlayerType == 1){
+        if (cur_frame != prev_frame)
+        {
+            mVideoWarp01->update(cur_frame);
+            mVideoWarp02->update(cur_frame);
+            mVideoWarp03->update(cur_frame);
+            mVideoWarp04->update(cur_frame);
+            prev_frame = cur_frame;
+        }
+        
+        cur_frame++;
+        
+        if (cur_frame >= mVideoWarp01->getTotalNumFrames())
+        {
+            cur_frame = 0;
+        }
+        
+        HPV::Update();
     }
-    
-    cur_frame++;
-    
-    if (cur_frame >= mVideoWarp01->getTotalNumFrames())
-    {
-        cur_frame = 0;
-    }
-    
-    HPV::Update();
 }
 
 //--------------------------------------------------------------
@@ -83,6 +98,27 @@ void ofApp::draw(){
     
     ofDrawBitmapString(ofToString(ofGetFrameRate()), 10, 10);
     
+    drawGui();
+}
+//--------------------------------------------------------------
+void ofApp::setupGui(){
+    
+    parameters.setName("Param");
+    parameters.add(mBkgColor.set("bkg Color", ofColor(0,0,0)));
+    parameters.add(mWarpSave.set("Warp Save", false));
+    parameters.add(mPlayMovie.set("Play", false));
+    parameters.add(mResetMovie.set("Reset Movies", false));
+    parameters.add(mDebug.set("Debug", false));
+    //parameters.add(mWarp->parameters);
+    
+    mGui.setup(parameters);
+    mDrawGUI = true;
+}
+//--------------------------------------------------------------
+void ofApp::drawGui(){
+    if (mDrawGUI) {
+        mGui.draw();
+    }
 }
 //--------------------------------------------------------------
 void ofApp::playVideos4K(){
@@ -103,8 +139,13 @@ void ofApp::playVideosHD(){
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
-    if (key == 'g'){
+    if (key == 'o'){
         (offset > 0) ? (offset = 0) : (offset = 1);
+    }
+    
+    if (key == 'g') {
+        mDrawGUI = !mDrawGUI;
+        std::cout << "gui" << std::endl;
     }
 }
 
