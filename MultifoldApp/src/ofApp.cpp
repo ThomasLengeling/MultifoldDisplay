@@ -12,11 +12,19 @@ void ofApp::setup(){
     ofSetVerticalSync(true);
     ofSetFrameRate(120);
     ofBackground(0);
+    ofDisableArbTex();
+    
+    //number of display
+    numDisplays = 4;
     
     //player type
     //1 -> HAP
     //0 ->HVP
     mPlayerType = 0;
+    
+    //0 - HD
+    //1 - 4K
+    mResolutionType = 0;
     
     std::string displayVide01 = "Videos/mov_01_02.mov";
     mVideoWarp01 = inn::VideoWarp::create(mPlayerType);
@@ -46,6 +54,11 @@ void ofApp::setup(){
         mVideoWarp04->setPaused(true);
     }
     
+    //WARP
+    mWarpMapping = inn::Mapping::create(numDisplays);
+    mWarpMapping->setupWarp(WIDTH_HD/2.0, HEIGHT_HD/2.0);
+    
+    //GUI
     setupGui();
     
     std::cout<<"Finishing setup"<<std::endl;
@@ -64,7 +77,10 @@ void ofApp::update(){
 
 void ofApp::syncVideos(){
     
-    if(mPlayerType == 1){
+    //HAP and HD
+    if(mPlayerType == 0){
+        
+    }else if(mPlayerType == 1){
         if (cur_frame != prev_frame)
         {
             mVideoWarp01->update(cur_frame);
@@ -89,7 +105,9 @@ void ofApp::syncVideos(){
 void ofApp::draw(){
     ofBackground(0, 0, 0);
     
-    playVideosHD();
+   // drawVideos();
+    
+    drawWarps();
     
     ofDrawBitmapString( mVideoWarp01->getFrameRate(), 10, 30);
     ofDrawBitmapString( mVideoWarp02->getFrameRate(), 10, 50);
@@ -109,7 +127,7 @@ void ofApp::setupGui(){
     parameters.add(mPlayMovie.set("Play", false));
     parameters.add(mResetMovie.set("Reset Movies", false));
     parameters.add(mDebug.set("Debug", false));
-    //parameters.add(mWarp->parameters);
+    parameters.add(mWarpMapping->parameters);
     
     mGui.setup(parameters);
     mDrawGUI = true;
@@ -121,22 +139,65 @@ void ofApp::drawGui(){
     }
 }
 //--------------------------------------------------------------
-void ofApp::playVideos4K(){
-    mVideoWarp01->draw(0, 0, WIDTH_4K/4.0, HEIGHT_4K/4.0);
-    mVideoWarp02->draw(WIDTH_4K/4.0, 0, WIDTH_4K/4.0, HEIGHT_4K/4.0);
-    mVideoWarp03->draw(0, HEIGHT_4K/4.0, WIDTH_4K/4.0, HEIGHT_4K/4.0);
-    mVideoWarp04->draw(WIDTH_4K/4.0, HEIGHT_4K/4.0, WIDTH_4K/4.0, HEIGHT_4K/4.0);
+void ofApp::drawWarps(){
+    ofTexture * tex01 = mVideoWarp01->getTexture();
+    if(tex01->isAllocated()){
+        mWarpMapping->draw(*tex01, 0);
+    }
     
-}
-//--------------------------------------------------------------
-void ofApp::playVideosHD(){
-    mVideoWarp01->draw(0, 0, WIDTH_HD/2.0 - offset, HEIGHT_HD/2.0 - offset) ;
-    mVideoWarp02->draw(WIDTH_HD/2.0 + offset, 0, WIDTH_HD/2.0 -offset, HEIGHT_HD/2.0-offset);
-    mVideoWarp03->draw(0, HEIGHT_HD/2.0 + offset, WIDTH_HD/2.0 - offset, HEIGHT_HD/2.0 - offset);
-    mVideoWarp04->draw(WIDTH_HD/2.0 + offset, HEIGHT_HD/2.0 + offset, WIDTH_HD/2.0 + offset, HEIGHT_HD/2.0 + offset);
+    ofTexture * tex02 = mVideoWarp02->getTexture();
+    if(tex02->isAllocated()){
+        mWarpMapping->draw(*tex02, 1);
+    }
     
+    
+    ofTexture * tex03 = mVideoWarp03->getTexture();
+    if(tex03->isAllocated()){
+        mWarpMapping->draw(*tex03, 2);
+    }
+    
+    ofTexture * tex04 = mVideoWarp04->getTexture();
+    if(tex04->isAllocated()){
+        mWarpMapping->draw(*tex04, 3);
+    }
 }
 
+//--------------------------------------------------------------
+void ofApp::drawVideos(){
+    
+    //new aspect ratio
+    //HD
+    if(mResolutionType == 0){
+        float wDisplay = WIDTH_HD /(float)numDisplays;
+        float hDisplay = HEIGHT_HD/(float)numDisplays;
+        
+        float midScreen =  ofGetWindowHeight()/2.0 - hDisplay/2.0;
+        
+        //display
+        mVideoWarp01->draw(0, midScreen, wDisplay, hDisplay);
+        mVideoWarp02->draw(wDisplay, midScreen, wDisplay, hDisplay);
+        mVideoWarp03->draw(wDisplay * 2, midScreen, wDisplay, hDisplay);
+        mVideoWarp04->draw(wDisplay * 3, midScreen, wDisplay, hDisplay);
+    }else{//4K
+        
+    }
+}
+
+//--------------------------------------------------------------
+void ofApp::debugVideos(){
+    
+    if(mResolutionType){
+        mVideoWarp01->draw(0, 0, WIDTH_HD/2.0 - offset, HEIGHT_HD/2.0 - offset) ;
+        mVideoWarp02->draw(WIDTH_HD/2.0 + offset, 0, WIDTH_HD/2.0 -offset, HEIGHT_HD/2.0-offset);
+        mVideoWarp03->draw(0, HEIGHT_HD/2.0 + offset, WIDTH_HD/2.0 - offset, HEIGHT_HD/2.0 - offset);
+        mVideoWarp04->draw(WIDTH_HD/2.0 + offset, HEIGHT_HD/2.0 + offset, WIDTH_HD/2.0 + offset, HEIGHT_HD/2.0 + offset);
+    }else{
+        mVideoWarp01->draw(0, 0, WIDTH_4K/4.0, HEIGHT_4K/4.0);
+        mVideoWarp02->draw(WIDTH_4K/4.0, 0, WIDTH_4K/4.0, HEIGHT_4K/4.0);
+        mVideoWarp03->draw(0, HEIGHT_4K/4.0, WIDTH_4K/4.0, HEIGHT_4K/4.0);
+        mVideoWarp04->draw(WIDTH_4K/4.0, HEIGHT_4K/4.0, WIDTH_4K/4.0, HEIGHT_4K/4.0);
+    }
+}
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
     if (key == 'o'){
@@ -202,4 +263,5 @@ void ofApp::dragEvent(ofDragInfo dragInfo){
 //--------------------------------------------------------------
 void ofApp::exit(){
     HPV::DestroyHPVEngine();
+    mWarpMapping->exitEvent();
 }
