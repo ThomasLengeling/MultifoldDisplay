@@ -45,12 +45,20 @@ public:
     
     void syncVideos();
     
+    //warp
+    inn::MappingRef mWarpMapping;
+    void drawWarps();
     
     //play videos in 4K resolution
-    void playVideos4K();
+    void debugVideos();
     
-    //play videos in HD resolution
-    void playVideosHD();
+    //play videos in current #displays
+    void drawVideos();
+    
+    //resolution type of Videos
+    // type = 0  HD
+    // type = 1  4K
+    int mResolutionType;
     
     int mPlayerType;
 

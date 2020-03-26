@@ -86,9 +86,11 @@ void VideoWarp::draw(int x, int y, int width, int height){
 
 ofTexture * VideoWarp::getTexture(){
     if(mPlayerType == 0){
-        return mHAPPlayer.getTexturePtr();
+        if(mHAPPlayer.getTexture()->isAllocated())
+            return mHAPPlayer.getTexture();
     }else{
-        return  mHPVPlayer.getTexturePtr();
+        if(mHPVPlayer.getTexturePtr()->isAllocated())
+            return  mHPVPlayer.getTexturePtr();
     }
     return new ofTexture;
 }

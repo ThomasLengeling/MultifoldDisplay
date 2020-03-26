@@ -21,16 +21,25 @@ namespace inn {
 
 	class Mapping {
 	public:
-		Mapping() {}
+		Mapping(int numDisplays) {
+            mNumDisplays = numDisplays;
+        }
 
 		//create memory
-		static MappingRef create() {return std::make_shared<Mapping>();}
+		static MappingRef create(int numDisplays) {
+            return std::make_shared<Mapping>(numDisplays);
+        }
+        
+        void exitEvent();
 
 		//setup the warp area
 		void setupWarp(int width, int height);
 
-		//draw the warw
+		//draw the warp
 		void draw(ofTexture & texture);
+        
+        //draw the warp
+        void draw(ofTexture & texture, int i);
 
 		//key events
 		void keyAction(ofKeyEventArgs& eventArgs);
@@ -38,7 +47,7 @@ namespace inn {
 		//save configuration of the warp
 		void saveConfiguration();
 
-		shared_ptr<ofxWarpBase> getWarp() {return this->warpController.getWarp(0);}
+		shared_ptr<ofxWarpBase> getWarp(int index) {return this->warpController.getWarp(index);}
 
 		//seperate texture in to number of screens.
         ofTexture getVideo();
@@ -63,7 +72,7 @@ namespace inn {
         
         std::vector<ParamMapRef> paramScreens;
         
-        int numDisplays;
+        int mNumDisplays;
         
         int mId;
 	};
