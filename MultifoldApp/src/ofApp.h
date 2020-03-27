@@ -10,6 +10,17 @@
 #include "ofParameter.h"
 #include "ofxGui.h"
 
+/*
+ 
+ 4K ->3840 x 2160 or 4096 x 2160
+ 
+ Video Card GeForce 2080
+ Max Resolution
+ 7680x4320 -> 2x2 4K
+ 
+ 
+ */
+
 #define WIDTH_4K    3840
 #define HEIGHT_4K   2160
 
@@ -50,7 +61,10 @@ public:
     void drawWarps();
     
     //play videos in 4K resolution
-    void debugVideos();
+    void debugSyncVideos();
+    
+    //debug layout videos
+    void debugLayoutVideos();
     
     //play videos in current #displays
     void drawVideos();
