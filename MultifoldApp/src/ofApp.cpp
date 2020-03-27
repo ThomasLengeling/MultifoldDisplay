@@ -30,7 +30,7 @@ void ofApp::setup(){
     mVideoWarp01 = inn::VideoWarp::create(mPlayerType);
     mVideoWarp01->loadVideo(displayVide01);
     
-    std::string displayVide02 = "Videos/mov_02_02.mov";
+    std::string displayVide02 = "Videos/mov_01_02.mov";
     mVideoWarp02 = inn::VideoWarp::create(mPlayerType);
     mVideoWarp02->loadVideo(displayVide02);
     
@@ -150,7 +150,6 @@ void ofApp::drawWarps(){
         mWarpMapping->draw(*tex02, 1);
     }
     
-    
     ofTexture * tex03 = mVideoWarp03->getTexture();
     if(tex03->isAllocated()){
         mWarpMapping->draw(*tex03, 2);
@@ -164,14 +163,13 @@ void ofApp::drawWarps(){
 
 //--------------------------------------------------------------
 void ofApp::drawVideos(){
-    
     //new aspect ratio
     //HD
     if(mResolutionType == 0){
-        float wDisplay = WIDTH_HD /(float)numDisplays;
-        float hDisplay = HEIGHT_HD/(float)numDisplays;
+        float wDisplay = ofGetWindowWidth()/(float)numDisplays;
+        float hDisplay = ofGetWindowHeight() /(float)numDisplays;
         
-        float midScreen =  ofGetWindowHeight()/2.0 - hDisplay/2.0;
+        float midScreen =  0;//ofGetWindowHeight()/2.0 - hDisplay/2.0;
         
         //display
         mVideoWarp01->draw(0, midScreen, wDisplay, hDisplay);
@@ -183,8 +181,12 @@ void ofApp::drawVideos(){
     }
 }
 
+void ofApp::debugLayoutVideos(){
+    
+}
+
 //--------------------------------------------------------------
-void ofApp::debugVideos(){
+void ofApp::debugSyncVideos(){
     
     if(mResolutionType){
         mVideoWarp01->draw(0, 0, WIDTH_HD/2.0 - offset, HEIGHT_HD/2.0 - offset) ;
@@ -207,6 +209,24 @@ void ofApp::keyPressed(int key){
     if (key == 'g') {
         mDrawGUI = !mDrawGUI;
         std::cout << "gui" << std::endl;
+    }
+    
+    if(key == '1'){
+        std::string displayVide01 = "Videos/mov_01_02.mov";
+        mVideoWarp01 = inn::VideoWarp::create(mPlayerType);
+        mVideoWarp01->loadVideo(displayVide01);
+        
+        std::string displayVide02 = "Videos/mov_01_02.mov";
+        mVideoWarp02 = inn::VideoWarp::create(mPlayerType);
+        mVideoWarp02->loadVideo(displayVide02);
+        
+        std::string displayVide03 = "Videos/mov_01_02.mov";
+        mVideoWarp03 = inn::VideoWarp::create(mPlayerType);
+        mVideoWarp03->loadVideo(displayVide03);
+        
+        std::string displayVide04 = "Videos/mov_01_02.mov";
+        mVideoWarp04 = inn::VideoWarp::create(mPlayerType);
+        mVideoWarp04->loadVideo(displayVide04);
     }
 }
 
