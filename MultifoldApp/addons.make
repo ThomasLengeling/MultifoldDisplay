@@ -1,7 +1,7 @@
 ofxDatGui
 ofxGui
-ofxHPVPlayer
 ofxHapPlayer
+ofxHPVPlayer
 ofxNetwork
 ofxOpenCv
 ofxWarp
