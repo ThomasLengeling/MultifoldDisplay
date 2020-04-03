@@ -18,29 +18,74 @@ void ofApp::setup(){
     numDisplays = 4;
     
     //player type
-    //1 -> HAP
-    //0 ->HVP
+    //1 -> HPV
+    //0 -> HAP
     mPlayerType = 0;
     
     //0 - HD
     //1 - 4K
     mResolutionType = 1;
     
-    std::string displayVide01 = "Videos/P1344322_hap.mov";
-    mVideoWarp01 = inn::VideoWarp::create(mPlayerType);
-    mVideoWarp01->loadVideo(displayVide01);
+    std::string displayVide01;
+    std::string displayVide02;
+    std::string displayVide03;
+    std::string displayVide04;
     
-    std::string displayVide02 = "Videos/P1344336_hap.mov";
-    mVideoWarp02 = inn::VideoWarp::create(mPlayerType);
-    mVideoWarp02->loadVideo(displayVide02);
+    std::vector<std::string> strVideo;
     
-    std::string displayVide03 = "Videos/P1344337_hap.mov";
-    mVideoWarp03 = inn::VideoWarp::create(mPlayerType);
-    mVideoWarp03->loadVideo(displayVide03);
+    ofJson videoJs;
+    std::string configFile = "video.json";
+    ofFile videoFile(configFile);
     
-    std::string displayVide04 = "Videos/P1344370_hap.mov";
-    mVideoWarp04 = inn::VideoWarp::create(mPlayerType);
-    mVideoWarp04->loadVideo(displayVide04);
+    if (videoFile.exists()) {
+        ofLog(OF_LOG_NOTICE) << " Reading Config File " << configFile;
+        videoFile >> videoJs;
+        
+        int i = 0;
+        for(auto & videoNames : videoJs["videos"]){
+            if(!videoNames.empty()){
+                std::string name = videoNames["name"];
+                strVideo.push_back(name);
+                ofLog(OF_LOG_NOTICE) << "Found video "<<i<<" :"<<name<<std::endl;
+                i++;
+            }
+        }
+        
+        if(strVideo.size() == 4){
+            displayVide01 = strVideo.at(0);
+            mVideoWarp01 = inn::VideoWarp::create(mPlayerType);
+            mVideoWarp01->loadVideo(displayVide01);
+            
+            displayVide02 =  strVideo.at(1);
+            mVideoWarp02 = inn::VideoWarp::create(mPlayerType);
+            mVideoWarp02->loadVideo(displayVide02);
+            
+            displayVide03 =  strVideo.at(2);
+            mVideoWarp03 = inn::VideoWarp::create(mPlayerType);
+            mVideoWarp03->loadVideo(displayVide03);
+            
+            displayVide04 =  strVideo.at(3);
+            mVideoWarp04 = inn::VideoWarp::create(mPlayerType);
+            mVideoWarp04->loadVideo(displayVide04);
+        }
+
+    }else{
+        displayVide01 = "Videos/P1344322_hap.mov";
+        mVideoWarp01 = inn::VideoWarp::create(mPlayerType);
+        mVideoWarp01->loadVideo(displayVide01);
+        
+        displayVide02 = "Videos/P1344336_hap.mov";
+        mVideoWarp02 = inn::VideoWarp::create(mPlayerType);
+        mVideoWarp02->loadVideo(displayVide02);
+        
+        displayVide03 = "Videos/P1344337_hap.mov";
+        mVideoWarp03 = inn::VideoWarp::create(mPlayerType);
+        mVideoWarp03->loadVideo(displayVide03);
+        
+        displayVide04 = "Videos/P1344370_hap.mov";
+        mVideoWarp04 = inn::VideoWarp::create(mPlayerType);
+        mVideoWarp04->loadVideo(displayVide04);
+    }
     
     mVideoWarp01->startPlay();
     mVideoWarp02->startPlay();
