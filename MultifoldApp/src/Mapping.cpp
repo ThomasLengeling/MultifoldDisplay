@@ -146,8 +146,10 @@ void Mapping::keyAction(ofKeyEventArgs &eventArgs) {
     }
 }
 
-void Mapping::exitEvent(){
+//--------------------------------------------------------------
+void Mapping::saveWarp() {
     this->warpController.saveSettings("warp.json");
+    ofLog(OF_LOG_NOTICE) << "Saving warp";
 }
 
 

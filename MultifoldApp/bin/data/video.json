@@ -4,25 +4,16 @@
 		{
 			"width": 4096,
 			"height": 2160,
-			"name": "wall_resolution.mp4",
-			"alias": "wall",
+			"name": "Videos/P1344322_hap.mov",
+			"alias": "left",
 			"drawx": 0,
 			"drawy": 0
 		},
 		{
 			"width": 4096,
 			"height": 2160,
-			"name": "table_resolution.mp4",
-			"alias": "table",
-			"drawx": 0,
-			"drawy": 0
-		},
-
-		{
-			"width": 4096,
-			"height": 2160,
-			"name": "table_resolution.mp4",
-			"alias": "table",
+			"name": "Videos/P1344336_hap.mov",
+			"alias": "front",
 			"drawx": 0,
 			"drawy": 0
 		},
@@ -30,8 +21,17 @@
 		{
 			"width": 4096,
 			"height": 2160,
-			"name": "table_resolution.mp4",
-			"alias": "table",
+			"name": "Videos/P1344337_hap.mov",
+			"alias": "right",
+			"drawx": 0,
+			"drawy": 0
+		},
+
+		{
+			"width": 4096,
+			"height": 2160,
+			"name": "Videos/P1344370_hap.mov",
+			"alias": "back",
 			"drawx": 0,
 			"drawy": 0
 		}

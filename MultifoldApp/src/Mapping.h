@@ -30,7 +30,8 @@ namespace inn {
             return std::make_shared<Mapping>(numDisplays);
         }
         
-        void exitEvent();
+		//--------------
+        void saveWarp();
 
 		//setup the warp area
 		void setupWarp(int width, int height);

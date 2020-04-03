@@ -24,21 +24,21 @@ void ofApp::setup(){
     
     //0 - HD
     //1 - 4K
-    mResolutionType = 0;
+    mResolutionType = 1;
     
-    std::string displayVide01 = "Videos/mov_01_02.mov";
+    std::string displayVide01 = "Videos/P1344322_hap.mov";
     mVideoWarp01 = inn::VideoWarp::create(mPlayerType);
     mVideoWarp01->loadVideo(displayVide01);
     
-    std::string displayVide02 = "Videos/mov_01_02.mov";
+    std::string displayVide02 = "Videos/P1344336_hap.mov";
     mVideoWarp02 = inn::VideoWarp::create(mPlayerType);
     mVideoWarp02->loadVideo(displayVide02);
     
-    std::string displayVide03 = "Videos/mov_03_02.mov";
+    std::string displayVide03 = "Videos/P1344337_hap.mov";
     mVideoWarp03 = inn::VideoWarp::create(mPlayerType);
     mVideoWarp03->loadVideo(displayVide03);
     
-    std::string displayVide04 = "Videos/mov_04_02.mov";
+    std::string displayVide04 = "Videos/P1344370_hap.mov";
     mVideoWarp04 = inn::VideoWarp::create(mPlayerType);
     mVideoWarp04->loadVideo(displayVide04);
     
@@ -64,8 +64,7 @@ void ofApp::setup(){
     std::cout<<"Finishing setup"<<std::endl;
     
     std::cout<<"Size"<<ofGetWindowWidth()<<" "<<ofGetWindowHeight()<<std::endl;
-    
-
+   
 }
 
 //--------------------------------------------------------------
@@ -109,12 +108,13 @@ void ofApp::draw(){
     
     drawWarps();
     
-    ofDrawBitmapString( mVideoWarp01->getFrameRate(), 10, 30);
-    ofDrawBitmapString( mVideoWarp02->getFrameRate(), 10, 50);
-    ofDrawBitmapString( mVideoWarp03->getFrameRate(), 10, 70);
-    ofDrawBitmapString( mVideoWarp04->getFrameRate(), 10, 90);
-    
-    ofDrawBitmapString(ofToString(ofGetFrameRate()), 10, 10);
+    if (mDrawGUI) {
+        ofDrawBitmapString(mVideoWarp01->getFrameRate(), 10, 30);
+        ofDrawBitmapString(mVideoWarp02->getFrameRate(), 10, 50);
+        ofDrawBitmapString(mVideoWarp03->getFrameRate(), 10, 70);
+        ofDrawBitmapString(mVideoWarp04->getFrameRate(), 10, 90);
+        ofDrawBitmapString(ofToString(ofGetFrameRate()), 10, 10);
+    }
     
     drawGui();
 }
@@ -138,6 +138,7 @@ void ofApp::drawGui(){
         mGui.draw();
     }
 }
+
 //--------------------------------------------------------------
 void ofApp::drawWarps(){
     ofTexture * tex01 = mVideoWarp01->getTexture();
@@ -164,7 +165,6 @@ void ofApp::drawWarps(){
 //--------------------------------------------------------------
 void ofApp::drawVideos(){
     //new aspect ratio
-    //HD
     if(mResolutionType == 0){
         float wDisplay = ofGetWindowWidth()/(float)numDisplays;
         float hDisplay = ofGetWindowHeight() /(float)numDisplays;
@@ -209,6 +209,10 @@ void ofApp::keyPressed(int key){
     if (key == 'g') {
         mDrawGUI = !mDrawGUI;
         std::cout << "gui" << std::endl;
+    }
+
+    if (key == 's') {
+        mWarpMapping->saveWarp();
     }
     
     if(key == '1'){
@@ -283,5 +287,5 @@ void ofApp::dragEvent(ofDragInfo dragInfo){
 //--------------------------------------------------------------
 void ofApp::exit(){
     HPV::DestroyHPVEngine();
-    mWarpMapping->exitEvent();
+    mWarpMapping->saveWarp();
 }
