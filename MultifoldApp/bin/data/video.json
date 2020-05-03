@@ -1,10 +1,11 @@
 {
+	"videoType": 2,
 	"videos": [
 
 		{
 			"width": 4096,
 			"height": 2160,
-			"name": "Videos/P1344322_hap.mov",
+			"name": "Videos/P1344337_1080p.mov",
 			"alias": "left",
 			"drawx": 0,
 			"drawy": 0
@@ -12,7 +13,7 @@
 		{
 			"width": 4096,
 			"height": 2160,
-			"name": "Videos/P1344336_hap.mov",
+			"name": "Videos/P1344335_1080p.mov",
 			"alias": "front",
 			"drawx": 0,
 			"drawy": 0
@@ -21,7 +22,7 @@
 		{
 			"width": 4096,
 			"height": 2160,
-			"name": "Videos/P1344337_hap.mov",
+			"name": "Videos/P1344336_1080p.mov",
 			"alias": "right",
 			"drawx": 0,
 			"drawy": 0
@@ -30,7 +31,7 @@
 		{
 			"width": 4096,
 			"height": 2160,
-			"name": "Videos/P1344370_hap.mov",
+			"name": "Videos/P1344338_1080p.mov",
 			"alias": "back",
 			"drawx": 0,
 			"drawy": 0

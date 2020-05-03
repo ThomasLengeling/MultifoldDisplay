@@ -19,7 +19,8 @@
  }
  
  type = 0 HPV Video fast encoding for installation
- tyep = 1 HAP Video fast enconding for testing
+ type = 1 HAP Video fast enconding for testing
+ tyep = 2 MP4 Video slow testing enconding
  */
 
 #include "ofMain.h"
@@ -46,12 +47,16 @@ public:
     void loadVideo(std::string name);
     void startPlay();
     void setPaused(bool status);
-    void update(int64_t currFrame);
+    void updateFrame(int64_t currFrame);
+    void update();
     int getTotalNumFrames();
-    int getFrameRate();
+    int getCurrentFrame();
     
     void draw(int x, int y, int width, int height);
-    ofTexture * getTexture();
+    ofTexture  getTexture();
+    ofTexture * getTexturePtr();
+    
+    void nextFrame();
     
 private:
     
@@ -68,6 +73,9 @@ private:
     //mPlayerType = 0
     //default
     ofxHapPlayer mHAPPlayer;
+    
+    //mPlayerType = 2
+    ofVideoPlayer mOFVideoPlayer;
     
 };
 

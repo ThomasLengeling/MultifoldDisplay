@@ -18,7 +18,6 @@
  Max Resolution
  7680x4320 -> 2x2 4K
  
- 
  */
 
 #define WIDTH_4K    3840
@@ -26,6 +25,9 @@
 
 #define WIDTH_HD    1920
 #define HEIGHT_HD   1080
+
+#define WIDTH_SD    640
+#define HEIGHT_SD   360
 
 class ofApp : public ofBaseApp{
     
@@ -97,4 +99,10 @@ public:
     bool                   mDrawGUI;
     void                   setupGui();
     void                   drawGui();
+    
+    void resetMovies(bool & value);
+    void playMovies(bool & value);
+    
+    
+    bool                    mPause;
 };

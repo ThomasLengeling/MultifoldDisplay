@@ -52,6 +52,8 @@ namespace inn {
 
 		//seperate texture in to number of screens.
         ofTexture getVideo();
+        
+        void setSize(int width, int height);
 
 		///gui
 		ofParameterGroup parameters;
