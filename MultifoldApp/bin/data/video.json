@@ -5,7 +5,11 @@
 		{
 			"width": 4096,
 			"height": 2160,
+<<<<<<< HEAD
 			"name": "Videos/P1344337_1080p.mov",
+=======
+			"name": "Videos/MVI_7003_hap.MOV",
+>>>>>>> e5c6aaa391f809ac2d0dad874012797e06e0f2e3
 			"alias": "left",
 			"drawx": 0,
 			"drawy": 0
