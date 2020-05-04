@@ -26,11 +26,6 @@ void ofApp::setup(){
     //1 - 4K
     mResolutionType = 0;
     
-    std::string displayVide01;
-    std::string displayVide02;
-    std::string displayVide03;
-    std::string displayVide04;
-    
     std::vector<std::string> strVideo;
     
     ofJson videoJs;
@@ -63,66 +58,43 @@ void ofApp::setup(){
             }
         }
         
+        //load videos
         if(strVideo.size() == 4){
-            displayVide01 = strVideo.at(0);
-            mVideoWarp01 = inn::VideoWarp::create(mPlayerType);
-            mVideoWarp01->loadVideo(displayVide01);
+            for(int i = 0; i < 4; i++){
+                inn::VideoWarpRef warp = inn::VideoWarp::create(mPlayerType);
+                warp->loadVideo(strVideo.at(i));
+                mVideoWarps.push_back(warp);
+            }
             
-            displayVide02 =  strVideo.at(1);
-            mVideoWarp02 = inn::VideoWarp::create(mPlayerType);
-            mVideoWarp02->loadVideo(displayVide02);
-            
-            displayVide03 =  strVideo.at(2);
-            mVideoWarp03 = inn::VideoWarp::create(mPlayerType);
-            mVideoWarp03->loadVideo(displayVide03);
-            
-            displayVide04 =  strVideo.at(3);
-            mVideoWarp04 = inn::VideoWarp::create(mPlayerType);
-            mVideoWarp04->loadVideo(displayVide04);
         }
         
     }else{
-        displayVide01 = "Videos/P1344322_hap.mov";
-        mVideoWarp01 = inn::VideoWarp::create(mPlayerType);
-        mVideoWarp01->loadVideo(displayVide01);
-        
-        displayVide02 = "Videos/P1344336_hap.mov";
-        mVideoWarp02 = inn::VideoWarp::create(mPlayerType);
-        mVideoWarp02->loadVideo(displayVide02);
-        
-        displayVide03 = "Videos/P1344337_hap.mov";
-        mVideoWarp03 = inn::VideoWarp::create(mPlayerType);
-        mVideoWarp03->loadVideo(displayVide03);
-        
-        displayVide04 = "Videos/P1344370_hap.mov";
-        mVideoWarp04 = inn::VideoWarp::create(mPlayerType);
-        mVideoWarp04->loadVideo(displayVide04);
+        //loat temp video
+        for(int i = 0; i < 4; i++){
+            inn::VideoWarpRef warp = inn::VideoWarp::create(mPlayerType);
+            warp->loadVideo(strVideo.at(i));
+            mVideoWarps.push_back(warp);
+        }
     }
     
-    mVideoWarp01->startPlay();
-    mVideoWarp02->startPlay();
-    mVideoWarp03->startPlay();
-    mVideoWarp04->startPlay();
+    //play videos
+    for(int i = 0; i < 4; i++){
+        mVideoWarps.at(i)->startPlay();
+    }
     
     if(mPlayerType == 1){
         
     }
     
+    //native video
     if(mPlayerType == 2){
-        mVideoWarp01->updateFrame(0);
-        mVideoWarp02->updateFrame(0);
-        mVideoWarp03->updateFrame(0);
-        mVideoWarp04->updateFrame(0);
         
-        mVideoWarp01->setPaused(true);
-        mVideoWarp02->setPaused(true);
-        mVideoWarp03->setPaused(true);
-        mVideoWarp04->setPaused(true);
-        
-        mVideoWarp01->update();
-        mVideoWarp02->update();
-        mVideoWarp03->update();
-        mVideoWarp04->update();
+        //initialize video
+        for(int i = 0; i < 4; i++){
+            mVideoWarps.at(i)->updateFrame(0);
+            mVideoWarps.at(i)->setPaused(true);
+            mVideoWarps.at(i)->update();
+        }
         
     }
     
@@ -141,7 +113,6 @@ void ofApp::setup(){
 
 //--------------------------------------------------------------
 void ofApp::update(){
-    ofSetWindowTitle(ofToString(ofGetFrameRate()));
     
     syncVideos();
 }
@@ -152,18 +123,18 @@ void ofApp::syncVideos(){
     if(mPlayerType == 0){
         
     }else if(mPlayerType == 1){ // HPV
-        if (cur_frame != prev_frame)
-        {
-            mVideoWarp01->updateFrame(cur_frame);
-            mVideoWarp02->updateFrame(cur_frame);
-            mVideoWarp03->updateFrame(cur_frame);
-            mVideoWarp04->updateFrame(cur_frame);
+        if (cur_frame != prev_frame){
+            
+            //update video frame
+            for(int i = 0; i < 4; i++){
+                mVideoWarps.at(i)->updateFrame(cur_frame);
+            }
             prev_frame = cur_frame;
         }
         
         cur_frame++;
         
-        if (cur_frame >= mVideoWarp01->getTotalNumFrames())
+        if (cur_frame >= mVideoWarps.at(0)->getTotalNumFrames())
         {
             cur_frame = 0;
         }
@@ -174,16 +145,15 @@ void ofApp::syncVideos(){
         if(!mPause){
             if (cur_frame != prev_frame){
                 
+                //update frame
+                for(int i = 0; i < 4; i++){
+                    mVideoWarps.at(i)->nextFrame();
+                }
                 
-                mVideoWarp01->nextFrame();
-                mVideoWarp02->nextFrame();
-                mVideoWarp03->nextFrame();
-                mVideoWarp04->nextFrame();
-                
-                mVideoWarp01->update();
-                mVideoWarp02->update();
-                mVideoWarp03->update();
-                mVideoWarp04->update();
+                //update video
+                for(int i = 0; i < 4; i++){
+                    mVideoWarps.at(i)->update();
+                }
                 
                 prev_frame = cur_frame;
                 
@@ -191,14 +161,13 @@ void ofApp::syncVideos(){
             
             cur_frame++;
             
-            if (cur_frame >= mVideoWarp01->getTotalNumFrames()){
+            if (cur_frame >= mVideoWarps.at(0)->getTotalNumFrames()){
                 
                 //reset alll the videos:
-                mVideoWarp01->updateFrame(0);
-                mVideoWarp02->updateFrame(0);
-                mVideoWarp03->updateFrame(0);
-                mVideoWarp04->updateFrame(0);
-                
+                for(int i = 0; i < 4; i++){
+                    mVideoWarps.at(i)->updateFrame(0);
+                }
+
                 cur_frame = 0;
             }
             
@@ -213,16 +182,14 @@ void ofApp::draw(){
     
     //drawVideos();
     
-    drawWarps();
-    
-    if (mDrawGUI) {
-        ofSetColor(255, 255, 255);
-        ofDrawBitmapString(mVideoWarp01->getCurrentFrame(), 10, 30);
-        ofDrawBitmapString(mVideoWarp02->getCurrentFrame(), 10, 50);
-        ofDrawBitmapString(mVideoWarp03->getCurrentFrame(), 10, 70);
-        ofDrawBitmapString(mVideoWarp04->getCurrentFrame(), 10, 90);
-        ofDrawBitmapString(ofToString(ofGetFrameRate()), 10, 10);
+    if(mDrawWarp){
+        drawWarps();
     }
+    
+    if(mDebugLayoutVideos){
+        debugLayoutVideos();
+    }
+    
     
     drawGui();
 }
@@ -234,27 +201,47 @@ void ofApp::setupGui(){
     parameters.add(mWarpSave.set("Warp Save", false));
     parameters.add(mPlayMovie.set("Toggle Pause", false));
     parameters.add(mResetMovie.set("Reset Movies", false));
-    parameters.add(mDebug.set("Debug", false));
+    parameters.add(mDebugMovie.set("Debug", false));
+    parameters.add(mDrawWarp.set("Draw Warp", true));
+    parameters.add(mMasterFrame.set("Master Frame", 0, 0, 50));
     parameters.add(mWarpMapping->parameters);
     
     mPlayMovie.addListener(this, &ofApp::playMovies);
     mResetMovie.addListener(this, &ofApp::resetMovies);
+    mDebugMovie.addListener(this, &ofApp::debugMovie);
+    mMasterFrame.addListener(this, &ofApp::frameSlider);
     
-    //ofAddListener(mPlayMovie.parameterChangedE(), this, &ofApp::playMovies);
     
     mGui.setup(parameters);
     mDrawGUI = true;
+    mDebugLayoutVideos = false;
 }
 
+
+void ofApp::frameSlider(int & value){
+    int framePosition = int(value);
+    
+    //reset alll the videos:
+    for(int i = 0; i < 4; i++){
+        mVideoWarps.at(i)->updateFrame(framePosition);
+    }
+    
+    //update video
+    for(int i = 0; i < 4; i++){
+        mVideoWarps.at(i)->update();
+    }
+    
+     ofLog(OF_LOG_NOTICE) <<framePosition;
+}
 //--------------------------------------------------------------
 void ofApp::resetMovies(bool & value){
     //  bool status = static_cast<ofParameter<bool>& >(e);
     
     if(value){
-        mVideoWarp01->updateFrame(0);
-        mVideoWarp02->updateFrame(0);
-        mVideoWarp03->updateFrame(0);
-        mVideoWarp04->updateFrame(0);
+        //reset to the begining of the video
+        for(int i = 0; i < 4; i++){
+            mVideoWarps.at(i)->updateFrame(0);
+        }
     }
     
     ofLog(OF_LOG_NOTICE) << "RESET MOVIE "<<value;
@@ -263,43 +250,49 @@ void ofApp::resetMovies(bool & value){
 //--------------------------------------------------------------
 void ofApp::playMovies(bool & value){
     bool status = value;
-    mVideoWarp01->setPaused(status);
-    mVideoWarp02->setPaused(status);
-    mVideoWarp03->setPaused(status);
-    mVideoWarp04->setPaused(status);
+    
+    //stop videos:
+    for(int i = 0; i < 4; i++){
+        mVideoWarps.at(i)->setPaused(status);
+    }
     
     mPause = status;
     ofLog(OF_LOG_NOTICE) << "Puase MOVIE "<<status;
 }
 
-
+//--------------------------------------------------------------
+void ofApp::debugMovie(bool & value){
+    mDebugLayoutVideos = !mDebugLayoutVideos;
+}
+//--------------------------------------------------------------
+void ofApp::drawVideoInfo(int id){
+    ofSetColor(255, 255, 255);
+    std::string infoName ="Video "+ to_string(id);
+    infoName += " :"+to_string(mVideoWarps.at(id)->getCurrentFrame())+" "+to_string(mVideoWarps.at(id)->getTotalNumFrames());
+    ofDrawBitmapString(infoName, 10, 30 + id*25);
+}
 //--------------------------------------------------------------
 void ofApp::drawGui(){
     if (mDrawGUI) {
+        
+        //draw info videos;
+        for(int i = 0; i < 4; i++){
+            drawVideoInfo(i);
+        }
+        
         mGui.draw();
     }
 }
 
 //--------------------------------------------------------------
 void ofApp::drawWarps(){
-    ofTexture  tex01 = mVideoWarp01->getTexture();
-    if(tex01.isAllocated()){
-        mWarpMapping->draw(tex01, 0);
-    }
     
-    ofTexture  tex02 = mVideoWarp02->getTexture();
-    if(tex02.isAllocated()){
-        mWarpMapping->draw(tex02, 1);
-    }
-    
-    ofTexture  tex03 = mVideoWarp03->getTexture();
-    if(tex03.isAllocated()){
-        mWarpMapping->draw(tex03, 2);
-    }
-    
-    ofTexture  tex04 = mVideoWarp04->getTexture();
-    if(tex04.isAllocated()){
-        mWarpMapping->draw(tex04, 3);
+    //get texture for the video and update the warp
+    for(int i = 0; i < 4; i++){
+        ofTexture  tex =  mVideoWarps.at(i)->getTexture();
+        if(tex.isAllocated()){
+            mWarpMapping->draw(tex, i);
+        }
     }
 }
 
@@ -312,35 +305,28 @@ void ofApp::drawVideos(){
         
         float midScreen =  0;//ofGetWindowHeight()/2.0 - hDisplay/2.0;
         
-        //display
-        mVideoWarp01->draw(0, midScreen, wDisplay, hDisplay);
-        mVideoWarp02->draw(wDisplay, midScreen, wDisplay, hDisplay);
-        mVideoWarp03->draw(wDisplay * 2, midScreen, wDisplay, hDisplay);
-        mVideoWarp04->draw(wDisplay * 3, midScreen, wDisplay, hDisplay);
+        //draw the video
+        for(int i = 0; i < 4; i++){
+            mVideoWarps.at(i)->draw(wDisplay * i, midScreen, wDisplay, hDisplay);
+        }
     }else{//4K
         
     }
 }
 
-void ofApp::debugLayoutVideos(){
-    
-}
-
 //--------------------------------------------------------------
-void ofApp::debugSyncVideos(){
+void ofApp::debugLayoutVideos(){
+    float wDisplay = ofGetWindowWidth()/(float)numDisplays;
+    float hDisplay = ofGetWindowHeight() /(float)numDisplays;
     
-    if(mResolutionType){
-        mVideoWarp01->draw(0, 0, WIDTH_HD/2.0 - offset, HEIGHT_HD/2.0 - offset) ;
-        mVideoWarp02->draw(WIDTH_HD/2.0 + offset, 0, WIDTH_HD/2.0 -offset, HEIGHT_HD/2.0-offset);
-        mVideoWarp03->draw(0, HEIGHT_HD/2.0 + offset, WIDTH_HD/2.0 - offset, HEIGHT_HD/2.0 - offset);
-        mVideoWarp04->draw(WIDTH_HD/2.0 + offset, HEIGHT_HD/2.0 + offset, WIDTH_HD/2.0 + offset, HEIGHT_HD/2.0 + offset);
-    }else{
-        mVideoWarp01->draw(0, 0, WIDTH_4K/4.0, HEIGHT_4K/4.0);
-        mVideoWarp02->draw(WIDTH_4K/4.0, 0, WIDTH_4K/4.0, HEIGHT_4K/4.0);
-        mVideoWarp03->draw(0, HEIGHT_4K/4.0, WIDTH_4K/4.0, HEIGHT_4K/4.0);
-        mVideoWarp04->draw(WIDTH_4K/4.0, HEIGHT_4K/4.0, WIDTH_4K/4.0, HEIGHT_4K/4.0);
+    float midScreen =  0;//ofGetWindowHeight()/2.0 - hDisplay/2.0;
+    
+    //draw the video
+    for(int i = 0; i < 4; i++){
+        mVideoWarps.at(i)->draw(wDisplay * i, midScreen, wDisplay, hDisplay);
     }
 }
+
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
     if (key == 'o'){
@@ -356,43 +342,26 @@ void ofApp::keyPressed(int key){
         mWarpMapping->saveWarp();
     }
     if(key == 'z'){
-        mVideoWarp01->setPaused(false);
-        mVideoWarp02->setPaused(false);
-        mVideoWarp03->setPaused(false);
-        mVideoWarp04->setPaused(false);
         
-        mVideoWarp01->startPlay();
-        mVideoWarp02->startPlay();
-        mVideoWarp03->startPlay();
-        mVideoWarp04->startPlay();
+        //reset video
+        for(int i = 0; i < 4; i++){
+            mVideoWarps.at(i)->setPaused(false);
+        }
+        
+        //start plays
+        for(int i = 0; i < 4; i++){
+            mVideoWarps.at(i)->startPlay();
+        }
+        
     }
     
     if(key == 'x'){
-        mVideoWarp01->setPaused(true);
-        mVideoWarp02->setPaused(true);
-        mVideoWarp03->setPaused(true);
-        mVideoWarp04->setPaused(true);
+        for(int i = 0; i < 4; i++){
+            mVideoWarps.at(i)->setPaused(true);
+         }
     }
     if(key == 'c'){
         mWarpMapping->setSize(WIDTH_SD, HEIGHT_SD);
-    }
-    
-    if(key == '1'){
-        std::string displayVide01 = "Videos/mov_01_02.mov";
-        mVideoWarp01 = inn::VideoWarp::create(mPlayerType);
-        mVideoWarp01->loadVideo(displayVide01);
-        
-        std::string displayVide02 = "Videos/mov_01_02.mov";
-        mVideoWarp02 = inn::VideoWarp::create(mPlayerType);
-        mVideoWarp02->loadVideo(displayVide02);
-        
-        std::string displayVide03 = "Videos/mov_01_02.mov";
-        mVideoWarp03 = inn::VideoWarp::create(mPlayerType);
-        mVideoWarp03->loadVideo(displayVide03);
-        
-        std::string displayVide04 = "Videos/mov_01_02.mov";
-        mVideoWarp04 = inn::VideoWarp::create(mPlayerType);
-        mVideoWarp04->loadVideo(displayVide04);
     }
 }
 

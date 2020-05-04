@@ -93,10 +93,10 @@ namespace inn {
 		ofParameter<float>   brightness;
 		ofParameter<float>	 exponent;
 
-		ofParameter<float> edgeLeft;
-		ofParameter<float> edgeRight;
-		ofParameter<float> edgeTop;
-		ofParameter<float> edgeBottom;
+		ofParameter<float>   edgeLeft;
+		ofParameter<float>   edgeRight;
+		ofParameter<float>   edgeTop;
+		ofParameter<float>   edgeBottom;
 
 		ofEventListener  gammaListener;
 		ofEventListener  luminanceListener;
