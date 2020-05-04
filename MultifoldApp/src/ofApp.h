@@ -51,19 +51,13 @@ public:
     
     
     //Video Warp
-    inn::VideoWarpRef mVideoWarp01;
-    inn::VideoWarpRef mVideoWarp02;
-    inn::VideoWarpRef mVideoWarp03;
-    inn::VideoWarpRef mVideoWarp04;
+    std::vector<inn::VideoWarpRef> mVideoWarps;
     
     void syncVideos();
     
     //warp
     inn::MappingRef mWarpMapping;
     void drawWarps();
-    
-    //play videos in 4K resolution
-    void debugSyncVideos();
     
     //debug layout videos
     void debugLayoutVideos();
@@ -87,21 +81,30 @@ public:
     //multi display mode
     int multiMode;
     
+    //multi layout display
+    bool mDebugLayoutVideos;
+    
     //debug and release mode
     ofParameterGroup      parameters;
     ofParameter<ofColor>  mBkgColor;
     ofParameter<bool>     mWarpSave;
     ofParameter<bool>     mPlayMovie;
     ofParameter<bool>     mResetMovie;
-    ofParameter<bool>     mDebug;
+    ofParameter<bool>     mDebugMovie;
+    ofParameter<bool>     mDrawWarp;
+    ofParameter<int>      mMasterFrame;
+    
     
     ofxPanel               mGui;
     bool                   mDrawGUI;
     void                   setupGui();
     void                   drawGui();
+    void                   drawVideoInfo(int id);
     
     void resetMovies(bool & value);
     void playMovies(bool & value);
+    void debugMovie(bool & value);
+    void frameSlider(int & value);
     
     
     bool                    mPause;

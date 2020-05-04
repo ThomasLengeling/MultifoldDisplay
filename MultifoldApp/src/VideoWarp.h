@@ -60,7 +60,11 @@ public:
     
 private:
     
+    //video name
     std::string mVideoName;
+    
+    //video alias name
+    std::string  mAlias;
     
     //type of player
     int mPlayerType;

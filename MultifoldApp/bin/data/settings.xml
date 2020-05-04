@@ -4,11 +4,11 @@
 	<Warp_Save>0</Warp_Save>
 	<Play>0</Play>
 	<Reset_Movies>0</Reset_Movies>
-	<Debug>0</Debug>
+	<Debug>1</Debug>
 	<Mapping_3>
 		<gamma_0>1, 1, 1, 255</gamma_0>
 		<luminance_0>1, 1, 1, 255</luminance_0>
-		<brightness_0>1</brightness_0>
+		<brightness_0>0.8877</brightness_0>
 		<exponent_0>2</exponent_0>
 		<edge_left_0>0</edge_left_0>
 		<edge_top_0>0</edge_top_0>
@@ -16,7 +16,7 @@
 		<edge_bottom_0>0</edge_bottom_0>
 		<gamma_1>1, 1, 1, 255</gamma_1>
 		<luminance_1>1, 1, 1, 255</luminance_1>
-		<brightness_1>1</brightness_1>
+		<brightness_1>0.8877</brightness_1>
 		<exponent_1>2</exponent_1>
 		<edge_left_1>0</edge_left_1>
 		<edge_top_1>0</edge_top_1>
@@ -24,7 +24,7 @@
 		<edge_bottom_1>0</edge_bottom_1>
 		<gamma_2>1, 1, 1, 255</gamma_2>
 		<luminance_2>1, 1, 1, 255</luminance_2>
-		<brightness_2>1</brightness_2>
+		<brightness_2>0.8877</brightness_2>
 		<exponent_2>2</exponent_2>
 		<edge_left_2>0</edge_left_2>
 		<edge_top_2>0</edge_top_2>
@@ -32,12 +32,14 @@
 		<edge_bottom_2>0</edge_bottom_2>
 		<gamma_3>1, 1, 1, 255</gamma_3>
 		<luminance_3>1, 1, 1, 255</luminance_3>
-		<brightness_3>1</brightness_3>
-		<exponent_3>2.21939</exponent_3>
+		<brightness_3>0.8877</brightness_3>
+		<exponent_3>2</exponent_3>
 		<edge_left_3>0</edge_left_3>
 		<edge_top_3>0</edge_top_3>
 		<edge_right_3>0</edge_right_3>
 		<edge_bottom_3>0</edge_bottom_3>
 	</Mapping_3>
-	<Toggle_Pause>0</Toggle_Pause>
+	<Toggle_Pause>1</Toggle_Pause>
+	<Draw_Warp>1</Draw_Warp>
+	<Master_Frame>0</Master_Frame>
 </Param>

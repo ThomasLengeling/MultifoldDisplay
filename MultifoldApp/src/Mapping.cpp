@@ -1,4 +1,4 @@
-#include "mapping.h"
+#include "Mapping.h"
 
 namespace inn {
 
