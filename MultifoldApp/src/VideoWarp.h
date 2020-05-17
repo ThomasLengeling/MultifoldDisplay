@@ -25,7 +25,9 @@
 
 #include "ofMain.h"
 #include "ofxHPVPlayer.h"
-#include "ofxHapPlayer.h"
+//#include "ofxHapPlayer.h"
+
+
 
 namespace inn {
 
@@ -35,19 +37,19 @@ typedef std::shared_ptr<VideoWarp> VideoWarpRef;
 
 class VideoWarp{
 public:
-    VideoWarp(int playerType){
-        mPlayerType = playerType;
-    }
+    VideoWarp(int playerType, int id);
     
-    static VideoWarpRef create(int playerType = 0) {
-        return std::make_shared<VideoWarp>(playerType);
+    static VideoWarpRef create(int playerType = 0, int id = 0) {
+        return std::make_shared<VideoWarp>(playerType, id);
         
     }
     
-    void loadVideo(std::string name);
+    void loadVideo(std::string & name);
     void startPlay();
     void setPaused(bool status);
     void updateFrame(int64_t currFrame);
+    void goToFirstFrame();
+    
     void update();
     int getTotalNumFrames();
     int getCurrentFrame();
@@ -56,7 +58,12 @@ public:
     ofTexture  getTexture();
     ofTexture * getTexturePtr();
     
+    void loadPlayer(bool & value);
+    
     void nextFrame();
+    
+    ofParameterGroup & getParamGroup(){return mGroupParam;}
+    
     
 private:
     
@@ -76,10 +83,18 @@ private:
     //multiplatfor .mov fast enconder
     //mPlayerType = 0
     //default
-    ofxHapPlayer mHAPPlayer;
+    //ofxHapPlayer mHAPPlayer;
     
     //mPlayerType = 2
     ofVideoPlayer mOFVideoPlayer;
+    
+    int mVideoId;
+    
+    //video files
+    ofParameterGroup        mGroupParam;
+    ofParameter<glm::vec2>  mSizeParam;
+    ofParameter<string>     mVideoParam;
+    ofParameter<bool>        mLoadParam;
     
 };
 

@@ -62,9 +62,6 @@ public:
     //debug layout videos
     void debugLayoutVideos();
     
-    //play videos in current #displays
-    void drawVideos();
-    
     //resolution type of Videos
     // type = 0  HD
     // type = 1  4K
@@ -84,6 +81,9 @@ public:
     //multi layout display
     bool mDebugLayoutVideos;
     
+    //min frame of all the videos;
+    int mMinFrame;
+    
     //debug and release mode
     ofParameterGroup      parameters;
     ofParameter<ofColor>  mBkgColor;
@@ -94,18 +94,27 @@ public:
     ofParameter<bool>     mDrawWarp;
     ofParameter<int>      mMasterFrame;
     
+    //sync video debug
+    ofParameter<bool>      mSyncVideosDebug;
+    
     
     ofxPanel               mGui;
     bool                   mDrawGUI;
     void                   setupGui();
     void                   drawGui();
     void                   drawVideoInfo(int id);
+    void                   drawVideoTime(int id, int currentFrame, int totalFrame);
+    
+    void                   drawSyncVideos();
     
     void resetMovies(bool & value);
     void playMovies(bool & value);
     void debugMovie(bool & value);
     void frameSlider(int & value);
+    void syncVideosDebug(bool & value);
     
     
     bool                    mPause;
+    
+    std::string             ofPath;
 };

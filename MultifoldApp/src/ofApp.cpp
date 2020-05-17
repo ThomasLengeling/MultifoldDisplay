@@ -6,10 +6,13 @@ static uint8_t offset = 1;
 
 //--------------------------------------------------------------
 void ofApp::setup(){
+    
+    ofSetLogLevel("Logging items", OF_LOG_VERBOSE);
+    
     //start HPV engine
     HPV::InitHPVEngine();
     
-    ofSetVerticalSync(true);
+    ofSetVerticalSync(false);
     ofSetFrameRate(25);
     ofBackground(0);
     ofDisableArbTex();
@@ -32,7 +35,11 @@ void ofApp::setup(){
     std::string configFile = "video.json";
     ofFile videoFile(configFile);
     
-    if (videoFile.exists()) {
+    ofPath = ofFilePath::getAbsolutePath( ofToDataPath("") );
+    
+    ofLog(OF_LOG_NOTICE) << " OF data path is " << ofPath << endl;
+    
+    if ( videoFile.exists() ) {
         ofLog(OF_LOG_NOTICE) << "Reading Config File " << configFile;
         videoFile >> videoJs;
         
@@ -58,28 +65,33 @@ void ofApp::setup(){
             }
         }
         
+        ofLog(OF_LOG_NOTICE)<<"Found Videos: "<<strVideo.size()<<std::endl;
+        
         //load videos
-        if(strVideo.size() == 4){
-            for(int i = 0; i < 4; i++){
-                inn::VideoWarpRef warp = inn::VideoWarp::create(mPlayerType);
-                warp->loadVideo(strVideo.at(i));
-                mVideoWarps.push_back(warp);
-            }
+        int id = 0;
+        for(auto & strVideoNames : strVideo){
+            inn::VideoWarpRef warp = inn::VideoWarp::create(mPlayerType, id);
             
+            warp->loadVideo(strVideoNames);
+            //warp->addListener();
+            mVideoWarps.push_back(warp);
+            id++;
         }
         
     }else{
         //loat temp video
-        for(int i = 0; i < 4; i++){
-            inn::VideoWarpRef warp = inn::VideoWarp::create(mPlayerType);
-            warp->loadVideo(strVideo.at(i));
-            mVideoWarps.push_back(warp);
-        }
+         for(auto & strVideoNames : strVideo){
+             inn::VideoWarpRef warp = inn::VideoWarp::create(mPlayerType);
+             warp->loadVideo(strVideoNames);
+             
+
+             mVideoWarps.push_back(warp);
+         }
     }
     
     //play videos
-    for(int i = 0; i < 4; i++){
-        mVideoWarps.at(i)->startPlay();
+    for(auto & video : mVideoWarps){
+       video->startPlay();
     }
     
     if(mPlayerType == 1){
@@ -90,13 +102,26 @@ void ofApp::setup(){
     if(mPlayerType == 2){
         
         //initialize video
-        for(int i = 0; i < 4; i++){
-            mVideoWarps.at(i)->updateFrame(0);
-            mVideoWarps.at(i)->setPaused(true);
-            mVideoWarps.at(i)->update();
-        }
-        
+        for(auto & video : mVideoWarps){
+            video->updateFrame(0);
+            video->setPaused(true);
+            video->update();
+         }
     }
+    
+    //get the min fram
+    mMinFrame = 999999;
+    int indexVideo = -1;
+    int id = 0;
+    for(auto & video : mVideoWarps){
+        if(mMinFrame > video->getTotalNumFrames()){
+            mMinFrame  = video->getTotalNumFrames();
+            indexVideo = id;
+            id++;
+        }
+    }
+    
+    ofLog(OF_LOG_NOTICE)<<"Min Frame: "<<mMinFrame<<" "<<indexVideo;
     
     //WARP
     mWarpMapping = inn::Mapping::create(numDisplays);
@@ -105,9 +130,8 @@ void ofApp::setup(){
     //GUI
     setupGui();
     
-    std::cout<<"Finishing setup"<<std::endl;
-    
-    std::cout<<"Size"<<ofGetWindowWidth()<<" "<<ofGetWindowHeight()<<std::endl;
+    ofLog(OF_LOG_NOTICE)<<"Finishing setup";
+    ofLog(OF_LOG_NOTICE)<<"Size"<<ofGetWindowWidth()<<" "<<ofGetWindowHeight();
     
 }
 
@@ -115,8 +139,12 @@ void ofApp::setup(){
 void ofApp::update(){
     
     syncVideos();
+    
+    //set the master frame with the current change frame
+    //mMasterFrame.set(cur_frame);
 }
 
+//--------------------------------------------------------------
 void ofApp::syncVideos(){
     
     //HAP and HD
@@ -126,16 +154,16 @@ void ofApp::syncVideos(){
         if (cur_frame != prev_frame){
             
             //update video frame
-            for(int i = 0; i < 4; i++){
-                mVideoWarps.at(i)->updateFrame(cur_frame);
+             for(auto & video : mVideoWarps){
+               video->updateFrame(cur_frame);
             }
             prev_frame = cur_frame;
         }
         
-        cur_frame++;
         
-        if (cur_frame >= mVideoWarps.at(0)->getTotalNumFrames())
-        {
+        //increase frame and reset when the current frame hits the min of all number of frame
+        cur_frame++;
+        if (cur_frame >= mMinFrame){
             cur_frame = 0;
         }
         
@@ -146,30 +174,40 @@ void ofApp::syncVideos(){
             if (cur_frame != prev_frame){
                 
                 //update frame
-                for(int i = 0; i < 4; i++){
-                    mVideoWarps.at(i)->nextFrame();
+               for(auto & video : mVideoWarps){
+                   video->nextFrame();
                 }
-                
+                    
                 //update video
-                for(int i = 0; i < 4; i++){
-                    mVideoWarps.at(i)->update();
+                for(auto & video : mVideoWarps){
+                    video->update();
                 }
-                
                 prev_frame = cur_frame;
-                
             }
             
+            //increase frame and reset when the current frame hits the min of all number of frame
             cur_frame++;
-            
-            if (cur_frame >= mVideoWarps.at(0)->getTotalNumFrames()){
-                
+            if (cur_frame >= mMinFrame){
+                ofLog(OF_LOG_NOTICE)<<"Finishing";
                 //reset alll the videos:
-                for(int i = 0; i < 4; i++){
-                    mVideoWarps.at(i)->updateFrame(0);
+                
+                for(auto & video : mVideoWarps){
+                   video->goToFirstFrame();
                 }
-
                 cur_frame = 0;
             }
+            
+        }else{
+            //update to the global frame
+            for(auto & video : mVideoWarps){
+                video->updateFrame(cur_frame);
+            }
+            
+            //update video
+            for(auto & video : mVideoWarps){
+                video->update();
+            }
+            
             
         }
         
@@ -178,58 +216,133 @@ void ofApp::syncVideos(){
 
 //--------------------------------------------------------------
 void ofApp::draw(){
-    ofBackground(0, 0, 0);
+    ofBackground(mBkgColor);
     
-    //drawVideos();
-    
+    //draw warps
     if(mDrawWarp){
         drawWarps();
     }
     
+    //sync debug videos
+    if(mSyncVideosDebug){
+        drawSyncVideos();
+    }
+    
+    //debug layout videos
     if(mDebugLayoutVideos){
         debugLayoutVideos();
     }
     
-    
+    //draw gui
     drawGui();
 }
 //--------------------------------------------------------------
 void ofApp::setupGui(){
-    
+    //params
     parameters.setName("Param");
-    parameters.add(mBkgColor.set("bkg Color", ofColor(0,0,0)));
+    parameters.add(mBkgColor.set("bkg Color", ofColor(20, 20, 20)));
     parameters.add(mWarpSave.set("Warp Save", false));
     parameters.add(mPlayMovie.set("Toggle Pause", false));
     parameters.add(mResetMovie.set("Reset Movies", false));
     parameters.add(mDebugMovie.set("Debug", false));
     parameters.add(mDrawWarp.set("Draw Warp", true));
-    parameters.add(mMasterFrame.set("Master Frame", 0, 0, 50));
-    parameters.add(mWarpMapping->parameters);
+    parameters.add(mMasterFrame.set("Master Frame", 0, 0, mMinFrame));
+    parameters.add(mSyncVideosDebug.set("Sync Frame", false));
     
+    //load parameters
+    for( auto & videos : mVideoWarps){
+        parameters.add(videos->getParamGroup());
+    }
+    
+    //map params
+    auto params = mWarpMapping->getParams();
+    for(auto & pam : params){
+        parameters.add(pam);
+    }
+    
+    //add listeners
     mPlayMovie.addListener(this, &ofApp::playMovies);
     mResetMovie.addListener(this, &ofApp::resetMovies);
     mDebugMovie.addListener(this, &ofApp::debugMovie);
     mMasterFrame.addListener(this, &ofApp::frameSlider);
+    mSyncVideosDebug.addListener(this, &ofApp::syncVideosDebug);
     
-    
+    //setup gui
     mGui.setup(parameters);
+    
+    //minimize the windows
+    mGui.getGroup("Video 0").minimize();
+    mGui.getGroup("Video 1").minimize();
+    mGui.getGroup("Video 2").minimize();
+    mGui.getGroup("Video 3").minimize();
+    
+    mGui.getGroup("Mapping 0").minimize();
+    mGui.getGroup("Mapping 1").minimize();
+    mGui.getGroup("Mapping 2").minimize();
+    mGui.getGroup("Mapping 3").minimize();
+    
+    //mGui.setSize(300, 200);
+    mGui.setPosition(30, 150);
+    
+    //default values
     mDrawGUI = true;
     mDebugLayoutVideos = false;
+    mDebugMovie.set(true);
+    mResetMovie.set(true);
+    
+    mGui.loadFromFile("settings.xml");
 }
 
-
+//--------------------------------------------------------------
+void ofApp::drawSyncVideos(){
+    if(mResolutionType == 0){
+        float wDisplay = ofGetWindowWidth()/(float)numDisplays;
+        float hDisplay = ofGetWindowHeight() /(float)numDisplays;
+        
+        glm::vec2 midScreen(ofGetWindowWidth()/2.0 - wDisplay,ofGetWindowHeight()/2.0 - hDisplay);
+        
+        //draw the video
+        int i = 0;
+        int j = 0;
+        for(auto & video : mVideoWarps){
+            video->draw(midScreen.x + i * wDisplay, midScreen.y + j * hDisplay, wDisplay, hDisplay);
+            i++;
+            if(i >=2){
+                j++;
+                i=0;
+            }
+            
+        }
+        
+    }
+}
+//--------------------------------------------------------------
 void ofApp::frameSlider(int & value){
     int framePosition = int(value);
     
+    //check if the movie is finished
+    if(framePosition >= mMinFrame){
+        for(auto & video : mVideoWarps){
+            video->goToFirstFrame();
+        }
+        cur_frame = 0;
+    }
+           
     //reset alll the videos:
-    for(int i = 0; i < 4; i++){
-        mVideoWarps.at(i)->updateFrame(framePosition);
+    for(auto & video : mVideoWarps){
+        video->updateFrame(framePosition);
+    }
+        
+    //update video
+    for(auto & video : mVideoWarps){
+        video->update();
     }
     
-    //update video
-    for(int i = 0; i < 4; i++){
-        mVideoWarps.at(i)->update();
-    }
+    //reset alll the videos:
+
+    
+    //update frame
+    cur_frame = framePosition;
     
      ofLog(OF_LOG_NOTICE) <<framePosition;
 }
@@ -239,21 +352,33 @@ void ofApp::resetMovies(bool & value){
     
     if(value){
         //reset to the begining of the video
-        for(int i = 0; i < 4; i++){
-            mVideoWarps.at(i)->updateFrame(0);
+        for(auto & video : mVideoWarps){
+            video->goToFirstFrame();
         }
+        
     }
     
     ofLog(OF_LOG_NOTICE) << "RESET MOVIE "<<value;
 }
-
 //--------------------------------------------------------------
 void ofApp::playMovies(bool & value){
+    
+    //stop movies
     bool status = value;
     
     //stop videos:
-    for(int i = 0; i < 4; i++){
-        mVideoWarps.at(i)->setPaused(status);
+    for(auto & video : mVideoWarps){
+        video->setPaused(status);
+     }
+        
+    //update to the global frame
+    for(auto & video : mVideoWarps){
+        video->updateFrame(cur_frame);
+    }
+    
+    //update video
+    for(auto & video : mVideoWarps){
+        video->update();
     }
     
     mPause = status;
@@ -261,24 +386,63 @@ void ofApp::playMovies(bool & value){
 }
 
 //--------------------------------------------------------------
+void ofApp::syncVideosDebug(bool & value){
+    
+    if(value){
+        mDebugMovie.set(false);
+        mDrawWarp.set(false);
+        
+        //update frames
+    }
+}
+
+//--------------------------------------------------------------
 void ofApp::debugMovie(bool & value){
     mDebugLayoutVideos = !mDebugLayoutVideos;
 }
+
+//--------------------------------------------------------------
+void ofApp::drawVideoTime(int id, int currentFrame, int totalFrame){
+    float wDisplay = ofGetWindowWidth()/(float)numDisplays;
+    float hDisplay = ofGetWindowHeight() /(float)numDisplays;
+    
+    ofPushStyle();
+    ofSetColor(255, 255, 255);
+    ofNoFill();
+    ofDrawRectangle(id * wDisplay, hDisplay + 5, wDisplay, 10);
+    
+    ofSetColor(255, 255, 255);
+    int mapFrame = ofMap(currentFrame, 0, totalFrame, 0, wDisplay);
+    ofFill();
+    ofDrawRectangle(id*wDisplay, hDisplay + 5, mapFrame, 10);
+    
+    ofPopStyle();
+}
+
 //--------------------------------------------------------------
 void ofApp::drawVideoInfo(int id){
     ofSetColor(255, 255, 255);
     std::string infoName ="Video "+ to_string(id);
     infoName += " :"+to_string(mVideoWarps.at(id)->getCurrentFrame())+" "+to_string(mVideoWarps.at(id)->getTotalNumFrames());
-    ofDrawBitmapString(infoName, 10, 30 + id*25);
+    ofDrawBitmapString(infoName, 20, 50 + id * 20);
 }
+
 //--------------------------------------------------------------
 void ofApp::drawGui(){
     if (mDrawGUI) {
         
+        //draw fps
+        ofDrawBitmapString("fps: "+to_string(ofGetFrameRate()), 10, 15);
+        ofDrawBitmapString("Frame: "+to_string(cur_frame)+" - "+to_string(mMinFrame), 10, 30);
+        
         //draw info videos;
-        for(int i = 0; i < 4; i++){
+        int i = 0;
+        for(auto & video : mVideoWarps){
             drawVideoInfo(i);
+            i++;
         }
+        
+        ofDrawBitmapString(ofPath, 10, 130);
         
         mGui.draw();
     }
@@ -288,31 +452,16 @@ void ofApp::drawGui(){
 void ofApp::drawWarps(){
     
     //get texture for the video and update the warp
-    for(int i = 0; i < 4; i++){
-        ofTexture  tex =  mVideoWarps.at(i)->getTexture();
+    int i = 0;
+    for(auto & video : mVideoWarps){
+        ofTexture  tex =  video->getTexture();
         if(tex.isAllocated()){
             mWarpMapping->draw(tex, i);
+            i++;
         }
     }
 }
 
-//--------------------------------------------------------------
-void ofApp::drawVideos(){
-    //new aspect ratio
-    if(mResolutionType == 0){
-        float wDisplay = ofGetWindowWidth()/(float)numDisplays;
-        float hDisplay = ofGetWindowHeight() /(float)numDisplays;
-        
-        float midScreen =  0;//ofGetWindowHeight()/2.0 - hDisplay/2.0;
-        
-        //draw the video
-        for(int i = 0; i < 4; i++){
-            mVideoWarps.at(i)->draw(wDisplay * i, midScreen, wDisplay, hDisplay);
-        }
-    }else{//4K
-        
-    }
-}
 
 //--------------------------------------------------------------
 void ofApp::debugLayoutVideos(){
@@ -322,9 +471,19 @@ void ofApp::debugLayoutVideos(){
     float midScreen =  0;//ofGetWindowHeight()/2.0 - hDisplay/2.0;
     
     //draw the video
-    for(int i = 0; i < 4; i++){
-        mVideoWarps.at(i)->draw(wDisplay * i, midScreen, wDisplay, hDisplay);
+    int i = 0;
+    for(auto & video : mVideoWarps){
+        video->draw(wDisplay * i, midScreen, wDisplay, hDisplay);
+        i++;
     }
+    
+    //draw timeline
+    int j = 0;
+    for(auto & video : mVideoWarps){
+        drawVideoTime(j, video->getCurrentFrame(), video->getTotalNumFrames());
+        j++;
+    }
+    
 }
 
 //--------------------------------------------------------------
@@ -335,29 +494,34 @@ void ofApp::keyPressed(int key){
     
     if (key == 'g') {
         mDrawGUI = !mDrawGUI;
-        std::cout << "gui" << std::endl;
+        ofLog(OF_LOG_NOTICE) << "gui";
     }
     
     if (key == 's') {
         mWarpMapping->saveWarp();
     }
+    
+    if(key == 'm'){
+        mGui.saveToFile("settings.xml");
+    }
+    
     if(key == 'z'){
         
         //reset video
-        for(int i = 0; i < 4; i++){
-            mVideoWarps.at(i)->setPaused(false);
+        for(auto & video : mVideoWarps){
+            video->setPaused(false);
         }
         
         //start plays
-        for(int i = 0; i < 4; i++){
-            mVideoWarps.at(i)->startPlay();
+        for(auto & video : mVideoWarps){
+            video->startPlay();
         }
         
     }
     
     if(key == 'x'){
-        for(int i = 0; i < 4; i++){
-            mVideoWarps.at(i)->setPaused(true);
+        for(auto & video : mVideoWarps){
+            video->setPaused(true);
          }
     }
     if(key == 'c'){

@@ -17,7 +17,7 @@ int main( ){
     int numScreens = 1;
     
     if (file.exists()) {
-        ofLog(OF_LOG_NOTICE) << " Reading Config File " << configFile;
+       // ofLog(OF_LOG_NOTICE) << " Reading Config File " << configFile;
         file >> js;
         
         windwoPos.x = js["position"]["x"];
@@ -29,10 +29,10 @@ int main( ){
         numScreens   = js["window"]["numScreen"];
         decorated    = (js["window"]["decorated"] == 1 ? true : false);
         
-        ofLog(OF_LOG_NOTICE)<<"Size: "<< windowSize.x<<" "<<windowSize.y<<" "<<decorated<<std::endl;
+        //ofLog(OF_LOG_NOTICE)<<"Size: "<< windowSize.x<<" "<<windowSize.y<<" "<<decorated<<std::endl;
         
     }else{
-        ofLog(OF_LOG_NOTICE)<<"ERROR Reading Config File"<<std::endl;
+        //ofLog(OF_LOG_NOTICE)<<"ERROR Reading Config File"<<std::endl;
         decorated  = false;
         windowSize = glm::vec2(1920 * numScreens, 1080);
         windwoPos  = glm::vec2(0, 0 );

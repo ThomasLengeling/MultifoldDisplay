@@ -159,3 +159,7 @@ ffmpeg -i yourSourceFile.mov -c:v hap outputName.mov
 ##### OSX
 
 -  .dylib from the ofxHap addon copy to ffmepg/lib/osx to /usr/local/ib
+
+apptranslocation error
+
+https://github.com/openframeworks/openFrameworks/issues/4421
