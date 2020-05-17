@@ -45,21 +45,24 @@ void Mapping::setupWarp(int width, int height) {
     for (int i = 0; i < mNumDisplays; i++) {
         ParamMapRef paramWarp = ParamMap::create();
         paramScreens.push_back(paramWarp);
+        
+        ofParameterGroup mParamGroup;
+        mMappingParams.push_back(mParamGroup);
     }
     
     //paramets
     for (int i = 0; i < mNumDisplays; i++) {
-        parameters.setName("Mapping "+std::to_string(i));
-        parameters.add(paramScreens.at(i)->gamma.set("gamma " + std::to_string(i), 1, ofColor(0), ofColor(255)));
-        parameters.add(paramScreens.at(i)->luminance.set("luminance " + std::to_string(i), 1, ofColor(0), ofColor(255)));
-        parameters.add(paramScreens.at(i)->brightness.set("brightness " + std::to_string(i), 0.8877, 0.0, 1.0));
-        parameters.add(paramScreens.at(i)->exponent.set("exponent " + std::to_string(i), 2.0, 0.0, 3.0));
+        mMappingParams.at(i).setName("Mapping "+std::to_string(i));
+        mMappingParams.at(i).add(paramScreens.at(i)->gamma.set("gamma " + std::to_string(i), 1, ofColor(0), ofColor(255)));
+        mMappingParams.at(i).add(paramScreens.at(i)->luminance.set("luminance " + std::to_string(i), 1, ofColor(0), ofColor(255)));
+        mMappingParams.at(i).add(paramScreens.at(i)->brightness.set("brightness " + std::to_string(i), 0.8877, 0.0, 1.0));
+        mMappingParams.at(i).add(paramScreens.at(i)->exponent.set("exponent " + std::to_string(i), 2.0, 0.0, 3.0));
         
         //Edges left, top, right, bottom
-        parameters.add(paramScreens.at(i)->edgeLeft.set("edge_left " + std::to_string(i), 0.0, 0.0, 1.0));
-        parameters.add(paramScreens.at(i)->edgeTop.set("edge_top " + std::to_string(i), 0.0, 0.0, 1.0));
-        parameters.add(paramScreens.at(i)->edgeRight.set("edge_right " + std::to_string(i), 0.0, 0.0, 1.0));
-        parameters.add(paramScreens.at(i)->edgeBottom.set("edge_bottom " + std::to_string(i), 0.0, 0.0, 1.0));
+        mMappingParams.at(i).add(paramScreens.at(i)->edgeLeft.set("edge_left " + std::to_string(i), 0.0, 0.0, 1.0));
+        mMappingParams.at(i).add(paramScreens.at(i)->edgeTop.set("edge_top " + std::to_string(i), 0.0, 0.0, 1.0));
+        mMappingParams.at(i).add(paramScreens.at(i)->edgeRight.set("edge_right " + std::to_string(i), 0.0, 0.0, 1.0));
+        mMappingParams.at(i).add(paramScreens.at(i)->edgeBottom.set("edge_bottom " + std::to_string(i), 0.0, 0.0, 1.0));
         
         //listeners
         paramScreens.at(i)->gammaListener = paramScreens.at(i)->gamma.newListener([this, i](ofColor &v) {
@@ -75,7 +78,7 @@ void Mapping::setupWarp(int width, int height) {
         paramScreens.at(i)->brightnessListener = paramScreens.at(i)->brightness.newListener([this, i](float &v) {
             shared_ptr<ofxWarpBase> warp = this->warpController.getWarp(i);
             warp->setBrightness(v);
-            std::cout<< warp->getBrightness()<<std::endl;
+             ofLog(OF_LOG_NOTICE)<<"gui brightness: "<< warp->getBrightness();
         });
         
         paramScreens.at(i)->luminanceListener = paramScreens.at(i)->luminance.newListener([this, i](ofColor &v) {

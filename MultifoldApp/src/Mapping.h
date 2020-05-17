@@ -56,7 +56,7 @@ namespace inn {
         void setSize(int width, int height);
 
 		///gui
-		ofParameterGroup parameters;
+        std::vector< ofParameterGroup > getParams(){return mMappingParams;}
 		ofParameter<float> brightness;
 
 	private:
@@ -73,7 +73,8 @@ namespace inn {
 
 		ParamMapRef paramWarp;
         
-        std::vector<ParamMapRef> paramScreens;
+        std::vector< ParamMapRef >          paramScreens;
+        std::vector< ofParameterGroup >     mMappingParams;
         
         int mNumDisplays;
         
