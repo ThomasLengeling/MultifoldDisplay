@@ -22,6 +22,8 @@ public:
 	int windowPosY;
 
 	bool decorated;
+    
+    int numDisplays;
 
 private:
 
@@ -33,6 +35,7 @@ private:
 		windowPosX = 0;
 		windowPosY = 0;
 		decorated = false;
+        numDisplays = 1;
 	}
 
 

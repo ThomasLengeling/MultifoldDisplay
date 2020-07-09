@@ -11,7 +11,7 @@
             "brightness": 0.8877000212669373,
             "corners": [
                 "0.0386352, 0.454872",
-                "0.260298, 0.448791",
+                "0.219371, 0.410578",
                 "0.240109, 0.861303",
                 "0.0145774, 0.873665"
             ],
@@ -39,7 +39,7 @@
             },
             "brightness": 0.8877000212669373,
             "corners": [
-                "0.267698, 0.450951",
+                "0.19162, 0.223651",
                 "0.49602, 0.46269",
                 "0.479607, 0.858868",
                 "0.26536, 0.874222"
@@ -101,6 +101,93 @@
                 "0.990359, 0.452555",
                 "0.988936, 0.869093",
                 "0.736071, 0.87061"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
             ],
             "linear": false,
             "resolution": 16,

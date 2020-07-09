@@ -5,6 +5,8 @@
 #include "Mapping.h"
 #include "ofxHPVPlayer.h"
 
+#include "config.h"
+
 #include "ofxDatGui.h"
 #include "ofParameterGroup.h"
 #include "ofParameter.h"

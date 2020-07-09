@@ -27,6 +27,9 @@ int main( ){
         windowSize.y = js["window"]["height"];
         
         numScreens   = js["window"]["numScreen"];
+        
+        SystemVars::getInstance().numDisplays = numScreens;
+        
         decorated    = (js["window"]["decorated"] == 1 ? true : false);
         
         //ofLog(OF_LOG_NOTICE)<<"Size: "<< windowSize.x<<" "<<windowSize.y<<" "<<decorated<<std::endl;
@@ -47,6 +50,8 @@ int main( ){
     settings.decorated = decorated;
     settings.resizable = false;
     ofCreateWindow(settings);
+    
+    
     
     // this kicks off the running of my app
     // can be OF_WINDOW or OF_FULLSCREEN
