@@ -18,7 +18,9 @@ void ofApp::setup(){
     ofDisableArbTex();
     
     //number of display
-    numDisplays = 4;
+    numDisplays = SystemVars::getInstance().numDisplays;
+    
+    ofLog(OF_LOG_NOTICE) << " Num Displays: "<<numDisplays<<std::endl;
     
     //player type
     //1 -> HPV

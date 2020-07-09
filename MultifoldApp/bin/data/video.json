@@ -26,15 +26,6 @@
 			"alias": "right",
 			"drawx": 0,
 			"drawy": 0
-		},
-
-		{
-			"width": 1920,
-			"height": 1080,
-			"name": "Videos/P1344337_1080p.mov",
-			"alias": "back",
-			"drawx": 0,
-			"drawy": 0
 		}
 
 
