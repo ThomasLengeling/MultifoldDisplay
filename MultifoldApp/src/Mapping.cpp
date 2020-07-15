@@ -13,7 +13,7 @@ void Mapping::setupWarp(int width, int height) {
     
     for (auto i = 0; i < this->warpController.getNumWarps(); ++i) {
         auto warp = this->warpController.getWarp(i);
-        warp->setSize(projectionWidth, projectionHeight);
+        warp->setSize(1920, 1080);
     }
     
     ofLog(OF_LOG_NOTICE)<<"Warp Size: "<< projectionWidth << " " << projectionHeight;

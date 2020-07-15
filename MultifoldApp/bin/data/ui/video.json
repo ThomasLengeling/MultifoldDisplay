@@ -1,11 +1,11 @@
 {
-	"videoType": 0,
+	"videoType": 1,
 	"videos": [
 
 		{
 			"width": 1920,
 			"height": 1080,
-			"name": "Videos/screen01_hap.mov",
+			"name": "Videos/screen04.hpv",
 			"alias": "left",
 			"drawx": 0,
 			"drawy": 0
@@ -13,7 +13,7 @@
 		{
 			"width": 1920,
 			"height": 1080,
-			"name": "Videos/screen02_hap.mov",
+			"name": "Videos/screen04.hpv",
 			"alias": "front",
 			"drawx": 0,
 			"drawy": 0
@@ -22,16 +22,8 @@
 		{
 			"width": 1920,
 			"height": 1080,
-			"name": "Videos/screen03_hap.mov",
+			"name": "Videos/screen04.hpv",
 			"alias": "right",
-			"drawx": 0,
-			"drawy": 0
-		},
-		{
-			"width": 1920,
-			"height": 1080,
-			"name": "Videos/screen01_hap.mov",
-			"alias": "display",
 			"drawx": 0,
 			"drawy": 0
 		}

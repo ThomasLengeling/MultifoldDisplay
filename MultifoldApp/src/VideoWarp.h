@@ -25,7 +25,7 @@
 
 #include "ofMain.h"
 #include "ofxHPVPlayer.h"
-//#include "ofxHapPlayer.h"
+#include "ofxHapPlayer.h"
 
 
 
@@ -83,7 +83,7 @@ private:
     //multiplatfor .mov fast enconder
     //mPlayerType = 0
     //default
-    //ofxHapPlayer mHAPPlayer;
+    ofxHapPlayer mHAPPlayer;
     
     //mPlayerType = 2
     ofVideoPlayer mOFVideoPlayer;
