@@ -32,12 +32,14 @@ int main( ){
         
         decorated    = (js["window"]["decorated"] == 1 ? true : false);
         
-        //ofLog(OF_LOG_NOTICE)<<"Size: "<< windowSize.x<<" "<<windowSize.y<<" "<<decorated<<std::endl;
+        ofLog(OF_LOG_NOTICE)<<"Size: "<< windowSize.x<<" "<<windowSize.y<<" "<<decorated<<std::endl;
+
+        ofLog(OF_LOG_NOTICE) << "Num Screens: " << numScreens << std::endl;
         
     }else{
-        //ofLog(OF_LOG_NOTICE)<<"ERROR Reading Config File"<<std::endl;
+        ofLog(OF_LOG_NOTICE)<<"ERROR Reading Config File"<<std::endl;
         decorated  = false;
-        windowSize = glm::vec2(1920 * numScreens, 1080);
+        windowSize = glm::vec2(1920, 1080);
         windwoPos  = glm::vec2(0, 0 );
     }
     
@@ -46,13 +48,15 @@ int main( ){
     settings.setGLVersion(4,1);
     
     settings.setSize(windowSize.x * numScreens, windowSize.y);
+    //settings.setSize(1280, 720);
+
     settings.setPosition(windwoPos);
     settings.decorated = decorated;
     settings.resizable = false;
     ofCreateWindow(settings);
     
-    
-    
+    ofLog(OF_LOG_NOTICE) << "Window Size: " <<ofGetWindowWidth()<<" "<<ofGetWindowHeight()<<std::endl;
+
     // this kicks off the running of my app
     // can be OF_WINDOW or OF_FULLSCREEN
     // pass in width and height too:

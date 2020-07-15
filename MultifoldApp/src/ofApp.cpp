@@ -6,6 +6,8 @@ static uint8_t offset = 1;
 
 //--------------------------------------------------------------
 void ofApp::setup(){
+
+    ofLog(OF_LOG_NOTICE) << "Starting App" << std::endl;
     
     ofSetLogLevel("Logging items", OF_LOG_VERBOSE);
     
@@ -37,9 +39,9 @@ void ofApp::setup(){
     std::string configFile = "video.json";
     ofFile videoFile(configFile);
     
-    ofPath = ofFilePath::getAbsolutePath( ofToDataPath("") );
+   ofPath = ofFilePath::getAbsolutePath( ofToDataPath("") );
     
-    ofLog(OF_LOG_NOTICE) << " OF data path is " << ofPath << endl;
+   ofLog(OF_LOG_NOTICE) << " OF data path is: " << ofPath << endl;
     
     if ( videoFile.exists() ) {
         ofLog(OF_LOG_NOTICE) << "Reading Config File " << configFile;
@@ -99,6 +101,16 @@ void ofApp::setup(){
     if(mPlayerType == 1){
         
     }
+
+    if (mPlayerType == 0) {
+        //initialize video
+        for (auto& video : mVideoWarps) {
+            video->updateFrame(0);
+            video->setPaused(true);
+            video->update();
+        }
+    }
+
     
     //native video
     if(mPlayerType == 2){
@@ -151,7 +163,21 @@ void ofApp::syncVideos(){
     
     //HAP and HD
     if(mPlayerType == 0){
-        
+        if (cur_frame != prev_frame) {
+
+            //update video frame
+            for (auto& video : mVideoWarps) {
+                video->updateFrame(cur_frame);
+            }
+            prev_frame = cur_frame;
+        }
+
+
+        //increase frame and reset when the current frame hits the min of all number of frame
+        cur_frame++;
+        if (cur_frame >= mMinFrame) {
+            cur_frame = 0;
+        }
     }else if(mPlayerType == 1){ // HPV
         if (cur_frame != prev_frame){
             
@@ -242,7 +268,7 @@ void ofApp::draw(){
 void ofApp::setupGui(){
     //params
     parameters.setName("Param");
-    parameters.add(mBkgColor.set("bkg Color", ofColor(20, 20, 20)));
+    parameters.add(mBkgColor.set("bkg Color", ofColor(0, 0, 0)));
     parameters.add(mWarpSave.set("Warp Save", false));
     parameters.add(mPlayMovie.set("Toggle Pause", false));
     parameters.add(mResetMovie.set("Reset Movies", false));
