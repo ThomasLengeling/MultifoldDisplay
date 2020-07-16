@@ -99,6 +99,8 @@ namespace inn {
 		ofParameter<float>   edgeTop;
 		ofParameter<float>   edgeBottom;
 
+		ofParameter<bool>	 reset;
+
 		ofEventListener  gammaListener;
 		ofEventListener  luminanceListener;
 		ofEventListener  brightnessListener;
@@ -108,6 +110,8 @@ namespace inn {
 		ofEventListener  edgeRightListener;
 		ofEventListener  edgeTopListener;
 		ofEventListener  edgeBottomListener;
+
+		ofEventListener	 resetListner;
 	};
 
 }
