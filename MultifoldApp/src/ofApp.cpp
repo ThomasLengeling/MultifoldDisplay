@@ -139,7 +139,7 @@ void ofApp::setup(){
     
     //WARP
     mWarpMapping = inn::Mapping::create(numDisplays);
-    mWarpMapping->setupWarp(WIDTH_HD/2.0, HEIGHT_HD/2.0);
+    mWarpMapping->setupWarp(WIDTH_HD, HEIGHT_HD);
     
     //GUI
     setupGui();
@@ -163,21 +163,30 @@ void ofApp::syncVideos(){
     
     //HAP and HD
     if(mPlayerType == 0){
-        if (cur_frame != prev_frame) {
+		if (!mPause) {
+			if (cur_frame != prev_frame) {
 
-            //update video frame
-            for (auto& video : mVideoWarps) {
-                video->updateFrame(cur_frame);
-            }
-            prev_frame = cur_frame;
-        }
+				//update video
+				for (auto & video : mVideoWarps) {
+					video->update();
+				}
+				prev_frame = cur_frame;
+			}
+
+			//increase frame and reset when the current frame hits the min of all number of frame
+			cur_frame++;
+
+		}
+		else {
+
+			//update video
+			for (auto & video : mVideoWarps) {
+				video->update();
+			}
 
 
-        //increase frame and reset when the current frame hits the min of all number of frame
-        cur_frame++;
-        if (cur_frame >= mMinFrame) {
-            cur_frame = 0;
-        }
+		}
+
     }else if(mPlayerType == 1){ // HPV
         if (cur_frame != prev_frame){
             

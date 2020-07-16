@@ -2,63 +2,16 @@
 <Param>
 	<bkg_Color>0, 0, 0, 255</bkg_Color>
 	<Warp_Save>0</Warp_Save>
-	<Play>0</Play>
-	<Reset_Movies>1</Reset_Movies>
-	<Debug>1</Debug>
-	<Mapping_3>
-		<gamma_0>1, 1, 1, 255</gamma_0>
-		<luminance_0>1, 1, 1, 255</luminance_0>
-		<brightness_0>0.8877</brightness_0>
-		<exponent_0>2</exponent_0>
-		<edge_left_0>0</edge_left_0>
-		<edge_top_0>0</edge_top_0>
-		<edge_right_0>0</edge_right_0>
-		<edge_bottom_0>0</edge_bottom_0>
-		<gamma_1>1, 1, 1, 255</gamma_1>
-		<luminance_1>1, 1, 1, 255</luminance_1>
-		<brightness_1>0.8877</brightness_1>
-		<exponent_1>2</exponent_1>
-		<edge_left_1>0</edge_left_1>
-		<edge_top_1>0</edge_top_1>
-		<edge_right_1>0</edge_right_1>
-		<edge_bottom_1>0</edge_bottom_1>
-		<gamma_2>1, 1, 1, 255</gamma_2>
-		<luminance_2>1, 1, 1, 255</luminance_2>
-		<brightness_2>0.8877</brightness_2>
-		<exponent_2>2</exponent_2>
-		<edge_left_2>0</edge_left_2>
-		<edge_top_2>0</edge_top_2>
-		<edge_right_2>0</edge_right_2>
-		<edge_bottom_2>0</edge_bottom_2>
-		<gamma_3>255, 255, 255, 255</gamma_3>
-		<luminance_3>255, 255, 255, 255</luminance_3>
-		<brightness_3>1</brightness_3>
-		<exponent_3>0</exponent_3>
-		<edge_left_3>0</edge_left_3>
-		<edge_top_3>0</edge_top_3>
-		<edge_right_3>0</edge_right_3>
-		<edge_bottom_3>0</edge_bottom_3>
-	</Mapping_3>
 	<Toggle_Pause>0</Toggle_Pause>
+	<Reset_Movies>1</Reset_Movies>
+	<Debug>0</Debug>
 	<Draw_Warp>1</Draw_Warp>
 	<Master_Frame>0</Master_Frame>
 	<Sync_Frame>0</Sync_Frame>
-	<Video_0>
-		<Video_Name>Videos/P1344337_1080p.mov</Video_Name>
-		<Load_Video>1</Load_Video>
-	</Video_0>
-	<Video_1>
-		<Video_Name>Videos/P1344337_1080p.mov</Video_Name>
-		<Load_Video>1</Load_Video>
-	</Video_1>
-	<Video_2>
-		<Video_Name>Videos/P1344337_1080p.mov</Video_Name>
-		<Load_Video>1</Load_Video>
-	</Video_2>
-	<Video_3>
-		<Video_Name>Videos/P1344336_1080p.mov</Video_Name>
-		<Load_Video>1</Load_Video>
-	</Video_3>
+	<Video_0 />
+	<Video_1 />
+	<Video_2 />
+	<Video_3 />
 	<Mapping_0>
 		<gamma_0>1, 1, 1, 255</gamma_0>
 		<luminance_0>1, 1, 1, 255</luminance_0>
@@ -89,4 +42,14 @@
 		<edge_right_2>0</edge_right_2>
 		<edge_bottom_2>0</edge_bottom_2>
 	</Mapping_2>
+	<Mapping_3>
+		<gamma_3>1, 1, 1, 255</gamma_3>
+		<luminance_3>1, 1, 1, 255</luminance_3>
+		<brightness_3>0.8877</brightness_3>
+		<exponent_3>2</exponent_3>
+		<edge_left_3>0</edge_left_3>
+		<edge_top_3>0</edge_top_3>
+		<edge_right_3>0</edge_right_3>
+		<edge_bottom_3>0</edge_bottom_3>
+	</Mapping_3>
 </Param>

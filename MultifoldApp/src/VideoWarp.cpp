@@ -26,10 +26,10 @@ VideoWarp::VideoWarp(int playerType, int id){
 
 //--------------------------------------------------------------
 void VideoWarp::loadPlayer(bool & value){
-    ofLog(OF_LOG_NOTICE)<<"load "<<mVideoId<<" "<<value;
+  //  ofLog(OF_LOG_NOTICE)<<"load "<<mVideoId<<" "<<value;
     
-    std::string videoName =  mVideoParam;
-    loadVideo(videoName);
+  //  std::string videoName =  mVideoParam;
+  //  loadVideo(videoName);
 }
 
 //--------------------------------------------------------------
