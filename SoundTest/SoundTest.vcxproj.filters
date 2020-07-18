@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup>
+		<ClCompile Include="src\ofApp.cpp">
+			<Filter>src</Filter>
+		</ClCompile>
+		<ClCompile Include="src\main.cpp">
+			<Filter>src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxAudioFile\src\ofxAudioFile.cpp">
+			<Filter>addons\ofxAudioFile\src</Filter>
+		</ClCompile>
+	</ItemGroup>
+	<ItemGroup>
+		<Filter Include="src">
+			<UniqueIdentifier>{d8376475-7454-4a24-b08a-aac121d3ad6f}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons">
+			<UniqueIdentifier>{71834F65-F3A9-211E-73B8-DC85}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxAudioFile">
+			<UniqueIdentifier>{010EAA6C-DF0B-6AE2-9885-C475}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxAudioFile\src">
+			<UniqueIdentifier>{C1E6B5D8-5BFE-B788-AEF4-D956}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxAudioFile\libs">
+			<UniqueIdentifier>{FFF0DC64-CB2B-F1B7-B927-0659}</UniqueIdentifier>
+		</Filter>
+	</ItemGroup>
+	<ItemGroup>
+		<ClInclude Include="src\ofApp.h">
+			<Filter>src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxAudioFile\src\ofxAudioFile.h">
+			<Filter>addons\ofxAudioFile\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxAudioFile\libs\dr_flac.h">
+			<Filter>addons\ofxAudioFile\libs</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxAudioFile\libs\dr_mp3.h">
+			<Filter>addons\ofxAudioFile\libs</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxAudioFile\libs\dr_wav.h">
+			<Filter>addons\ofxAudioFile\libs</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxAudioFile\libs\stb_vorbis.h">
+			<Filter>addons\ofxAudioFile\libs</Filter>
+		</ClInclude>
+	</ItemGroup>
+	<ItemGroup>
+		<ResourceCompile Include="icon.rc" />
+	</ItemGroup>
+</Project>

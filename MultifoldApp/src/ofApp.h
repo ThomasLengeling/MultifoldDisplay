@@ -12,6 +12,9 @@
 #include "ofParameter.h"
 #include "ofxGui.h"
 
+#include "ofxAudioFile.h"
+
+
 /*
  
  4K ->3840 x 2160 or 4096 x 2160
@@ -119,4 +122,14 @@ public:
     bool                    mPause;
     
     std::string             ofPath;
+
+    ofxAudioFile audiofile;
+    void setupAudio();
+
+    double playhead;
+    std::atomic<double> playheadControl;
+    double step;
+    double sampleRate;
+
+    void audioOut(ofSoundBuffer& buffer);
 };

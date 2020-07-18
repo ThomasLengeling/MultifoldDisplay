@@ -1,3 +1,4 @@
+ofxAudioFile
 ofxDatGui
 ofxGui
 ofxHapPlayer

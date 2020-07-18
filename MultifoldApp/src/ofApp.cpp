@@ -144,11 +144,86 @@ void ofApp::setup(){
     //GUI
     setupGui();
     
+    //audio
+    setupAudio();
+
+
     ofLog(OF_LOG_NOTICE)<<"Finishing setup";
     ofLog(OF_LOG_NOTICE)<<"Size"<<ofGetWindowWidth()<<" "<<ofGetWindowHeight();
     
 }
 
+void ofApp::setupAudio() {
+
+    std::string filepath = ofToDataPath("Sounds/within_AI_samples_02.wav"); 
+
+    audiofile.setVerbose(true);
+  
+    if (ofFile::doesFileExist(filepath)) {
+        audiofile.load(filepath);
+        if (!audiofile.loaded()) {
+            ofLogError() << "error loading file, double check the file path";
+        }
+    }
+    else {
+        ofLogError() << "sound input file does not exists";
+    }
+
+    // audio setup for testing audio file stream 
+    ofSoundStreamSettings settings;
+    sampleRate = 44100.0;
+    settings.setOutListener(this);
+    settings.sampleRate = sampleRate;
+    settings.numOutputChannels = 2;
+    settings.numInputChannels = 0;
+    settings.bufferSize = 512;
+    ofSoundStreamSetup(settings);
+
+    playhead = std::numeric_limits<int>::max(); // because it is converted to int for check
+    playheadControl = -1.0;
+    step = audiofile.samplerate() / sampleRate;
+    playhead = 0;
+}
+
+void ofApp::audioOut(ofSoundBuffer& buffer) {
+
+    // really spartan and not efficient sample playing, just for testing
+
+    if (playheadControl >= 0.0) {
+        playhead = playheadControl;
+        playheadControl = -1.0;
+    }
+
+    for (size_t i = 0; i < buffer.getNumFrames(); i++) {
+
+        int n = playhead;
+
+        if (n < audiofile.length() - 1) {
+
+            for (size_t k = 0; k < buffer.getNumChannels(); ++k) {
+                if (k < audiofile.channels()) {
+                    float fract = playhead - (double)n;
+                    float s0 = audiofile.sample(n, k);
+                    float s1 = audiofile.sample(n + 1, k);
+                    float isample = s0 * (1.0 - fract) + s1 * fract; // linear interpolation
+                    buffer[i * buffer.getNumChannels() + k] = isample;
+                }
+                else {
+                    buffer[i * buffer.getNumChannels() + k] = 0.0f;
+                }
+            }
+
+            playhead += step;
+
+        }
+        else {
+            buffer[i * buffer.getNumChannels()] = 0.0f;
+            buffer[i * buffer.getNumChannels() + 1] = 0.0f;
+            playhead = std::numeric_limits<int>::max();
+        }
+
+    }
+}
 //--------------------------------------------------------------
 void ofApp::update(){
     
@@ -255,8 +330,10 @@ void ofApp::syncVideos(){
 void ofApp::draw(){
     ofBackground(mBkgColor);
     
+  
     //draw warps
     if(mDrawWarp){
+        ofSetColor(255);
         drawWarps();
     }
     
@@ -322,7 +399,7 @@ void ofApp::setupGui(){
     mGui.setPosition(30, 150);
     
     //default values
-    mDrawGUI = true;
+    mDrawGUI = false;
     mDebugLayoutVideos = false;
     mDebugMovie.set(true);
     mResetMovie.set(true);
@@ -394,6 +471,8 @@ void ofApp::resetMovies(bool & value){
         }
         
     }
+
+    playheadControl = 0.0;
     
     ofLog(OF_LOG_NOTICE) << "RESET MOVIE "<<value;
 }
@@ -528,6 +607,10 @@ void ofApp::keyPressed(int key){
     if (key == 'o'){
         (offset > 0) ? (offset = 0) : (offset = 1);
     }
+
+    if (key == ' ') {
+        playheadControl = 0.0;
+    }
     
     if (key == 'g') {
         mDrawGUI = !mDrawGUI;
@@ -554,6 +637,11 @@ void ofApp::keyPressed(int key){
             video->startPlay();
         }
         
+    }
+
+    if (key == 'r') {
+        bool reset = true;
+        resetMovies(reset);
     }
     
     if(key == 'x'){
@@ -620,4 +708,6 @@ void ofApp::dragEvent(ofDragInfo dragInfo){
 void ofApp::exit(){
     HPV::DestroyHPVEngine();
     mWarpMapping->saveWarp();
+
+    ofSoundStreamClose();
 }

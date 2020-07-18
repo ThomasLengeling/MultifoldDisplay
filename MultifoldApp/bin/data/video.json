@@ -5,7 +5,7 @@
         {
             "width": 1920,
             "height": 1080,
-            "name": "Videos/test_1080p_hap.mov",
+            "name": "Videos/GDL_Market1.mp4_HAP.mov",
             "alias": "left",
             "drawx": 0,
             "drawy": 0
@@ -13,7 +13,7 @@
         {
             "width": 1920,
             "height": 1080,
-            "name": "Videos/test_1080p_hap.mov",
+            "name": "Videos/GDL_Market2.mp4_HAP.mov",
             "alias": "front",
             "drawx": 0,
             "drawy": 0
@@ -22,7 +22,7 @@
         {
             "width": 1920,
             "height": 1080,
-            "name": "Videos/test_1080p_hap.mov",
+            "name": "Videos/GDL_Market3.mp4_HAP.mov",
             "alias": "right",
             "drawx": 0,
             "drawy": 0
@@ -30,7 +30,7 @@
         {
             "width": 1920,
             "height": 1080,
-            "name": "Videos/test_1080p_hap.mov",
+            "name": "Videos/within_world_is_fufu2 (1)_HAP.mov",
             "alias": "display",
             "drawx": 0,
             "drawy": 0

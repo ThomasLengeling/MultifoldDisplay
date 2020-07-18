@@ -53,6 +53,9 @@ int main( ){
     settings.setPosition(windwoPos);
     settings.decorated = decorated;
     settings.resizable = false;
+    settings.multiMonitorFullScreen = true;
+    //settings.windowMode = OF_FULLSCREEN;
+
     ofCreateWindow(settings);
     
     ofLog(OF_LOG_NOTICE) << "Window Size: " <<ofGetWindowWidth()<<" "<<ofGetWindowHeight()<<std::endl;

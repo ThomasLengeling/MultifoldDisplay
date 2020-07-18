@@ -1,1 +1,4454 @@
-{"warps":[{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"0.00392157, 0.00392157, 0.00392157","luminance":"0.00392157, 0.00392157, 0.00392157"},"brightness":0.8877000212669373,"corners":["0, 0","1, 0","1, 1","0.0109148, 0.918002"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"0.00392157, 0.00392157, 0.00392157","luminance":"0.00392157, 0.00392157, 0.00392157"},"brightness":0.8877000212669373,"corners":["0, 0","1, 0","1, 1","0.0748441, 0.649387"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"0.00392157, 0.00392157, 0.00392157","luminance":"0.00392157, 0.00392157, 0.00392157"},"brightness":0.8877000212669373,"corners":["0, 0","1, 0","1, 1","0.260915, 0.561734"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"0.00392157, 0.00392157, 0.00392157","luminance":"0.00392157, 0.00392157, 0.00392157"},"brightness":0.8877000212669373,"corners":["0.392411, 0.241282","1, 0","1, 1","0.405405, 0.774741"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","1, 1","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","1, 0","0.835759, 0.782281","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","0.846674, 0.336475","1, 1.00094","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}},{"adaptive":true,"blend":{"edges":"0, 0, 0, 0","exponent":2.0,"gamma":"1, 1, 1","luminance":"0.5, 0.5, 0.5"},"brightness":1.0,"corners":["0, 0","0.902807, 0.155514","0.984927, 0.628652","0, 1"],"linear":false,"resolution":16,"type":3,"warp":{"columns":2,"control points":["0, 0","0, 1","1, 0","1, 1"],"rows":2}}]}
+{
+    "warps": [
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "0.00392157, 0.00392157, 0.00392157",
+                "luminance": "0.00392157, 0.00392157, 0.00392157"
+            },
+            "brightness": 0.8877000212669373,
+            "corners": [
+                "0.0190755, 0.0768142",
+                "0.231966, 0.0155514",
+                "0.231055, 0.863811",
+                "0.00765959, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "0.00392157, 0.00392157, 0.00392157",
+                "luminance": "0.00392157, 0.00392157, 0.00392157"
+            },
+            "brightness": 0.8877000212669373,
+            "corners": [
+                "0.255208, -0.00235623",
+                "0.497982, -0.000471311",
+                "0.499159, 0.972666",
+                "0.253424, 0.964182"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "0.00392157, 0.00392157, 0.00392157",
+                "luminance": "0.00392157, 0.00392157, 0.00392157"
+            },
+            "brightness": 0.8877000212669373,
+            "corners": [
+                "0.506967, 0.0282752",
+                "0.745508, 0.00942511",
+                "0.743229, 0.979736",
+                "0.507401, 0.878416"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": false,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "0.00392157, 0.00392157, 0.00392157",
+                "luminance": "0.00392157, 0.00392157, 0.00392157"
+            },
+            "brightness": 0.8877000212669373,
+            "corners": [
+                "0.995313, 0.99246",
+                "0.75013, 0.980679",
+                "0.750287, 0.000471052",
+                "0.997917, 0.0131951"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 3,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "0.5, 0",
+                    "0.5, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": false,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 1",
+                "0, 0",
+                "1, 0",
+                "0.835759, 0.782281"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 5,
+                "control points": [
+                    "0, 0",
+                    "0, 0.5",
+                    "0, 1",
+                    "0.25, 0",
+                    "0.25, 0.5",
+                    "0.25, 1",
+                    "0.5, 0",
+                    "0.5, 0.5",
+                    "0.5, 1",
+                    "0.75, 0",
+                    "0.75, 0.5",
+                    "0.75, 1",
+                    "1, 0",
+                    "1, 0.5",
+                    "1, 1"
+                ],
+                "rows": 3
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "0.846674, 0.336475",
+                "1, 1.00094",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "0.902807, 0.155514",
+                "0.984927, 0.628652",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "0.983854, 0.955702",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0.0233073, 0.164939",
+                "0.996224, 0.0273327",
+                "0.971615, 0.927427",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0.000260417, 0.0876532",
+                "0.994401, 0.0292177",
+                "0.992188, 0.982092",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0.00611979, 0.0546654",
+                "0.994857, 0.0263902",
+                "0.994531, 0.983977",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0.113281, 0.188501",
+                "0.98776, 0.0339303",
+                "0.982943, 0.912347",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0.199479, 0.207352",
+                "0.979688, 0.112158",
+                "0.977995, 0.858624",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        },
+        {
+            "adaptive": true,
+            "blend": {
+                "edges": "0, 0, 0, 0",
+                "exponent": 2.0,
+                "gamma": "1, 1, 1",
+                "luminance": "0.5, 0.5, 0.5"
+            },
+            "brightness": 1.0,
+            "corners": [
+                "0, 0",
+                "1, 0",
+                "1, 1",
+                "0, 1"
+            ],
+            "linear": false,
+            "resolution": 16,
+            "type": 3,
+            "warp": {
+                "columns": 2,
+                "control points": [
+                    "0, 0",
+                    "0, 1",
+                    "1, 0",
+                    "1, 1"
+                ],
+                "rows": 2
+            }
+        }
+    ]
+}
