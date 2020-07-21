@@ -177,6 +177,7 @@ void ofApp::setupAudio() {
     settings.numOutputChannels = 2;
     settings.numInputChannels = 0;
     settings.bufferSize = 512;
+
     ofSoundStreamSetup(settings);
 
     playhead = std::numeric_limits<int>::max(); // because it is converted to int for check

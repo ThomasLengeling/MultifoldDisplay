@@ -48,7 +48,6 @@ int main( ){
     settings.setGLVersion(4,1);
     
     settings.setSize(windowSize.x * numScreens, windowSize.y);
-    //settings.setSize(1280, 720);
 
     settings.setPosition(windwoPos);
     settings.decorated = decorated;
