@@ -12,12 +12,8 @@
 #include "ofParameter.h"
 #include "ofxGui.h"
 
-<<<<<<< HEAD
 #include "ofxAudioFile.h"
 
-
-=======
->>>>>>> 3539f2e6926d65abd9098b722453867b4333486d
 /*
  
  4K ->3840 x 2160 or 4096 x 2160
@@ -125,7 +121,6 @@ public:
     bool                    mPause;
     
     std::string             ofPath;
-<<<<<<< HEAD
 
     ofxAudioFile audiofile;
     void setupAudio();
@@ -136,6 +131,4 @@ public:
     double sampleRate;
 
     void audioOut(ofSoundBuffer& buffer);
-=======
->>>>>>> 3539f2e6926d65abd9098b722453867b4333486d
 };

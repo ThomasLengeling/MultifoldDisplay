@@ -5,11 +5,7 @@
         {
             "width": 1920,
             "height": 1080,
-<<<<<<< HEAD
             "name": "Videos/test02_screen1.mp4_HAP.mov",
-=======
-            "name": "Videos/test_1080p_hap.mov",
->>>>>>> 3539f2e6926d65abd9098b722453867b4333486d
             "alias": "left",
             "drawx": 0,
             "drawy": 0
@@ -17,11 +13,7 @@
         {
             "width": 1920,
             "height": 1080,
-<<<<<<< HEAD
             "name": "Videos/test02_screen2.mp4_HAP.mov",
-=======
-            "name": "Videos/test_1080p_hap.mov",
->>>>>>> 3539f2e6926d65abd9098b722453867b4333486d
             "alias": "front",
             "drawx": 0,
             "drawy": 0
@@ -30,11 +22,7 @@
         {
             "width": 1920,
             "height": 1080,
-<<<<<<< HEAD
             "name": "Videos/test02_screen3.mp4_HAP.mov",
-=======
-            "name": "Videos/test_1080p_hap.mov",
->>>>>>> 3539f2e6926d65abd9098b722453867b4333486d
             "alias": "right",
             "drawx": 0,
             "drawy": 0
@@ -42,11 +30,7 @@
         {
             "width": 1920,
             "height": 1080,
-<<<<<<< HEAD
             "name": "Videos/test02_screen4.mp4_HAP.mov",
-=======
-            "name": "Videos/test_1080p_hap.mov",
->>>>>>> 3539f2e6926d65abd9098b722453867b4333486d
             "alias": "display",
             "drawx": 0,
             "drawy": 0
