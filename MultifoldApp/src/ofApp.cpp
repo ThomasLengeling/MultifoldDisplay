@@ -144,15 +144,19 @@ void ofApp::setup(){
     //GUI
     setupGui();
     
+<<<<<<< HEAD
     //audio
     setupAudio();
 
 
+=======
+>>>>>>> 3539f2e6926d65abd9098b722453867b4333486d
     ofLog(OF_LOG_NOTICE)<<"Finishing setup";
     ofLog(OF_LOG_NOTICE)<<"Size"<<ofGetWindowWidth()<<" "<<ofGetWindowHeight();
     
 }
 
+<<<<<<< HEAD
 void ofApp::setupAudio() {
 
     std::string filepath = ofToDataPath("Sounds/within_AI_samples_02.wav"); 
@@ -225,6 +229,8 @@ void ofApp::audioOut(ofSoundBuffer& buffer) {
 
     }
 }
+=======
+>>>>>>> 3539f2e6926d65abd9098b722453867b4333486d
 //--------------------------------------------------------------
 void ofApp::update(){
     
@@ -331,10 +337,15 @@ void ofApp::syncVideos(){
 void ofApp::draw(){
     ofBackground(mBkgColor);
     
+<<<<<<< HEAD
   
     //draw warps
     if(mDrawWarp){
         ofSetColor(255);
+=======
+    //draw warps
+    if(mDrawWarp){
+>>>>>>> 3539f2e6926d65abd9098b722453867b4333486d
         drawWarps();
     }
     
@@ -400,7 +411,11 @@ void ofApp::setupGui(){
     mGui.setPosition(30, 150);
     
     //default values
+<<<<<<< HEAD
     mDrawGUI = false;
+=======
+    mDrawGUI = true;
+>>>>>>> 3539f2e6926d65abd9098b722453867b4333486d
     mDebugLayoutVideos = false;
     mDebugMovie.set(true);
     mResetMovie.set(true);
@@ -472,8 +487,11 @@ void ofApp::resetMovies(bool & value){
         }
         
     }
+<<<<<<< HEAD
 
     playheadControl = 0.0;
+=======
+>>>>>>> 3539f2e6926d65abd9098b722453867b4333486d
     
     ofLog(OF_LOG_NOTICE) << "RESET MOVIE "<<value;
 }
@@ -608,10 +626,13 @@ void ofApp::keyPressed(int key){
     if (key == 'o'){
         (offset > 0) ? (offset = 0) : (offset = 1);
     }
+<<<<<<< HEAD
 
     if (key == ' ') {
         playheadControl = 0.0;
     }
+=======
+>>>>>>> 3539f2e6926d65abd9098b722453867b4333486d
     
     if (key == 'g') {
         mDrawGUI = !mDrawGUI;
@@ -639,11 +660,14 @@ void ofApp::keyPressed(int key){
         }
         
     }
+<<<<<<< HEAD
 
     if (key == 'r') {
         bool reset = true;
         resetMovies(reset);
     }
+=======
+>>>>>>> 3539f2e6926d65abd9098b722453867b4333486d
     
     if(key == 'x'){
         for(auto & video : mVideoWarps){
@@ -709,6 +733,9 @@ void ofApp::dragEvent(ofDragInfo dragInfo){
 void ofApp::exit(){
     HPV::DestroyHPVEngine();
     mWarpMapping->saveWarp();
+<<<<<<< HEAD
 
     ofSoundStreamClose();
+=======
+>>>>>>> 3539f2e6926d65abd9098b722453867b4333486d
 }

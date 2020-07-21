@@ -1,8 +1,13 @@
+<<<<<<< HEAD
 *.wav
 *.mp3
 
 # Prerequisites
 *.ds
+=======
+# Prerequisites
+*.d
+>>>>>>> 3539f2e6926d65abd9098b722453867b4333486d
 
 # Compiled Object files
 *.slo

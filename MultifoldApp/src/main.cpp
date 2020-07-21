@@ -48,13 +48,20 @@ int main( ){
     settings.setGLVersion(4,1);
     
     settings.setSize(windowSize.x * numScreens, windowSize.y);
+<<<<<<< HEAD
+=======
+    //settings.setSize(1280, 720);
+>>>>>>> 3539f2e6926d65abd9098b722453867b4333486d
 
     settings.setPosition(windwoPos);
     settings.decorated = decorated;
     settings.resizable = false;
+<<<<<<< HEAD
     settings.multiMonitorFullScreen = true;
     //settings.windowMode = OF_FULLSCREEN;
 
+=======
+>>>>>>> 3539f2e6926d65abd9098b722453867b4333486d
     ofCreateWindow(settings);
     
     ofLog(OF_LOG_NOTICE) << "Window Size: " <<ofGetWindowWidth()<<" "<<ofGetWindowHeight()<<std::endl;
