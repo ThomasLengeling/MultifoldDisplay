@@ -511,10 +511,7 @@ void ofApp::drawSyncVideos(){
             j++;
             i=0;
         }
-            
     }
-        
-    
 }
 //--------------------------------------------------------------
 void ofApp::frameSlider(int & value){
@@ -543,8 +540,7 @@ void ofApp::frameSlider(int & value){
     
     //update frame
     cur_frame = framePosition;
-    
-     ofLog(OF_LOG_NOTICE) <<framePosition;
+    ofLog(OF_LOG_NOTICE) <<framePosition;
 }
 //--------------------------------------------------------------
 void ofApp::resetMovies(bool & value){
