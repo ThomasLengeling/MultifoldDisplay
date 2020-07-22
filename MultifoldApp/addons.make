@@ -5,6 +5,6 @@ ofxHapPlayer
 ofxHPVPlayer
 ofxNetwork
 ofxOpenCv
+ofxOsc
 ofxWarp
 ofxXmlSettings
-ofxOsc
