@@ -11,6 +11,7 @@
 #include "ofParameterGroup.h"
 #include "ofParameter.h"
 #include "ofxGui.h"
+#include "ofxOsc.h"
 
 #include "ofxAudioFile.h"
 
@@ -56,6 +57,10 @@ public:
     
     //Video Warp
     std::vector<inn::VideoWarpRef> mVideoWarps;
+
+    void loadAV(std::string jsonFile);
+
+    void initVideos();
     
     void syncVideos();
     
@@ -65,11 +70,6 @@ public:
     
     //debug layout videos
     void debugLayoutVideos();
-    
-    //resolution type of Videos
-    // type = 0  HD
-    // type = 1  4K
-    int mResolutionType;
     
     int mPlayerType;
 
@@ -123,7 +123,7 @@ public:
     std::string             ofPath;
 
     ofxAudioFile audiofile;
-    void setupAudio();
+    void setupAudio(std::string audio);
 
     double playhead;
     std::atomic<double> playheadControl;
@@ -131,4 +131,9 @@ public:
     double sampleRate;
 
     void audioOut(ofSoundBuffer& buffer);
+
+    //osc
+    int            mPort;
+    ofxOscReceiver receiver;
+    void           updateOSC();
 };

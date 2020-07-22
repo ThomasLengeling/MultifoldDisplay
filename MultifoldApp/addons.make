@@ -7,3 +7,4 @@ ofxNetwork
 ofxOpenCv
 ofxWarp
 ofxXmlSettings
+ofxOsc

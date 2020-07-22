@@ -28,78 +28,119 @@ void ofApp::setup(){
     //1 -> HPV
     //0 -> HAP
     mPlayerType = 0;
+  
+
+    //load av files
+    std::string avfile = "av_00.json";
+    loadAV(avfile);
+    initVideos();
     
-    //0 - HD
-    //1 - 4K
-    mResolutionType = 0;
+    //WARP
+    mWarpMapping = inn::Mapping::create(numDisplays);
+    mWarpMapping->setupWarp(WIDTH_HD, HEIGHT_HD);
     
+    //GUI
+    setupGui();
+
+    ofLog() << "listening for osc messages on port " << mPort;
+    receiver.setup(mPort);
+    
+
+    ofLog(OF_LOG_NOTICE)<<"Finishing setup";
+    ofLog(OF_LOG_NOTICE)<<"Size"<<ofGetWindowWidth()<<" "<<ofGetWindowHeight();
+    
+}
+
+//--------------------------------------------------------------
+void ofApp::loadAV(std::string jsonFile) {
+
+    //clear data
+    mVideoWarps.clear();
+
+    //audio path;
+    std::string audioPath = "";
+
     std::vector<std::string> strVideo;
-    
-    ofJson videoJs;
-    std::string configFile = "video.json";
-    ofFile videoFile(configFile);
-    
-   ofPath = ofFilePath::getAbsolutePath( ofToDataPath("") );
-    
-   ofLog(OF_LOG_NOTICE) << " OF data path is: " << ofPath << endl;
-    
-    if ( videoFile.exists() ) {
-        ofLog(OF_LOG_NOTICE) << "Reading Config File " << configFile;
-        videoFile >> videoJs;
-        
-        int videoType = int(videoJs["videoType"]);
+
+    ofJson avJs;
+    ofFile avFile(jsonFile);
+
+    ofPath = ofFilePath::getAbsolutePath(ofToDataPath(""));
+
+    ofLog(OF_LOG_NOTICE) << " OF data path is: " << ofPath << endl;
+
+    if (avFile.exists()) {
+        ofLog(OF_LOG_NOTICE) << "Reading Config File " << jsonFile;
+        avFile >> avJs;
+
+        int videoType = int(avJs["videoType"]);
         mPlayerType = videoType;
-        if(videoType == 0){
-            ofLog(OF_LOG_NOTICE) <<"Loading video HAP "<<int(mPlayerType);
+        if (videoType == 0) {
+            ofLog(OF_LOG_NOTICE) << "Loading video HAP " << int(mPlayerType);
         }
-        if(videoType == 1){
-            ofLog(OF_LOG_NOTICE) <<"Loading video HPV "<<int(mPlayerType);
+        if (videoType == 1) {
+            ofLog(OF_LOG_NOTICE) << "Loading video HPV " << int(mPlayerType);
         }
-        if(videoType == 2){
-            ofLog(OF_LOG_NOTICE) <<"Loading video MOV "<<int(mPlayerType);
+        if (videoType == 2) {
+            ofLog(OF_LOG_NOTICE) << "Loading video MOV " << int(mPlayerType);
         }
-        
+
+        //videos
         int i = 0;
-        for(auto & videoNames : videoJs["videos"]){
-            if(!videoNames.empty()){
+        for (auto& videoNames : avJs["videos"]) {
+            if (!videoNames.empty()) {
                 std::string name = videoNames["name"];
                 strVideo.push_back(name);
-                ofLog(OF_LOG_NOTICE) << "Found video "<<i<<" : "<<name;
+                ofLog(OF_LOG_NOTICE) << "Found video " << i << " : " << name;
                 i++;
             }
         }
-        
-        ofLog(OF_LOG_NOTICE)<<"Found Videos: "<<strVideo.size()<<std::endl;
-        
+
+        ofLog(OF_LOG_NOTICE) << "Found Videos: " << strVideo.size() << std::endl;
+
         //load videos
         int id = 0;
-        for(auto & strVideoNames : strVideo){
+        for (auto& strVideoNames : strVideo) {
             inn::VideoWarpRef warp = inn::VideoWarp::create(mPlayerType, id);
-            
+
             warp->loadVideo(strVideoNames);
             //warp->addListener();
             mVideoWarps.push_back(warp);
             id++;
         }
-        
-    }else{
+        //audio
+        for (auto& audioNames : avJs["audios"]) {
+            if (!audioNames.empty()) {
+                std::string file = audioNames["name"];
+                audioPath = file;
+                ofLog(OF_LOG_NOTICE) << "Found audio file " << " : " << audioPath;
+            }
+        }
+    }
+    else {
         //loat temp video
-         for(auto & strVideoNames : strVideo){
-             inn::VideoWarpRef warp = inn::VideoWarp::create(mPlayerType);
-             warp->loadVideo(strVideoNames);
-             
+        for (auto& strVideoNames : strVideo) {
+            inn::VideoWarpRef warp = inn::VideoWarp::create(mPlayerType);
+            warp->loadVideo(strVideoNames);
 
-             mVideoWarps.push_back(warp);
-         }
+
+            mVideoWarps.push_back(warp);
+        }
     }
-    
+
+    //audio
+    setupAudio(audioPath);
+}
+
+//--------------------------------------------------------------
+void ofApp::initVideos() {
     //play videos
-    for(auto & video : mVideoWarps){
-       video->startPlay();
+    for (auto& video : mVideoWarps) {
+        video->startPlay();
     }
-    
-    if(mPlayerType == 1){
-        
+
+    if (mPlayerType == 1) {
+
     }
 
     if (mPlayerType == 0) {
@@ -111,50 +152,37 @@ void ofApp::setup(){
         }
     }
 
-    
+
     //native video
-    if(mPlayerType == 2){
-        
+    if (mPlayerType == 2) {
+
         //initialize video
-        for(auto & video : mVideoWarps){
+        for (auto& video : mVideoWarps) {
             video->updateFrame(0);
             video->setPaused(true);
             video->update();
-         }
+        }
     }
-    
+
     //get the min fram
     mMinFrame = 999999;
     int indexVideo = -1;
     int id = 0;
-    for(auto & video : mVideoWarps){
-        if(mMinFrame > video->getTotalNumFrames()){
-            mMinFrame  = video->getTotalNumFrames();
+    for (auto& video : mVideoWarps) {
+        if (mMinFrame > video->getTotalNumFrames()) {
+            mMinFrame = video->getTotalNumFrames();
             indexVideo = id;
             id++;
         }
     }
-    
-    ofLog(OF_LOG_NOTICE)<<"Min Frame: "<<mMinFrame<<" "<<indexVideo;
-    
-    //WARP
-    mWarpMapping = inn::Mapping::create(numDisplays);
-    mWarpMapping->setupWarp(WIDTH_HD, HEIGHT_HD);
-    
-    //GUI
-    setupGui();
-    
-    //audio
-    setupAudio();
 
-    ofLog(OF_LOG_NOTICE)<<"Finishing setup";
-    ofLog(OF_LOG_NOTICE)<<"Size"<<ofGetWindowWidth()<<" "<<ofGetWindowHeight();
-    
+    ofLog(OF_LOG_NOTICE) << "Min Frame: " << mMinFrame << " " << indexVideo;
+
 }
 
-void ofApp::setupAudio() {
 
-    std::string filepath = ofToDataPath("Sounds/within_AI_samples_02.wav"); 
+//--------------------------------------------------------------
+void ofApp::setupAudio(std::string filepath) {
 
     audiofile.setVerbose(true);
   
@@ -185,6 +213,7 @@ void ofApp::setupAudio() {
     playhead = 0;
 }
 
+//--------------------------------------------------------------
 void ofApp::audioOut(ofSoundBuffer& buffer) {
 
     // really spartan and not efficient sample playing, just for testing
@@ -224,13 +253,71 @@ void ofApp::audioOut(ofSoundBuffer& buffer) {
 
     }
 }
+
 //--------------------------------------------------------------
-void ofApp::update(){
-    
+void ofApp::update() {
+
     syncVideos();
-    
+
     //set the master frame with the current change frame
     //mMasterFrame.set(cur_frame);
+}
+
+//--------------------------------------------------------------
+void ofApp::updateOSC() {
+    while (receiver.hasWaitingMessages()) {
+
+        // get the next message
+        ofxOscMessage m;
+        receiver.getNextMessage(m);
+
+        // check for mouse moved message
+        if (m.getAddress() == "/av") {
+            int id = m.getArgAsInt32(0);
+            if (id == 0) {
+                std::string avfile = "av_00.json";
+                loadAV(avfile);
+                initVideos();
+                ofLog(OF_LOG_NOTICE) << "loaded new AV :" << avfile;
+            }
+
+            if (id == 1) {
+                std::string avfile = "av_01.json";
+                loadAV(avfile);
+                initVideos();
+                ofLog(OF_LOG_NOTICE) << "loaded new AV :" << avfile;
+            }
+
+            if (id == 2) {
+                std::string avfile = "av_02.json";
+                loadAV(avfile);
+                initVideos();
+                ofLog(OF_LOG_NOTICE) << "loaded new AV :" << avfile;
+            }
+
+            if (id == 3) {
+                std::string avfile = "av_03.json";
+                loadAV(avfile);
+                initVideos();
+                ofLog(OF_LOG_NOTICE) << "loaded new AV :" << avfile;
+            }
+        }
+
+        if (m.getAddress() == "/stop") {
+            bool play = false;
+            playMovies(play);
+        }
+
+        if (m.getAddress() == "/play") {
+            bool play = true;
+            playMovies(play);
+        }
+
+        if(m.getAddress() == "/reset"){
+            bool reset = true;
+            resetMovies(reset);
+        }
+    }
 }
 
 //--------------------------------------------------------------
@@ -409,26 +496,25 @@ void ofApp::setupGui(){
 
 //--------------------------------------------------------------
 void ofApp::drawSyncVideos(){
-    if(mResolutionType == 0){
-        float wDisplay = ofGetWindowWidth()/(float)numDisplays;
-        float hDisplay = ofGetWindowHeight() /(float)numDisplays;
+    float wDisplay = ofGetWindowWidth()/(float)numDisplays;
+    float hDisplay = ofGetWindowHeight() /(float)numDisplays;
         
-        glm::vec2 midScreen(ofGetWindowWidth()/2.0 - wDisplay,ofGetWindowHeight()/2.0 - hDisplay);
+    glm::vec2 midScreen(ofGetWindowWidth()/2.0 - wDisplay,ofGetWindowHeight()/2.0 - hDisplay);
         
-        //draw the video
-        int i = 0;
-        int j = 0;
-        for(auto & video : mVideoWarps){
-            video->draw(midScreen.x + i * wDisplay, midScreen.y + j * hDisplay, wDisplay, hDisplay);
-            i++;
-            if(i >=2){
-                j++;
-                i=0;
-            }
-            
+    //draw the video
+    int i = 0;
+    int j = 0;
+    for(auto & video : mVideoWarps){
+        video->draw(midScreen.x + i * wDisplay, midScreen.y + j * hDisplay, wDisplay, hDisplay);
+        i++;
+        if(i >=2){
+            j++;
+            i=0;
         }
-        
+            
     }
+        
+    
 }
 //--------------------------------------------------------------
 void ofApp::frameSlider(int & value){
@@ -498,6 +584,9 @@ void ofApp::playMovies(bool & value){
     }
     
     mPause = status;
+    if (status = true){
+        playhead = 0;
+    }
     ofLog(OF_LOG_NOTICE) << "Puase MOVIE "<<status;
 }
 
@@ -604,6 +693,35 @@ void ofApp::debugLayoutVideos(){
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
+
+    if (key == '0') {
+        std::string avfile = "av_00.json";
+        loadAV(avfile);
+        initVideos();
+        ofLog(OF_LOG_NOTICE) << "loaded new AV :" << avfile;
+    }
+
+    if (key == '1') {
+        std::string avfile = "av_01.json";
+        loadAV(avfile);
+        initVideos();
+        ofLog(OF_LOG_NOTICE) << "loaded new AV :" << avfile;
+    }
+
+    if (key == '2') {
+        std::string avfile = "av_02.json";
+        loadAV(avfile);
+        initVideos();
+        ofLog(OF_LOG_NOTICE) << "loaded new AV :" << avfile;
+    }
+
+    if (key == '3') {
+        std::string avfile = "av_03.json";
+        loadAV(avfile);
+        initVideos();
+        ofLog(OF_LOG_NOTICE) << "loaded new AV :" << avfile;
+    }
+
     if (key == 'o'){
         (offset > 0) ? (offset = 0) : (offset = 1);
     }
