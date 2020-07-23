@@ -31,7 +31,7 @@ void ofApp::setup(){
   
 
     //load av files
-    std::string avfile = "av_00.json";
+    std::string avfile = "avset_00.json";
     loadAV(avfile);
     initVideos();
     
@@ -42,6 +42,7 @@ void ofApp::setup(){
     //GUI
     setupGui();
 
+    mPort = 32000;
     ofLog() << "listening for osc messages on port " << mPort;
     receiver.setup(mPort);
     
@@ -261,6 +262,8 @@ void ofApp::update() {
 
     //set the master frame with the current change frame
     //mMasterFrame.set(cur_frame);
+
+    updateOSC();
 }
 
 //--------------------------------------------------------------
@@ -275,28 +278,28 @@ void ofApp::updateOSC() {
         if (m.getAddress() == "/av") {
             int id = m.getArgAsInt32(0);
             if (id == 0) {
-                std::string avfile = "av_00.json";
+                std::string avfile = "avset_00.json";
                 loadAV(avfile);
                 initVideos();
                 ofLog(OF_LOG_NOTICE) << "loaded new AV :" << avfile;
             }
 
             if (id == 1) {
-                std::string avfile = "av_01.json";
+                std::string avfile = "avset_01.json";
                 loadAV(avfile);
                 initVideos();
                 ofLog(OF_LOG_NOTICE) << "loaded new AV :" << avfile;
             }
 
             if (id == 2) {
-                std::string avfile = "av_02.json";
+                std::string avfile = "avset_02.json";
                 loadAV(avfile);
                 initVideos();
                 ofLog(OF_LOG_NOTICE) << "loaded new AV :" << avfile;
             }
 
             if (id == 3) {
-                std::string avfile = "av_03.json";
+                std::string avfile = "avset_03.json";
                 loadAV(avfile);
                 initVideos();
                 ofLog(OF_LOG_NOTICE) << "loaded new AV :" << avfile;
@@ -304,12 +307,12 @@ void ofApp::updateOSC() {
         }
 
         if (m.getAddress() == "/stop") {
-            bool play = false;
+            bool play = true;
             playMovies(play);
         }
 
         if (m.getAddress() == "/play") {
-            bool play = true;
+            bool play = false;
             playMovies(play);
         }
 
@@ -691,36 +694,34 @@ void ofApp::debugLayoutVideos(){
 void ofApp::keyPressed(int key){
 
     if (key == '0') {
-        std::string avfile = "av_00.json";
+        std::string avfile = "avset_00.json";
         loadAV(avfile);
         initVideos();
         ofLog(OF_LOG_NOTICE) << "loaded new AV :" << avfile;
     }
 
     if (key == '1') {
-        std::string avfile = "av_01.json";
+        std::string avfile = "avset_00.json";
         loadAV(avfile);
         initVideos();
         ofLog(OF_LOG_NOTICE) << "loaded new AV :" << avfile;
     }
 
     if (key == '2') {
-        std::string avfile = "av_02.json";
+        std::string avfile = "avset_01.json";
         loadAV(avfile);
         initVideos();
         ofLog(OF_LOG_NOTICE) << "loaded new AV :" << avfile;
     }
 
     if (key == '3') {
-        std::string avfile = "av_03.json";
+        std::string avfile = "avset_02.json";
         loadAV(avfile);
         initVideos();
         ofLog(OF_LOG_NOTICE) << "loaded new AV :" << avfile;
     }
 
-    if (key == 'o'){
-        (offset > 0) ? (offset = 0) : (offset = 1);
-    }
+ 
 
     if (key == ' ') {
         playheadControl = 0.0;
@@ -739,18 +740,14 @@ void ofApp::keyPressed(int key){
         mGui.saveToFile("settings.xml");
     }
     
-    if(key == 'z'){
-        
-        //reset video
-        for(auto & video : mVideoWarps){
-            video->setPaused(false);
-        }
-        
-        //start plays
-        for(auto & video : mVideoWarps){
-            video->startPlay();
-        }
-        
+    if (key == 'z') {
+        bool play = false;
+        playMovies(play);
+    }
+
+    if(key == 'x'){
+        bool play = true;
+        playMovies(play);
     }
 
     if (key == 'r') {
@@ -758,14 +755,6 @@ void ofApp::keyPressed(int key){
         resetMovies(reset);
     }
     
-    if(key == 'x'){
-        for(auto & video : mVideoWarps){
-            video->setPaused(true);
-         }
-    }
-    if(key == 'c'){
-        mWarpMapping->setSize(WIDTH_SD, HEIGHT_SD);
-    }
 }
 
 //--------------------------------------------------------------
