@@ -6,5 +6,6 @@ ofxHPVPlayer
 ofxNetwork
 ofxOpenCv
 ofxOsc
+ofxSoundObjects
 ofxWarp
 ofxXmlSettings
