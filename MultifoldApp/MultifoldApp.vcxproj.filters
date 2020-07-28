@@ -190,6 +190,48 @@
 		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOsc\libs\oscpack\src\osc\OscTypes.cpp">
 			<Filter>addons\ofxOsc\libs\oscpack\src\osc</Filter>
 		</ClCompile>
+		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\ofxSoundFile.cpp">
+			<Filter>addons\ofxSoundObjects\src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\ofxSoundMatrixMixer.cpp">
+			<Filter>addons\ofxSoundObjects\src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\ofxSoundMixer.cpp">
+			<Filter>addons\ofxSoundObjects\src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\ofxSoundMultiplexer.cpp">
+			<Filter>addons\ofxSoundObjects\src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\ofxSoundObject.cpp">
+			<Filter>addons\ofxSoundObjects\src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\ofxSoundPlayerObject.cpp">
+			<Filter>addons\ofxSoundObjects\src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\ofxSoundRecorderObject.cpp">
+			<Filter>addons\ofxSoundObjects\src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\ofxSoundUtils.cpp">
+			<Filter>addons\ofxSoundObjects\src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\Renderers\ofx2DCanvas.cpp">
+			<Filter>addons\ofxSoundObjects\src\Renderers</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\Renderers\ofxSlidersGrid.cpp">
+			<Filter>addons\ofxSoundObjects\src\Renderers</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\Renderers\ofxSoundObjectBaseRenderer.cpp">
+			<Filter>addons\ofxSoundObjects\src\Renderers</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\Renderers\ofxSoundObjectMatrixMixerRenderer.cpp">
+			<Filter>addons\ofxSoundObjects\src\Renderers</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\SoundObjects\VUMeter.cpp">
+			<Filter>addons\ofxSoundObjects\src\SoundObjects</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\SoundObjects\waveformDraw.cpp">
+			<Filter>addons\ofxSoundObjects\src\SoundObjects</Filter>
+		</ClCompile>
 		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxWarp\src\ofxWarp\Controller.cpp">
 			<Filter>addons\ofxWarp\src\ofxWarp</Filter>
 		</ClCompile>
@@ -464,6 +506,18 @@
 		</Filter>
 		<Filter Include="addons\ofxOsc\libs\oscpack\src\osc">
 			<UniqueIdentifier>{EDACB89C-9768-9551-4D41-B590}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxSoundObjects">
+			<UniqueIdentifier>{A1DEA472-3243-C85B-12C4-7080}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxSoundObjects\src">
+			<UniqueIdentifier>{F49E5818-5434-4299-95C1-2A8C}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxSoundObjects\src\Renderers">
+			<UniqueIdentifier>{7FC1F407-8245-86D7-940C-A245}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxSoundObjects\src\SoundObjects">
+			<UniqueIdentifier>{7D005C6E-D3DD-315D-EF0E-E12B}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxWarp">
 			<UniqueIdentifier>{0CB908C6-4EC5-EF34-1A36-41BB}</UniqueIdentifier>
@@ -1651,6 +1705,69 @@
 		</ClInclude>
 		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOsc\libs\oscpack\src\osc\OscTypes.h">
 			<Filter>addons\ofxOsc\libs\oscpack\src\osc</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\ofxSoundFile.h">
+			<Filter>addons\ofxSoundObjects\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\ofxSoundMatrixMixer.h">
+			<Filter>addons\ofxSoundObjects\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\ofxSoundMixer.h">
+			<Filter>addons\ofxSoundObjects\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\ofxSoundMultiplexer.h">
+			<Filter>addons\ofxSoundObjects\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\ofxSoundObject.h">
+			<Filter>addons\ofxSoundObjects\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\ofxSoundObjects.h">
+			<Filter>addons\ofxSoundObjects\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\ofxSoundObjectsConstants.h">
+			<Filter>addons\ofxSoundObjects\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\ofxSoundPlayerObject.h">
+			<Filter>addons\ofxSoundObjects\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\ofxSoundRecorderObject.h">
+			<Filter>addons\ofxSoundObjects\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\ofxSoundUtils.h">
+			<Filter>addons\ofxSoundObjects\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\Renderers\ofx2DCanvas.h">
+			<Filter>addons\ofxSoundObjects\src\Renderers</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\Renderers\ofxSlidersGrid.h">
+			<Filter>addons\ofxSoundObjects\src\Renderers</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\Renderers\ofxSoundObjectBaseRenderer.h">
+			<Filter>addons\ofxSoundObjects\src\Renderers</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\Renderers\ofxSoundObjectMatrixMixerRenderer.h">
+			<Filter>addons\ofxSoundObjects\src\Renderers</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\Renderers\ofxSoundRendererUtils.h">
+			<Filter>addons\ofxSoundObjects\src\Renderers</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\SoundObjects\DigitalDelay.h">
+			<Filter>addons\ofxSoundObjects\src\SoundObjects</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\SoundObjects\LowPassFilter.h">
+			<Filter>addons\ofxSoundObjects\src\SoundObjects</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\SoundObjects\NoiseGenerator.h">
+			<Filter>addons\ofxSoundObjects\src\SoundObjects</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\SoundObjects\SineWaveGenerator.h">
+			<Filter>addons\ofxSoundObjects\src\SoundObjects</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\SoundObjects\VUMeter.h">
+			<Filter>addons\ofxSoundObjects\src\SoundObjects</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\SoundObjects\waveformDraw.h">
+			<Filter>addons\ofxSoundObjects\src\SoundObjects</Filter>
 		</ClInclude>
 		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxWarp\src\ofxWarp\Controller.h">
 			<Filter>addons\ofxWarp\src\ofxWarp</Filter>

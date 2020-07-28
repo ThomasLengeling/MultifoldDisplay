@@ -14,6 +14,7 @@
 #include "ofxOsc.h"
 
 #include "ofxAudioFile.h"
+#include "ofxSoundPlayerObject.h"
 
 /*
  
@@ -122,18 +123,21 @@ public:
     
     std::string             ofPath;
 
-    ofxAudioFile audiofile;
+
     void setupAudio(std::string audio);
 
-    double playhead;
-    std::atomic<double> playheadControl;
-    double step;
-    double sampleRate;
+    ofEventListener playerEndListener;
+    void playerEnded(size_t& id);
 
-    void audioOut(ofSoundBuffer& buffer);
+    ofSoundStream stream;
+    ofxSoundOutput output;
+    // these are all subclasses of ofSoundObject
+    ofxSoundPlayerObject player;
 
     //osc
     int            mPort;
     ofxOscReceiver receiver;
     void           updateOSC();
+
+    bool            playNewVideos;
 };

@@ -61,6 +61,10 @@ public:
     void loadPlayer(bool & value);
     
     void nextFrame();
+
+    void closeVideo();
+
+    bool  isLoaded();
     
     ofParameterGroup & getParamGroup(){return mGroupParam;}
     

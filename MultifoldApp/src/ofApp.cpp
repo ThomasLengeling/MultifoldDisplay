@@ -29,12 +29,6 @@ void ofApp::setup(){
     //0 -> HAP
     mPlayerType = 0;
   
-
-    //load av files
-    std::string avfile = "avset_00.json";
-    loadAV(avfile);
-    initVideos();
-    
     //WARP
     mWarpMapping = inn::Mapping::create(numDisplays);
     mWarpMapping->setupWarp(WIDTH_HD, HEIGHT_HD);
@@ -42,13 +36,57 @@ void ofApp::setup(){
     //GUI
     setupGui();
 
+
+    //load av files
+    std::string avfile = "avset_00.json";
+    loadAV(avfile);
+    initVideos();
+    playNewVideos = false;
+
     mPort = 32000;
     ofLog() << "listening for osc messages on port " << mPort;
     receiver.setup(mPort);
     
 
+    ofxSoundUtils::printOutputSoundDevices();
+    auto outDevices = ofxSoundUtils::getOutputSoundDevices();
+
+    // IMPORTANT!!!
+    // The following line of code is where you set which audio interface to use.
+    // the index is the number printed in the console inside [ ] before the interface name
+    // You can use a different input and output device.
+
+    int outDeviceIndex = 0;
+    cout << ofxSoundUtils::getSoundDeviceString(outDevices[outDeviceIndex], false, true) << endl;
+
+
+
+    // audio setup for testing audio file stream 
+    ofSoundStreamSettings soundSettings;
+    soundSettings.numInputChannels = 0;
+    soundSettings.numOutputChannels = 2;
+    soundSettings.sampleRate = player.getSoundFile().getSampleRate();
+    soundSettings.bufferSize = 256;
+    soundSettings.numBuffers = 1;
+
+    stream.setup(soundSettings);
+
+    stream.setOutput(output);
+
+    player.connectTo(output);
+
+    // set if you want to either have the player looping (playing over and over again) or not (stop once it reaches the its end).
+    player.setLoop(false);
+
+    if (!player.getIsLooping()) {
+        // if the player is not looping you can register  to the end event, which will get triggered when the player reaches the end of the file.
+        playerEndListener = player.endEvent.newListener(this, &ofApp::playerEnded);
+    }
+
     ofLog(OF_LOG_NOTICE)<<"Finishing setup";
     ofLog(OF_LOG_NOTICE)<<"Size"<<ofGetWindowWidth()<<" "<<ofGetWindowHeight();
+
+
     
 }
 
@@ -56,6 +94,9 @@ void ofApp::setup(){
 void ofApp::loadAV(std::string jsonFile) {
 
     //clear data
+    for (auto & videos: mVideoWarps) {
+        videos->closeVideo();
+    }
     mVideoWarps.clear();
 
     //audio path;
@@ -184,75 +225,29 @@ void ofApp::initVideos() {
 
 //--------------------------------------------------------------
 void ofApp::setupAudio(std::string filepath) {
-
-    audiofile.setVerbose(true);
+    std::string soundfile = ofToDataPath(filepath);
   
-    if (ofFile::doesFileExist(filepath)) {
-        audiofile.load(filepath);
-        if (!audiofile.loaded()) {
-            ofLogError() << "error loading file, double check the file path";
-        }
+    player.load(soundfile, false);
+    player.setPaused(true);
+        //set the following to true if you want to stream the audio data from the disk on demand instead of
+        //reading the whole file into memory. Default is false
+ 
+    if (player.isLoaded()){
+        ofLog(OF_LOG_NOTICE) << "The player loader: " << filepath;
+
+        player.connectTo(output);
     }
     else {
-        ofLogError() << "sound input file does not exists";
+        ofLog(OF_LOG_NOTICE) << "Error loading: " << filepath;
     }
-
-    // audio setup for testing audio file stream 
-    ofSoundStreamSettings settings;
-    sampleRate = 44100.0;
-    settings.setOutListener(this);
-    settings.sampleRate = sampleRate;
-    settings.numOutputChannels = 2;
-    settings.numInputChannels = 0;
-    settings.bufferSize = 512;
-
-    ofSoundStreamSetup(settings);
-
-    playhead = std::numeric_limits<int>::max(); // because it is converted to int for check
-    playheadControl = -1.0;
-    step = audiofile.samplerate() / sampleRate;
-    playhead = 0;
 }
 
 //--------------------------------------------------------------
-void ofApp::audioOut(ofSoundBuffer& buffer) {
+void ofApp::playerEnded(size_t& id) {
+    // This function gets called when the player ends. You can do whatever you need to here.
+    // This event happens in the main thread, not in the audio thread.
+    cout << "the player's instance " << id << "finished playing" << endl;
 
-    // really spartan and not efficient sample playing, just for testing
-
-    if (playheadControl >= 0.0) {
-        playhead = playheadControl;
-        playheadControl = -1.0;
-    }
-
-    for (size_t i = 0; i < buffer.getNumFrames(); i++) {
-
-        int n = playhead;
-
-        if (n < audiofile.length() - 1) {
-
-            for (size_t k = 0; k < buffer.getNumChannels(); ++k) {
-                if (k < audiofile.channels()) {
-                    float fract = playhead - (double)n;
-                    float s0 = audiofile.sample(n, k);
-                    float s1 = audiofile.sample(n + 1, k);
-                    float isample = s0 * (1.0 - fract) + s1 * fract; // linear interpolation
-                    buffer[i * buffer.getNumChannels() + k] = isample;
-                }
-                else {
-                    buffer[i * buffer.getNumChannels() + k] = 0.0f;
-                }
-            }
-
-            playhead += step;
-
-        }
-        else {
-            buffer[i * buffer.getNumChannels()] = 0.0f;
-            buffer[i * buffer.getNumChannels() + 1] = 0.0f;
-            playhead = std::numeric_limits<int>::max();
-        }
-
-    }
 }
 
 //--------------------------------------------------------------
@@ -281,28 +276,33 @@ void ofApp::updateOSC() {
                 std::string avfile = "avset_00.json";
                 loadAV(avfile);
                 initVideos();
-                ofLog(OF_LOG_NOTICE) << "loaded new AV :" << avfile;
-            }
 
-            if (id == 1) {
+                ofLog(OF_LOG_NOTICE) << "loaded new AV :" << avfile;
+                playNewVideos = true;
+            }
+            else if (id == 1) {
                 std::string avfile = "avset_01.json";
                 loadAV(avfile);
                 initVideos();
-                ofLog(OF_LOG_NOTICE) << "loaded new AV :" << avfile;
-            }
 
-            if (id == 2) {
+                ofLog(OF_LOG_NOTICE) << "loaded new AV :" << avfile;
+                playNewVideos = true;
+            }
+            else if (id == 2) {
                 std::string avfile = "avset_02.json";
                 loadAV(avfile);
                 initVideos();
-                ofLog(OF_LOG_NOTICE) << "loaded new AV :" << avfile;
-            }
 
-            if (id == 3) {
+                ofLog(OF_LOG_NOTICE) << "loaded new AV :" << avfile;
+                playNewVideos = true;
+            }
+            else if (id == 3) {
                 std::string avfile = "avset_03.json";
                 loadAV(avfile);
                 initVideos();
+
                 ofLog(OF_LOG_NOTICE) << "loaded new AV :" << avfile;
+                playNewVideos = true;
             }
         }
 
@@ -325,6 +325,32 @@ void ofApp::updateOSC() {
 
 //--------------------------------------------------------------
 void ofApp::syncVideos(){
+
+    if (playNewVideos) {
+
+        int loadeadAll = 0;
+        for (auto & video : mVideoWarps) {
+            if (video->isLoaded()) {
+                loadeadAll++;
+            }
+         }
+
+        //all videos are loaded
+        if (loadeadAll  == 4 && player.isLoaded() ) {
+
+            bool reset = true;
+            resetMovies(reset);
+            //reset
+            bool play = false;
+            playMovies(play);
+
+            player.setPaused(false);
+            player.play();
+            cur_frame = 0;
+            playNewVideos = false;
+        }
+
+    }
     
     //HAP and HD
     if(mPlayerType == 0){
@@ -338,9 +364,12 @@ void ofApp::syncVideos(){
 				prev_frame = cur_frame;
 			}
 
+
 			//increase frame and reset when the current frame hits the min of all number of frame
 			cur_frame++;
-
+            if (cur_frame >= mMinFrame) {
+                playNewVideos = true;
+            }
 		}
 		else {
 
@@ -452,6 +481,7 @@ void ofApp::setupGui(){
     parameters.add(mDrawWarp.set("Draw Warp", true));
     parameters.add(mMasterFrame.set("Master Frame", 0, 0, mMinFrame));
     parameters.add(mSyncVideosDebug.set("Sync Frame", false));
+    parameters.add(player.volume);
     
     //load parameters
     for( auto & videos : mVideoWarps){
@@ -557,7 +587,10 @@ void ofApp::resetMovies(bool & value){
         
     }
 
-    playheadControl = 0.0;
+    if (player.isLoaded()) {
+        player.setPositionMS(0);
+        player.play();
+    }
     
     ofLog(OF_LOG_NOTICE) << "RESET MOVIE "<<value;
 }
@@ -583,8 +616,16 @@ void ofApp::playMovies(bool & value){
     }
     
     mPause = status;
-    if (status = true){
-        playhead = 0;
+    if (status == false){
+
+        if (player.isLoaded()) {
+            player.setPaused(false);
+        }
+    }
+    else {
+        if (player.isLoaded()) {
+          player.setPaused(true);
+        }
     }
     ofLog(OF_LOG_NOTICE) << "Puase MOVIE "<<status;
 }
@@ -722,9 +763,9 @@ void ofApp::keyPressed(int key){
     }
 
  
-
+    //audio
     if (key == ' ') {
-        playheadControl = 0.0;
+       
     }
     
     if (key == 'g') {
@@ -811,5 +852,5 @@ void ofApp::dragEvent(ofDragInfo dragInfo){
 void ofApp::exit(){
     HPV::DestroyHPVEngine();
     mWarpMapping->saveWarp();
-    ofSoundStreamClose();
+    stream.close();
 }
