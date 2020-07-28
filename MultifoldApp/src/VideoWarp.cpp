@@ -69,6 +69,16 @@ void VideoWarp::loadVideo(std::string & name){
     ofLog(OF_LOG_NOTICE)<<"Loaded Video "<<mVideoName<<std::endl;
     
 }
+void VideoWarp::closeVideo() {
+    if (mPlayerType == 0) {
+        mHAPPlayer.close();    }
+    else if (mPlayerType == 1) {
+        mHPVPlayer.close();
+    }
+    else if (mPlayerType == 2) {
+        mOFVideoPlayer.close();
+    }
+}
 
 //--------------------------------------------------------------
 void VideoWarp::updateFrame(int64_t currFrame){
@@ -94,6 +104,19 @@ void VideoWarp::update(){
     }
 }
 
+bool VideoWarp::isLoaded() {
+    bool loaded = false;
+    if (mPlayerType == 0) {
+        loaded = mHAPPlayer.isLoaded();
+    }
+    else if (mPlayerType == 1) {
+        loaded = mHAPPlayer.isLoaded();
+    }
+    else if (mPlayerType == 2) {
+        loaded =  mOFVideoPlayer.isLoaded();
+    }
+    return loaded;
+}
 //--------------------------------------------------------------
 int VideoWarp::getTotalNumFrames(){
     if(mPlayerType == 0){

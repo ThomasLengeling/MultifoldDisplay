@@ -4,7 +4,7 @@
     {
       "width": 1920,
       "height": 1080,
-      "name": "Videos/test02_screen1.mp4_HAP.mov",
+      "name": "Videos/dummy_010_01_hap.mov",
       "alias": "left",
       "drawx": 0,
       "drawy": 0
@@ -12,7 +12,7 @@
     {
       "width": 1920,
       "height": 1080,
-      "name": "Videos/test02_screen2.mp4_HAP.mov",
+      "name": "Videos/dummy_010_02_hap.mov",
       "alias": "front",
       "drawx": 0,
       "drawy": 0
@@ -20,7 +20,7 @@
     {
       "width": 1920,
       "height": 1080,
-      "name": "Videos/test02_screen3.mp4_HAP.mov",
+      "name": "Videos/dummy_010_03_hap.mov",
       "alias": "right",
       "drawx": 0,
       "drawy": 0
@@ -28,7 +28,7 @@
     {
       "width": 1920,
       "height": 1080,
-      "name": "Videos/test02_screen4.mp4_HAP.mov",
+      "name": "Videos/dummy_010_04_hap.mov",
       "alias": "display",
       "drawx": 0,
       "drawy": 0
@@ -36,7 +36,7 @@
   ],
   "audios": [
     {
-      "name": "tubophone.wav",
+      "name": "Sounds/dummy_010_sounds.mp3",
       "channel": 2,
       "location": "front"
     }

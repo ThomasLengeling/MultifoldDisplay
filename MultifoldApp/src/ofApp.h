@@ -123,6 +123,7 @@ public:
     std::string             ofPath;
 
     ofxAudioFile audiofile;
+    ofxAudioFile audiofileTmp;
     void setupAudio(std::string audio);
 
     double playhead;
@@ -136,4 +137,6 @@ public:
     int            mPort;
     ofxOscReceiver receiver;
     void           updateOSC();
+
+    bool            playNewVideos;
 };

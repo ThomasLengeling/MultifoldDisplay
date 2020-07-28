@@ -29,12 +29,6 @@ void ofApp::setup(){
     //0 -> HAP
     mPlayerType = 0;
   
-
-    //load av files
-    std::string avfile = "avset_00.json";
-    loadAV(avfile);
-    initVideos();
-    
     //WARP
     mWarpMapping = inn::Mapping::create(numDisplays);
     mWarpMapping->setupWarp(WIDTH_HD, HEIGHT_HD);
@@ -42,13 +36,33 @@ void ofApp::setup(){
     //GUI
     setupGui();
 
+
+    //load av files
+    std::string avfile = "avset_00.json";
+    loadAV(avfile);
+    initVideos();
+    playNewVideos = false;
+
     mPort = 32000;
     ofLog() << "listening for osc messages on port " << mPort;
     receiver.setup(mPort);
     
 
+    // audio setup for testing audio file stream 
+    ofSoundStreamSettings settings;
+    sampleRate = 44100.0;
+    settings.setOutListener(this);
+    settings.sampleRate = sampleRate;
+    settings.numOutputChannels = 2;
+    settings.numInputChannels = 0;
+    settings.bufferSize = 512;
+
+    ofSoundStreamSetup(settings);
+
     ofLog(OF_LOG_NOTICE)<<"Finishing setup";
     ofLog(OF_LOG_NOTICE)<<"Size"<<ofGetWindowWidth()<<" "<<ofGetWindowHeight();
+
+
     
 }
 
@@ -56,6 +70,9 @@ void ofApp::setup(){
 void ofApp::loadAV(std::string jsonFile) {
 
     //clear data
+    for (auto & videos: mVideoWarps) {
+        videos->closeVideo();
+    }
     mVideoWarps.clear();
 
     //audio path;
@@ -131,6 +148,7 @@ void ofApp::loadAV(std::string jsonFile) {
 
     //audio
     setupAudio(audioPath);
+    ofSleepMillis(100);
 }
 
 //--------------------------------------------------------------
@@ -184,11 +202,14 @@ void ofApp::initVideos() {
 
 //--------------------------------------------------------------
 void ofApp::setupAudio(std::string filepath) {
+    std::string soundfile = ofToDataPath(filepath);
+    audiofile.free();
+
 
     audiofile.setVerbose(true);
   
-    if (ofFile::doesFileExist(filepath)) {
-        audiofile.load(filepath);
+    if (ofFile::doesFileExist(soundfile)) {
+        audiofile.load(soundfile);
         if (!audiofile.loaded()) {
             ofLogError() << "error loading file, double check the file path";
         }
@@ -197,21 +218,15 @@ void ofApp::setupAudio(std::string filepath) {
         ofLogError() << "sound input file does not exists";
     }
 
-    // audio setup for testing audio file stream 
-    ofSoundStreamSettings settings;
-    sampleRate = 44100.0;
-    settings.setOutListener(this);
-    settings.sampleRate = sampleRate;
-    settings.numOutputChannels = 2;
-    settings.numInputChannels = 0;
-    settings.bufferSize = 512;
+    if (audiofile.loaded()) {
 
-    ofSoundStreamSetup(settings);
 
-    playhead = std::numeric_limits<int>::max(); // because it is converted to int for check
-    playheadControl = -1.0;
-    step = audiofile.samplerate() / sampleRate;
-    playhead = 0;
+
+        playhead = std::numeric_limits<int>::max(); // because it is converted to int for check
+        playheadControl = -1.0;
+        step = audiofile.samplerate() / sampleRate;
+        playhead = 0;
+    }
 }
 
 //--------------------------------------------------------------
@@ -219,39 +234,41 @@ void ofApp::audioOut(ofSoundBuffer& buffer) {
 
     // really spartan and not efficient sample playing, just for testing
 
-    if (playheadControl >= 0.0) {
-        playhead = playheadControl;
-        playheadControl = -1.0;
-    }
+    if (audiofile.loaded() && !playNewVideos) {
+        if (playheadControl >= 0.0) {
+            playhead = playheadControl;
+            playheadControl = -1.0;
+        }
 
-    for (size_t i = 0; i < buffer.getNumFrames(); i++) {
+        for (size_t i = 0; i < buffer.getNumFrames(); i++) {
 
-        int n = playhead;
+            int n = playhead;
 
-        if (n < audiofile.length() - 1) {
+            if (n < audiofile.length() - 1) {
 
-            for (size_t k = 0; k < buffer.getNumChannels(); ++k) {
-                if (k < audiofile.channels()) {
-                    float fract = playhead - (double)n;
-                    float s0 = audiofile.sample(n, k);
-                    float s1 = audiofile.sample(n + 1, k);
-                    float isample = s0 * (1.0 - fract) + s1 * fract; // linear interpolation
-                    buffer[i * buffer.getNumChannels() + k] = isample;
+                for (size_t k = 0; k < buffer.getNumChannels(); ++k) {
+                    if (k < audiofile.channels()) {
+                        float fract = playhead - (double)n;
+                        float s0 = audiofile.sample(n, k);
+                        float s1 = audiofile.sample(n + 1, k);
+                        float isample = s0 * (1.0 - fract) + s1 * fract; // linear interpolation
+                        buffer[i * buffer.getNumChannels() + k] = isample;
+                    }
+                    else {
+                        buffer[i * buffer.getNumChannels() + k] = 0.0f;
+                    }
                 }
-                else {
-                    buffer[i * buffer.getNumChannels() + k] = 0.0f;
-                }
+
+                playhead += step;
+
+            }
+            else {
+                buffer[i * buffer.getNumChannels()] = 0.0f;
+                buffer[i * buffer.getNumChannels() + 1] = 0.0f;
+                playhead = std::numeric_limits<int>::max();
             }
 
-            playhead += step;
-
         }
-        else {
-            buffer[i * buffer.getNumChannels()] = 0.0f;
-            buffer[i * buffer.getNumChannels() + 1] = 0.0f;
-            playhead = std::numeric_limits<int>::max();
-        }
-
     }
 }
 
@@ -281,28 +298,33 @@ void ofApp::updateOSC() {
                 std::string avfile = "avset_00.json";
                 loadAV(avfile);
                 initVideos();
-                ofLog(OF_LOG_NOTICE) << "loaded new AV :" << avfile;
-            }
 
-            if (id == 1) {
+                ofLog(OF_LOG_NOTICE) << "loaded new AV :" << avfile;
+                playNewVideos = true;
+            }
+            else if (id == 1) {
                 std::string avfile = "avset_01.json";
                 loadAV(avfile);
                 initVideos();
-                ofLog(OF_LOG_NOTICE) << "loaded new AV :" << avfile;
-            }
 
-            if (id == 2) {
+                ofLog(OF_LOG_NOTICE) << "loaded new AV :" << avfile;
+                playNewVideos = true;
+            }
+            else if (id == 2) {
                 std::string avfile = "avset_02.json";
                 loadAV(avfile);
                 initVideos();
-                ofLog(OF_LOG_NOTICE) << "loaded new AV :" << avfile;
-            }
 
-            if (id == 3) {
+                ofLog(OF_LOG_NOTICE) << "loaded new AV :" << avfile;
+                playNewVideos = true;
+            }
+            else if (id == 3) {
                 std::string avfile = "avset_03.json";
                 loadAV(avfile);
                 initVideos();
+
                 ofLog(OF_LOG_NOTICE) << "loaded new AV :" << avfile;
+                playNewVideos = true;
             }
         }
 
@@ -325,6 +347,29 @@ void ofApp::updateOSC() {
 
 //--------------------------------------------------------------
 void ofApp::syncVideos(){
+
+    if (playNewVideos) {
+
+        int loadeadAll = 0;
+        for (auto & video : mVideoWarps) {
+            if (video->isLoaded()) {
+                loadeadAll++;
+                playhead = 0; 
+            }
+         }
+
+        //all videos are loaded
+        if (loadeadAll  == 4 && audiofile.loaded()) {
+
+            bool play = false;
+            playMovies(play);
+
+
+           
+            playNewVideos = false;
+        }
+
+    }
     
     //HAP and HD
     if(mPlayerType == 0){

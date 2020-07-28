@@ -4,7 +4,7 @@
     {
       "width": 1920,
       "height": 1080,
-      "name": "Videos/GDL_Market1.mp4_HAP.mov",
+      "name": "Videos/dummy_012_01_2_hap.mov",
       "alias": "left",
       "drawx": 0,
       "drawy": 0
@@ -12,7 +12,7 @@
     {
       "width": 1920,
       "height": 1080,
-      "name": "Videos/GDL_Market2.mp4_HAP.mov",
+      "name": "Videos/dummy_012_02_2_hap.mov",
       "alias": "front",
       "drawx": 0,
       "drawy": 0
@@ -20,7 +20,7 @@
     {
       "width": 1920,
       "height": 1080,
-      "name": "Videos/GDL_Market3.mp4_HAP.mov",
+      "name": "Videos/dummy_012_03_2_hap.mov",
       "alias": "right",
       "drawx": 0,
       "drawy": 0
@@ -28,7 +28,7 @@
     {
       "width": 1920,
       "height": 1080,
-      "name": "Videos/Text_List of items.mp4_HAP.mov",
+      "name": "Videos/dummy_012_04_2_hap.mov",
       "alias": "display",
       "drawx": 0,
       "drawy": 0
@@ -36,7 +36,7 @@
   ],
   "audios": [
     {
-      "name": "tubophone.wav",
+      "name": "Sounds/dummy_012_sounds.mp3",
       "channel": 2,
       "location": "front"
     }
