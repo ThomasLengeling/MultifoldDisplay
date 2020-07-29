@@ -25,11 +25,13 @@ String strPort = "32000";
 
 String msg = "/av";
 
-
+PImage img;
 
 void setup() {
   fullScreen();
   //size(1920, 1080);
+
+  img = loadImage("city.png");
 
   PFont font = createFont("arial", 20);
 
@@ -43,9 +45,10 @@ void setup() {
   color activeColor = color(0, 130, 164);
   cp5.setColorActive(activeColor);
   cp5.setColorBackground(color(170));
-  cp5.setColorForeground(color(50));
+  cp5.setColorForeground(color(50, 200));
   cp5.setColorCaptionLabel(color(50));
   cp5.setColorValueLabel(color(255));
+  cp5.setColorValueActiveLabel(color(255));
 
 
   ///////////////////////////////////////////////////////
@@ -130,8 +133,14 @@ void port(String strValue) {
 
 
 void draw() {
-  background(220);
+  fill(255, 100);
+  rect(0, 0, width, height);
 
+  pushStyle();
+  blendMode(BLEND);  
+  tint(200, 190);
+  image(img, 0, 0, width, height);
+  popStyle();
   //  sendValues(msg, sliderCurrX, sliderCurrY, sliderCurrZ);
   //  println("sent values "+msg+"  "+ sliderCurrX+" "+sliderCurrY+" "+sliderCurrZ);
 }
