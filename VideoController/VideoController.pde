@@ -23,13 +23,13 @@ NetAddress myRemoteLocation;
 String strIP = "18.27.113.155";
 String strPort = "32000";
 
-String msg = "/dirxyz";
+String msg = "/av";
 
 
 
 void setup() {
-  //fullScreen();
-  size(1920, 1080);
+  fullScreen();
+  //size(1920, 1080);
 
   PFont font = createFont("arial", 20);
 
@@ -52,11 +52,11 @@ void setup() {
 
   cp5.addTextlabel("OSC Message")
     .setText("OSC Message "+msg)
-    .setPosition(1500, 50)
-    .setColorValue(0xffffffff);
+    .setPosition(1700, 50)
+    .setFont(font);
 
   cp5.addTextfield("ip")
-    .setPosition(1500, 80)
+    .setPosition(1700, 80)
     .setSize(150, 20)
     .setFocus(true)
     .setValue(strIP)
@@ -65,7 +65,7 @@ void setup() {
     ;
 
   cp5.addTextfield("port")
-    .setPosition(1500, 130)
+    .setPosition(1700, 130)
     .setSize(150, 20)
     .setValue(strPort)
     .setAutoClear(false)
@@ -73,44 +73,44 @@ void setup() {
     ;
 
   reset =  cp5.addButton("reset")
-    .setPosition(1500, 250)
+    .setPosition(1700, 250)
     .setSize(300, 100)
     .setFont(font)
     ;
 
   reset =  cp5.addButton("play")
-    .setPosition(1500, 400)
+    .setPosition(1700, 450)
     .setSize(300, 100)
     .setFont(font)
     ;
 
   reset =  cp5.addButton("stop")
-    .setPosition(1500, 550)
+    .setPosition(1700, 650)
     .setSize(300, 100)
     .setFont(font)
     ;
 
   av_00 =  cp5.addButton("Videos_00")
-    .setPosition(500, 50)
-    .setSize(500, 150)
+    .setPosition(400, 50)
+    .setSize(600, 200)
     .setFont(font)
     ;
 
   av_01 =  cp5.addButton("Videos_01")
-    .setPosition(500, 300)
-    .setSize(500, 150)
+    .setPosition(400, 350)
+    .setSize(600, 200)
     .setFont(font)
     ;
 
   av_02 =  cp5.addButton("Videos_02")
-    .setPosition(500, 550)
-    .setSize(500, 150)
+    .setPosition(400, 650)
+    .setSize(600, 200)
     .setFont(font)
     ;
 
   av_03 =  cp5.addButton("Videos_03")
-    .setPosition(500, 800)
-    .setSize(500, 150)
+    .setPosition(400, 950)
+    .setSize(600, 200)
     .setFont(font)
     ;
 }
