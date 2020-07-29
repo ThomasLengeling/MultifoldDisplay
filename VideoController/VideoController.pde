@@ -46,9 +46,9 @@ void setup() {
   cp5.setColorActive(activeColor);
   cp5.setColorBackground(color(170));
   cp5.setColorForeground(color(50, 200));
-  cp5.setColorCaptionLabel(color(50));
-  cp5.setColorValueLabel(color(255));
-  cp5.setColorValueActiveLabel(color(255));
+  cp5.setColorCaptionLabel(color(255));
+  cp5.setColorValueLabel(color(155));
+ // cp5.setColorValueActiveLabel(color(255));
 
 
   ///////////////////////////////////////////////////////
