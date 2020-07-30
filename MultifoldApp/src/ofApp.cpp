@@ -38,10 +38,10 @@ void ofApp::setup(){
 
 
     //load av files
-    std::string avfile = "avset_00.json";
+    std::string avfile = "idle_00.json";
     loadAV(avfile);
     initVideos();
-    playNewVideos = false;
+    playNewVideos = true;
 
     mPort = 32000;
     ofLog() << "listening for osc messages on port " << mPort;
@@ -143,11 +143,22 @@ void ofApp::loadAV(std::string jsonFile) {
         //load videos
         int id = 0;
         for (auto& strVideoNames : strVideo) {
-            inn::VideoWarpRef warp = inn::VideoWarp::create(mPlayerType, id);
+            inn::VideoWarpRef video = inn::VideoWarp::create(mPlayerType, id);
+            video->loadVideo(strVideoNames);
+           // if (video->isLoaded()) {
+                mVideoWarps.push_back(video);
+           // }
 
-            warp->loadVideo(strVideoNames);
+          /*  if (!video->isLoaded()) {
+                string test = "Videos/dummy_010_01_hap.mov";//"Videos/test_hap_"+to_string(id)+".mov";
+                //std::string soundfile = ofToDataPath(test);
+                
+   
+                video->loadVideo(test);
+                mVideoWarps.push_back(video);
+            }
             //warp->addListener();
-            mVideoWarps.push_back(warp);
+          */
             id++;
         }
         //audio
@@ -273,7 +284,7 @@ void ofApp::updateOSC() {
         if (m.getAddress() == "/av") {
             int id = m.getArgAsInt32(0);
             if (id == 0) {
-                std::string avfile = "avset_00.json";
+                std::string avfile = "idle_00.json";
                 loadAV(avfile);
                 initVideos();
 
@@ -281,7 +292,7 @@ void ofApp::updateOSC() {
                 playNewVideos = true;
             }
             else if (id == 1) {
-                std::string avfile = "avset_01.json";
+                std::string avfile = "cai_00.json";
                 loadAV(avfile);
                 initVideos();
 
@@ -289,7 +300,7 @@ void ofApp::updateOSC() {
                 playNewVideos = true;
             }
             else if (id == 2) {
-                std::string avfile = "avset_02.json";
+                std::string avfile = "gld_00.json";
                 loadAV(avfile);
                 initVideos();
 
@@ -297,7 +308,23 @@ void ofApp::updateOSC() {
                 playNewVideos = true;
             }
             else if (id == 3) {
-                std::string avfile = "avset_03.json";
+                std::string avfile = "gld_01.json";
+                loadAV(avfile);
+                initVideos();
+
+                ofLog(OF_LOG_NOTICE) << "loaded new AV :" << avfile;
+                playNewVideos = true;
+            }
+            else if (id == 4) {
+                std::string avfile = "phc_00.json";
+                loadAV(avfile);
+                initVideos();
+
+                ofLog(OF_LOG_NOTICE) << "loaded new AV :" << avfile;
+                playNewVideos = true;
+            }
+            else if (id == 5) {
+                std::string avfile = "phc_01.json";
                 loadAV(avfile);
                 initVideos();
 
@@ -368,7 +395,17 @@ void ofApp::syncVideos(){
 			//increase frame and reset when the current frame hits the min of all number of frame
 			cur_frame++;
             if (cur_frame >= mMinFrame) {
-                playNewVideos = true;
+                
+                int doneMovies = 0;
+                for (auto& video : mVideoWarps) {
+                    if (video->isDone()) {
+                        doneMovies++;
+                    }
+                }
+                cout <<"done "<< doneMovies;
+                if (doneMovies >= 4) {
+                    playNewVideos = true;
+                }
             }
 		}
 		else {
@@ -735,28 +772,28 @@ void ofApp::debugLayoutVideos(){
 void ofApp::keyPressed(int key){
 
     if (key == '0') {
-        std::string avfile = "avset_00.json";
+        std::string avfile = "idle_00.json";
         loadAV(avfile);
         initVideos();
         ofLog(OF_LOG_NOTICE) << "loaded new AV :" << avfile;
     }
 
     if (key == '1') {
-        std::string avfile = "avset_00.json";
+        std::string avfile = "cai_00.json";
         loadAV(avfile);
         initVideos();
         ofLog(OF_LOG_NOTICE) << "loaded new AV :" << avfile;
     }
 
     if (key == '2') {
-        std::string avfile = "avset_01.json";
+        std::string avfile = "gdl_00.json";
         loadAV(avfile);
         initVideos();
         ofLog(OF_LOG_NOTICE) << "loaded new AV :" << avfile;
     }
 
     if (key == '3') {
-        std::string avfile = "avset_02.json";
+        std::string avfile = "phc_00.json";
         loadAV(avfile);
         initVideos();
         ofLog(OF_LOG_NOTICE) << "loaded new AV :" << avfile;

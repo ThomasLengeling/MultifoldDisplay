@@ -4,7 +4,7 @@
     {
       "width": 1920,
       "height": 1080,
-      "name": "Videos/dummy_011_01_1_hap.mov",
+      "name": "Videos/dummy_013_01_3_hap.mov",
       "alias": "left",
       "drawx": 0,
       "drawy": 0
@@ -12,7 +12,7 @@
     {
       "width": 1920,
       "height": 1080,
-      "name": "Videos/dummy_011_02_1_hap.mov",
+      "name": "Videos/dummy_013_02_3_hap.mov",
       "alias": "front",
       "drawx": 0,
       "drawy": 0
@@ -20,7 +20,7 @@
     {
       "width": 1920,
       "height": 1080,
-      "name": "Videos/dummy_011_03_1_hap.mov",
+      "name": "Videos/dummy_013_03_3_hap.mov",
       "alias": "right",
       "drawx": 0,
       "drawy": 0
@@ -28,7 +28,7 @@
     {
       "width": 1920,
       "height": 1080,
-      "name": "Videos/dummy_011_04_1_hap.mov",
+      "name": "Videos/dummy_013_04_3_hap.mov",
       "alias": "display",
       "drawx": 0,
       "drawy": 0
@@ -36,7 +36,7 @@
   ],
   "audios": [
     {
-      "name": "Sounds/dummy_011_sounds.mp3",
+      "name": "Sounds/dummy_013_sounds.mp3",
       "channel": 2,
       "location": "front"
     }

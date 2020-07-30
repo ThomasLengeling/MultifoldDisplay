@@ -1,0 +1,44 @@
+{
+  "videoType": 0,
+  "videos": [
+    {
+      "width": 1920,
+      "height": 1080,
+      "name": "Videos/CAI_Left_HAP.mov",
+      "alias": "left",
+      "drawx": 0,
+      "drawy": 0
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "name": "Videos/CAI_Right_HAP.mov",
+      "alias": "front",
+      "drawx": 0,
+      "drawy": 0
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "name": "Videos/CAI_Center_HAP.mov",
+      "alias": "right",
+      "drawx": 0,
+      "drawy": 0
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "name": "Videos/CAI_Display_HAP.mov",
+      "alias": "display",
+      "drawx": 0,
+      "drawy": 0
+    }
+  ],
+  "audios": [
+    {
+      "name": "Sounds/CAI_Audio02 wav.wav",
+      "channel": 2,
+      "location": "front"
+    }
+  ]
+}
