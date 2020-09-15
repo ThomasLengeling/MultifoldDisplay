@@ -31,8 +31,8 @@ String msg = "/av";
 PImage img;
 
 void setup() {
-  //fullScreen();
-  size(1920, 1080);
+  fullScreen();
+  //size(1920, 1080);
 
   img = loadImage("cities.jpeg");
 
