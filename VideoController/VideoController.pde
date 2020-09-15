@@ -18,6 +18,12 @@ Button    av_04;
 Button    av_05;
 Button    av_06;
 
+Button    av_07;
+Button    av_08;
+Button    av_09;
+Button    av_10;
+
+
 //osc
 OscP5 oscP5;
 NetAddress myRemoteLocation;
@@ -206,6 +212,81 @@ void setup() {
     }
   }
   );
+  //
+  av_06 =  cp5.addButton("intro")
+    .setPosition(700, 1100)
+    .setSize(100, 100)
+    .setFont(font)
+    ;
+
+  av_06.addCallback(new CallbackListener() {
+    public void controlEvent(CallbackEvent theEvent) {
+      if (theEvent.getAction()==ControlP5.ACTION_ENTER) {
+        OscMessage myMessage = new OscMessage("/av");
+        myMessage.add(6);
+        oscP5.send(myMessage, myRemoteLocation);
+        println("send /av 6");
+      }
+    }
+  }
+  );
+  //
+  av_07 =  cp5.addButton("trade")
+    .setPosition(900, 1100)
+    .setSize(100, 100)
+    .setFont(font)
+    ;
+
+  av_07.addCallback(new CallbackListener() {
+    public void controlEvent(CallbackEvent theEvent) {
+      if (theEvent.getAction()==ControlP5.ACTION_ENTER) {
+        OscMessage myMessage = new OscMessage("/av");
+        myMessage.add(7);
+        oscP5.send(myMessage, myRemoteLocation);
+        println("send /av 7");
+      }
+    }
+  }
+  );
+  
+  //
+  av_08 =  cp5.addButton("indoor")
+    .setPosition(1100, 1100)
+    .setSize(100, 100)
+    .setFont(font)
+    ;
+
+  av_08.addCallback(new CallbackListener() {
+    public void controlEvent(CallbackEvent theEvent) {
+      if (theEvent.getAction()==ControlP5.ACTION_ENTER) {
+        OscMessage myMessage = new OscMessage("/av");
+        myMessage.add(8);
+        oscP5.send(myMessage, myRemoteLocation);
+        println("send /av 8");
+      }
+    }
+  }
+  );
+  
+  //
+  av_09 =  cp5.addButton("festivity")
+    .setPosition(1300, 1100)
+    .setSize(100, 100)
+    .setFont(font)
+    ;
+
+  av_09.addCallback(new CallbackListener() {
+    public void controlEvent(CallbackEvent theEvent) {
+      if (theEvent.getAction()==ControlP5.ACTION_ENTER) {
+        OscMessage myMessage = new OscMessage("/av");
+        myMessage.add(9);
+        oscP5.send(myMessage, myRemoteLocation);
+        println("send /av 9");
+      }
+    }
+  }
+  );
+  
 }
 
 
