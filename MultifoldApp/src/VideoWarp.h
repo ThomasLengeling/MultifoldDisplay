@@ -64,6 +64,8 @@ public:
 
     void closeVideo();
     bool  isLoaded();
+
+    void setPosition(float value);
     
     bool isDone();
 

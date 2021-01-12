@@ -1,0 +1,44 @@
+{
+  "videoType": 0,
+  "videos": [
+    {
+      "width": 1920,
+      "height": 1080,
+      "name": "INDOOR/chapter03_screen_left_jan11.mov",
+      "alias": "left",
+      "drawx": 0,
+      "drawy": 0
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "name": "INDOOR/chapter03_screen_central_jan11.mov",
+      "alias": "front",
+      "drawx": 0,
+      "drawy": 0
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "name": "INDOOR/chapter03_screen_right_jan11.mov",
+      "alias": "right",
+      "drawx": 0,
+      "drawy": 0
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "name": "INDOOR/chapter03_monitor_001_jan11.mov",
+      "alias": "display",
+      "drawx": 0,
+      "drawy": 0
+    }
+  ],
+  "audios": [
+    {
+      "name": "Sounds/Chapter_03_jan11.wav",
+      "channel": 2,
+      "location": "front"
+    }
+  ]
+}

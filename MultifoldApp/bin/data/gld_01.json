@@ -4,7 +4,7 @@
     {
       "width": 1920,
       "height": 1080,
-      "name": "Videos/dummy_013_01_3_hap.mov",
+      "name": "GDL/cables_left_HAP.mov",
       "alias": "left",
       "drawx": 0,
       "drawy": 0
@@ -12,7 +12,7 @@
     {
       "width": 1920,
       "height": 1080,
-      "name": "Videos/dummy_013_02_3_hap.mov",
+      "name": "GDL/cables_middle_HAP.mov",
       "alias": "front",
       "drawx": 0,
       "drawy": 0
@@ -20,7 +20,7 @@
     {
       "width": 1920,
       "height": 1080,
-      "name": "Videos/dummy_013_03_3_hap.mov",
+      "name": "GDL/cables_right_HAP.mov",
       "alias": "right",
       "drawx": 0,
       "drawy": 0
@@ -28,7 +28,7 @@
     {
       "width": 1920,
       "height": 1080,
-      "name": "Videos/dummy_013_04_3_hap.mov",
+      "name": "GDL/cables_tv_HAP.mov",
       "alias": "display",
       "drawx": 0,
       "drawy": 0
@@ -36,7 +36,7 @@
   ],
   "audios": [
     {
-      "name": "Sounds/dummy_013_sounds.mp3",
+      "name": "Sounds/cables_sound.wav",
       "channel": 2,
       "location": "front"
     }

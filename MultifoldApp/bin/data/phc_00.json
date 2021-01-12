@@ -4,7 +4,7 @@
     {
       "width": 1920,
       "height": 1080,
-      "name": "Videos/dummy_012_01_2_hap.mov",
+      "name": "PHC/goat sides_HAP.mov",
       "alias": "left",
       "drawx": 0,
       "drawy": 0
@@ -12,7 +12,7 @@
     {
       "width": 1920,
       "height": 1080,
-      "name": "Videos/dummy_012_02_2_hap.mov",
+      "name": "PHC/goat_middle_HAP.mov",
       "alias": "front",
       "drawx": 0,
       "drawy": 0
@@ -20,7 +20,7 @@
     {
       "width": 1920,
       "height": 1080,
-      "name": "Videos/dummy_012_03_2_hap.mov",
+      "name": "PHC/goat sides_HAP.mov",
       "alias": "right",
       "drawx": 0,
       "drawy": 0
@@ -28,7 +28,7 @@
     {
       "width": 1920,
       "height": 1080,
-      "name": "Videos/dummy_012_04_2_hap.mov",
+      "name": "PHC/goat_tv_HAP.mov",
       "alias": "display",
       "drawx": 0,
       "drawy": 0
@@ -36,7 +36,7 @@
   ],
   "audios": [
     {
-      "name": "Sounds/dummy_012_sounds.mp3",
+      "name": "Sounds/goat_sound.wav",
       "channel": 2,
       "location": "front"
     }

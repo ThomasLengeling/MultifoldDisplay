@@ -4,7 +4,7 @@
     {
       "width": 1920,
       "height": 1080,
-      "name": "Videos/CAI_01_Left01_HAP.mov",
+      "name": "Videos/idle_left_HAP.mov",
       "alias": "left",
       "drawx": 0,
       "drawy": 0
@@ -12,7 +12,7 @@
     {
       "width": 1920,
       "height": 1080,
-      "name": "Videos/CAI_02_Center_HAP.mov",
+      "name": "Videos/idle_middle_HAP.mov",
       "alias": "front",
       "drawx": 0,
       "drawy": 0
@@ -20,7 +20,7 @@
     {
       "width": 1920,
       "height": 1080,
-      "name": "Videos/CAI_03_Right01_HAP.mov",
+      "name": "Videos/idle_right_HAP.mov",
       "alias": "right",
       "drawx": 0,
       "drawy": 0
@@ -28,7 +28,7 @@
     {
       "width": 1920,
       "height": 1080,
-      "name": "Videos/CAI_04_Display02_HAP.mov",
+      "name": "Videos/idle_mode_001_hap_jan11.mov",
       "alias": "display",
       "drawx": 0,
       "drawy": 0
@@ -36,7 +36,7 @@
   ],
   "audios": [
     {
-      "name": "Sounds/CAI_Audio02 wav.wav",
+      "name": "Sounds/Idle_sound.wav",
       "channel": 2,
       "location": "front"
     }

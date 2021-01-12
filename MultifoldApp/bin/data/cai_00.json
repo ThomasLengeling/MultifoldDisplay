@@ -4,7 +4,7 @@
     {
       "width": 1920,
       "height": 1080,
-      "name": "Videos/CAI_Left_HAP.mov",
+      "name": "CAI/CAI_Left_HAP.mov",
       "alias": "left",
       "drawx": 0,
       "drawy": 0
@@ -12,7 +12,7 @@
     {
       "width": 1920,
       "height": 1080,
-      "name": "Videos/CAI_Right_HAP.mov",
+      "name": "CAI/CAI_Center_HAP.mov",
       "alias": "front",
       "drawx": 0,
       "drawy": 0
@@ -20,7 +20,7 @@
     {
       "width": 1920,
       "height": 1080,
-      "name": "Videos/CAI_Center_HAP.mov",
+      "name": "CAI/CAI_Right_HAP.mov",
       "alias": "right",
       "drawx": 0,
       "drawy": 0
@@ -28,7 +28,7 @@
     {
       "width": 1920,
       "height": 1080,
-      "name": "Videos/CAI_Display_HAP.mov",
+      "name": "CAI/CAI_Display_HAP.mov",
       "alias": "display",
       "drawx": 0,
       "drawy": 0

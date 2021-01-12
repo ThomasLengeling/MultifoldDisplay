@@ -38,7 +38,7 @@ void ofApp::setup(){
 
 
     //load av files
-    std::string avfile = "idle_00.json";
+    std::string avfile = "idle_00.json";// "intro_00.json"; /// "idle_00.json";
     loadAV(avfile);
     initVideos();
     playNewVideos = true;
@@ -56,7 +56,7 @@ void ofApp::setup(){
     // the index is the number printed in the console inside [ ] before the interface name
     // You can use a different input and output device.
 
-    int outDeviceIndex = 0;
+    int outDeviceIndex = 6;
     cout << ofxSoundUtils::getSoundDeviceString(outDevices[outDeviceIndex], false, true) << endl;
 
 
@@ -66,8 +66,14 @@ void ofApp::setup(){
     soundSettings.numInputChannels = 0;
     soundSettings.numOutputChannels = 2;
     soundSettings.sampleRate = player.getSoundFile().getSampleRate();
-    soundSettings.bufferSize = 256;
-    soundSettings.numBuffers = 1;
+    
+    cout << " Sample Rate videos " << std::endl;
+    cout << player.getSoundFile().getSampleRate()<< std::endl;
+
+    soundSettings.bufferSize = 512;// 256
+    soundSettings.numBuffers = 2;
+
+    player.volume = 0.3; //.3
 
     stream.setup(soundSettings);
 
@@ -77,6 +83,7 @@ void ofApp::setup(){
 
     // set if you want to either have the player looping (playing over and over again) or not (stop once it reaches the its end).
     player.setLoop(false);
+
 
     if (!player.getIsLooping()) {
         // if the player is not looping you can register  to the end event, which will get triggered when the player reaches the end of the file.
@@ -146,6 +153,7 @@ void ofApp::loadAV(std::string jsonFile) {
             inn::VideoWarpRef video = inn::VideoWarp::create(mPlayerType, id);
             video->loadVideo(strVideoNames);
            // if (video->isLoaded()) {
+
                 mVideoWarps.push_back(video);
            // }
 
@@ -239,6 +247,7 @@ void ofApp::setupAudio(std::string filepath) {
     std::string soundfile = ofToDataPath(filepath);
   
     player.load(soundfile, false);
+
     player.setPaused(true);
         //set the following to true if you want to stream the audio data from the disk on demand instead of
         //reading the whole file into memory. Default is false
@@ -279,6 +288,21 @@ void ofApp::updateOSC() {
         // get the next message
         ofxOscMessage m;
         receiver.getNextMessage(m);
+
+        if (m.getAddress() == "/time") {
+            float time = m.getArgAsFloat(0);
+
+            player.stop();
+            
+            for (auto& video : mVideoWarps) {
+                video->setPosition(time);
+            }
+
+            player.setPosition(time);
+
+
+            ofLog(OF_LOG_NOTICE) <<"updated time video: " << time;
+        }
 
         // check for mouse moved message
         if (m.getAddress() == "/av") {
@@ -331,6 +355,39 @@ void ofApp::updateOSC() {
                 ofLog(OF_LOG_NOTICE) << "loaded new AV :" << avfile;
                 playNewVideos = true;
             }
+            else if (id == 6) {
+                std::string avfile = "intro_00.json";
+                loadAV(avfile);
+                initVideos();
+
+                ofLog(OF_LOG_NOTICE) << "loaded new AV :" << avfile;
+                playNewVideos = true;
+            }
+            else if (id == 7) {
+                std::string avfile = "trade_00.json";
+                loadAV(avfile);
+                initVideos();
+
+                ofLog(OF_LOG_NOTICE) << "loaded new AV :" << avfile;
+                playNewVideos = true;
+            }
+            else if (id == 8) {
+                std::string avfile = "indoor_00.json";
+                loadAV(avfile);
+                initVideos();
+
+                ofLog(OF_LOG_NOTICE) << "loaded new AV :" << avfile;
+                playNewVideos = true;
+            }
+            else if (id == 9) {
+                std::string avfile = "festivity_00.json";
+                loadAV(avfile);
+                initVideos();
+
+                ofLog(OF_LOG_NOTICE) << "loaded new AV :" << avfile;
+                playNewVideos = true;
+            }
+
         }
 
         if (m.getAddress() == "/stop") {
@@ -604,8 +661,6 @@ void ofApp::frameSlider(int & value){
     for(auto & video : mVideoWarps){
         video->update();
     }
-    
-    //reset alll the videos:
 
     
     //update frame

@@ -81,6 +81,12 @@ void VideoWarp::closeVideo() {
     }
 }
 
+void VideoWarp::setPosition(float value) {
+    if (mPlayerType == 0) {
+        mHAPPlayer.setPosition(value);
+    }
+}
+
 //--------------------------------------------------------------
 void VideoWarp::updateFrame(int64_t currFrame){
     if(mPlayerType == 0){

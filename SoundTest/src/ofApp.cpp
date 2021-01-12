@@ -6,7 +6,7 @@ void ofApp::setup(){
 
     ofBackground( 0 );
 
-    std::string filepath = ofToDataPath("tubophone.wav"); // mono original file
+    std::string filepath = ofToDataPath("chapter_01_audiohap1.wav"); // mono original file
     //std::string filepath = ofToDataPath("tubophone.mp3"); // at the moment mp3 isn't working on ARM
     //std::string filepath = ofToDataPath("tubophone.ogg"); // ogg/vorbis
     //std::string filepath = ofToDataPath("tubophone.flac"); // FLAC
