@@ -49,6 +49,7 @@ void VideoWarp::loadVideo(std::string & name){
         ofLog(OF_LOG_NOTICE)<<"Player HAP L: "<< mVideoName;
         mHAPPlayer.load(mVideoName);
         mHAPPlayer.setLoopState(OF_LOOP_NONE);
+        mHAPPlayer.setVolume(0.0);
     }
     
     if(mPlayerType == 2){

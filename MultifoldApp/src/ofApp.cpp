@@ -56,7 +56,7 @@ void ofApp::setup(){
     // the index is the number printed in the console inside [ ] before the interface name
     // You can use a different input and output device.
 
-    int outDeviceIndex = 6;
+    int outDeviceIndex = ofxSoundUtils::getOutputSoundDevices().size() - 1;
     cout << ofxSoundUtils::getSoundDeviceString(outDevices[outDeviceIndex], false, true) << endl;
 
 
@@ -71,7 +71,7 @@ void ofApp::setup(){
     cout << player.getSoundFile().getSampleRate()<< std::endl;
 
     soundSettings.bufferSize = 512;// 256
-    soundSettings.numBuffers = 2;
+    soundSettings.numBuffers = 2; //2
 
     player.volume = 0.3; //.3
 
@@ -246,7 +246,7 @@ void ofApp::initVideos() {
 void ofApp::setupAudio(std::string filepath) {
     std::string soundfile = ofToDataPath(filepath);
   
-    player.load(soundfile, false);
+    player.load(soundfile, true);
 
     player.setPaused(true);
         //set the following to true if you want to stream the audio data from the disk on demand instead of
