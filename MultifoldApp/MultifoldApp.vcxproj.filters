@@ -19,244 +19,244 @@
 		<ClCompile Include="src\VideoWarp.cpp">
 			<Filter>src</Filter>
 		</ClCompile>
-		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxAudioFile\src\ofxAudioFile.cpp">
+		<ClCompile Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxAudioFile\src\ofxAudioFile.cpp">
 			<Filter>addons\ofxAudioFile\src</Filter>
 		</ClCompile>
-		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxDatGui\src\core\ofxDatGuiComponent.cpp">
+		<ClCompile Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxDatGui\src\core\ofxDatGuiComponent.cpp">
 			<Filter>addons\ofxDatGui\src\core</Filter>
 		</ClCompile>
-		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxDatGui\src\libs\ofxSmartFont\ofxSmartFont.cpp">
+		<ClCompile Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxDatGui\src\libs\ofxSmartFont\ofxSmartFont.cpp">
 			<Filter>addons\ofxDatGui\src\libs\ofxSmartFont</Filter>
 		</ClCompile>
-		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxDatGui\src\ofxDatGui.cpp">
+		<ClCompile Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxDatGui\src\ofxDatGui.cpp">
 			<Filter>addons\ofxDatGui\src</Filter>
 		</ClCompile>
-		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxGui\src\ofxBaseGui.cpp">
+		<ClCompile Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxGui\src\ofxBaseGui.cpp">
 			<Filter>addons\ofxGui\src</Filter>
 		</ClCompile>
-		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxGui\src\ofxButton.cpp">
+		<ClCompile Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxGui\src\ofxButton.cpp">
 			<Filter>addons\ofxGui\src</Filter>
 		</ClCompile>
-		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxGui\src\ofxColorPicker.cpp">
+		<ClCompile Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxGui\src\ofxColorPicker.cpp">
 			<Filter>addons\ofxGui\src</Filter>
 		</ClCompile>
-		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxGui\src\ofxGuiGroup.cpp">
+		<ClCompile Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxGui\src\ofxGuiGroup.cpp">
 			<Filter>addons\ofxGui\src</Filter>
 		</ClCompile>
-		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxGui\src\ofxInputField.cpp">
+		<ClCompile Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxGui\src\ofxInputField.cpp">
 			<Filter>addons\ofxGui\src</Filter>
 		</ClCompile>
-		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxGui\src\ofxLabel.cpp">
+		<ClCompile Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxGui\src\ofxLabel.cpp">
 			<Filter>addons\ofxGui\src</Filter>
 		</ClCompile>
-		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxGui\src\ofxPanel.cpp">
+		<ClCompile Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxGui\src\ofxPanel.cpp">
 			<Filter>addons\ofxGui\src</Filter>
 		</ClCompile>
-		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxGui\src\ofxSlider.cpp">
+		<ClCompile Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxGui\src\ofxSlider.cpp">
 			<Filter>addons\ofxGui\src</Filter>
 		</ClCompile>
-		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxGui\src\ofxSliderGroup.cpp">
+		<ClCompile Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxGui\src\ofxSliderGroup.cpp">
 			<Filter>addons\ofxGui\src</Filter>
 		</ClCompile>
-		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxGui\src\ofxToggle.cpp">
+		<ClCompile Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxGui\src\ofxToggle.cpp">
 			<Filter>addons\ofxGui\src</Filter>
 		</ClCompile>
-		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxHapPlayer\src\ofxHapPlayer.cpp">
+		<ClCompile Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxHapPlayer\src\ofxHapPlayer.cpp">
 			<Filter>addons\ofxHapPlayer\src</Filter>
 		</ClCompile>
-		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxHapPlayer\libs\hap\src\hap.c">
+		<ClCompile Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxHapPlayer\libs\hap\src\hap.c">
 			<Filter>addons\ofxHapPlayer\libs\hap\src</Filter>
 		</ClCompile>
-		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxHapPlayer\libs\ofxHap\src\AudioDecoder.cpp">
+		<ClCompile Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxHapPlayer\libs\ofxHap\src\AudioDecoder.cpp">
 			<Filter>addons\ofxHapPlayer\libs\ofxHap\src</Filter>
 		</ClCompile>
-		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxHapPlayer\libs\ofxHap\src\AudioParameters.cpp">
+		<ClCompile Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxHapPlayer\libs\ofxHap\src\AudioParameters.cpp">
 			<Filter>addons\ofxHapPlayer\libs\ofxHap\src</Filter>
 		</ClCompile>
-		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxHapPlayer\libs\ofxHap\src\AudioResampler.cpp">
+		<ClCompile Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxHapPlayer\libs\ofxHap\src\AudioResampler.cpp">
 			<Filter>addons\ofxHapPlayer\libs\ofxHap\src</Filter>
 		</ClCompile>
-		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxHapPlayer\libs\ofxHap\src\AudioThread.cpp">
+		<ClCompile Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxHapPlayer\libs\ofxHap\src\AudioThread.cpp">
 			<Filter>addons\ofxHapPlayer\libs\ofxHap\src</Filter>
 		</ClCompile>
-		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxHapPlayer\libs\ofxHap\src\Clock.cpp">
+		<ClCompile Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxHapPlayer\libs\ofxHap\src\Clock.cpp">
 			<Filter>addons\ofxHapPlayer\libs\ofxHap\src</Filter>
 		</ClCompile>
-		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxHapPlayer\libs\ofxHap\src\Demuxer.cpp">
+		<ClCompile Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxHapPlayer\libs\ofxHap\src\Demuxer.cpp">
 			<Filter>addons\ofxHapPlayer\libs\ofxHap\src</Filter>
 		</ClCompile>
-		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxHapPlayer\libs\ofxHap\src\MovieTime.cpp">
+		<ClCompile Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxHapPlayer\libs\ofxHap\src\MovieTime.cpp">
 			<Filter>addons\ofxHapPlayer\libs\ofxHap\src</Filter>
 		</ClCompile>
-		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxHapPlayer\libs\ofxHap\src\PacketCache.cpp">
+		<ClCompile Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxHapPlayer\libs\ofxHap\src\PacketCache.cpp">
 			<Filter>addons\ofxHapPlayer\libs\ofxHap\src</Filter>
 		</ClCompile>
-		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxHapPlayer\libs\ofxHap\src\RingBuffer.cpp">
+		<ClCompile Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxHapPlayer\libs\ofxHap\src\RingBuffer.cpp">
 			<Filter>addons\ofxHapPlayer\libs\ofxHap\src</Filter>
 		</ClCompile>
-		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxHapPlayer\libs\ofxHap\src\TimeRangeSet.cpp">
+		<ClCompile Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxHapPlayer\libs\ofxHap\src\TimeRangeSet.cpp">
 			<Filter>addons\ofxHapPlayer\libs\ofxHap\src</Filter>
 		</ClCompile>
-		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxHPVPlayer\src\HPVManager.cpp">
+		<ClCompile Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxHPVPlayer\src\HPVManager.cpp">
 			<Filter>addons\ofxHPVPlayer\src</Filter>
 		</ClCompile>
-		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxHPVPlayer\src\HPVPlayer.cpp">
+		<ClCompile Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxHPVPlayer\src\HPVPlayer.cpp">
 			<Filter>addons\ofxHPVPlayer\src</Filter>
 		</ClCompile>
-		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxHPVPlayer\src\HPVRenderBridge.cpp">
+		<ClCompile Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxHPVPlayer\src\HPVRenderBridge.cpp">
 			<Filter>addons\ofxHPVPlayer\src</Filter>
 		</ClCompile>
-		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxHPVPlayer\src\Log.cpp">
+		<ClCompile Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxHPVPlayer\src\Log.cpp">
 			<Filter>addons\ofxHPVPlayer\src</Filter>
 		</ClCompile>
-		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxHPVPlayer\src\lz4.c">
+		<ClCompile Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxHPVPlayer\src\lz4.c">
 			<Filter>addons\ofxHPVPlayer\src</Filter>
 		</ClCompile>
-		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxHPVPlayer\src\lz4hc.c">
+		<ClCompile Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxHPVPlayer\src\lz4hc.c">
 			<Filter>addons\ofxHPVPlayer\src</Filter>
 		</ClCompile>
-		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxHPVPlayer\src\ofxHPVPLayer.cpp">
+		<ClCompile Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxHPVPlayer\src\ofxHPVPLayer.cpp">
 			<Filter>addons\ofxHPVPlayer\src</Filter>
 		</ClCompile>
-		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxNetwork\src\ofxNetworkUtils.cpp">
+		<ClCompile Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxNetwork\src\ofxNetworkUtils.cpp">
 			<Filter>addons\ofxNetwork\src</Filter>
 		</ClCompile>
-		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxNetwork\src\ofxTCPClient.cpp">
+		<ClCompile Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxNetwork\src\ofxTCPClient.cpp">
 			<Filter>addons\ofxNetwork\src</Filter>
 		</ClCompile>
-		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxNetwork\src\ofxTCPManager.cpp">
+		<ClCompile Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxNetwork\src\ofxTCPManager.cpp">
 			<Filter>addons\ofxNetwork\src</Filter>
 		</ClCompile>
-		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxNetwork\src\ofxTCPServer.cpp">
+		<ClCompile Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxNetwork\src\ofxTCPServer.cpp">
 			<Filter>addons\ofxNetwork\src</Filter>
 		</ClCompile>
-		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxNetwork\src\ofxUDPManager.cpp">
+		<ClCompile Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxNetwork\src\ofxUDPManager.cpp">
 			<Filter>addons\ofxNetwork\src</Filter>
 		</ClCompile>
-		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\src\ofxCvColorImage.cpp">
+		<ClCompile Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\src\ofxCvColorImage.cpp">
 			<Filter>addons\ofxOpenCv\src</Filter>
 		</ClCompile>
-		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\src\ofxCvContourFinder.cpp">
+		<ClCompile Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\src\ofxCvContourFinder.cpp">
 			<Filter>addons\ofxOpenCv\src</Filter>
 		</ClCompile>
-		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\src\ofxCvFloatImage.cpp">
+		<ClCompile Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\src\ofxCvFloatImage.cpp">
 			<Filter>addons\ofxOpenCv\src</Filter>
 		</ClCompile>
-		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\src\ofxCvGrayscaleImage.cpp">
+		<ClCompile Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\src\ofxCvGrayscaleImage.cpp">
 			<Filter>addons\ofxOpenCv\src</Filter>
 		</ClCompile>
-		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\src\ofxCvHaarFinder.cpp">
+		<ClCompile Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\src\ofxCvHaarFinder.cpp">
 			<Filter>addons\ofxOpenCv\src</Filter>
 		</ClCompile>
-		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\src\ofxCvImage.cpp">
+		<ClCompile Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\src\ofxCvImage.cpp">
 			<Filter>addons\ofxOpenCv\src</Filter>
 		</ClCompile>
-		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\src\ofxCvShortImage.cpp">
+		<ClCompile Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\src\ofxCvShortImage.cpp">
 			<Filter>addons\ofxOpenCv\src</Filter>
 		</ClCompile>
-		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOsc\src\ofxOscBundle.cpp">
+		<ClCompile Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOsc\src\ofxOscBundle.cpp">
 			<Filter>addons\ofxOsc\src</Filter>
 		</ClCompile>
-		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOsc\src\ofxOscMessage.cpp">
+		<ClCompile Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOsc\src\ofxOscMessage.cpp">
 			<Filter>addons\ofxOsc\src</Filter>
 		</ClCompile>
-		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOsc\src\ofxOscParameterSync.cpp">
+		<ClCompile Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOsc\src\ofxOscParameterSync.cpp">
 			<Filter>addons\ofxOsc\src</Filter>
 		</ClCompile>
-		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOsc\src\ofxOscReceiver.cpp">
+		<ClCompile Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOsc\src\ofxOscReceiver.cpp">
 			<Filter>addons\ofxOsc\src</Filter>
 		</ClCompile>
-		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOsc\src\ofxOscSender.cpp">
+		<ClCompile Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOsc\src\ofxOscSender.cpp">
 			<Filter>addons\ofxOsc\src</Filter>
 		</ClCompile>
-		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOsc\libs\oscpack\src\ip\IpEndpointName.cpp">
+		<ClCompile Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOsc\libs\oscpack\src\ip\IpEndpointName.cpp">
 			<Filter>addons\ofxOsc\libs\oscpack\src\ip</Filter>
 		</ClCompile>
-		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOsc\libs\oscpack\src\ip\win32\NetworkingUtils.cpp">
+		<ClCompile Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOsc\libs\oscpack\src\ip\win32\NetworkingUtils.cpp">
 			<Filter>addons\ofxOsc\libs\oscpack\src\ip\win32</Filter>
 		</ClCompile>
-		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOsc\libs\oscpack\src\ip\win32\UdpSocket.cpp">
+		<ClCompile Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOsc\libs\oscpack\src\ip\win32\UdpSocket.cpp">
 			<Filter>addons\ofxOsc\libs\oscpack\src\ip\win32</Filter>
 		</ClCompile>
-		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOsc\libs\oscpack\src\osc\OscOutboundPacketStream.cpp">
+		<ClCompile Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOsc\libs\oscpack\src\osc\OscOutboundPacketStream.cpp">
 			<Filter>addons\ofxOsc\libs\oscpack\src\osc</Filter>
 		</ClCompile>
-		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOsc\libs\oscpack\src\osc\OscPrintReceivedElements.cpp">
+		<ClCompile Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOsc\libs\oscpack\src\osc\OscPrintReceivedElements.cpp">
 			<Filter>addons\ofxOsc\libs\oscpack\src\osc</Filter>
 		</ClCompile>
-		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOsc\libs\oscpack\src\osc\OscReceivedElements.cpp">
+		<ClCompile Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOsc\libs\oscpack\src\osc\OscReceivedElements.cpp">
 			<Filter>addons\ofxOsc\libs\oscpack\src\osc</Filter>
 		</ClCompile>
-		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOsc\libs\oscpack\src\osc\OscTypes.cpp">
+		<ClCompile Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOsc\libs\oscpack\src\osc\OscTypes.cpp">
 			<Filter>addons\ofxOsc\libs\oscpack\src\osc</Filter>
 		</ClCompile>
-		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\ofxSoundFile.cpp">
+		<ClCompile Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\ofxSoundFile.cpp">
 			<Filter>addons\ofxSoundObjects\src</Filter>
 		</ClCompile>
-		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\ofxSoundMatrixMixer.cpp">
+		<ClCompile Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\ofxSoundMatrixMixer.cpp">
 			<Filter>addons\ofxSoundObjects\src</Filter>
 		</ClCompile>
-		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\ofxSoundMixer.cpp">
+		<ClCompile Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\ofxSoundMixer.cpp">
 			<Filter>addons\ofxSoundObjects\src</Filter>
 		</ClCompile>
-		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\ofxSoundMultiplexer.cpp">
+		<ClCompile Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\ofxSoundMultiplexer.cpp">
 			<Filter>addons\ofxSoundObjects\src</Filter>
 		</ClCompile>
-		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\ofxSoundObject.cpp">
+		<ClCompile Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\ofxSoundObject.cpp">
 			<Filter>addons\ofxSoundObjects\src</Filter>
 		</ClCompile>
-		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\ofxSoundPlayerObject.cpp">
+		<ClCompile Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\ofxSoundPlayerObject.cpp">
 			<Filter>addons\ofxSoundObjects\src</Filter>
 		</ClCompile>
-		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\ofxSoundRecorderObject.cpp">
+		<ClCompile Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\ofxSoundRecorderObject.cpp">
 			<Filter>addons\ofxSoundObjects\src</Filter>
 		</ClCompile>
-		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\ofxSoundUtils.cpp">
+		<ClCompile Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\ofxSoundUtils.cpp">
 			<Filter>addons\ofxSoundObjects\src</Filter>
 		</ClCompile>
-		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\Renderers\ofx2DCanvas.cpp">
+		<ClCompile Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\Renderers\ofx2DCanvas.cpp">
 			<Filter>addons\ofxSoundObjects\src\Renderers</Filter>
 		</ClCompile>
-		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\Renderers\ofxSlidersGrid.cpp">
+		<ClCompile Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\Renderers\ofxSlidersGrid.cpp">
 			<Filter>addons\ofxSoundObjects\src\Renderers</Filter>
 		</ClCompile>
-		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\Renderers\ofxSoundObjectBaseRenderer.cpp">
+		<ClCompile Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\Renderers\ofxSoundObjectBaseRenderer.cpp">
 			<Filter>addons\ofxSoundObjects\src\Renderers</Filter>
 		</ClCompile>
-		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\Renderers\ofxSoundObjectMatrixMixerRenderer.cpp">
+		<ClCompile Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\Renderers\ofxSoundObjectMatrixMixerRenderer.cpp">
 			<Filter>addons\ofxSoundObjects\src\Renderers</Filter>
 		</ClCompile>
-		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\SoundObjects\VUMeter.cpp">
+		<ClCompile Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\SoundObjects\VUMeter.cpp">
 			<Filter>addons\ofxSoundObjects\src\SoundObjects</Filter>
 		</ClCompile>
-		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\SoundObjects\waveformDraw.cpp">
+		<ClCompile Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\SoundObjects\waveformDraw.cpp">
 			<Filter>addons\ofxSoundObjects\src\SoundObjects</Filter>
 		</ClCompile>
-		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxWarp\src\ofxWarp\Controller.cpp">
+		<ClCompile Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxWarp\src\ofxWarp\Controller.cpp">
 			<Filter>addons\ofxWarp\src\ofxWarp</Filter>
 		</ClCompile>
-		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxWarp\src\ofxWarp\WarpBase.cpp">
+		<ClCompile Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxWarp\src\ofxWarp\WarpBase.cpp">
 			<Filter>addons\ofxWarp\src\ofxWarp</Filter>
 		</ClCompile>
-		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxWarp\src\ofxWarp\WarpBilinear.cpp">
+		<ClCompile Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxWarp\src\ofxWarp\WarpBilinear.cpp">
 			<Filter>addons\ofxWarp\src\ofxWarp</Filter>
 		</ClCompile>
-		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxWarp\src\ofxWarp\WarpPerspective.cpp">
+		<ClCompile Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxWarp\src\ofxWarp\WarpPerspective.cpp">
 			<Filter>addons\ofxWarp\src\ofxWarp</Filter>
 		</ClCompile>
-		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxWarp\src\ofxWarp\WarpPerspectiveBilinear.cpp">
+		<ClCompile Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxWarp\src\ofxWarp\WarpPerspectiveBilinear.cpp">
 			<Filter>addons\ofxWarp\src\ofxWarp</Filter>
 		</ClCompile>
-		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxXmlSettings\src\ofxXmlSettings.cpp">
+		<ClCompile Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxXmlSettings\src\ofxXmlSettings.cpp">
 			<Filter>addons\ofxXmlSettings\src</Filter>
 		</ClCompile>
-		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxXmlSettings\libs\tinyxml.cpp">
+		<ClCompile Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxXmlSettings\libs\tinyxml.cpp">
 			<Filter>addons\ofxXmlSettings\libs</Filter>
 		</ClCompile>
-		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxXmlSettings\libs\tinyxmlerror.cpp">
+		<ClCompile Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxXmlSettings\libs\tinyxmlerror.cpp">
 			<Filter>addons\ofxXmlSettings\libs</Filter>
 		</ClCompile>
-		<ClCompile Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxXmlSettings\libs\tinyxmlparser.cpp">
+		<ClCompile Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxXmlSettings\libs\tinyxmlparser.cpp">
 			<Filter>addons\ofxXmlSettings\libs</Filter>
 		</ClCompile>
 	</ItemGroup>
@@ -554,1243 +554,1243 @@
 		<ClInclude Include="src\VideoWarp.h">
 			<Filter>src</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxAudioFile\src\ofxAudioFile.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxAudioFile\src\ofxAudioFile.h">
 			<Filter>addons\ofxAudioFile\src</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxAudioFile\libs\dr_flac.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxAudioFile\libs\dr_flac.h">
 			<Filter>addons\ofxAudioFile\libs</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxAudioFile\libs\dr_mp3.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxAudioFile\libs\dr_mp3.h">
 			<Filter>addons\ofxAudioFile\libs</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxAudioFile\libs\dr_wav.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxAudioFile\libs\dr_wav.h">
 			<Filter>addons\ofxAudioFile\libs</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxAudioFile\libs\stb_vorbis.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxAudioFile\libs\stb_vorbis.h">
 			<Filter>addons\ofxAudioFile\libs</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxDatGui\src\components\ofxDatGui2dPad.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxDatGui\src\components\ofxDatGui2dPad.h">
 			<Filter>addons\ofxDatGui\src\components</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxDatGui\src\components\ofxDatGuiButton.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxDatGui\src\components\ofxDatGuiButton.h">
 			<Filter>addons\ofxDatGui\src\components</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxDatGui\src\components\ofxDatGuiColorPicker.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxDatGui\src\components\ofxDatGuiColorPicker.h">
 			<Filter>addons\ofxDatGui\src\components</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxDatGui\src\components\ofxDatGuiControls.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxDatGui\src\components\ofxDatGuiControls.h">
 			<Filter>addons\ofxDatGui\src\components</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxDatGui\src\components\ofxDatGuiFRM.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxDatGui\src\components\ofxDatGuiFRM.h">
 			<Filter>addons\ofxDatGui\src\components</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxDatGui\src\components\ofxDatGuiGroups.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxDatGui\src\components\ofxDatGuiGroups.h">
 			<Filter>addons\ofxDatGui\src\components</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxDatGui\src\components\ofxDatGuiLabel.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxDatGui\src\components\ofxDatGuiLabel.h">
 			<Filter>addons\ofxDatGui\src\components</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxDatGui\src\components\ofxDatGuiMatrix.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxDatGui\src\components\ofxDatGuiMatrix.h">
 			<Filter>addons\ofxDatGui\src\components</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxDatGui\src\components\ofxDatGuiScrollView.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxDatGui\src\components\ofxDatGuiScrollView.h">
 			<Filter>addons\ofxDatGui\src\components</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxDatGui\src\components\ofxDatGuiSlider.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxDatGui\src\components\ofxDatGuiSlider.h">
 			<Filter>addons\ofxDatGui\src\components</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxDatGui\src\components\ofxDatGuiTextInput.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxDatGui\src\components\ofxDatGuiTextInput.h">
 			<Filter>addons\ofxDatGui\src\components</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxDatGui\src\components\ofxDatGuiTextInputField.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxDatGui\src\components\ofxDatGuiTextInputField.h">
 			<Filter>addons\ofxDatGui\src\components</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxDatGui\src\components\ofxDatGuiTimeGraph.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxDatGui\src\components\ofxDatGuiTimeGraph.h">
 			<Filter>addons\ofxDatGui\src\components</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxDatGui\src\core\ofxDatGuiComponent.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxDatGui\src\core\ofxDatGuiComponent.h">
 			<Filter>addons\ofxDatGui\src\core</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxDatGui\src\core\ofxDatGuiConstants.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxDatGui\src\core\ofxDatGuiConstants.h">
 			<Filter>addons\ofxDatGui\src\core</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxDatGui\src\core\ofxDatGuiEvents.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxDatGui\src\core\ofxDatGuiEvents.h">
 			<Filter>addons\ofxDatGui\src\core</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxDatGui\src\core\ofxDatGuiIntObject.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxDatGui\src\core\ofxDatGuiIntObject.h">
 			<Filter>addons\ofxDatGui\src\core</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxDatGui\src\libs\ofxSmartFont\ofxSmartFont.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxDatGui\src\libs\ofxSmartFont\ofxSmartFont.h">
 			<Filter>addons\ofxDatGui\src\libs\ofxSmartFont</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxDatGui\src\ofxDatGui.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxDatGui\src\ofxDatGui.h">
 			<Filter>addons\ofxDatGui\src</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxDatGui\src\themes\ofxDatGuiTheme.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxDatGui\src\themes\ofxDatGuiTheme.h">
 			<Filter>addons\ofxDatGui\src\themes</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxDatGui\src\themes\ofxDatGuiThemes.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxDatGui\src\themes\ofxDatGuiThemes.h">
 			<Filter>addons\ofxDatGui\src\themes</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxGui\src\ofxBaseGui.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxGui\src\ofxBaseGui.h">
 			<Filter>addons\ofxGui\src</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxGui\src\ofxButton.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxGui\src\ofxButton.h">
 			<Filter>addons\ofxGui\src</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxGui\src\ofxColorPicker.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxGui\src\ofxColorPicker.h">
 			<Filter>addons\ofxGui\src</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxGui\src\ofxGui.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxGui\src\ofxGui.h">
 			<Filter>addons\ofxGui\src</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxGui\src\ofxGuiGroup.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxGui\src\ofxGuiGroup.h">
 			<Filter>addons\ofxGui\src</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxGui\src\ofxGuiUtils.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxGui\src\ofxGuiUtils.h">
 			<Filter>addons\ofxGui\src</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxGui\src\ofxInputField.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxGui\src\ofxInputField.h">
 			<Filter>addons\ofxGui\src</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxGui\src\ofxLabel.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxGui\src\ofxLabel.h">
 			<Filter>addons\ofxGui\src</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxGui\src\ofxPanel.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxGui\src\ofxPanel.h">
 			<Filter>addons\ofxGui\src</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxGui\src\ofxSlider.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxGui\src\ofxSlider.h">
 			<Filter>addons\ofxGui\src</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxGui\src\ofxSliderGroup.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxGui\src\ofxSliderGroup.h">
 			<Filter>addons\ofxGui\src</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxGui\src\ofxToggle.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxGui\src\ofxToggle.h">
 			<Filter>addons\ofxGui\src</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxHapPlayer\src\ofxHapPlayer.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxHapPlayer\src\ofxHapPlayer.h">
 			<Filter>addons\ofxHapPlayer\src</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxHapPlayer\libs\hap\src\hap.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxHapPlayer\libs\hap\src\hap.h">
 			<Filter>addons\ofxHapPlayer\libs\hap\src</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxHapPlayer\libs\ofxHap\include\ofxHap\AudioDecoder.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxHapPlayer\libs\ofxHap\include\ofxHap\AudioDecoder.h">
 			<Filter>addons\ofxHapPlayer\libs\ofxHap\include\ofxHap</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxHapPlayer\libs\ofxHap\include\ofxHap\AudioParameters.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxHapPlayer\libs\ofxHap\include\ofxHap\AudioParameters.h">
 			<Filter>addons\ofxHapPlayer\libs\ofxHap\include\ofxHap</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxHapPlayer\libs\ofxHap\include\ofxHap\AudioResampler.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxHapPlayer\libs\ofxHap\include\ofxHap\AudioResampler.h">
 			<Filter>addons\ofxHapPlayer\libs\ofxHap\include\ofxHap</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxHapPlayer\libs\ofxHap\include\ofxHap\AudioThread.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxHapPlayer\libs\ofxHap\include\ofxHap\AudioThread.h">
 			<Filter>addons\ofxHapPlayer\libs\ofxHap\include\ofxHap</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxHapPlayer\libs\ofxHap\include\ofxHap\Clock.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxHapPlayer\libs\ofxHap\include\ofxHap\Clock.h">
 			<Filter>addons\ofxHapPlayer\libs\ofxHap\include\ofxHap</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxHapPlayer\libs\ofxHap\include\ofxHap\Common.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxHapPlayer\libs\ofxHap\include\ofxHap\Common.h">
 			<Filter>addons\ofxHapPlayer\libs\ofxHap\include\ofxHap</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxHapPlayer\libs\ofxHap\include\ofxHap\Demuxer.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxHapPlayer\libs\ofxHap\include\ofxHap\Demuxer.h">
 			<Filter>addons\ofxHapPlayer\libs\ofxHap\include\ofxHap</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxHapPlayer\libs\ofxHap\include\ofxHap\ErrorReceiving.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxHapPlayer\libs\ofxHap\include\ofxHap\ErrorReceiving.h">
 			<Filter>addons\ofxHapPlayer\libs\ofxHap\include\ofxHap</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxHapPlayer\libs\ofxHap\include\ofxHap\MovieTime.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxHapPlayer\libs\ofxHap\include\ofxHap\MovieTime.h">
 			<Filter>addons\ofxHapPlayer\libs\ofxHap\include\ofxHap</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxHapPlayer\libs\ofxHap\include\ofxHap\PacketCache.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxHapPlayer\libs\ofxHap\include\ofxHap\PacketCache.h">
 			<Filter>addons\ofxHapPlayer\libs\ofxHap\include\ofxHap</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxHapPlayer\libs\ofxHap\include\ofxHap\RingBuffer.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxHapPlayer\libs\ofxHap\include\ofxHap\RingBuffer.h">
 			<Filter>addons\ofxHapPlayer\libs\ofxHap\include\ofxHap</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxHapPlayer\libs\ofxHap\include\ofxHap\TimeRangeSet.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxHapPlayer\libs\ofxHap\include\ofxHap\TimeRangeSet.h">
 			<Filter>addons\ofxHapPlayer\libs\ofxHap\include\ofxHap</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxHPVPlayer\src\HPVEvent.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxHPVPlayer\src\HPVEvent.h">
 			<Filter>addons\ofxHPVPlayer\src</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxHPVPlayer\src\HPVHeader.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxHPVPlayer\src\HPVHeader.h">
 			<Filter>addons\ofxHPVPlayer\src</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxHPVPlayer\src\HPVManager.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxHPVPlayer\src\HPVManager.h">
 			<Filter>addons\ofxHPVPlayer\src</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxHPVPlayer\src\HPVPlayer.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxHPVPlayer\src\HPVPlayer.h">
 			<Filter>addons\ofxHPVPlayer\src</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxHPVPlayer\src\HPVRenderBridge.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxHPVPlayer\src\HPVRenderBridge.h">
 			<Filter>addons\ofxHPVPlayer\src</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxHPVPlayer\src\Log.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxHPVPlayer\src\Log.h">
 			<Filter>addons\ofxHPVPlayer\src</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxHPVPlayer\src\lz4.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxHPVPlayer\src\lz4.h">
 			<Filter>addons\ofxHPVPlayer\src</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxHPVPlayer\src\lz4hc.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxHPVPlayer\src\lz4hc.h">
 			<Filter>addons\ofxHPVPlayer\src</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxHPVPlayer\src\ofxHPVPlayer.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxHPVPlayer\src\ofxHPVPlayer.h">
 			<Filter>addons\ofxHPVPlayer\src</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxHPVPlayer\src\ThreadSafeQueue.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxHPVPlayer\src\ThreadSafeQueue.h">
 			<Filter>addons\ofxHPVPlayer\src</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxHPVPlayer\src\Timer.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxHPVPlayer\src\Timer.h">
 			<Filter>addons\ofxHPVPlayer\src</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxNetwork\src\ofxNetwork.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxNetwork\src\ofxNetwork.h">
 			<Filter>addons\ofxNetwork\src</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxNetwork\src\ofxNetworkUtils.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxNetwork\src\ofxNetworkUtils.h">
 			<Filter>addons\ofxNetwork\src</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxNetwork\src\ofxTCPClient.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxNetwork\src\ofxTCPClient.h">
 			<Filter>addons\ofxNetwork\src</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxNetwork\src\ofxTCPManager.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxNetwork\src\ofxTCPManager.h">
 			<Filter>addons\ofxNetwork\src</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxNetwork\src\ofxTCPServer.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxNetwork\src\ofxTCPServer.h">
 			<Filter>addons\ofxNetwork\src</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxNetwork\src\ofxTCPSettings.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxNetwork\src\ofxTCPSettings.h">
 			<Filter>addons\ofxNetwork\src</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxNetwork\src\ofxUDPManager.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxNetwork\src\ofxUDPManager.h">
 			<Filter>addons\ofxNetwork\src</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxNetwork\src\ofxUDPSettings.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxNetwork\src\ofxUDPSettings.h">
 			<Filter>addons\ofxNetwork\src</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\src\ofxCvBlob.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\src\ofxCvBlob.h">
 			<Filter>addons\ofxOpenCv\src</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\src\ofxCvColorImage.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\src\ofxCvColorImage.h">
 			<Filter>addons\ofxOpenCv\src</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\src\ofxCvConstants.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\src\ofxCvConstants.h">
 			<Filter>addons\ofxOpenCv\src</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\src\ofxCvContourFinder.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\src\ofxCvContourFinder.h">
 			<Filter>addons\ofxOpenCv\src</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\src\ofxCvFloatImage.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\src\ofxCvFloatImage.h">
 			<Filter>addons\ofxOpenCv\src</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\src\ofxCvGrayscaleImage.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\src\ofxCvGrayscaleImage.h">
 			<Filter>addons\ofxOpenCv\src</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\src\ofxCvHaarFinder.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\src\ofxCvHaarFinder.h">
 			<Filter>addons\ofxOpenCv\src</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\src\ofxCvImage.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\src\ofxCvImage.h">
 			<Filter>addons\ofxOpenCv\src</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\src\ofxCvShortImage.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\src\ofxCvShortImage.h">
 			<Filter>addons\ofxOpenCv\src</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\src\ofxOpenCv.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\src\ofxOpenCv.h">
 			<Filter>addons\ofxOpenCv\src</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\ippicv\include\ippicv.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\ippicv\include\ippicv.h">
 			<Filter>addons\ofxOpenCv\libs\ippicv\include</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\ippicv\include\ippicv_base.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\ippicv\include\ippicv_base.h">
 			<Filter>addons\ofxOpenCv\libs\ippicv\include</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\ippicv\include\ippicv_defs.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\ippicv\include\ippicv_defs.h">
 			<Filter>addons\ofxOpenCv\libs\ippicv\include</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\ippicv\include\ippicv_defs_l.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\ippicv\include\ippicv_defs_l.h">
 			<Filter>addons\ofxOpenCv\libs\ippicv\include</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\ippicv\include\ippicv_l.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\ippicv\include\ippicv_l.h">
 			<Filter>addons\ofxOpenCv\libs\ippicv\include</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\ippicv\include\ippicv_redefs.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\ippicv\include\ippicv_redefs.h">
 			<Filter>addons\ofxOpenCv\libs\ippicv\include</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\ippicv\include\ippicv_types.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\ippicv\include\ippicv_types.h">
 			<Filter>addons\ofxOpenCv\libs\ippicv\include</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\ippicv\include\ippicv_types_l.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\ippicv\include\ippicv_types_l.h">
 			<Filter>addons\ofxOpenCv\libs\ippicv\include</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\ippicv\include\ippversion.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\ippicv\include\ippversion.h">
 			<Filter>addons\ofxOpenCv\libs\ippicv\include</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\calib3d\calib3d.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\calib3d\calib3d.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\calib3d</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\calib3d\calib3d_c.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\calib3d\calib3d_c.h">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\calib3d</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\calib3d.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\calib3d.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\affine.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\affine.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\base.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\base.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\bindings_utils.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\bindings_utils.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\bufferpool.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\bufferpool.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\check.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\check.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\core.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\core.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\core_c.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\core_c.h">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda\block.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda\block.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda\border_interpolate.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda\border_interpolate.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda\color.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda\color.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda\common.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda\common.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda\datamov_utils.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda\datamov_utils.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda\detail\color_detail.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda\detail\color_detail.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda\detail</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda\detail\reduce.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda\detail\reduce.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda\detail</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda\detail\reduce_key_val.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda\detail\reduce_key_val.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda\detail</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda\detail\transform_detail.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda\detail\transform_detail.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda\detail</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda\detail\type_traits_detail.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda\detail\type_traits_detail.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda\detail</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda\detail\vec_distance_detail.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda\detail\vec_distance_detail.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda\detail</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda\dynamic_smem.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda\dynamic_smem.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda\emulation.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda\emulation.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda\filters.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda\filters.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda\funcattrib.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda\funcattrib.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda\functional.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda\functional.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda\limits.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda\limits.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda\reduce.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda\reduce.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda\saturate_cast.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda\saturate_cast.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda\scan.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda\scan.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda\simd_functions.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda\simd_functions.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda\transform.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda\transform.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda\type_traits.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda\type_traits.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda\utility.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda\utility.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda\vec_distance.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda\vec_distance.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda\vec_math.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda\vec_math.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda\vec_traits.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda\vec_traits.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda\warp.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda\warp.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda\warp_reduce.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda\warp_reduce.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda\warp_shuffle.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda\warp_shuffle.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda.inl.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda.inl.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda_stream_accessor.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda_stream_accessor.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda_types.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\cuda_types.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\cvdef.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\cvdef.h">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\cvstd.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\cvstd.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\cvstd.inl.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\cvstd.inl.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\cvstd_wrapper.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\cvstd_wrapper.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\cv_cpu_dispatch.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\cv_cpu_dispatch.h">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\cv_cpu_helper.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\cv_cpu_helper.h">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\directx.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\directx.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\eigen.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\eigen.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\fast_math.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\fast_math.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\hal\hal.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\hal\hal.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core\hal</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\hal\interface.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\hal\interface.h">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core\hal</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\hal\intrin.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\hal\intrin.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core\hal</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\hal\intrin_avx.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\hal\intrin_avx.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core\hal</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\hal\intrin_cpp.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\hal\intrin_cpp.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core\hal</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\hal\intrin_forward.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\hal\intrin_forward.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core\hal</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\hal\intrin_neon.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\hal\intrin_neon.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core\hal</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\hal\intrin_sse.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\hal\intrin_sse.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core\hal</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\hal\intrin_sse_em.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\hal\intrin_sse_em.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core\hal</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\hal\intrin_vsx.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\hal\intrin_vsx.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core\hal</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\mat.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\mat.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\mat.inl.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\mat.inl.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\matx.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\matx.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\neon_utils.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\neon_utils.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\ocl.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\ocl.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\ocl_genbase.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\ocl_genbase.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\opencl\ocl_defs.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\opencl\ocl_defs.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core\opencl</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\opencl\opencl_info.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\opencl\opencl_info.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core\opencl</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\opencl\opencl_svm.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\opencl\opencl_svm.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core\opencl</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\opencl\runtime\autogenerated\opencl_clamdblas.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\opencl\runtime\autogenerated\opencl_clamdblas.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core\opencl\runtime\autogenerated</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\opencl\runtime\autogenerated\opencl_clamdfft.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\opencl\runtime\autogenerated\opencl_clamdfft.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core\opencl\runtime\autogenerated</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\opencl\runtime\autogenerated\opencl_core.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\opencl\runtime\autogenerated\opencl_core.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core\opencl\runtime\autogenerated</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\opencl\runtime\autogenerated\opencl_core_wrappers.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\opencl\runtime\autogenerated\opencl_core_wrappers.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core\opencl\runtime\autogenerated</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\opencl\runtime\autogenerated\opencl_gl.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\opencl\runtime\autogenerated\opencl_gl.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core\opencl\runtime\autogenerated</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\opencl\runtime\autogenerated\opencl_gl_wrappers.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\opencl\runtime\autogenerated\opencl_gl_wrappers.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core\opencl\runtime\autogenerated</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\opencl\runtime\opencl_clamdblas.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\opencl\runtime\opencl_clamdblas.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core\opencl\runtime</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\opencl\runtime\opencl_clamdfft.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\opencl\runtime\opencl_clamdfft.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core\opencl\runtime</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\opencl\runtime\opencl_core.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\opencl\runtime\opencl_core.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core\opencl\runtime</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\opencl\runtime\opencl_core_wrappers.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\opencl\runtime\opencl_core_wrappers.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core\opencl\runtime</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\opencl\runtime\opencl_gl.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\opencl\runtime\opencl_gl.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core\opencl\runtime</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\opencl\runtime\opencl_gl_wrappers.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\opencl\runtime\opencl_gl_wrappers.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core\opencl\runtime</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\opencl\runtime\opencl_svm_20.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\opencl\runtime\opencl_svm_20.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core\opencl\runtime</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\opencl\runtime\opencl_svm_definitions.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\opencl\runtime\opencl_svm_definitions.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core\opencl\runtime</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\opencl\runtime\opencl_svm_hsa_extension.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\opencl\runtime\opencl_svm_hsa_extension.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core\opencl\runtime</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\opengl.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\opengl.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\openvx\ovx_defs.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\openvx\ovx_defs.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core\openvx</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\operations.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\operations.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\optim.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\optim.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\ovx.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\ovx.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\persistence.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\persistence.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\private\cv_cpu_include_simd_declarations.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\private\cv_cpu_include_simd_declarations.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core\private</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\private.cuda.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\private.cuda.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\private.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\private.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\saturate.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\saturate.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\softfloat.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\softfloat.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\sse_utils.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\sse_utils.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\traits.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\traits.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\types.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\types.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\types_c.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\types_c.h">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\utility.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\utility.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\utils\configuration.private.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\utils\configuration.private.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core\utils</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\utils\filesystem.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\utils\filesystem.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core\utils</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\utils\filesystem.private.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\utils\filesystem.private.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core\utils</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\utils\lock.private.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\utils\lock.private.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core\utils</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\utils\logger.defines.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\utils\logger.defines.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core\utils</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\utils\logger.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\utils\logger.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core\utils</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\utils\trace.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\utils\trace.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core\utils</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\utils\trace.private.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\utils\trace.private.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core\utils</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\va_intel.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\va_intel.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\version.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\version.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\vsx_utils.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core\vsx_utils.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\core</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\core.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\cvconfig.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\cvconfig.h">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\dnn\all_layers.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\dnn\all_layers.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\dnn</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\dnn\dict.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\dnn\dict.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\dnn</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\dnn\dnn.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\dnn\dnn.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\dnn</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\dnn\dnn.inl.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\dnn\dnn.inl.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\dnn</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\dnn\layer.details.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\dnn\layer.details.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\dnn</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\dnn\layer.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\dnn\layer.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\dnn</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\dnn\shape_utils.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\dnn\shape_utils.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\dnn</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\dnn\version.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\dnn\version.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\dnn</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\dnn.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\dnn.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\features2d\features2d.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\features2d\features2d.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\features2d</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\features2d\hal\interface.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\features2d\hal\interface.h">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\features2d\hal</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\features2d.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\features2d.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\allocator.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\allocator.h">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\flann</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\all_indices.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\all_indices.h">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\flann</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\any.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\any.h">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\flann</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\autotuned_index.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\autotuned_index.h">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\flann</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\composite_index.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\composite_index.h">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\flann</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\config.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\config.h">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\flann</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\defines.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\defines.h">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\flann</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\dist.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\dist.h">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\flann</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\dummy.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\dummy.h">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\flann</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\dynamic_bitset.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\dynamic_bitset.h">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\flann</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\flann.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\flann.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\flann</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\flann_base.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\flann_base.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\flann</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\general.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\general.h">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\flann</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\ground_truth.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\ground_truth.h">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\flann</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\heap.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\heap.h">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\flann</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\hierarchical_clustering_index.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\hierarchical_clustering_index.h">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\flann</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\index_testing.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\index_testing.h">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\flann</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\kdtree_index.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\kdtree_index.h">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\flann</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\kdtree_single_index.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\kdtree_single_index.h">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\flann</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\kmeans_index.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\kmeans_index.h">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\flann</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\linear_index.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\linear_index.h">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\flann</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\logger.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\logger.h">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\flann</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\lsh_index.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\lsh_index.h">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\flann</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\lsh_table.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\lsh_table.h">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\flann</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\matrix.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\matrix.h">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\flann</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\miniflann.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\miniflann.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\flann</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\nn_index.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\nn_index.h">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\flann</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\object_factory.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\object_factory.h">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\flann</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\params.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\params.h">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\flann</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\random.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\random.h">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\flann</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\result_set.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\result_set.h">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\flann</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\sampling.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\sampling.h">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\flann</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\saving.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\saving.h">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\flann</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\simplex_downhill.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\simplex_downhill.h">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\flann</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\timer.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\timer.h">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\flann</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\flann.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\flann.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\core.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\core.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\gapi</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\cpu\core.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\cpu\core.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\cpu</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\cpu\gcpukernel.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\cpu\gcpukernel.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\cpu</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\cpu\imgproc.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\cpu\imgproc.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\cpu</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\fluid\core.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\fluid\core.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\fluid</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\fluid\gfluidbuffer.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\fluid\gfluidbuffer.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\fluid</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\fluid\gfluidkernel.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\fluid\gfluidkernel.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\fluid</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\fluid\imgproc.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\fluid\imgproc.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\fluid</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\garg.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\garg.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\gapi</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\garray.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\garray.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\gapi</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\gcall.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\gcall.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\gapi</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\gcommon.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\gcommon.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\gapi</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\gcompiled.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\gcompiled.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\gapi</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\gcompoundkernel.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\gcompoundkernel.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\gapi</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\gcomputation.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\gcomputation.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\gapi</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\gkernel.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\gkernel.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\gapi</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\gmat.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\gmat.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\gapi</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\gmetaarg.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\gmetaarg.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\gapi</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\gproto.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\gproto.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\gapi</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\gpu\core.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\gpu\core.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\gpu</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\gpu\ggpukernel.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\gpu\ggpukernel.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\gpu</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\gpu\imgproc.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\gpu\imgproc.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\gpu</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\gscalar.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\gscalar.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\gapi</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\gtyped.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\gtyped.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\gapi</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\gtype_traits.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\gtype_traits.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\gapi</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\imgproc.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\imgproc.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\gapi</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\ocl\core.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\ocl\core.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\ocl</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\ocl\goclkernel.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\ocl\goclkernel.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\ocl</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\ocl\imgproc.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\ocl\imgproc.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\ocl</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\opencv_includes.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\opencv_includes.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\gapi</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\operators.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\operators.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\gapi</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\own\assert.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\own\assert.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\own</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\own\convert.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\own\convert.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\own</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\own\cvdefs.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\own\cvdefs.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\own</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\own\exports.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\own\exports.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\own</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\own\mat.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\own\mat.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\own</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\own\saturate.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\own\saturate.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\own</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\own\scalar.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\own\scalar.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\own</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\own\types.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\own\types.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\own</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\util\any.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\util\any.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\util</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\util\compiler_hints.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\util\compiler_hints.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\util</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\util\optional.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\util\optional.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\util</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\util\throw.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\util\throw.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\util</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\util\util.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\util\util.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\util</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\util\variant.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\util\variant.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\gapi\util</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\gapi.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\highgui\highgui.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\highgui\highgui.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\highgui</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\highgui\highgui_c.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\highgui\highgui_c.h">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\highgui</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\highgui\highgui_winrt.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\highgui\highgui_winrt.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\highgui</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\highgui.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\highgui.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\imgcodecs\imgcodecs.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\imgcodecs\imgcodecs.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\imgcodecs</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\imgcodecs\imgcodecs_c.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\imgcodecs\imgcodecs_c.h">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\imgcodecs</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\imgcodecs\ios.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\imgcodecs\ios.h">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\imgcodecs</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\imgcodecs\legacy\constants_c.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\imgcodecs\legacy\constants_c.h">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\imgcodecs\legacy</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\imgcodecs.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\imgcodecs.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\imgproc\detail\gcgraph.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\imgproc\detail\gcgraph.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\imgproc\detail</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\imgproc\hal\hal.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\imgproc\hal\hal.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\imgproc\hal</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\imgproc\hal\interface.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\imgproc\hal\interface.h">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\imgproc\hal</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\imgproc\imgproc.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\imgproc\imgproc.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\imgproc</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\imgproc\imgproc_c.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\imgproc\imgproc_c.h">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\imgproc</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\imgproc\types_c.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\imgproc\types_c.h">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\imgproc</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\imgproc.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\imgproc.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\ml\ml.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\ml\ml.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\ml</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\ml\ml.inl.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\ml\ml.inl.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\ml</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\ml.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\ml.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\objdetect\detection_based_tracker.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\objdetect\detection_based_tracker.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\objdetect</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\objdetect\objdetect.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\objdetect\objdetect.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\objdetect</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\objdetect.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\objdetect.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\opencv.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\opencv.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\opencv_modules.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\opencv_modules.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\photo\cuda.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\photo\cuda.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\photo</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\photo\legacy\constants_c.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\photo\legacy\constants_c.h">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\photo\legacy</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\photo\photo.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\photo\photo.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\photo</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\photo.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\photo.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\stitching\detail\autocalib.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\stitching\detail\autocalib.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\stitching\detail</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\stitching\detail\blenders.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\stitching\detail\blenders.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\stitching\detail</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\stitching\detail\camera.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\stitching\detail\camera.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\stitching\detail</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\stitching\detail\exposure_compensate.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\stitching\detail\exposure_compensate.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\stitching\detail</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\stitching\detail\matchers.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\stitching\detail\matchers.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\stitching\detail</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\stitching\detail\motion_estimators.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\stitching\detail\motion_estimators.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\stitching\detail</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\stitching\detail\seam_finders.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\stitching\detail\seam_finders.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\stitching\detail</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\stitching\detail\timelapsers.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\stitching\detail\timelapsers.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\stitching\detail</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\stitching\detail\util.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\stitching\detail\util.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\stitching\detail</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\stitching\detail\util_inl.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\stitching\detail\util_inl.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\stitching\detail</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\stitching\detail\warpers.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\stitching\detail\warpers.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\stitching\detail</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\stitching\detail\warpers_inl.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\stitching\detail\warpers_inl.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\stitching\detail</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\stitching\warpers.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\stitching\warpers.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\stitching</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\stitching.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\stitching.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\ts\cuda_perf.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\ts\cuda_perf.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\ts</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\ts\cuda_test.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\ts\cuda_test.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\ts</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\ts\ocl_perf.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\ts\ocl_perf.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\ts</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\ts\ocl_test.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\ts\ocl_test.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\ts</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\ts\ts_ext.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\ts\ts_ext.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\ts</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\ts\ts_gtest.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\ts\ts_gtest.h">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\ts</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\ts\ts_perf.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\ts\ts_perf.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\ts</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\ts.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\ts.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\video\background_segm.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\video\background_segm.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\video</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\video\legacy\constants_c.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\video\legacy\constants_c.h">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\video\legacy</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\video\tracking.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\video\tracking.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\video</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\video\video.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\video\video.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\video</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\video.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\video.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\videoio\cap_ios.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\videoio\cap_ios.h">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\videoio</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\videoio\cap_winrt.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\videoio\cap_winrt.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\videoio</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\videoio\container_avi.private.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\videoio\container_avi.private.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\videoio</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\videoio\legacy\constants_c.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\videoio\legacy\constants_c.h">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\videoio\legacy</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\videoio\registry.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\videoio\registry.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\videoio</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\videoio\videoio.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\videoio\videoio.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\videoio</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\videoio\videoio_c.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\videoio\videoio_c.h">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2\videoio</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\videoio.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\videoio.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\world.hpp">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOpenCv\libs\opencv\include\opencv2\world.hpp">
 			<Filter>addons\ofxOpenCv\libs\opencv\include\opencv2</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOsc\src\ofxOsc.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOsc\src\ofxOsc.h">
 			<Filter>addons\ofxOsc\src</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOsc\src\ofxOscArg.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOsc\src\ofxOscArg.h">
 			<Filter>addons\ofxOsc\src</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOsc\src\ofxOscBundle.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOsc\src\ofxOscBundle.h">
 			<Filter>addons\ofxOsc\src</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOsc\src\ofxOscMessage.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOsc\src\ofxOscMessage.h">
 			<Filter>addons\ofxOsc\src</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOsc\src\ofxOscParameterSync.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOsc\src\ofxOscParameterSync.h">
 			<Filter>addons\ofxOsc\src</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOsc\src\ofxOscReceiver.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOsc\src\ofxOscReceiver.h">
 			<Filter>addons\ofxOsc\src</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOsc\src\ofxOscSender.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOsc\src\ofxOscSender.h">
 			<Filter>addons\ofxOsc\src</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOsc\libs\oscpack\src\ip\IpEndpointName.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOsc\libs\oscpack\src\ip\IpEndpointName.h">
 			<Filter>addons\ofxOsc\libs\oscpack\src\ip</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOsc\libs\oscpack\src\ip\NetworkingUtils.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOsc\libs\oscpack\src\ip\NetworkingUtils.h">
 			<Filter>addons\ofxOsc\libs\oscpack\src\ip</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOsc\libs\oscpack\src\ip\PacketListener.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOsc\libs\oscpack\src\ip\PacketListener.h">
 			<Filter>addons\ofxOsc\libs\oscpack\src\ip</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOsc\libs\oscpack\src\ip\TimerListener.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOsc\libs\oscpack\src\ip\TimerListener.h">
 			<Filter>addons\ofxOsc\libs\oscpack\src\ip</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOsc\libs\oscpack\src\ip\UdpSocket.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOsc\libs\oscpack\src\ip\UdpSocket.h">
 			<Filter>addons\ofxOsc\libs\oscpack\src\ip</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOsc\libs\oscpack\src\osc\MessageMappingOscPacketListener.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOsc\libs\oscpack\src\osc\MessageMappingOscPacketListener.h">
 			<Filter>addons\ofxOsc\libs\oscpack\src\osc</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOsc\libs\oscpack\src\osc\OscException.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOsc\libs\oscpack\src\osc\OscException.h">
 			<Filter>addons\ofxOsc\libs\oscpack\src\osc</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOsc\libs\oscpack\src\osc\OscHostEndianness.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOsc\libs\oscpack\src\osc\OscHostEndianness.h">
 			<Filter>addons\ofxOsc\libs\oscpack\src\osc</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOsc\libs\oscpack\src\osc\OscOutboundPacketStream.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOsc\libs\oscpack\src\osc\OscOutboundPacketStream.h">
 			<Filter>addons\ofxOsc\libs\oscpack\src\osc</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOsc\libs\oscpack\src\osc\OscPacketListener.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOsc\libs\oscpack\src\osc\OscPacketListener.h">
 			<Filter>addons\ofxOsc\libs\oscpack\src\osc</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOsc\libs\oscpack\src\osc\OscPrintReceivedElements.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOsc\libs\oscpack\src\osc\OscPrintReceivedElements.h">
 			<Filter>addons\ofxOsc\libs\oscpack\src\osc</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOsc\libs\oscpack\src\osc\OscReceivedElements.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOsc\libs\oscpack\src\osc\OscReceivedElements.h">
 			<Filter>addons\ofxOsc\libs\oscpack\src\osc</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxOsc\libs\oscpack\src\osc\OscTypes.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxOsc\libs\oscpack\src\osc\OscTypes.h">
 			<Filter>addons\ofxOsc\libs\oscpack\src\osc</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\ofxSoundFile.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\ofxSoundFile.h">
 			<Filter>addons\ofxSoundObjects\src</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\ofxSoundMatrixMixer.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\ofxSoundMatrixMixer.h">
 			<Filter>addons\ofxSoundObjects\src</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\ofxSoundMixer.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\ofxSoundMixer.h">
 			<Filter>addons\ofxSoundObjects\src</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\ofxSoundMultiplexer.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\ofxSoundMultiplexer.h">
 			<Filter>addons\ofxSoundObjects\src</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\ofxSoundObject.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\ofxSoundObject.h">
 			<Filter>addons\ofxSoundObjects\src</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\ofxSoundObjects.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\ofxSoundObjects.h">
 			<Filter>addons\ofxSoundObjects\src</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\ofxSoundObjectsConstants.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\ofxSoundObjectsConstants.h">
 			<Filter>addons\ofxSoundObjects\src</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\ofxSoundPlayerObject.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\ofxSoundPlayerObject.h">
 			<Filter>addons\ofxSoundObjects\src</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\ofxSoundRecorderObject.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\ofxSoundRecorderObject.h">
 			<Filter>addons\ofxSoundObjects\src</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\ofxSoundUtils.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\ofxSoundUtils.h">
 			<Filter>addons\ofxSoundObjects\src</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\Renderers\ofx2DCanvas.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\Renderers\ofx2DCanvas.h">
 			<Filter>addons\ofxSoundObjects\src\Renderers</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\Renderers\ofxSlidersGrid.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\Renderers\ofxSlidersGrid.h">
 			<Filter>addons\ofxSoundObjects\src\Renderers</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\Renderers\ofxSoundObjectBaseRenderer.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\Renderers\ofxSoundObjectBaseRenderer.h">
 			<Filter>addons\ofxSoundObjects\src\Renderers</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\Renderers\ofxSoundObjectMatrixMixerRenderer.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\Renderers\ofxSoundObjectMatrixMixerRenderer.h">
 			<Filter>addons\ofxSoundObjects\src\Renderers</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\Renderers\ofxSoundRendererUtils.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\Renderers\ofxSoundRendererUtils.h">
 			<Filter>addons\ofxSoundObjects\src\Renderers</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\SoundObjects\DigitalDelay.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\SoundObjects\DigitalDelay.h">
 			<Filter>addons\ofxSoundObjects\src\SoundObjects</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\SoundObjects\LowPassFilter.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\SoundObjects\LowPassFilter.h">
 			<Filter>addons\ofxSoundObjects\src\SoundObjects</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\SoundObjects\NoiseGenerator.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\SoundObjects\NoiseGenerator.h">
 			<Filter>addons\ofxSoundObjects\src\SoundObjects</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\SoundObjects\SineWaveGenerator.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\SoundObjects\SineWaveGenerator.h">
 			<Filter>addons\ofxSoundObjects\src\SoundObjects</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\SoundObjects\VUMeter.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\SoundObjects\VUMeter.h">
 			<Filter>addons\ofxSoundObjects\src\SoundObjects</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\SoundObjects\waveformDraw.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxSoundObjects\src\SoundObjects\waveformDraw.h">
 			<Filter>addons\ofxSoundObjects\src\SoundObjects</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxWarp\src\ofxWarp\Controller.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxWarp\src\ofxWarp\Controller.h">
 			<Filter>addons\ofxWarp\src\ofxWarp</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxWarp\src\ofxWarp\WarpBase.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxWarp\src\ofxWarp\WarpBase.h">
 			<Filter>addons\ofxWarp\src\ofxWarp</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxWarp\src\ofxWarp\WarpBilinear.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxWarp\src\ofxWarp\WarpBilinear.h">
 			<Filter>addons\ofxWarp\src\ofxWarp</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxWarp\src\ofxWarp\WarpPerspective.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxWarp\src\ofxWarp\WarpPerspective.h">
 			<Filter>addons\ofxWarp\src\ofxWarp</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxWarp\src\ofxWarp\WarpPerspectiveBilinear.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxWarp\src\ofxWarp\WarpPerspectiveBilinear.h">
 			<Filter>addons\ofxWarp\src\ofxWarp</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxWarp\src\ofxWarp.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxWarp\src\ofxWarp.h">
 			<Filter>addons\ofxWarp\src</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxXmlSettings\src\ofxXmlSettings.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxXmlSettings\src\ofxXmlSettings.h">
 			<Filter>addons\ofxXmlSettings\src</Filter>
 		</ClInclude>
-		<ClInclude Include="..\..\..\openframeworks\of_v0.11.0_vs2017_release\addons\ofxXmlSettings\libs\tinyxml.h">
+		<ClInclude Include="..\..\..\openFrameworks_lib\of_v0.11.0_vs2017_release\addons\ofxXmlSettings\libs\tinyxml.h">
 			<Filter>addons\ofxXmlSettings\libs</Filter>
 		</ClInclude>
 	</ItemGroup>

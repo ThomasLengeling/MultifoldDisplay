@@ -2,43 +2,43 @@
   "videoType": 0,
   "videos": [
     {
-      "width": 1920,
-      "height": 1080,
-      "name": "Videos/dummy_010_01_hap.mov",
-      "alias": "left",
-      "drawx": 0,
-      "drawy": 0
+        "width": 1920,
+        "height": 1080,
+        "name": "Videos/test_1080p_hap.mov",
+        "alias": "left",
+        "drawx": 0,
+        "drawy": 0
     },
     {
-      "width": 1920,
-      "height": 1080,
-      "name": "Videos/dummy_010_02_hap.mov",
-      "alias": "front",
-      "drawx": 0,
-      "drawy": 0
+        "width": 1920,
+        "height": 1080,
+        "name": "Videos/test_1080p_hap.mov",
+        "alias": "front",
+        "drawx": 0,
+        "drawy": 0
     },
     {
-      "width": 1920,
-      "height": 1080,
-      "name": "Videos/dummy_010_03_hap.mov",
-      "alias": "right",
-      "drawx": 0,
-      "drawy": 0
+        "width": 1920,
+        "height": 1080,
+        "name": "Videos/test_1080p_hap.mov",
+        "alias": "right",
+        "drawx": 0,
+        "drawy": 0
     },
     {
-      "width": 1920,
-      "height": 1080,
-      "name": "Videos/dummy_010_04_hap.mov",
-      "alias": "display",
-      "drawx": 0,
-      "drawy": 0
+        "width": 1920,
+        "height": 1080,
+        "name": "Videos/test_1080p_hap.mov",
+        "alias": "display",
+        "drawx": 0,
+        "drawy": 0
     }
   ],
   "audios": [
     {
-      "name": "Sounds/dummy_010_sounds.mp3",
-      "channel": 2,
-      "location": "front"
+        "name": "Sounds/tubophone.mp3",
+        "channel": 2,
+        "location": "front"
     }
   ]
 }

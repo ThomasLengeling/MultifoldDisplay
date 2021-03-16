@@ -48,16 +48,18 @@ void ofApp::setup(){
     receiver.setup(mPort);
     
 
-    ofxSoundUtils::printOutputSoundDevices();
-    auto outDevices = ofxSoundUtils::getOutputSoundDevices();
+   // ofxSoundUtils::printOutputSoundDevices();
+    //auto outDevices = ofxSoundUtils::getOutputSoundDevices();
+	
+	cout << "loading sound" << std::endl;
 
     // IMPORTANT!!!
     // The following line of code is where you set which audio interface to use.
     // the index is the number printed in the console inside [ ] before the interface name
     // You can use a different input and output device.
 
-    int outDeviceIndex = 0;
-    cout << ofxSoundUtils::getSoundDeviceString(outDevices[outDeviceIndex], false, true) << endl;
+    //int outDeviceIndex = 0;
+    //cout << ofxSoundUtils::getSoundDeviceString(outDevices[outDeviceIndex], false, true) << endl;
 
 
 
@@ -229,6 +231,7 @@ void ofApp::setupAudio(std::string filepath) {
   
     player.load(soundfile, false);
     player.setPaused(true);
+
         //set the following to true if you want to stream the audio data from the disk on demand instead of
         //reading the whole file into memory. Default is false
  
@@ -330,6 +333,7 @@ void ofApp::syncVideos(){
 
         int loadeadAll = 0;
         for (auto & video : mVideoWarps) {
+			ofLog(OF_LOG_NOTICE) << "Loading Video "<< loadeadAll;
             if (video->isLoaded()) {
                 loadeadAll++;
             }
@@ -337,15 +341,18 @@ void ofApp::syncVideos(){
 
         //all videos are loaded
         if (loadeadAll  == 4 && player.isLoaded() ) {
-
+			ofLog(OF_LOG_NOTICE) << "Loaded 4 Videos Successfully";
             bool reset = true;
             resetMovies(reset);
-            //reset
+            
+			//reset
             bool play = false;
             playMovies(play);
 
             player.setPaused(false);
             player.play();
+
+			//go out side of the load video loop
             cur_frame = 0;
             playNewVideos = false;
         }
@@ -627,7 +634,13 @@ void ofApp::playMovies(bool & value){
           player.setPaused(true);
         }
     }
-    ofLog(OF_LOG_NOTICE) << "Puase MOVIE "<<status;
+
+	if (value == false) {
+		ofLog(OF_LOG_NOTICE) << "Play MOVIE " << status;
+	}
+	else {
+		ofLog(OF_LOG_NOTICE) << "Pause MOVIE " << status;
+	}
 }
 
 //--------------------------------------------------------------

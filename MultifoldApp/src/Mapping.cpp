@@ -20,7 +20,7 @@ void Mapping::setupWarp(int width, int height) {
 	ofLog(OF_LOG_NOTICE) << "Num Display " << mNumDisplays;
 	ofLog(OF_LOG_NOTICE) << "Current Display " << this->warpController.getNumWarps();
 
-    if (this->warpController.getWarps().empty() ||  mNumDisplays !=  this->warpController.getNumWarps()) {
+    if (this->warpController.getWarps().empty()){// ||  mNumDisplays !=  this->warpController.getNumWarps()) {
         // Otherwise create warps from scratch.
         ofLog(OF_LOG_NOTICE)<<"JSON Empty Displays: "<<mNumDisplays;
         

@@ -35,6 +35,12 @@ int main( ){
         ofLog(OF_LOG_NOTICE)<<"Size: "<< windowSize.x<<" "<<windowSize.y<<" "<<decorated<<std::endl;
 
         ofLog(OF_LOG_NOTICE) << "Num Screens: " << numScreens << std::endl;
+
+		//final installation
+		// type = 1 final, single video
+		// type = 0 testing, videos can be change dynamically.
+		int installationType = js["installation"]["type"];
+
         
     }else{
         ofLog(OF_LOG_NOTICE)<<"ERROR Reading Config File"<<std::endl;
