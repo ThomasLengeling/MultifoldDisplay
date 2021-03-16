@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
     
     "window": {
         "width": 1920,
@@ -6,6 +7,14 @@
         "decorated": 1,
         "numScreen": 4
     },
+=======
+  "window":{
+    "width" : 1920,
+    "height" : 1080,
+    "decorated": 0,
+    "numScreen": 4
+  },
+>>>>>>> b0269515cf82a4cafd7ef690f1231bc39ceeac88
 
     "network": {
         "ip": "127.0.0.1",

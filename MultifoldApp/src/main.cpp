@@ -54,7 +54,7 @@ int main( ){
     settings.setGLVersion(4,1);
     
     settings.setSize(windowSize.x * numScreens, windowSize.y);
-    settings.setPosition(windwoPos);
+    settings.setPosition(glm::vec2(-1920 * 4, 0));
     settings.decorated = decorated;
     settings.resizable = false;
     settings.multiMonitorFullScreen = true;
