@@ -719,7 +719,7 @@ void ofApp::playMovies(bool & value){
           player.setPaused(true);
         }
     }
-    ofLog(OF_LOG_NOTICE) << "Puase MOVIE "<<status;
+    ofLog(OF_LOG_NOTICE) << "Pause MOVIE "<<status;
 }
 
 //--------------------------------------------------------------
