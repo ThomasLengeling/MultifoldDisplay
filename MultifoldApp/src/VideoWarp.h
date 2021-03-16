@@ -63,11 +63,15 @@ public:
     void nextFrame();
 
     void closeVideo();
-
     bool  isLoaded();
+
+    void setPosition(float value);
     
+    bool isDone();
+
     ofParameterGroup & getParamGroup(){return mGroupParam;}
     
+   // bool isLoaded();
     
 private:
     

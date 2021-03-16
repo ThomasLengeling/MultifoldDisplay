@@ -1,0 +1,44 @@
+{
+  "videoType": 0,
+  "videos": [
+    {
+      "width": 1920,
+      "height": 1080,
+      "name": "PHC/goat sides_HAP.mov",
+      "alias": "left",
+      "drawx": 0,
+      "drawy": 0
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "name": "PHC/goat_middle_HAP.mov",
+      "alias": "front",
+      "drawx": 0,
+      "drawy": 0
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "name": "PHC/goat sides_HAP.mov",
+      "alias": "right",
+      "drawx": 0,
+      "drawy": 0
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "name": "PHC/goat_tv_HAP.mov",
+      "alias": "display",
+      "drawx": 0,
+      "drawy": 0
+    }
+  ],
+  "audios": [
+    {
+      "name": "Sounds/goat_sound.wav",
+      "channel": 2,
+      "location": "front"
+    }
+  ]
+}

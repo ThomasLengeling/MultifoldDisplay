@@ -26,6 +26,7 @@ VideoWarp::VideoWarp(int playerType, int id){
 
 //--------------------------------------------------------------
 void VideoWarp::loadPlayer(bool & value){
+
   //  ofLog(OF_LOG_NOTICE)<<"load "<<mVideoId<<" "<<value;
     
   //  std::string videoName =  mVideoParam;
@@ -40,35 +41,36 @@ void VideoWarp::loadVideo(std::string & name){
         ofLog(OF_LOG_NOTICE)<<"Player HPV";
         mHPVPlayer.init(HPV::NewPlayer());
         mHPVPlayer.load(mVideoName);
-        mHPVPlayer.setLoopState(OF_LOOP_NORMAL);
+        mHPVPlayer.setLoopState(OF_LOOP_NONE);
         mHPVPlayer.setDoubleBuffered(true);
     }
     
     if(mPlayerType == 0){
-        ofLog(OF_LOG_NOTICE)<<"Player HAP";
+        ofLog(OF_LOG_NOTICE)<<"Player HAP L: "<< mVideoName;
         mHAPPlayer.load(mVideoName);
-        mHAPPlayer.setLoopState(OF_LOOP_NORMAL);
+        mHAPPlayer.setLoopState(OF_LOOP_NONE);
+        mHAPPlayer.setVolume(0.0);
     }
     
     if(mPlayerType == 2){
         ofLog(OF_LOG_NOTICE)<<"OF Native Player";
         mOFVideoPlayer.load(mVideoName);
-        mOFVideoPlayer.setLoopState(OF_LOOP_NORMAL);
+        mOFVideoPlayer.setLoopState(OF_LOOP_NONE);
         
         //set video name
-        mVideoParam.set(mVideoName.c_str());
+        //mVideoParam.set(mVideoName.c_str());
         if(mOFVideoPlayer.isLoaded()){
-            mLoadParam.set(true);
+          //  mLoadParam.set(true);
             ofLog(OF_LOG_NOTICE)<<"Loaded Succesfully";
         }else{
-             mLoadParam.set(false);
+            // mLoadParam.set(false);
             ofLog(OF_LOG_NOTICE)<<"Error loading the video";
         }
     }
     
-    ofLog(OF_LOG_NOTICE)<<"Loaded Video "<<mVideoName<<std::endl;
-    
+    ofLog(OF_LOG_NOTICE)<<"Loaded Video "<<mVideoName<<std::endl;   
 }
+//--------------------------------------------------------------
 void VideoWarp::closeVideo() {
     if (mPlayerType == 0) {
         mHAPPlayer.close();    }
@@ -77,6 +79,12 @@ void VideoWarp::closeVideo() {
     }
     else if (mPlayerType == 2) {
         mOFVideoPlayer.close();
+    }
+}
+
+void VideoWarp::setPosition(float value) {
+    if (mPlayerType == 0) {
+        mHAPPlayer.setPosition(value);
     }
 }
 
@@ -103,6 +111,7 @@ void VideoWarp::update(){
         mOFVideoPlayer.update();
     }
 }
+//--------------------------------------------------------------
 
 bool VideoWarp::isLoaded() {
     bool loaded = false;
@@ -116,6 +125,21 @@ bool VideoWarp::isLoaded() {
         loaded =  mOFVideoPlayer.isLoaded();
     }
     return loaded;
+}
+//--------------------------------------------------------------
+
+bool VideoWarp::isDone() {
+    bool done = false;
+    if (mPlayerType == 0) {
+        done = mHAPPlayer.getIsMovieDone();
+    }
+    else if (mPlayerType == 1) {
+        done = mHAPPlayer.getIsMovieDone();
+    }
+    else if (mPlayerType == 2) {
+        done = mOFVideoPlayer.getIsMovieDone();
+    }
+    return done;
 }
 //--------------------------------------------------------------
 int VideoWarp::getTotalNumFrames(){

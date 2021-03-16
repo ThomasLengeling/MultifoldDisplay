@@ -1,0 +1,44 @@
+{
+  "videoType": 0,
+  "videos": [
+    {
+      "width": 1920,
+      "height": 1080,
+      "name": "INTRO/chapter01_screen_left_1_jan11.mov",
+      "alias": "left",
+      "drawx": 0,
+      "drawy": 0
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "name": "INTRO/chapter01_screen_central_jan11.mov",
+      "alias": "front",
+      "drawx": 0,
+      "drawy": 0
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "name": "INTRO/chapter01_screen_right_1_jan11.mov",
+      "alias": "right",
+      "drawx": 0,
+      "drawy": 0
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "name": "INTRO/chapter01_monitor_chapter01_jan11.mov",
+      "alias": "display",
+      "drawx": 0,
+      "drawy": 0
+    }
+  ],
+  "audios": [
+    {
+      "name": "Sounds/Chapter_01_jan12th.wav",
+      "channel": 2,
+      "location": "front"
+    }
+  ]
+}
