@@ -36,6 +36,9 @@ void ofApp::setup(){
     //GUI
     setupGui();
 
+    //debug imgs
+    loadDebugImgs();
+
 
     //load av files
     std::string avfile = "idle_00.json";// "intro_00.json"; /// "idle_00.json";
@@ -97,9 +100,52 @@ void ofApp::setup(){
     ofLog(OF_LOG_NOTICE)<<"Size"<<ofGetWindowWidth()<<" "<<ofGetWindowHeight();
 
 
+    mDebugMode = true;
     
 }
+//--------------------------------------------------------------
+void ofApp::loadDebugImgs() {
 
+    ofImage         mDebugImgLeft;
+    ofImage         mDebugImgCenter;
+    ofImage         mDebugImgRight;
+    ofImage         mDebugImgDisplay;
+
+    //left
+    if (mDebugImgLeft.load("imgs/left_hd.png")) {
+        ofLog(OF_LOG_NOTICE) << "Loaded Left Debug Img";
+        mDebugImgs.push_back(mDebugImgLeft);
+    }
+    else {
+        ofLog(OF_LOG_NOTICE) << "Error Left Debug Img";
+    }
+
+    ///center
+    if (mDebugImgCenter.load("imgs/center_hd.png")) {
+        ofLog(OF_LOG_NOTICE) << "Loaded Center Debug Img";
+        mDebugImgs.push_back(mDebugImgCenter);
+    }
+    else {
+        ofLog(OF_LOG_NOTICE) << "Error Center Debug Img";
+    }
+
+    //
+    if (mDebugImgRight.load("imgs/right_hd.png")) {
+        ofLog(OF_LOG_NOTICE) << "Loaded Right Debug Img";
+        mDebugImgs.push_back(mDebugImgRight);
+    }
+    else {
+        ofLog(OF_LOG_NOTICE) << "Error Right Debug Img";
+    }
+    //
+    if (mDebugImgDisplay.load("imgs/display_hd.png")) {
+        ofLog(OF_LOG_NOTICE) << "Loaded Display Debug Img";
+        mDebugImgs.push_back(mDebugImgDisplay);
+    }
+    else {
+        ofLog(OF_LOG_NOTICE) << "Error Display Debug Img";
+    }
+}
 //--------------------------------------------------------------
 void ofApp::loadAV(std::string jsonFile) {
 
@@ -282,7 +328,7 @@ void ofApp::update() {
 		syncVideos();
 	}
 	else {
-
+        //use debug imgs
 	}
 
     //set the master frame with the current change frame
@@ -557,15 +603,18 @@ void ofApp::draw(){
     ofBackground(mBkgColor);
     
     //draw warps
-    if(mDrawWarp){
+    if(!mDebugMode){
         ofSetColor(255);
         drawWarps();
+    }else{
+        ofSetColor(255);
+        drawDebugWarps();
     }
     
     //sync debug videos
-    if(mSyncVideosDebug){
-        drawSyncVideos();
-    }
+    //if(mSyncVideosDebug){
+    //    drawSyncVideos();
+   // }
     
  
     //draw gui
@@ -742,7 +791,6 @@ void ofApp::syncVideosDebug(bool & value){
     if(value){
         mDebugMovie.set(false);
         mDrawWarp.set(false);
-        
         //update frames
     }
 }
@@ -750,7 +798,7 @@ void ofApp::syncVideosDebug(bool & value){
 //--------------------------------------------------------------
 void ofApp::debugMovie(bool & value){
 
-
+    mDebugMode = value;
 }
 
 //--------------------------------------------------------------
@@ -808,6 +856,18 @@ void ofApp::drawWarps(){
     for(auto & video : mVideoWarps){
         ofTexture  tex =  video->getTexture();
         if(tex.isAllocated()){
+            mWarpMapping->draw(tex, i);
+            i++;
+        }
+    }
+}
+
+//--------------------------------------------------
+void ofApp::drawDebugWarps() {
+    int i = 0;
+    for (auto& video : mVideoWarps) {
+        ofTexture  tex = mDebugImgs.at(i).getTexture();
+        if (tex.isAllocated()) {
             mWarpMapping->draw(tex, i);
             i++;
         }
@@ -880,6 +940,7 @@ void ofApp::keyPressed(int key){
         ofLog(OF_LOG_NOTICE) << "gui";
     }
     
+    //save warps
     if (key == 's') {
         mWarpMapping->saveWarp();
     }
@@ -958,6 +1019,6 @@ void ofApp::dragEvent(ofDragInfo dragInfo){
 //--------------------------------------------------------------
 void ofApp::exit(){
     HPV::DestroyHPVEngine();
-    mWarpMapping->saveWarp();
+   // mWarpMapping->saveWarp();
     stream.close();
 }

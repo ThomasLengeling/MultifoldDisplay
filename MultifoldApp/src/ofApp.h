@@ -68,6 +68,8 @@ public:
     //warp
     inn::MappingRef mWarpMapping;
     void drawWarps();
+
+    void drawDebugWarps();
     
     //debug layout videos
     void debugLayoutVideos();
@@ -140,4 +142,12 @@ public:
     void           updateOSC();
 
     bool            playNewVideos;
+
+    //load debug imgs
+    void            loadDebugImgs();
+
+    std::vector <ofImage> mDebugImgs;
+
+
+
 };

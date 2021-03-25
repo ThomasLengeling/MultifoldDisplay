@@ -11,10 +11,7 @@ void Mapping::setupWarp(int width, int height) {
     //   Load warp settings from file if one exists.
     this->warpController.loadSettings("warp.json");
     
-    for (auto i = 0; i < this->warpController.getNumWarps(); ++i) {
-        auto warp = this->warpController.getWarp(i);
-        warp->setSize(1920, 1080);
-    }
+
     
     ofLog(OF_LOG_NOTICE)<<"Warp Size: "<< projectionWidth << " " << projectionHeight;
 	ofLog(OF_LOG_NOTICE) << "Num Display " << mNumDisplays;
@@ -33,10 +30,25 @@ void Mapping::setupWarp(int width, int height) {
             warp->setGamma(1.0);
             warp->setExponent(2.0);
             warp->setLuminance(0.5);
-            //this->warpController.addWarp(warp);
+            warp->setControlPoint(0, glm::vec2(0.25 * (i ), 0));
+            warp->setControlPoint(1, glm::vec2(0.25*(i+1), 0));
+            warp->setControlPoint(2, glm::vec2(0.25*(i+1), 1.0));
+            warp->setControlPoint(3, glm::vec2(0.25 * (i ), 1.0));
+;            //this->warpController.addWarp(warp);
             ofLog(OF_LOG_NOTICE)<<"Created warp "<<projectionWidth<<" "<<projectionWidth;
         }
     }
+
+    //set the warps
+    for (auto i = 0; i < this->warpController.getNumWarps(); ++i) {
+        auto warp = this->warpController.getWarp(i);
+
+        if (i == 3) {//display 4K vs HD 3840, 2160
+            //warp->setSize(1920, 1080);
+           // warp->setEdges(glm::vec4(0.0f, 0.0f, 0.0f, 0.0f));
+        }
+    }
+
     ofLog(OF_LOG_NOTICE)<<"Num Waps: "<<this->warpController.getNumWarps();
     
     this->useBeginEnd = false;
@@ -138,7 +150,16 @@ void Mapping::draw(ofTexture &texture) {
     if (texture.isAllocated()) {
         for (auto i = 0; i < this->warpController.getNumWarps(); ++i) {
             auto warp = this->warpController.getWarp(i);
-            warp->draw(texture);
+
+            if (i == 3) { //displays
+                ofPushMatrix();
+                ofTranslate(1920 * 2, 0);
+                warp->draw(texture);
+                ofPopMatrix();
+            }
+            else {
+                warp->draw(texture);
+            }
         }
     } else {
        ofLog(OF_LOG_NOTICE) << "not allocated";
@@ -148,8 +169,19 @@ void Mapping::draw(ofTexture &texture) {
 //--------------------------------------------------------------
 void Mapping::draw(ofTexture & texture, int i){
     if (texture.isAllocated()) {
-        auto warp = this->warpController.getWarp(i);
-        warp->draw(texture);
+
+        if (i == 3) { //displays
+           // ofPushMatrix();
+           // ofTranslate(1920 * 3, 0);
+            auto warp = this->warpController.getWarp(i);
+            warp->draw(texture);
+          //  ofPopMatrix();
+        }
+        else {
+            auto warp = this->warpController.getWarp(i);
+            warp->draw(texture);
+        }
+ 
     } else {
         ofLog(OF_LOG_NOTICE) << "not allocated tex " <<i;
     }
