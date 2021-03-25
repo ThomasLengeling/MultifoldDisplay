@@ -123,9 +123,9 @@ void Mapping::setupWarp(int width, int height) {
 			warp->setBrightness(1.0);
 		});
     }
-    
-    
 }
+
+//-----------------------------------------------------------------------
 void Mapping::setSize(int width, int height){
     for (auto i = 0; i < this->warpController.getNumWarps(); ++i) {
         auto warp = this->warpController.getWarp(i);

@@ -83,11 +83,11 @@ public:
     //multi display mode
     int multiMode;
     
-    //multi layout display
-    bool mDebugLayoutVideos;
-    
     //min frame of all the videos;
     int mMinFrame;
+	
+	//debug warps mode or play full video
+	int mDebugMode;
     
     //debug and release mode
     ofParameterGroup      parameters;
@@ -103,14 +103,14 @@ public:
     ofParameter<bool>      mSyncVideosDebug;
     
     
-    ofxPanel               mGui;
-    bool                   mDrawGUI;
-    void                   setupGui();
-    void                   drawGui();
-    void                   drawVideoInfo(int id);
-    void                   drawVideoTime(int id, int currentFrame, int totalFrame);
+    ofxPanel mGui;
+    bool mDrawGUI;
+    void setupGui();
+    void drawGui();
+    void drawVideoInfo(int id);
+    void drawVideoTime(int id, int currentFrame, int totalFrame);
     
-    void                   drawSyncVideos();
+    void drawSyncVideos();
     
     void resetMovies(bool & value);
     void playMovies(bool & value);

@@ -58,13 +58,9 @@ void ofApp::setup(){
     // the index is the number printed in the console inside [ ] before the interface name
     // You can use a different input and output device.
 
-<<<<<<< HEAD
-    //int outDeviceIndex = 0;
+
+    // int outDeviceIndex = ofxSoundUtils::getOutputSoundDevices().size() - 1;
     //cout << ofxSoundUtils::getSoundDeviceString(outDevices[outDeviceIndex], false, true) << endl;
-=======
-    int outDeviceIndex = ofxSoundUtils::getOutputSoundDevices().size() - 1;
-    cout << ofxSoundUtils::getSoundDeviceString(outDevices[outDeviceIndex], false, true) << endl;
->>>>>>> b0269515cf82a4cafd7ef690f1231bc39ceeac88
 
 
 
@@ -281,7 +277,13 @@ void ofApp::playerEnded(size_t& id) {
 //--------------------------------------------------------------
 void ofApp::update() {
 
-    syncVideos();
+	//main video play
+	if (!mDebugMode) {
+		syncVideos();
+	}
+	else {
+
+	}
 
     //set the master frame with the current change frame
     //mMasterFrame.set(cur_frame);
@@ -395,7 +397,6 @@ void ofApp::updateOSC() {
                 ofLog(OF_LOG_NOTICE) << "loaded new AV :" << avfile;
                 playNewVideos = true;
             }
-
         }
 
         if (m.getAddress() == "/stop") {
@@ -555,7 +556,6 @@ void ofApp::syncVideos(){
 void ofApp::draw(){
     ofBackground(mBkgColor);
     
-  
     //draw warps
     if(mDrawWarp){
         ofSetColor(255);
@@ -567,11 +567,7 @@ void ofApp::draw(){
         drawSyncVideos();
     }
     
-    //debug layout videos
-    if(mDebugLayoutVideos){
-        debugLayoutVideos();
-    }
-    
+ 
     //draw gui
     drawGui();
 }
@@ -626,7 +622,6 @@ void ofApp::setupGui(){
     
     //default values
     mDrawGUI = false;
-    mDebugLayoutVideos = false;
     mDebugMovie.set(true);
     mResetMovie.set(true);
     
@@ -731,7 +726,6 @@ void ofApp::playMovies(bool & value){
           player.setPaused(true);
         }
     }
-<<<<<<< HEAD
 
 	if (value == false) {
 		ofLog(OF_LOG_NOTICE) << "Play MOVIE " << status;
@@ -739,9 +733,7 @@ void ofApp::playMovies(bool & value){
 	else {
 		ofLog(OF_LOG_NOTICE) << "Pause MOVIE " << status;
 	}
-=======
-    ofLog(OF_LOG_NOTICE) << "Pause MOVIE "<<status;
->>>>>>> b0269515cf82a4cafd7ef690f1231bc39ceeac88
+
 }
 
 //--------------------------------------------------------------
@@ -757,7 +749,8 @@ void ofApp::syncVideosDebug(bool & value){
 
 //--------------------------------------------------------------
 void ofApp::debugMovie(bool & value){
-    mDebugLayoutVideos = !mDebugLayoutVideos;
+
+
 }
 
 //--------------------------------------------------------------

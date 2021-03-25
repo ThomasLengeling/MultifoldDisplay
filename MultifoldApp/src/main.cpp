@@ -39,7 +39,7 @@ int main( ){
 		//final installation
 		// type = 1 final, single video
 		// type = 0 testing, videos can be change dynamically.
-		int installationType = js["installation"]["type"];
+		//int installationType = js["installation"]["type"];
 
         
     }else{
