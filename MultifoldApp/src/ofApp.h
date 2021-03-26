@@ -118,7 +118,7 @@ public:
     void playMovies(bool & value);
     void debugMovie(bool & value);
     void frameSlider(int & value);
-    void syncVideosDebug(bool & value);
+    //void syncVideosDebug(bool & value);
     
     
     bool                    mPause;

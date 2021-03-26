@@ -518,9 +518,10 @@ void ofApp::syncVideos(){
                         doneMovies++;
                     }
                 }
-                cout <<"done "<< doneMovies;
+               
                 if (doneMovies >= 4) {
                     playNewVideos = true;
+                    cout << "Done Movie : " << doneMovies;
                 }
             }
 		}
@@ -611,11 +612,7 @@ void ofApp::draw(){
         drawDebugWarps();
     }
     
-    //sync debug videos
-    //if(mSyncVideosDebug){
-    //    drawSyncVideos();
-   // }
-    
+ 
  
     //draw gui
     drawGui();
@@ -631,7 +628,7 @@ void ofApp::setupGui(){
     parameters.add(mDebugMovie.set("Debug", false));
     parameters.add(mDrawWarp.set("Draw Warp", true));
     parameters.add(mMasterFrame.set("Master Frame", 0, 0, mMinFrame));
-    parameters.add(mSyncVideosDebug.set("Sync Frame", false));
+    //parameters.add(mSyncVideosDebug.set("Sync Frame", false));
     parameters.add(player.volume);
     
     //load parameters
@@ -650,7 +647,7 @@ void ofApp::setupGui(){
     mResetMovie.addListener(this, &ofApp::resetMovies);
     mDebugMovie.addListener(this, &ofApp::debugMovie);
     mMasterFrame.addListener(this, &ofApp::frameSlider);
-    mSyncVideosDebug.addListener(this, &ofApp::syncVideosDebug);
+    //mSyncVideosDebug.addListener(this, &ofApp::syncVideosDebug);
     
     //setup gui
     mGui.setup(parameters);
@@ -786,16 +783,6 @@ void ofApp::playMovies(bool & value){
 }
 
 //--------------------------------------------------------------
-void ofApp::syncVideosDebug(bool & value){
-    
-    if(value){
-        mDebugMovie.set(false);
-        mDrawWarp.set(false);
-        //update frames
-    }
-}
-
-//--------------------------------------------------------------
 void ofApp::debugMovie(bool & value){
 
     mDebugMode = value;
@@ -844,7 +831,7 @@ void ofApp::drawGui(){
         
         ofDrawBitmapString(ofPath, 10, 130);
         
-        mGui.draw();
+       // mGui.draw();
     }
 }
 
@@ -905,28 +892,23 @@ void ofApp::keyPressed(int key){
         std::string avfile = "idle_00.json";
         loadAV(avfile);
         initVideos();
-        ofLog(OF_LOG_NOTICE) << "loaded new AV :" << avfile;
+        mDebugMode = false;
+        playNewVideos = true;
+        ofLog(OF_LOG_NOTICE) << "Start new Videos: " << avfile;
     }
 
     if (key == '1') {
         std::string avfile = "cai_00.json";
+     
         loadAV(avfile);
         initVideos();
+        mDebugMode = false;
         ofLog(OF_LOG_NOTICE) << "loaded new AV :" << avfile;
     }
 
-    if (key == '2') {
-        std::string avfile = "gdl_00.json";
-        loadAV(avfile);
-        initVideos();
-        ofLog(OF_LOG_NOTICE) << "loaded new AV :" << avfile;
-    }
 
-    if (key == '3') {
-        std::string avfile = "phc_00.json";
-        loadAV(avfile);
-        initVideos();
-        ofLog(OF_LOG_NOTICE) << "loaded new AV :" << avfile;
+    if (key == 'd') {
+        mDebugMode = true;
     }
 
  
