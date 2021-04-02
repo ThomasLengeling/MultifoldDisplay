@@ -841,26 +841,31 @@ void ofApp::keyPressed(int key){
         mDrawWarp.set(true);
         mDebugImgWarp.set(false);
         mSyncVideosDebug.set(false);
+        ofLog(OF_LOG_NOTICE) << "start videos mode";
     }
 
 
     if (key == 'd'){
-        mDrawWarp.set(!mDrawWarp.get());
-        mDebugImgWarp.set(!mDebugImgWarp.get());
-        mSyncVideosDebug.set(!mSyncVideosDebug.get());
+
+        player.setPaused(true);
+
+        mDrawWarp.set(false);
+        mDebugImgWarp.set(true);
+        mSyncVideosDebug.set(false);
+        ofLog(OF_LOG_NOTICE) << "debug mode";
     }
+
 
  
     //audio
     if (key == ' ') {
-
         mInitialize = true;
-
-      
+        ofLog(OF_LOG_NOTICE) << "stop init mode";
     }
     
     if (key == 'e') {
         player.setPosition(0.99);
+        ofLog(OF_LOG_NOTICE) << "end  mode";
     }
     if (key == 'g') {
         mDrawGUI = !mDrawGUI;
@@ -895,7 +900,6 @@ void ofApp::keyPressed(int key){
 //--------------------------------------------------------------
 void ofApp::updateOSC() {
     while (receiver.hasWaitingMessages()) {
-
         // get the next message
         ofxOscMessage m;
         receiver.getNextMessage(m);
