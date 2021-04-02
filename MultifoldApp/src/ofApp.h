@@ -54,7 +54,9 @@ public:
     void windowResized(int w, int h);
     void dragEvent(ofDragInfo dragInfo);
     void gotMessage(ofMessage msg);
-    
+
+    void drawDisplay(ofEventArgs& args);
+    void setupVideo();
     
     //Video Warp
     std::vector<inn::VideoWarpRef> mVideoWarps;
@@ -88,8 +90,6 @@ public:
     //min frame of all the videos;
     int mMinFrame;
 	
-	//debug warps mode or play full video
-	int mDebugMode;
     
     //debug and release mode
     ofParameterGroup      parameters;
@@ -97,7 +97,7 @@ public:
     ofParameter<bool>     mWarpSave;
     ofParameter<bool>     mPlayMovie;
     ofParameter<bool>     mResetMovie;
-    ofParameter<bool>     mDebugMovie;
+    ofParameter<bool>     mDebugImgWarp;
     ofParameter<bool>     mDrawWarp;
     ofParameter<int>      mMasterFrame;
     
@@ -118,7 +118,7 @@ public:
     void playMovies(bool & value);
     void debugMovie(bool & value);
     void frameSlider(int & value);
-    //void syncVideosDebug(bool & value);
+    void syncVideosDebug(bool & value);
     
     
     bool                    mPause;
@@ -147,7 +147,10 @@ public:
     void            loadDebugImgs();
 
     std::vector <ofImage> mDebugImgs;
+   // ofImage         mDebugImgDisplay;
 
+    bool            mInitialize;
+    float           mInitTimer;
 
 
 };

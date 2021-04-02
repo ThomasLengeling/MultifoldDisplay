@@ -49,23 +49,39 @@ int main( ){
         windwoPos  = glm::vec2(0, 0 );
     }
     
-    //ofGLWindowSettings
+    //3 front videos
     ofGLFWWindowSettings settings;
     settings.setGLVersion(4,1);
-    
-    settings.setSize(windowSize.x * numScreens, windowSize.y);
+    //settings.multiMonitorFullScreen = true;
+    settings.doubleBuffering = true;
+    settings.setSize(windowSize.x * 4, windowSize.y);
     settings.setPosition(glm::vec2(-1920 * 4, 0));
     settings.decorated = decorated;
-    settings.resizable = false;
-    settings.multiMonitorFullScreen = true;
-    //settings.windowMode = OF_FULLSCREEN;
+    //settings.resizable = false;
     ofCreateWindow(settings);
+    //shared_ptr<ofAppBaseWindow> mainWindow = ofCreateWindow(settings);
     
-    ofLog(OF_LOG_NOTICE) << "Window Size: " <<ofGetWindowWidth()<<" "<<ofGetWindowHeight()<<std::endl;
+    ofLog(OF_LOG_NOTICE) << "3 HD Warp created Window Size: " <<ofGetWindowWidth()<<" "<<ofGetWindowHeight()<<std::endl;
 
-    // this kicks off the running of my app
-    // can be OF_WINDOW or OF_FULLSCREEN
-    // pass in width and height too:
-    ofRunApp(new ofApp());
-    
+    //4k video for table display
+    //3840, 2160
+    //1920 x 108
+    settings.setGLVersion(4, 1);
+    settings.setSize(1920, 1080);
+    settings.setPosition(glm::vec2(-1920, 0));
+    settings.decorated = false;
+    settings.resizable = false;
+    // uncomment next line to share main's OpenGL resources with gui
+   // settings.shareContextWith = mainWindow;
+   // shared_ptr<ofAppBaseWindow> largeWindow = ofCreateWindow(settings);
+
+   // shared_ptr<ofApp> mainApp(new ofApp);
+    //mainApp->setupVideo();
+   // ofAddListener(largeWindow->events().draw,mainApp.get(),&ofApp::drawDisplay);
+
+   
+    //mainApp->setupGui();
+   ofRunApp(new ofApp());
+    //ofRunApp(mainWindow, mainApp);
+    //ofRunMainLoop();
 }

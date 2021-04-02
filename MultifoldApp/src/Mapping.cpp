@@ -23,17 +23,19 @@ void Mapping::setupWarp(int width, int height) {
         
         for (int i = 0; i < mNumDisplays; i++) {
             shared_ptr<ofxWarpBase> warp;
-            warp = this->warpController.buildWarp<ofxWarpPerspectiveBilinear>();
+           // warp = this->warpController.buildWarp<ofxWarpPerspectiveBilinear>();
+            warp = this->warpController.buildWarp<ofxWarpPerspective >();
             warp->setSize(projectionWidth, projectionHeight);
+            warp->handleWindowResize(1920, 1080);
             warp->setEdges(glm::vec4(0.0f, 0.0f, 0.0f, 0.0f));
             warp->setBrightness(1.0);
             warp->setGamma(1.0);
             warp->setExponent(2.0);
             warp->setLuminance(0.5);
-            warp->setControlPoint(0, glm::vec2(0.25 * (i ), 0));
-            warp->setControlPoint(1, glm::vec2(0.25*(i+1), 0));
-            warp->setControlPoint(2, glm::vec2(0.25*(i+1), 1.0));
-            warp->setControlPoint(3, glm::vec2(0.25 * (i ), 1.0));
+            warp->setControlPoint(0, glm::vec2(0, 0));
+            warp->setControlPoint(1, glm::vec2(1, 0));
+            warp->setControlPoint(2, glm::vec2(1, 1.0));
+            warp->setControlPoint(3, glm::vec2(0, 1.0));
 ;            //this->warpController.addWarp(warp);
             ofLog(OF_LOG_NOTICE)<<"Created warp "<<projectionWidth<<" "<<projectionWidth;
         }
@@ -42,11 +44,13 @@ void Mapping::setupWarp(int width, int height) {
     //set the warps
     for (auto i = 0; i < this->warpController.getNumWarps(); ++i) {
         auto warp = this->warpController.getWarp(i);
-
-        if (i == 3) {//display 4K vs HD 3840, 2160
-            //warp->setSize(1920, 1080);
+        warp->handleWindowResize(1920, 1080);
+        warp->setSize(1920, 1080);
+       // if (i == 3) {
+            //display 4K vs HD 3840, 2160
+      
            // warp->setEdges(glm::vec4(0.0f, 0.0f, 0.0f, 0.0f));
-        }
+       // }
     }
 
     ofLog(OF_LOG_NOTICE)<<"Num Waps: "<<this->warpController.getNumWarps();
@@ -69,7 +73,7 @@ void Mapping::setupWarp(int width, int height) {
 		mMappingParams.at(i).setName("Mapping " + std::to_string(i));
 		mMappingParams.at(i).add(paramScreens.at(i)->gamma.set("gamma " + std::to_string(i), 1, ofColor(0), ofColor(255)));
 		mMappingParams.at(i).add(paramScreens.at(i)->luminance.set("luminance " + std::to_string(i), 1, ofColor(0), ofColor(255)));
-		mMappingParams.at(i).add(paramScreens.at(i)->brightness.set("brightness " + std::to_string(i), 0.8877, 0.0, 1.0));
+		mMappingParams.at(i).add(paramScreens.at(i)->brightness.set("brightness " + std::to_string(i), 1.0, 0.0, 1.0));
 		mMappingParams.at(i).add(paramScreens.at(i)->exponent.set("exponent " + std::to_string(i), 2.0, 0.0, 3.0));
 
 		//Edges left, top, right, bottom
@@ -151,15 +155,12 @@ void Mapping::draw(ofTexture &texture) {
         for (auto i = 0; i < this->warpController.getNumWarps(); ++i) {
             auto warp = this->warpController.getWarp(i);
 
-            if (i == 3) { //displays
+
                 ofPushMatrix();
-                ofTranslate(1920 * 2, 0);
+                ofTranslate(1920 * i, 0);
                 warp->draw(texture);
                 ofPopMatrix();
-            }
-            else {
-                warp->draw(texture);
-            }
+
         }
     } else {
        ofLog(OF_LOG_NOTICE) << "not allocated";
@@ -168,23 +169,8 @@ void Mapping::draw(ofTexture &texture) {
 
 //--------------------------------------------------------------
 void Mapping::draw(ofTexture & texture, int i){
-    if (texture.isAllocated()) {
-
-        if (i == 3) { //displays
-           // ofPushMatrix();
-           // ofTranslate(1920 * 3, 0);
-            auto warp = this->warpController.getWarp(i);
-            warp->draw(texture);
-          //  ofPopMatrix();
-        }
-        else {
-            auto warp = this->warpController.getWarp(i);
-            warp->draw(texture);
-        }
- 
-    } else {
-        ofLog(OF_LOG_NOTICE) << "not allocated tex " <<i;
-    }
+    auto warp = this->warpController.getWarp(i);
+    warp->draw(texture);
 }
 
 //--------------------------------------------------------------

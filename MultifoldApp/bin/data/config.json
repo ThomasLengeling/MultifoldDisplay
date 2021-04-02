@@ -1,9 +1,9 @@
-{   
+{
     "window": {
         "width": 1920,
         "height": 1080,
-        "decorated": 1,
-        "numScreen": 4
+        "decorated": 0,
+        "numScreen": 3
     },
 
     "network": {
@@ -17,7 +17,7 @@
     },
 
     "video": {
-        "type": 0
+        "type": 1
     },
 
     "installation": {

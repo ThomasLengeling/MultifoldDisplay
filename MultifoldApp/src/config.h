@@ -35,7 +35,7 @@ private:
 		windowPosX = 0;
 		windowPosY = 0;
 		decorated = false;
-        numDisplays = 4;
+        numDisplays = 3;
 	}
 
 

@@ -40,9 +40,10 @@ void VideoWarp::loadVideo(std::string & name){
     if(mPlayerType == 1){
         ofLog(OF_LOG_NOTICE)<<"Player HPV";
         mHPVPlayer.init(HPV::NewPlayer());
-        mHPVPlayer.load(mVideoName);
-        mHPVPlayer.setLoopState(OF_LOOP_NONE);
         mHPVPlayer.setDoubleBuffered(true);
+        mHPVPlayer.loadAsync(mVideoName);
+        mHPVPlayer.setLoopState(OF_LOOP_NONE);
+        //mHPVPlayer.setDoubleBuffered(true);
     }
     
     if(mPlayerType == 0){
@@ -86,6 +87,12 @@ void VideoWarp::setPosition(float value) {
     if (mPlayerType == 0) {
         mHAPPlayer.setPosition(value);
     }
+    else if (mPlayerType == 1) {
+        mHPVPlayer.seekToPos(value);
+    }
+    else if (mPlayerType == 2) {
+        mOFVideoPlayer.setPosition(value);
+    }
 }
 
 //--------------------------------------------------------------
@@ -104,11 +111,11 @@ void VideoWarp::updateFrame(int64_t currFrame){
 //--------------------------------------------------------------
 void VideoWarp::update(){
     if(mPlayerType == 0){
-        mHAPPlayer.update();
+     //   mHAPPlayer.update();
     }else if(mPlayerType == 1){
-       
+       //the is a global instance for updating the HPV render
     }else if(mPlayerType == 2){
-        mOFVideoPlayer.update();
+       // mOFVideoPlayer.update();
     }
 }
 //--------------------------------------------------------------
@@ -119,7 +126,7 @@ bool VideoWarp::isLoaded() {
         loaded = mHAPPlayer.isLoaded();
     }
     else if (mPlayerType == 1) {
-        loaded = mHAPPlayer.isLoaded();
+        loaded = mHPVPlayer.isLoaded();
     }
     else if (mPlayerType == 2) {
         loaded =  mOFVideoPlayer.isLoaded();
@@ -163,11 +170,10 @@ void VideoWarp::startPlay(){
         mOFVideoPlayer.play();
     }
 }
-
+//--------------------------------------------------------------
 void VideoWarp::nextFrame(){
     mOFVideoPlayer.nextFrame();
 }
-
 //--------------------------------------------------------------
 void VideoWarp::setPaused(bool status){
     if(mPlayerType == 0){
@@ -243,6 +249,20 @@ ofTexture * VideoWarp::getTexturePtr(){
         }
     }
     return new ofTexture;
+}
+
+void VideoWarp::close() {
+    if (mPlayerType == 0) {
+        mHAPPlayer.close();
+    }
+    else if (mPlayerType == 1) {
+        mHPVPlayer.stop();
+        mHPVPlayer.close();
+     
+    }
+    else if (mPlayerType == 2) {
+        mOFVideoPlayer.close();
+    }
 }
 
 }

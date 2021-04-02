@@ -43,6 +43,8 @@ public:
         return std::make_shared<VideoWarp>(playerType, id);
         
     }
+
+    void close();
     
     void loadVideo(std::string & name);
     void startPlay();
