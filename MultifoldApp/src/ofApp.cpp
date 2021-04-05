@@ -15,7 +15,7 @@ void ofApp::setup(){
    // HPV::InitHPVEngine();
     
     ofSetVerticalSync(false);
-    ofSetFrameRate(25);
+    ofSetFrameRate(24.3);
     ofBackground(0);
     ofDisableArbTex();
     
@@ -878,22 +878,22 @@ void ofApp::keyPressed(int key){
     }
     
     if(key == 'm'){
-        mGui.saveToFile("settings.xml");
+      //  mGui.saveToFile("settings.xml");
     }
     
     if (key == 'z') {
-        bool play = false;
-        playMovies(play);
+      //  bool play = false;
+      //  playMovies(play);
     }
 
     if(key == 'x'){
-        bool play = true;
-        playMovies(play);
+      //  bool play = true;
+     //   playMovies(play);
     }
 
     if (key == 'r') {
-        bool reset = true;
-        resetMovies(reset);
+       // bool reset = true;
+      //  resetMovies(reset);
     }
     
 }
