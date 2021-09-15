@@ -1,13 +1,23 @@
 
 # Multi Screen Warping app
 
+Application in openFrameworks/C++ that synchronizes multiple video and audio in real-time.
 
-openFrameworks App
 
 #### Required addons:
 
+
+- ofxAudioFile
+- ofxDatGui
+- ofxGui
+- ofxHapPlayer
+- ofxHPVPlayer
+- ofxNetwork
+- ofxOpenCv
+- ofxOsc
+- ofxSoundObjects
 - ofxWarp
-- 
+- ofxXmlSettings
 
 ## Instructions use
 

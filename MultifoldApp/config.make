@@ -8,7 +8,7 @@
 #   The location of your root openFrameworks installation
 #       (default) OF_ROOT = ../../openFrameworks/of_v0.11.0_osx_release 
 ################################################################################
-# OF_ROOT = ../../openFrameworks/of_v0.11.0_osx_release
+OF_ROOT = C:\Users\Bizon\Documents\Motion\openFrameworks
 
 ################################################################################
 # PROJECT ROOT
