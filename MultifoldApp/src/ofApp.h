@@ -1,5 +1,8 @@
 #pragma once
 
+#include <cstddef>
+#include <stdint.h>
+
 #include "ofMain.h"
 #include "VideoWarp.h"
 #include "Mapping.h"
@@ -32,8 +35,6 @@
 #define WIDTH_HD    1920
 #define HEIGHT_HD   1080
 
-#define WIDTH_SD    640
-#define HEIGHT_SD   360
 
 class ofApp : public ofBaseApp{
     
@@ -118,8 +119,7 @@ public:
     void playMovies(bool & value);
     void debugMovie(bool & value);
     void frameSlider(int & value);
-    void syncVideosDebug(bool & value);
-    
+
     
     bool                    mPause;
     
@@ -129,7 +129,7 @@ public:
     void setupAudio(std::string audio);
 
     ofEventListener playerEndListener;
-    void playerEnded(size_t& id);
+    void playerEnded(size_t  & id);
 
     ofSoundStream stream;
     ofxSoundOutput output;

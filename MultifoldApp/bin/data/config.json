@@ -1,10 +1,38 @@
 {
-    "window": {
+    "window": [
+      {
         "width": 1920,
         "height": 1080,
         "decorated": 0,
-        "numScreen": 3
-    },
+        "numscreen": 3,
+        "alias": "left",
+        "id": 0
+      },
+      {
+        "width": 1920,
+        "height": 1080,
+        "decorated": 0,
+        "numscreen": 3,
+        "alias": "center",
+        "id": 1
+      },
+      {
+        "width": 1920,
+        "height": 1080,
+        "decorated": 0,
+        "numScreen": 3,
+        "alias": "right",
+        "id": 2
+      },
+      {
+        "width": 640,
+        "height": 480,
+        "decorated": 1,
+        "numScreen": 1,
+        "alias": "main",
+        "id": 3
+      }
+    ],
 
     "network": {
         "ip": "127.0.0.1",
@@ -17,11 +45,8 @@
     },
 
     "video": {
-        "type": 1
-    },
-
-    "installation": {
-        "type" : 1
+        "format": "hpv",
+        "orientation" : "portrait"
     }
 
 }

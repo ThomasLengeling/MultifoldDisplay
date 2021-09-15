@@ -1,41 +1,53 @@
 {
-	"videoType": 0,
-	"videos": [
-
-        {
-            "width": 1920,
-            "height": 1080,
-            "name": "Videos/CAI_01_Left_HAP.mov",
-            "alias": "left",
-            "drawx": 0,
-            "drawy": 0
-        },
-        {
-            "width": 1920,
-            "height": 1080,
-            "name": "Videos/CAI_02_Center_HAP.mov",
-            "alias": "front",
-            "drawx": 0,
-            "drawy": 0
-        },
-
-        {
-            "width": 1920,
-            "height": 1080,
-            "name": "Videos/CAI_03_Right_HAP.mov",
-            "alias": "right",
-            "drawx": 0,
-            "drawy": 0
-        },
-        {
-            "width": 1920,
-            "height": 1080,
-            "name": "Videos/CAI_04_Display_HAP.mov",
-            "alias": "display",
-            "drawx": 0,
-            "drawy": 0
-        }
-
-
-	]
+  "resolution": {
+    "width": 1920,
+    "height": 1080
+  },
+  "videos": [
+    {
+      "name": "Videos/CAI_01_Left_HAP.mov",
+      "id": "0",
+      "alias": "left"
+    },
+    {
+      "name": "Videos/CAI_01_Left_HAP.mov",
+      "id": "1",
+      "alias": "left"
+    },
+    {
+      "name": "Videos/CAI_01_Left_HAP.mov",
+      "id": "2",
+      "alias": "left"
+    },
+    {
+      "name": "Videos/CAI_01_Left_HAP.mov",
+      "id": "3",
+      "alias": "center"
+    },
+    {
+      "name": "Videos/CAI_01_Left_HAP.mov",
+      "id": "4",
+      "alias": "center"
+    },
+    {
+      "name": "Videos/CAI_01_Left_HAP.mov",
+      "id": "5",
+      "alias": "center"
+    },
+    {
+      "name": "Videos/CAI_01_Left_HAP.mov",
+      "id": "6",
+      "alias": "right"
+    },
+    {
+      "name": "Videos/CAI_01_Left_HAP.mov",
+      "id": "7",
+      "alias": "right"
+    },
+    {
+      "name": "Videos/CAI_01_Left_HAP.mov",
+      "id": "8",
+      "alias": "right"
+    }
+  ]
 }

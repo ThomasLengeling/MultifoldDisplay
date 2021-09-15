@@ -315,7 +315,7 @@ void ofApp::setupAudio(std::string filepath) {
 }
 
 //--------------------------------------------------------------
-void ofApp::playerEnded(size_t& id) {
+void ofApp::playerEnded(size_t & id) {
     // This function gets called when the player ends. You can do whatever you need to here.
     // This event happens in the main thread, not in the audio thread.
     cout << "the player's instance " << id << "finished playing" << endl;

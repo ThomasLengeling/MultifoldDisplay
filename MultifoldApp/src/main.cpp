@@ -2,6 +2,15 @@
 #include "ofApp.h"
 #include "config.h"
 
+struct Display{
+	glm::vec2 pos;
+	glm::vec2 size;
+	std::string alias;
+	int id;
+	int numScreens;
+	int decorated;
+}display;
+
 //========================================================================
 int main( ){
     
@@ -13,6 +22,9 @@ int main( ){
     glm::vec2  windowSize;
     glm::vec2  windwoPos;
     bool decorated = false;
+	
+	std::vector<Display> displays;
+	std::string orientation = "landscape";
     
     int numScreens = 1;
     
@@ -22,24 +34,42 @@ int main( ){
         
         windwoPos.x = js["position"]["x"];
         windwoPos.y = js["position"]["y"];
-        
-        windowSize.x = js["window"]["width"];
-        windowSize.y = js["window"]["height"];
-        
-        numScreens   = js["window"]["numScreen"];
-        
-        SystemVars::getInstance().numDisplays = numScreens;
-        
-        decorated    = (js["window"]["decorated"] == 1 ? true : false);
-        
-        ofLog(OF_LOG_NOTICE)<<"Size: "<< windowSize.x<<" "<<windowSize.y<<" "<<decorated<<std::endl;
 
-        ofLog(OF_LOG_NOTICE) << "Num Screens: " << numScreens << std::endl;
+		std::string format = js["video"]["format"];
+		orientation = std::string(js["video"]["orientation"]);
 
-		//final installation
-		// type = 1 final, single video
-		// type = 0 testing, videos can be change dynamically.
-		//int installationType = js["installation"]["type"];
+		std::string ip = js["network"]["ip"];
+		int port = js["network"]["port"];
+
+		ofLog(OF_LOG_NOTICE) << "Position: " << windwoPos.x<< ", " << windwoPos.y;
+		ofLog(OF_LOG_NOTICE) << "Network: " <<ip<< "  " << port;
+		ofLog(OF_LOG_NOTICE) << "Video Format " << format << " Orientation: " << orientation;
+
+
+		//load individual windows
+		
+		int i = 0;
+		for (auto & windows : js["window"]) {
+			if (!windows.empty()) {
+				Display d;
+				d.size.x = windows["width"];
+				d.size.y = windows["height"];
+				d.decorated = windows["decorated"];
+				d.numScreens = windows["numscreen"];
+				d.alias = std::string(windows["alias"]);
+				d.id = windows["id"];
+
+				ofLog(OF_LOG_NOTICE) << "Found  Window " << d.alias << " " << i;
+				ofLog(OF_LOG_NOTICE) << "Num Screens: " << d.numScreens << " size: " << d.size.x << ", " << displays[i].size.y;
+
+				displays.push_back(d);
+			}
+		}
+
+        
+        
+       // SystemVars::getInstance().numDisplays = numScreens;
+        
 
         
     }else{
@@ -48,17 +78,52 @@ int main( ){
         windowSize = glm::vec2(1920, 1080);
         windwoPos  = glm::vec2(0, 0 );
     }
-    
+
+	//create windwos
+	for (auto & d : displays){
+		ofGLFWWindowSettings settings;
+		settings.setGLVersion(4, 1);
+		settings.doubleBuffering = true;
+		int sizeX = 1920;
+		int sizeY = 1080;
+		if (orientation == "portrait") {
+			if (d.alias != "main") {
+				sizeX = displays[i].size.y * displays[i].numScreens;
+				sizeY = displays[i].size.x;
+				settings.setSize(sizeX, sizeY);
+			}
+			else {
+
+			}
+
+			int posX = 1920 + 0;
+			int posY = 0;
+			if (i >= 1) {
+				posX = 1920 + sizeX * (i-1);
+				posY = 0;
+			}
+			if (d.alias == "main") {
+				posX = 0;
+				posY = 0;
+			}
+
+			ofLog(OF_LOG_NOTICE) << "Window Size: " << sizeX << ", " << sizeY;
+			ofLog(OF_LOG_NOTICE) << "Window Location: " << posX << ", " << posY;
+
+			settings.setPosition(glm::vec2(posX, posY));
+		}
+		else {
+			int x = displays[i].size.x * displays[i].numScreens;
+			int y = displays[i].size.y;
+			settings.setSize(x, y);
+		}
+
+		settings.decorated = decorated;
+		settings.resizable = false;
+		ofCreateWindow(settings);
+	}
     //3 front videos
-    ofGLFWWindowSettings settings;
-    settings.setGLVersion(4,1);
-    //settings.multiMonitorFullScreen = true;
-    settings.doubleBuffering = true;
-    settings.setSize(windowSize.x * 4, windowSize.y);
-    settings.setPosition(glm::vec2(-1920 * 4, 0));
-    settings.decorated = decorated;
-    //settings.resizable = false;
-    ofCreateWindow(settings);
+
     //shared_ptr<ofAppBaseWindow> mainWindow = ofCreateWindow(settings);
     
     ofLog(OF_LOG_NOTICE) << "3 HD Warp created Window Size: " <<ofGetWindowWidth()<<" "<<ofGetWindowHeight()<<std::endl;
