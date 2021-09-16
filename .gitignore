@@ -58,10 +58,14 @@
 #ignore folders
 MultifoldApp/bin/data/Videos/
 
+VideoTest/bin/data/videos/
+
 *.hpv
 *.mov
 
 VideoTest/bin/data/Videos/
+
+
 
 
 

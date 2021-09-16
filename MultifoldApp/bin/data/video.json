@@ -1,52 +1,58 @@
 {
+  "videotype": 1,
   "resolution": {
     "width": 1920,
     "height": 1080
   },
+  "audios": [
+    {
+      "name": "audios/sound.mav"
+    }
+  ],
   "videos": [
     {
-      "name": "Videos/CAI_01_Left_HAP.mov",
-      "id": "0",
+      "name": "videos/bbb_export.hpv",
+      "id": 0,
       "alias": "left"
     },
     {
-      "name": "Videos/CAI_01_Left_HAP.mov",
-      "id": "1",
+      "name": "videos/bbb_export.hpv",
+      "id": 1,
       "alias": "left"
     },
     {
-      "name": "Videos/CAI_01_Left_HAP.mov",
-      "id": "2",
+      "name": "videos/bbb_export.hpv",
+      "id": 2,
       "alias": "left"
     },
     {
-      "name": "Videos/CAI_01_Left_HAP.mov",
-      "id": "3",
+      "name": "videos/bbb_export.hpv",
+      "id": 3,
       "alias": "center"
     },
     {
-      "name": "Videos/CAI_01_Left_HAP.mov",
-      "id": "4",
+      "name": "videos/bbb_export.hpv",
+      "id": 4,
       "alias": "center"
     },
     {
-      "name": "Videos/CAI_01_Left_HAP.mov",
-      "id": "5",
+      "name": "videos/bbb_export.hpv",
+      "id": 5,
       "alias": "center"
     },
     {
-      "name": "Videos/CAI_01_Left_HAP.mov",
-      "id": "6",
+      "name": "videos/bbb_export.hpv",
+      "id": 6,
       "alias": "right"
     },
     {
-      "name": "Videos/CAI_01_Left_HAP.mov",
-      "id": "7",
+      "name": "videos/bbb_export.hpv",
+      "id": 7,
       "alias": "right"
     },
     {
-      "name": "Videos/CAI_01_Left_HAP.mov",
-      "id": "8",
+      "name": "videos/bbb_export.hpv",
+      "id": 8,
       "alias": "right"
     }
   ]

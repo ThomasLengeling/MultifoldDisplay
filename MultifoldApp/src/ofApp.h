@@ -68,11 +68,6 @@ public:
     
     void syncVideos();
     
-    //warp
-    inn::MappingRef mWarpMapping;
-    void drawWarps();
-
-    void drawDebugWarps();
     
     //debug layout videos
     void debugLayoutVideos();
@@ -90,6 +85,15 @@ public:
     
     //min frame of all the videos;
     int mMinFrame;
+
+    void setupVideoLeft();
+    void setupVideoCenter();
+    void setupVideoRight();
+
+    //updating windows
+    void updateVideoLeft();
+    void updateVideoCenter();
+    void updateVideoRight();
 	
     
     //debug and release mode

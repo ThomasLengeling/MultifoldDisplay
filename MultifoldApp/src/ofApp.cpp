@@ -12,7 +12,7 @@ void ofApp::setup(){
     ofSetLogLevel("Logging items", OF_LOG_VERBOSE);
     
     //start HPV engine
-   // HPV::InitHPVEngine();
+    HPV::InitHPVEngine();
     
     ofSetVerticalSync(false);
     ofSetFrameRate(24.3);
@@ -20,28 +20,25 @@ void ofApp::setup(){
     ofDisableArbTex();
     
     //number of display
-    numDisplays = 4;// SystemVars::getInstance().numDisplays;
+    numDisplays = 3;// SystemVars::getInstance().numDisplays;
     
     ofLog(OF_LOG_NOTICE) << "Num Displays for Videos: "<<numDisplays<<std::endl;
     
     //player type
     //1 -> HPV
     //0 -> HAP
-    mPlayerType = 0;
-  
-    //WARP
-    mWarpMapping = inn::Mapping::create(3);
-    mWarpMapping->setupWarp(WIDTH_HD, HEIGHT_HD);
+    mPlayerType = 1;
+ 
     
     //GUI
     setupGui();
 
     //debug imgs
-    loadDebugImgs();
+   // loadDebugImgs();
 
 
     //load av files
-    std::string avfile = "final_videos.json";// "intro_00.json"; /// "idle_00.json";
+    std::string avfile = "video.json";// "intro_00.json"; /// "idle_00.json";
     loadAV(avfile);
     initVideos();
     playNewVideos = false;
@@ -105,6 +102,17 @@ void ofApp::setup(){
 
     ofLog(OF_LOG_NOTICE) << "Finishing setup";
     ofLog(OF_LOG_NOTICE) << "Size" << ofGetWindowWidth() << " " << ofGetWindowHeight();
+}
+
+//--------------------------------------------------------------
+void ofApp::setupVideoLeft() {
+
+}
+void ofApp::setupVideoCenter() {
+
+}
+void ofApp::setupVideoRight() {
+
 }
 
 //--------------------------------------------------------------
@@ -193,8 +201,9 @@ void ofApp::loadAV(std::string jsonFile) {
         ofLog(OF_LOG_NOTICE) << "Reading Config File " << jsonFile;
         avFile >> avJs;
 
-        int videoType = int(avJs["videoType"]);
+        int videoType = avJs["videotype"];
         mPlayerType = videoType;
+
         if (videoType == 0) {
             ofLog(OF_LOG_NOTICE) << "Loading Videos Type HAP " << int(mPlayerType);
         }
@@ -210,24 +219,32 @@ void ofApp::loadAV(std::string jsonFile) {
         for (auto& videoNames : avJs["videos"]) {
             if (!videoNames.empty()) {
                 std::string name = videoNames["name"];
+                int id = videoNames["id"];
+                std::string alias = videoNames["alias"];
+
                 strVideo.push_back(name);
-                ofLog(OF_LOG_NOTICE) << "Found video " << i << " : " << name;
+                ofLog(OF_LOG_NOTICE) << "Found video " << i << " : " << name<<" "<< alias;
                 i++;
             }
         }
 
         ofLog(OF_LOG_NOTICE) << "Found Videos: " << strVideo.size() << std::endl;
+        ofLog(OF_LOG_NOTICE) << "Loading Videos: ";
 
         //load videos
         int id = 0;
-        for (auto& strVideoNames : strVideo) {
+        for (auto & strVideoNames : strVideo) {
+            ofLog(OF_LOG_NOTICE) << "loaded: " << id;
+
             inn::VideoWarpRef video = inn::VideoWarp::create(mPlayerType, id);
             video->loadVideo(strVideoNames);
             mVideoWarps.push_back(video);
-
             id++;
         }
+        ofLog(OF_LOG_NOTICE) <<"Finished Videos"<< std::endl;
+
         //audio
+        ofLog(OF_LOG_NOTICE) << "Loading audio";
         for (auto& audioNames : avJs["audios"]) {
             if (!audioNames.empty()) {
                 std::string file = audioNames["name"];
@@ -434,7 +451,7 @@ void ofApp::syncVideos(){
         
         }
         else {
-            ofLog(OF_LOG_NOTICE) << "Audio not  Playing";
+           // ofLog(OF_LOG_NOTICE) << "Audio not  Playing";
         }
 
         if (player.getPosition() >= 1.0) {
@@ -494,12 +511,14 @@ void ofApp::draw(){
     //ofClear(mBkgColor);
     
     //draw warps
-    if(mDrawWarp){
+    if (mDrawWarp) {
         ofSetColor(255);
-        drawWarps();
 
-        ofTexture  tex = mVideoWarps.at(3)->getTexture();
-        tex.draw(1920*3, 0, 1920, 1080);
+        if (!mVideoWarps.empty()){
+            ofTexture tex = mVideoWarps.at(0)->getTexture();
+            tex.draw(1920 * 3, 0, 1920, 1080);
+        }
+   
     }
     
     if (mSyncVideosDebug) {
@@ -509,7 +528,7 @@ void ofApp::draw(){
  
     if (mDebugImgWarp) {
         ofSetColor(255);
-        drawDebugWarps();
+    
     }
 
     if (!mInitialize) {
@@ -533,7 +552,21 @@ void ofApp::draw(){
     ofSetColor(255);
     drawGui();
 }
+//--------------------------------------------------------------
 
+void  ofApp::updateVideoLeft() {
+
+}
+
+void  ofApp::updateVideoCenter() {
+
+}
+
+void  ofApp::updateVideoRight() {
+
+}
+
+//--------------------------------------------------------------
 void ofApp::drawDisplay(ofEventArgs& args) {
    // ofClear(0);
 
@@ -569,12 +602,7 @@ void ofApp::setupGui(){
     for( auto & videos : mVideoWarps){
         parameters.add(videos->getParamGroup());
     }
-    
-    //map params
-    auto params = mWarpMapping->getParams();
-    for(auto & pam : params){
-        parameters.add(pam);
-    }
+  
     
     //add listeners
     mPlayMovie.addListener(this, &ofApp::playMovies);
@@ -772,39 +800,6 @@ void ofApp::drawGui(){
     }
 }
 
-//--------------------------------------------------------------
-void ofApp::drawWarps(){
-    
-    //get texture for the video and update the warp
-    int i = 0;
-    for(auto & video : mVideoWarps){
-        if (i == 3) continue;
-        ofTexture  tex =  video->getTexture();
-        if(tex.isAllocated()){
-            mWarpMapping->draw(tex, i);
-            i++;
-        }
-    }
-}
-
-//--------------------------------------------------
-void ofApp::drawDebugWarps() {
-    int i = 0;
-    for (auto& video : mVideoWarps) {
-        
-        ofTexture  tex = mDebugImgs.at(i).getTexture();
-        if (tex.isAllocated()) {
-            if (i == 3) {
-                tex.draw(1920 * 3, 0, 1920, 1080);
-            }
-            else {
-                mWarpMapping->draw(tex, i);
-            }
-            i++;
-        }
-    }
-}
-
 
 //--------------------------------------------------------------
 void ofApp::debugLayoutVideos(){
@@ -874,7 +869,7 @@ void ofApp::keyPressed(int key){
     
     //save warps
     if (key == 's') {
-        mWarpMapping->saveWarp();
+       
     }
     
     if(key == 'm'){
@@ -1076,8 +1071,7 @@ void ofApp::exit(){
         movie->close();
     }
 
-    //HPV::DestroyHPVEngine();
-   // mWarpMapping->saveWarp();
+    HPV::DestroyHPVEngine();
 
     player.unload();
     stream.close();

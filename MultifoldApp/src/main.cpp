@@ -1,5 +1,6 @@
 #include "ofMain.h"
 #include "ofApp.h"
+#include "ofAppGLFWWindow.h"
 #include "config.h"
 
 struct Display{
@@ -9,6 +10,7 @@ struct Display{
 	int id;
 	int numScreens;
 	int decorated;
+	shared_ptr<ofAppBaseWindow> videoWindow;
 }display;
 
 //========================================================================
@@ -35,10 +37,10 @@ int main( ){
         windwoPos.x = js["position"]["x"];
         windwoPos.y = js["position"]["y"];
 
-		std::string format = js["video"]["format"];
-		orientation = std::string(js["video"]["orientation"]);
+		std::string format = js["video"]["format"].get<std::string>();
+		orientation = js["video"]["orientation"].get<std::string>();
 
-		std::string ip = js["network"]["ip"];
+		std::string ip = js["network"]["ip"].get<std::string>();
 		int port = js["network"]["port"];
 
 		ofLog(OF_LOG_NOTICE) << "Position: " << windwoPos.x<< ", " << windwoPos.y;
@@ -56,13 +58,14 @@ int main( ){
 				d.size.y = windows["height"];
 				d.decorated = windows["decorated"];
 				d.numScreens = windows["numscreen"];
-				d.alias = std::string(windows["alias"]);
+				d.alias = windows["alias"].get<std::string>();
 				d.id = windows["id"];
 
 				ofLog(OF_LOG_NOTICE) << "Found  Window " << d.alias << " " << i;
-				ofLog(OF_LOG_NOTICE) << "Num Screens: " << d.numScreens << " size: " << d.size.x << ", " << displays[i].size.y;
+				ofLog(OF_LOG_NOTICE) << "Num Screens: " << d.numScreens << " size: " << d.size.x << ", " << d.size.y;
 
 				displays.push_back(d);
+				i++;
 			}
 		}
 
@@ -79,74 +82,110 @@ int main( ){
         windwoPos  = glm::vec2(0, 0 );
     }
 
+	//main windows
+	ofLog(OF_LOG_NOTICE) << "Creating Main Window";
+	shared_ptr<ofAppBaseWindow> mainWindow;
+	if (!displays.empty()) {
+		for (auto& d : displays) {
+			if (d.alias == "main") {
+				ofGLFWWindowSettings settings;
+				settings.setSize(d.size.x, d.size.y);
+				settings.setPosition(glm::vec2(0, 0));
+				settings.resizable = false;
+				mainWindow = ofCreateWindow(settings);
+			}
+		}
+	}
+
 	//create windwos
-	for (auto & d : displays){
-		ofGLFWWindowSettings settings;
-		settings.setGLVersion(4, 1);
-		settings.doubleBuffering = true;
-		int sizeX = 1920;
-		int sizeY = 1080;
-		if (orientation == "portrait") {
-			if (d.alias != "main") {
-				sizeX = displays[i].size.y * displays[i].numScreens;
-				sizeY = displays[i].size.x;
-				settings.setSize(sizeX, sizeY);
+	int i = 0;
+	if (!displays.empty() ){
+		for (auto& d : displays) {
+			ofGLFWWindowSettings settings;
+
+			//dont create a window if its the main layout
+			if (d.alias == "main") {
+				ofLog(OF_LOG_NOTICE) << "Continue to Main" << i << std::endl;
+				i++;
+				continue;
+			}
+
+			ofLog(OF_LOG_NOTICE) << "Creating window: " << i<<"....";
+			
+			settings.setGLVersion(4, 1);
+			settings.doubleBuffering = true;
+			int sizeX = 1920;
+			int sizeY = 1080;
+			//1920 x 1080
+			
+			if (orientation == "portrait") {
+				if (d.alias != "main") {
+					sizeX = d.size.y * d.numScreens;
+					sizeY = d.size.x;
+					settings.setSize(sizeX, sizeY);
+				}
+
+				int posX = 1920 + 0;
+				int posY = 0;
+				if (i >= 1) {
+					posX = 1920 + sizeX * (i - 1);
+					posY = 0;
+				}
+
+				ofLog(OF_LOG_NOTICE) << "Window Size: " << sizeX << ", " << sizeY;
+				ofLog(OF_LOG_NOTICE) << "Window Location: " << posX << ", " << posY;
+
+				settings.setPosition(glm::vec2(posX, posY));
+
 			}
 			else {
-
+					int x = displays[i].size.x * displays[i].numScreens;
+					int y = displays[i].size.y;
+					settings.setSize(x, y);
 			}
+			
+			ofLog(OF_LOG_NOTICE) << "...";
+			settings.decorated = decorated;
+			settings.resizable = false;
+			settings.shareContextWith = mainWindow;
+			d.videoWindow = ofCreateWindow(settings);
+			d.videoWindow->setVerticalSync(false);
 
-			int posX = 1920 + 0;
-			int posY = 0;
-			if (i >= 1) {
-				posX = 1920 + sizeX * (i-1);
-				posY = 0;
-			}
-			if (d.alias == "main") {
-				posX = 0;
-				posY = 0;
-			}
-
-			ofLog(OF_LOG_NOTICE) << "Window Size: " << sizeX << ", " << sizeY;
-			ofLog(OF_LOG_NOTICE) << "Window Location: " << posX << ", " << posY;
-
-			settings.setPosition(glm::vec2(posX, posY));
+			ofLog(OF_LOG_NOTICE) << "Finishing creating video: " << i << std::endl;
+			i++;
 		}
-		else {
-			int x = displays[i].size.x * displays[i].numScreens;
-			int y = displays[i].size.y;
-			settings.setSize(x, y);
-		}
-
-		settings.decorated = decorated;
+	}
+	else {
+		//if the json failed to read a display settings then create simple main window
+		ofGLFWWindowSettings settings;
+		settings.setSize(800, 800);
+		settings.setPosition(glm::vec2(0, 0));
 		settings.resizable = false;
-		ofCreateWindow(settings);
+		mainWindow = ofCreateWindow(settings);
 	}
     //3 front videos
 
     //shared_ptr<ofAppBaseWindow> mainWindow = ofCreateWindow(settings);
     
-    ofLog(OF_LOG_NOTICE) << "3 HD Warp created Window Size: " <<ofGetWindowWidth()<<" "<<ofGetWindowHeight()<<std::endl;
+    ofLog(OF_LOG_NOTICE) << "Creating Windows Events " <<std::endl;
 
-    //4k video for table display
-    //3840, 2160
-    //1920 x 108
-    settings.setGLVersion(4, 1);
-    settings.setSize(1920, 1080);
-    settings.setPosition(glm::vec2(-1920, 0));
-    settings.decorated = false;
-    settings.resizable = false;
-    // uncomment next line to share main's OpenGL resources with gui
-   // settings.shareContextWith = mainWindow;
-   // shared_ptr<ofAppBaseWindow> largeWindow = ofCreateWindow(settings);
+	shared_ptr<ofApp> mainApp(new ofApp);
 
-   // shared_ptr<ofApp> mainApp(new ofApp);
-    //mainApp->setupVideo();
-   // ofAddListener(largeWindow->events().draw,mainApp.get(),&ofApp::drawDisplay);
+	mainApp->setupVideoLeft();
+	mainApp->setupVideoCenter();
+	mainApp->setupVideoRight();
 
-   
-    //mainApp->setupGui();
-   ofRunApp(new ofApp());
-    //ofRunApp(mainWindow, mainApp);
-    //ofRunMainLoop();
+	if (!displays.size()) {
+		//ofAddListener(displays.at(0).videoWindow->events().draw, mainApp.get(), &ofApp::updateVideoLeft);
+		//ofAddListener(displays.at(1).videoWindow->events().draw, mainApp.get(), &ofApp::updateVideoCenter);
+		//ofAddListener(displays.at(2).videoWindow->events().draw, mainApp.get(), &ofApp::updateVideoRight);
+	}
+	
+	//mainApp->setupGui();
+	//ofAddListener(guiWindow->events().draw, mainApp.get(), &ofApp::drawGui);
+
+	ofRunApp(mainWindow, mainApp);
+    ofRunMainLoop();
+
+	ofLog(OF_LOG_NOTICE) << "Finishing Windows Creating " << std::endl;
 }

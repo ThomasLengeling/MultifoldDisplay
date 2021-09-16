@@ -20,7 +20,7 @@
         "width": 1920,
         "height": 1080,
         "decorated": 0,
-        "numScreen": 3,
+        "numscreen": 3,
         "alias": "right",
         "id": 2
       },
@@ -28,7 +28,7 @@
         "width": 640,
         "height": 480,
         "decorated": 1,
-        "numScreen": 1,
+        "numscreen": 1,
         "alias": "main",
         "id": 3
       }
