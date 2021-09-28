@@ -4,7 +4,6 @@ ofxGui
 ofxHapPlayer
 ofxHPVPlayer
 ofxNetwork
-ofxOpenCv
 ofxOsc
 ofxSoundObjects
 ofxWarp

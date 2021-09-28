@@ -554,27 +554,7 @@ void ofApp::draw(){
     ofSetColor(255);
     drawGui();
 }
-//--------------------------------------------------------------
-//----- Draw Video content on the displays
-void  ofApp::drawVideoLeft(ofEventArgs& args) {
-    
-    ofSetColor(0, 255, 0);
-    ofDrawCircle(glm::vec2(HEIGHT_4K / 2.0, (WIDTH_4K * 3) / 2.0), 1000);
-}
 
-void  ofApp::drawVideoCenter(ofEventArgs& args) {
-
-    ofSetColor(0, 0, 255);
-    ofDrawCircle(glm::vec2(HEIGHT_4K / 2.0, (WIDTH_4K * 3) / 2.0), 1000);
-
-}
-
-void  ofApp::drawVideoRight(ofEventArgs& args) {
-
-    ofSetColor(255, 0, 0);
-    ofDrawCircle(glm::vec2(HEIGHT_4K / 2.0, (WIDTH_4K * 3) / 2.0), 1000);
-
-}
 
 //--------------------------------------------------------------
 void ofApp::drawDisplay(ofEventArgs& args) {
@@ -639,7 +619,7 @@ void ofApp::setupGui(){
     mGui.setPosition(30, 150);
     
     //default values
-    mDrawGUI = false;
+    mDrawGUI = true;
     mResetMovie.set(true);
     
     mGui.loadFromFile("settings.xml");
@@ -804,9 +784,9 @@ void ofApp::drawGui(){
             i++;
         }
         
-        ofDrawBitmapString(ofPath, 10, 130);
+        ofDrawBitmapString(ofPath, 10, 250);
         
-        mGui.draw();
+        //mGui.draw();
     }
 }
 

@@ -90,10 +90,6 @@ public:
     void setupVideoCenter();
     void setupVideoRight();
 
-    //updating windows
-    void drawVideoLeft(ofEventArgs& args);
-    void drawVideoCenter(ofEventArgs& args);
-    void drawVideoRight(ofEventArgs& args);
 	
     
     //debug and release mode
@@ -156,5 +152,10 @@ public:
     bool            mInitialize;
     float           mInitTimer;
 
+
+};
+
+//---------------------------
+class Common {
 
 };

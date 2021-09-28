@@ -3,10 +3,13 @@
 #include "ofAppGLFWWindow.h"
 #include "config.h"
 
+#include "WindowVideoApp.h"
+
 struct Display{
 	glm::vec2 pos;
 	glm::vec2 size;
 	std::string alias;
+	ofColor bkgColor;
 	int id;
 	int numScreens;
 	int decorated;
@@ -29,6 +32,8 @@ int main( ){
 	std::string orientation = "landscape";
     
     int numScreens = 1;
+
+	ofColor colors[] = {ofColor(200), ofColor(255), ofColor(150)};
     
     if (file.exists()) {
        // ofLog(OF_LOG_NOTICE) << " Reading Config File " << configFile;
@@ -60,6 +65,7 @@ int main( ){
 				d.numScreens = windows["numscreen"];
 				d.alias = windows["alias"].get<std::string>();
 				d.id = windows["id"];
+				d.bkgColor = colors[i];
 
 				ofLog(OF_LOG_NOTICE) << "Found  Window " << d.alias << " " << i;
 				ofLog(OF_LOG_NOTICE) << "Num Screens: " << d.numScreens << " size: " << d.size.x << ", " << d.size.y;
@@ -144,7 +150,6 @@ int main( ){
 			ofLog(OF_LOG_NOTICE) << "...";
 			settings.decorated = d.decorated;
 			settings.resizable = false;
-			settings.shareContextWith = mainWindow;
 			d.videoWindow = ofCreateWindow(settings);
 			d.videoWindow->setVerticalSync(false);
 
@@ -169,20 +174,27 @@ int main( ){
 
 	shared_ptr<ofApp> mainApp(new ofApp);
 
-	mainApp->setupVideoLeft();
-	mainApp->setupVideoCenter();
-	mainApp->setupVideoRight();
+	//windows
+	shared_ptr<WindowVideoApp> leftApp(new WindowVideoApp);
+	shared_ptr<WindowVideoApp> centerApp(new WindowVideoApp);
+	shared_ptr<WindowVideoApp> rightApp(new WindowVideoApp);
 
-	
-	ofAddListener(displays.at(0).videoWindow->events().draw, mainApp.get(), &ofApp::drawVideoLeft);
-	ofAddListener(displays.at(1).videoWindow->events().draw, mainApp.get(), &ofApp::drawVideoCenter);
-	ofAddListener(displays.at(2).videoWindow->events().draw, mainApp.get(), &ofApp::drawVideoRight);
-	
-	
-	//mainApp->setupGui();
-	//ofAddListener(guiWindow->events().draw, mainApp.get(), &ofApp::drawGui);
 
 	ofRunApp(mainWindow, mainApp);
+
+
+	int j = 0;
+	for (auto& d : displays) {
+		if (d.alias != "main") {
+			shared_ptr<WindowVideoApp> videoApp(new WindowVideoApp);
+			videoApp->setBackground(colors[j]);
+			ofRunApp(d.videoWindow, videoApp);
+			j++;
+		}
+	}
+
+
+
     ofRunMainLoop();
 
 	ofLog(OF_LOG_NOTICE) << "Finishing Windows Creating " << std::endl;
