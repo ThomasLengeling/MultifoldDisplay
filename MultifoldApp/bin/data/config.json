@@ -1,24 +1,24 @@
 {
     "window": [
       {
-        "width": 1920,
-        "height": 1080,
+        "width": 3840,
+        "height": 2160,
         "decorated": 0,
         "numscreen": 3,
         "alias": "left",
         "id": 0
       },
       {
-        "width": 1920,
-        "height": 1080,
+        "width": 3840,
+        "height": 2160,
         "decorated": 0,
         "numscreen": 3,
         "alias": "center",
         "id": 1
       },
       {
-        "width": 1920,
-        "height": 1080,
+        "width": 3840,
+        "height": 2160,
         "decorated": 0,
         "numscreen": 3,
         "alias": "right",

@@ -19,6 +19,11 @@ public:
 	ofxHPVPlayer hpvPlayer02;
 	ofxHPVPlayer hpvPlayer03;
 	ofxHPVPlayer hpvPlayer04;
+	ofxHPVPlayer hpvPlayer05;
+	ofxHPVPlayer hpvPlayer06;
+	ofxHPVPlayer hpvPlayer07;
+	ofxHPVPlayer hpvPlayer08;
+	ofxHPVPlayer hpvPlayer09;
 
     ofSoundPlayer soundPlayer;
 };

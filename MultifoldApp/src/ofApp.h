@@ -91,9 +91,9 @@ public:
     void setupVideoRight();
 
     //updating windows
-    void updateVideoLeft();
-    void updateVideoCenter();
-    void updateVideoRight();
+    void drawVideoLeft(ofEventArgs& args);
+    void drawVideoCenter(ofEventArgs& args);
+    void drawVideoRight(ofEventArgs& args);
 	
     
     //debug and release mode

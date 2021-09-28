@@ -125,12 +125,9 @@ int main( ){
 					settings.setSize(sizeX, sizeY);
 				}
 
-				int posX = 1920 + 0;
+				int posX = 1920 + sizeX * (i);
 				int posY = 0;
-				if (i >= 1) {
-					posX = 1920 + sizeX * (i - 1);
-					posY = 0;
-				}
+
 
 				ofLog(OF_LOG_NOTICE) << "Window Size: " << sizeX << ", " << sizeY;
 				ofLog(OF_LOG_NOTICE) << "Window Location: " << posX << ", " << posY;
@@ -145,7 +142,7 @@ int main( ){
 			}
 			
 			ofLog(OF_LOG_NOTICE) << "...";
-			settings.decorated = decorated;
+			settings.decorated = d.decorated;
 			settings.resizable = false;
 			settings.shareContextWith = mainWindow;
 			d.videoWindow = ofCreateWindow(settings);
@@ -169,17 +166,18 @@ int main( ){
     
     ofLog(OF_LOG_NOTICE) << "Creating Windows Events " <<std::endl;
 
+
 	shared_ptr<ofApp> mainApp(new ofApp);
 
 	mainApp->setupVideoLeft();
 	mainApp->setupVideoCenter();
 	mainApp->setupVideoRight();
 
-	if (!displays.size()) {
-		//ofAddListener(displays.at(0).videoWindow->events().draw, mainApp.get(), &ofApp::updateVideoLeft);
-		//ofAddListener(displays.at(1).videoWindow->events().draw, mainApp.get(), &ofApp::updateVideoCenter);
-		//ofAddListener(displays.at(2).videoWindow->events().draw, mainApp.get(), &ofApp::updateVideoRight);
-	}
+	
+	ofAddListener(displays.at(0).videoWindow->events().draw, mainApp.get(), &ofApp::drawVideoLeft);
+	ofAddListener(displays.at(1).videoWindow->events().draw, mainApp.get(), &ofApp::drawVideoCenter);
+	ofAddListener(displays.at(2).videoWindow->events().draw, mainApp.get(), &ofApp::drawVideoRight);
+	
 	
 	//mainApp->setupGui();
 	//ofAddListener(guiWindow->events().draw, mainApp.get(), &ofApp::drawGui);

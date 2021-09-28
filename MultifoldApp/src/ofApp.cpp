@@ -106,12 +106,14 @@ void ofApp::setup(){
 
 //--------------------------------------------------------------
 void ofApp::setupVideoLeft() {
-
+    ofSetBackgroundColor(255, 0, 0);
 }
 void ofApp::setupVideoCenter() {
+    ofSetBackgroundColor(0, 255, 0);
 
 }
 void ofApp::setupVideoRight() {
+    ofSetBackgroundColor(0, 0, 255);
 
 }
 
@@ -553,16 +555,24 @@ void ofApp::draw(){
     drawGui();
 }
 //--------------------------------------------------------------
+//----- Draw Video content on the displays
+void  ofApp::drawVideoLeft(ofEventArgs& args) {
+    
+    ofSetColor(0, 255, 0);
+    ofDrawCircle(glm::vec2(HEIGHT_4K / 2.0, (WIDTH_4K * 3) / 2.0), 1000);
+}
 
-void  ofApp::updateVideoLeft() {
+void  ofApp::drawVideoCenter(ofEventArgs& args) {
+
+    ofSetColor(0, 0, 255);
+    ofDrawCircle(glm::vec2(HEIGHT_4K / 2.0, (WIDTH_4K * 3) / 2.0), 1000);
 
 }
 
-void  ofApp::updateVideoCenter() {
+void  ofApp::drawVideoRight(ofEventArgs& args) {
 
-}
-
-void  ofApp::updateVideoRight() {
+    ofSetColor(255, 0, 0);
+    ofDrawCircle(glm::vec2(HEIGHT_4K / 2.0, (WIDTH_4K * 3) / 2.0), 1000);
 
 }
 
