@@ -35,7 +35,6 @@
 #define WIDTH_HD    1920
 #define HEIGHT_HD   1080
 
-
 class ofApp : public ofBaseApp{
     
 public:
@@ -56,8 +55,6 @@ public:
     void dragEvent(ofDragInfo dragInfo);
     void gotMessage(ofMessage msg);
 
-    void drawDisplay(ofEventArgs& args);
-    void setupVideo();
     
     //Video Warp
     std::vector<inn::VideoWarpRef> mVideoWarps;
@@ -68,9 +65,6 @@ public:
     
     void syncVideos();
     
-    
-    //debug layout videos
-    void debugLayoutVideos();
     
     int mPlayerType;
 
@@ -86,12 +80,6 @@ public:
     //min frame of all the videos;
     int mMinFrame;
 
-    void setupVideoLeft();
-    void setupVideoCenter();
-    void setupVideoRight();
-
-	
-    
     //debug and release mode
     ofParameterGroup      parameters;
     ofParameter<ofColor>  mBkgColor;
@@ -113,11 +101,8 @@ public:
     void drawVideoInfo(int id);
     void drawVideoTime(int id, int currentFrame, int totalFrame);
     
-    void drawSyncVideos();
-    
     void resetMovies(bool & value);
     void playMovies(bool & value);
-    void debugMovie(bool & value);
     void frameSlider(int & value);
 
     
@@ -142,9 +127,6 @@ public:
     void           updateOSC();
 
     bool            playNewVideos;
-
-    //load debug imgs
-    void            loadDebugImgs();
 
     std::vector <ofImage> mDebugImgs;
    // ofImage         mDebugImgDisplay;

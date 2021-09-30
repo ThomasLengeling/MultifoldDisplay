@@ -1,52 +1,34 @@
 {
-    "window": [
-      {
-        "width": 3840,
-        "height": 2160,
-        "decorated": 0,
-        "numscreen": 3,
-        "alias": "left",
-        "id": 0
-      },
-      {
-        "width": 3840,
-        "height": 2160,
-        "decorated": 0,
-        "numscreen": 3,
-        "alias": "center",
-        "id": 1
-      },
-      {
-        "width": 3840,
-        "height": 2160,
-        "decorated": 0,
-        "numscreen": 3,
-        "alias": "right",
-        "id": 2
-      },
-      {
-        "width": 640,
-        "height": 480,
-        "decorated": 1,
-        "numscreen": 1,
-        "alias": "main",
-        "id": 3
-      }
-    ],
-
-    "network": {
-        "ip": "127.0.0.1",
-        "port": 32000
+  "window": [
+    {
+      "width": 3840,
+      "height": 2160,
+      "decorated": 0,
+      "numscreen": 5,
+      "alias": "individual",
+      "id": 0,
+      "posx": 1920
     },
-
-    "position": {
-        "x": 0,
-        "y": 0
-    },
-
-    "video": {
-        "format": "hpv",
-        "orientation" : "portrait"
+    {
+      "width": 640,
+      "height": 480,
+      "decorated": 0,
+      "numscreen": 1,
+      "alias": "main",
+      "id": 1,
+      "posx": 0
     }
-
+  ],
+  "network": {
+    "ip": "127.0.0.1",
+    "port": 32000
+  },
+  "position": {
+    "x": 0,
+    "y": 0
+  },
+  "video": {
+    "format": "hpv",
+    "orientation": "portrait"
+  }
 }

@@ -8,19 +8,13 @@ static uint8_t offset = 1;
 void ofApp::setup(){
 
     ofLog(OF_LOG_NOTICE) << "Starting App" << std::endl;
-    
     ofSetLogLevel("Logging items", OF_LOG_VERBOSE);
     
-    //start HPV engine
-    HPV::InitHPVEngine();
-    
-    ofSetVerticalSync(false);
-    ofSetFrameRate(24.3);
+    //ofSetVerticalSync(true);
+    ofSetFrameRate(30);
     ofBackground(0);
-    ofDisableArbTex();
+    //ofDisableArbTex();
     
-    //number of display
-    numDisplays = 3;// SystemVars::getInstance().numDisplays;
     
     ofLog(OF_LOG_NOTICE) << "Num Displays for Videos: "<<numDisplays<<std::endl;
     
@@ -28,28 +22,30 @@ void ofApp::setup(){
     //1 -> HPV
     //0 -> HAP
     mPlayerType = 1;
+
+    HPV::InitHPVEngine();
+
  
     
     //GUI
-    setupGui();
-
-    //debug imgs
-   // loadDebugImgs();
+    //setupGui();
 
 
     //load av files
-    std::string avfile = "video.json";// "intro_00.json"; /// "idle_00.json";
-    loadAV(avfile);
-    initVideos();
+    //std::string avfile = "video.json";// "intro_00.json"; /// "idle_00.json";
+    //loadAV(avfile);
+    //initVideos();
     playNewVideos = false;
     mPause = true;
 
+    //OSC
     mPort = 32000;
     ofLog(OF_LOG_NOTICE) << "Listening for OSC messages on port " << mPort;
     receiver.setup(mPort);
     
+    /*
     ofLog(OF_LOG_NOTICE) << "Loading sound" << std::endl;
-
+    
     ofxSoundUtils::printOutputSoundDevices();
     auto outDevices = ofxSoundUtils::getOutputSoundDevices();
 
@@ -63,7 +59,7 @@ void ofApp::setup(){
     soundSettings.sampleRate = player.getSoundFile().getSampleRate();
     soundSettings.setOutDevice(outDevices[outDeviceIndex]);
  
-    cout << " Sample Rate videos " << std::endl;
+    cout << " Sample Rate Sound File " << std::endl;
     cout << player.getSoundFile().getSampleRate()<< std::endl;
 
     soundSettings.bufferSize = 512;// 256
@@ -92,8 +88,8 @@ void ofApp::setup(){
     }
 
     ofLog(OF_LOG_NOTICE)<<"Finishing setup Audio";
+    */
 
-  
     mInitialize = false;
     mDebugImgWarp = true;
 
@@ -104,80 +100,6 @@ void ofApp::setup(){
     ofLog(OF_LOG_NOTICE) << "Size" << ofGetWindowWidth() << " " << ofGetWindowHeight();
 }
 
-//--------------------------------------------------------------
-void ofApp::setupVideoLeft() {
-    ofSetBackgroundColor(255, 0, 0);
-}
-void ofApp::setupVideoCenter() {
-    ofSetBackgroundColor(0, 255, 0);
-
-}
-void ofApp::setupVideoRight() {
-    ofSetBackgroundColor(0, 0, 255);
-
-}
-
-//--------------------------------------------------------------
-void ofApp::setupVideo() {
-
-
-    ofClear(0);
-/*
-    if (mDebugImgDisplay.load("imgs/display_hd.png")) {
-        mDebugImgDisplay.setUseTexture(true);
-        ofLog(OF_LOG_NOTICE) << "Loaded Display Debug Img";
-    }
-    else {
-        ofLog(OF_LOG_NOTICE) << "Error Display Debug Img";
-
-    }
-    */
-}
-//--------------------------------------------------------------
-void ofApp::loadDebugImgs() {
-
-    ofImage         mDebugImgLeft;
-    ofImage         mDebugImgCenter;
-    ofImage         mDebugImgRight;
-    ofImage         mDebugImgDisplay;
-
-    //left
-    if (mDebugImgLeft.load("imgs/left_hd.png")) {
-        ofLog(OF_LOG_NOTICE) << "Loaded Left Debug Img";
-        mDebugImgs.push_back(mDebugImgLeft);
-    }
-    else {
-        ofLog(OF_LOG_NOTICE) << "Error Left Debug Img";
-    }
-
-    ///center
-    if (mDebugImgCenter.load("imgs/center_hd.png")) {
-        ofLog(OF_LOG_NOTICE) << "Loaded Center Debug Img";
-        mDebugImgs.push_back(mDebugImgCenter);
-    }
-    else {
-        ofLog(OF_LOG_NOTICE) << "Error Center Debug Img";
-    }
-
-    //
-    if (mDebugImgRight.load("imgs/right_hd.png")) {
-        ofLog(OF_LOG_NOTICE) << "Loaded Right Debug Img";
-        mDebugImgs.push_back(mDebugImgRight);
-    }
-    else {
-        ofLog(OF_LOG_NOTICE) << "Error Right Debug Img";
-    }
-
-    if (mDebugImgDisplay.load("imgs/display_hd.png")) {
-        mDebugImgs.push_back(mDebugImgDisplay);
-        ofLog(OF_LOG_NOTICE) << "Loaded Display Debug Img";
-    }
-    else {
-        ofLog(OF_LOG_NOTICE) << "Error Display Debug Img";
-    }
-    //
-
-}
 //--------------------------------------------------------------
 void ofApp::loadAV(std::string jsonFile) {
 
@@ -273,31 +195,29 @@ void ofApp::loadAV(std::string jsonFile) {
 
 //--------------------------------------------------------------
 void ofApp::initVideos() {
+
     //play videos
     for (auto& video : mVideoWarps) {
         video->startPlay();
     }
 
+    //init videos 
     if (mPlayerType == 1) {
         for (auto& video : mVideoWarps) {
             video->setPaused(true);
         }
     }
 
+    //initialize video
     if (mPlayerType == 0) {
-        //initialize video
         for (auto& video : mVideoWarps) {
             video->updateFrame(0);
             video->setPaused(true);
             video->update();
         }
     }
-
-
     //native video
-    if (mPlayerType == 2) {
-
-        //initialize video
+    if (mPlayerType == 2) {        //initialize video
         for (auto& video : mVideoWarps) {
             video->updateFrame(0);
             video->setPaused(true);
@@ -316,9 +236,7 @@ void ofApp::initVideos() {
             id++;
         }
     }
-
     ofLog(OF_LOG_NOTICE) << "Min Frame: " << mMinFrame << " " << indexVideo;
-
 }
 
 
@@ -346,7 +264,7 @@ void ofApp::update() {
 
 	//main video play
 	if (mDrawWarp || mSyncVideosDebug) {
-		syncVideos();
+		//syncVideos();
 	}
 
     //set the master frame with the current change frame
@@ -513,6 +431,7 @@ void ofApp::draw(){
     //ofClear(mBkgColor);
     
     //draw warps
+    /*
     if (mDrawWarp) {
         ofSetColor(255);
 
@@ -549,36 +468,20 @@ void ofApp::draw(){
     }
     
  
- 
+   */
     //draw gui
     ofSetColor(255);
-    drawGui();
+    ofDrawBitmapString("fps: " + to_string(ofGetFrameRate()), 10, 15);
+
+   // drawGui();
+  
 }
 
-
-//--------------------------------------------------------------
-void ofApp::drawDisplay(ofEventArgs& args) {
-   // ofClear(0);
-
-    //draw warps
-  if (mDebugImgWarp) { //wird 
-   //    ofSetColor(0);
-        ofSetColor(255);
-        //ofTexture  tex = mDebugImgDisplay.getTexture();
-//tex.draw(1920*3, 0, 1920, 1080);
-    }else if(mDrawWarp){
-        ofSetColor(255);
-        ofTexture  tex = mVideoWarps.at(3)->getTexture();
-        tex.draw(0, 0, 1920, 1080);
-    }
-
-}
 //--------------------------------------------------------------
 void ofApp::setupGui(){
     //params
     parameters.setName("Param");
     parameters.add(mBkgColor.set("bkg Color", ofColor(0, 0, 0)));
-    parameters.add(mWarpSave.set("Warp Save", false));
     parameters.add(mPlayMovie.set("Toggle Pause", false));
     parameters.add(mResetMovie.set("Reset Movies", false));
     parameters.add(mDebugImgWarp.set("Debug Warp", true));
@@ -587,11 +490,6 @@ void ofApp::setupGui(){
     parameters.add(mMasterFrame.set("Master Frame", 0, 0, mMinFrame));
   
     parameters.add(player.volume);
-    
-    //load parameters
-    for( auto & videos : mVideoWarps){
-        parameters.add(videos->getParamGroup());
-    }
   
     
     //add listeners
@@ -603,18 +501,7 @@ void ofApp::setupGui(){
     
     //setup gui
     mGui.setup(parameters);
-    
-    //minimize the windows
-    mGui.getGroup("Video 0").minimize();
-    mGui.getGroup("Video 1").minimize();
-    mGui.getGroup("Video 2").minimize();
-    mGui.getGroup("Video 3").minimize();
-    
-    mGui.getGroup("Mapping 0").minimize();
-    mGui.getGroup("Mapping 1").minimize();
-    mGui.getGroup("Mapping 2").minimize();
-    mGui.getGroup("Mapping 3").minimize();
-    
+
     //mGui.setSize(300, 200);
     mGui.setPosition(30, 150);
     
@@ -624,35 +511,7 @@ void ofApp::setupGui(){
     
     mGui.loadFromFile("settings.xml");
 }
-//--------------------------------------------------------------
-void ofApp::debugMovie(bool& value) {
 
-   // mDebugMode = value;
-}
-//--------------------------------------------------------------
-//void ofApp::syncVideosDebug(bool& value) {
-//    mSyncVideosDebug.set(value);
-//}
-
-//--------------------------------------------------------------
-void ofApp::drawSyncVideos(){
-    float wDisplay = ofGetWindowWidth()/(float)numDisplays;
-    float hDisplay = ofGetWindowHeight() /(float)numDisplays;
-        
-    glm::vec2 midScreen(ofGetWindowWidth()/2.0 - wDisplay,ofGetWindowHeight()/2.0 - hDisplay);
-        
-    //draw the video
-    int i = 0;
-    int j = 0;
-    for(auto & video : mVideoWarps){
-        video->draw(midScreen.x + i * wDisplay, midScreen.y + j * hDisplay, wDisplay, hDisplay);
-        i++;
-        if(i >=2){
-            j++;
-            i=0;
-        }
-    }
-}
 //--------------------------------------------------------------
 void ofApp::frameSlider(int & value){
     int framePosition = int(value);
@@ -791,28 +650,6 @@ void ofApp::drawGui(){
 }
 
 
-//--------------------------------------------------------------
-void ofApp::debugLayoutVideos(){
-    float wDisplay = ofGetWindowWidth()/(float)numDisplays;
-    float hDisplay = ofGetWindowHeight() /(float)numDisplays;
-    
-    float midScreen =  0;//ofGetWindowHeight()/2.0 - hDisplay/2.0;
-    
-    //draw the video
-    int i = 0;
-    for(auto & video : mVideoWarps){
-        video->draw(wDisplay * i, midScreen, wDisplay, hDisplay);
-        i++;
-    }
-    
-    //draw timeline
-    int j = 0;
-    for(auto & video : mVideoWarps){
-        drawVideoTime(j, video->getCurrentFrame(), video->getTotalNumFrames());
-        j++;
-    }
-    
-}
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
@@ -1061,8 +898,8 @@ void ofApp::exit(){
         movie->close();
     }
 
-    HPV::DestroyHPVEngine();
+   // HPV::DestroyHPVEngine();
 
-    player.unload();
-    stream.close();
+   // player.unload();
+    //stream.close();
 }
