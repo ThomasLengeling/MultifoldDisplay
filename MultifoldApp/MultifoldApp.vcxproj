@@ -186,9 +186,7 @@
   <ItemGroup>
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\ofApp.cpp" />
-    <ClCompile Include="src\Mapping.cpp" />
-    <ClCompile Include="src\VideoWarp.cpp" />
-    <ClCompile Include="src\VW.cpp" />
+    <ClCompile Include="src\VideoPlayers.cpp" />
     <ClCompile Include="..\..\openFrameworks\addons\ofxAudioFile\src\ofxAudioFile.cpp" />
     <ClCompile Include="..\..\openFrameworks\addons\ofxDatGui\src\core\ofxDatGuiComponent.cpp" />
     <ClCompile Include="..\..\openFrameworks\addons\ofxDatGui\src\libs\ofxSmartFont\ofxSmartFont.cpp" />
@@ -267,9 +265,7 @@
   <ItemGroup>
     <ClInclude Include="src\ofApp.h" />
     <ClInclude Include="src\config.h" />
-    <ClInclude Include="src\Mapping.h" />
-    <ClInclude Include="src\VideoWarp.h" />
-    <ClInclude Include="src\VW.h" />
+    <ClInclude Include="src\VideoPlayers.h" />
     <ClInclude Include="src\WindowVideoApp.h" />
     <ClInclude Include="..\..\openFrameworks\addons\ofxAudioFile\src\ofxAudioFile.h" />
     <ClInclude Include="..\..\openFrameworks\addons\ofxAudioFile\libs\dr_flac.h" />

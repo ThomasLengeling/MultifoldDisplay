@@ -2,6 +2,7 @@
 
 #include "ofMain.h"
 #include "ofxHPVPlayer.h"
+#include "ofApp.h"
 
 #define WIDTH_4K    3840
 #define HEIGHT_4K   2160
@@ -24,6 +25,8 @@ public:
 
 	void setId(int id) { mId = id; }
 
+	shared_ptr<Common> common;
+
 private:
 	ofColor mBkgColor;
 	int mDisplayId;
@@ -34,6 +37,9 @@ private:
 
 	ofImage         mDebugImg;
 	ofxHPVPlayer	mHPVPlayer;
+
+
+
 };
 
 

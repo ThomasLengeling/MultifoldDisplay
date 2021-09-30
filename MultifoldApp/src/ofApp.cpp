@@ -10,40 +10,56 @@ void ofApp::setup(){
     ofLog(OF_LOG_NOTICE) << "Starting App" << std::endl;
     ofSetLogLevel("Logging items", OF_LOG_VERBOSE);
     
-    //ofSetVerticalSync(true);
     ofSetFrameRate(30);
     ofBackground(0);
-    //ofDisableArbTex();
+    ofDisableArbTex();
     
-    
-    ofLog(OF_LOG_NOTICE) << "Num Displays for Videos: "<<numDisplays<<std::endl;
-    
-    //player type
-    //1 -> HPV
-    //0 -> HAP
-    mPlayerType = 1;
-
+ 
+    //Video
     HPV::InitHPVEngine();
 
- 
-    
     //GUI
-    //setupGui();
+    setupGui();
 
 
     //load av files
-    //std::string avfile = "video.json";// "intro_00.json"; /// "idle_00.json";
-    //loadAV(avfile);
-    //initVideos();
-    playNewVideos = false;
-    mPause = true;
+    std::string avfile = "video.json";// "intro_00.json"; /// "idle_00.json";
+    loadAudio(avfile);
+
+    //load UDP information
+
+    loadUDP();
+
+    //Reivers
+    if (mSlaveUDP) {
+        ofLog(OF_LOG_NOTICE) << "Setting Receiver Port:  " << mUDPPortReceiver<< std::endl;
+        ofxUDPSettings settings;
+        settings.receiveOn(mUDPPortReceiver);
+        settings.blocking = false;
+        udpReceiver.Setup(settings);
+    }
+
+    //sender Master
+    if (mMasterUDP) {
+        ofLog(OF_LOG_NOTICE) << "Setting Master Sender Ports: " << mUDPPortCenter<<" "<< mUDPPortLeft<< std::endl;
+        ofxUDPSettings settings;
+        settings.sendTo("127.0.0.1", mUDPPortCenter);
+        settings.blocking = false;
+        udpSendCenter.Setup(settings);
+
+        settings.sendTo("127.0.0.1", mUDPPortLeft);
+        settings.blocking = false;
+        udpSendLeft.Setup(settings);
+    }
+
+
 
     //OSC
     mPort = 32000;
     ofLog(OF_LOG_NOTICE) << "Listening for OSC messages on port " << mPort;
     receiver.setup(mPort);
     
-    /*
+    //load audio
     ofLog(OF_LOG_NOTICE) << "Loading sound" << std::endl;
     
     ofxSoundUtils::printOutputSoundDevices();
@@ -88,31 +104,21 @@ void ofApp::setup(){
     }
 
     ofLog(OF_LOG_NOTICE)<<"Finishing setup Audio";
-    */
-
-    mInitialize = false;
-    mDebugImgWarp = true;
+ 
 
     ofResetElapsedTimeCounter();
     mInitTimer = 14000;//seconds
 
     ofLog(OF_LOG_NOTICE) << "Finishing setup";
     ofLog(OF_LOG_NOTICE) << "Size" << ofGetWindowWidth() << " " << ofGetWindowHeight();
+
+    common->startVideo = false;
 }
 
 //--------------------------------------------------------------
-void ofApp::loadAV(std::string jsonFile) {
-
-    //clear data
-    for (auto & videos: mVideoWarps) {
-        videos->closeVideo();
-    }
-    mVideoWarps.clear();
-
+void ofApp::loadAudio(std::string jsonFile) {
     //audio path;
     std::string audioPath = "";
-
-    std::vector<std::string> strVideo;
 
     ofJson avJs;
     ofFile avFile(jsonFile);
@@ -125,48 +131,6 @@ void ofApp::loadAV(std::string jsonFile) {
         ofLog(OF_LOG_NOTICE) << "Reading Config File " << jsonFile;
         avFile >> avJs;
 
-        int videoType = avJs["videotype"];
-        mPlayerType = videoType;
-
-        if (videoType == 0) {
-            ofLog(OF_LOG_NOTICE) << "Loading Videos Type HAP " << int(mPlayerType);
-        }
-        if (videoType == 1) {
-            ofLog(OF_LOG_NOTICE) << "Loading Videos Type HPV " << int(mPlayerType);
-        }
-        if (videoType == 2) {
-            ofLog(OF_LOG_NOTICE) << "Loading Videos Type MOV " << int(mPlayerType);
-        }
-
-        //videos
-        int i = 0;
-        for (auto& videoNames : avJs["videos"]) {
-            if (!videoNames.empty()) {
-                std::string name = videoNames["name"];
-                int id = videoNames["id"];
-                std::string alias = videoNames["alias"];
-
-                strVideo.push_back(name);
-                ofLog(OF_LOG_NOTICE) << "Found video " << i << " : " << name<<" "<< alias;
-                i++;
-            }
-        }
-
-        ofLog(OF_LOG_NOTICE) << "Found Videos: " << strVideo.size() << std::endl;
-        ofLog(OF_LOG_NOTICE) << "Loading Videos: ";
-
-        //load videos
-        int id = 0;
-        for (auto & strVideoNames : strVideo) {
-            ofLog(OF_LOG_NOTICE) << "loaded: " << id;
-
-            inn::VideoWarpRef video = inn::VideoWarp::create(mPlayerType, id);
-            video->loadVideo(strVideoNames);
-            mVideoWarps.push_back(video);
-            id++;
-        }
-        ofLog(OF_LOG_NOTICE) <<"Finished Videos"<< std::endl;
-
         //audio
         ofLog(OF_LOG_NOTICE) << "Loading audio";
         for (auto& audioNames : avJs["audios"]) {
@@ -177,66 +141,58 @@ void ofApp::loadAV(std::string jsonFile) {
             }
         }
     }
-    else {
-        //loat temp video
-        for (auto& strVideoNames : strVideo) {
-            
-            inn::VideoWarpRef warp = inn::VideoWarp::create(mPlayerType);
-            warp->loadVideo(strVideoNames);
-
-
-            mVideoWarps.push_back(warp);
-        }
-    }
 
     //audio
     setupAudio(audioPath);
 }
 
 //--------------------------------------------------------------
-void ofApp::initVideos() {
+void ofApp::loadUDP() {
+    ofLog(OF_LOG_NOTICE) << "Loading UDP info ";
+    ofJson js;
+    std::string configFile = "config.json";
+    ofFile file(configFile);
 
-    //play videos
-    for (auto& video : mVideoWarps) {
-        video->startPlay();
-    }
+    if (file.exists()) {
+        // ofLog(OF_LOG_NOTICE) << " Reading Config File " << configFile;
+        file >> js;
 
-    //init videos 
-    if (mPlayerType == 1) {
-        for (auto& video : mVideoWarps) {
-            video->setPaused(true);
+        std::string ip = js["network"]["ip"].get<std::string>();
+        int port0 = js["network"]["port0"]; //center
+        int port1 = js["network"]["port1"]; //left
+        std::string type = js["network"]["type"].get<std::string>();
+        int id = js["network"]["id"];
+
+        ofLog(OF_LOG_NOTICE) << "Network: " << port0 << "  " << port1 << " " << type << std::endl;
+
+        if (type == "master") {
+            ofLog(OF_LOG_NOTICE) << "Set Master UDP ";
+            mMasterUDP = true;
+            mSlaveUDP = false;
+            mUDPPortCenter = port0; //center
+            mUDPPortLeft = port1;  //left
+        }
+        
+        if(type == "slave") {
+            ofLog(OF_LOG_NOTICE) << "Set Slave UDP " << id;
+            mMasterUDP = false;
+            mSlaveUDP = true;
+            //Center
+            if (id == 1) {
+                mUDPPortReceiver = port0;
+            }
+            //Left
+            if (id == 2) {
+                mUDPPortReceiver = port1;
+            }
+
         }
     }
-
-    //initialize video
-    if (mPlayerType == 0) {
-        for (auto& video : mVideoWarps) {
-            video->updateFrame(0);
-            video->setPaused(true);
-            video->update();
-        }
-    }
-    //native video
-    if (mPlayerType == 2) {        //initialize video
-        for (auto& video : mVideoWarps) {
-            video->updateFrame(0);
-            video->setPaused(true);
-            video->update();
-        }
+    else {
+        ofLog(OF_LOG_NOTICE) << "Cannot Load UDP info ";
     }
 
-    //get the min fram
-    mMinFrame = 999999;
-    int indexVideo = -1;
-    int id = 0;
-    for (auto& video : mVideoWarps) {
-        if (mMinFrame > video->getTotalNumFrames()) {
-            mMinFrame = video->getTotalNumFrames();
-            indexVideo = id;
-            id++;
-        }
-    }
-    ofLog(OF_LOG_NOTICE) << "Min Frame: " << mMinFrame << " " << indexVideo;
+
 }
 
 
@@ -252,228 +208,33 @@ void ofApp::setupAudio(std::string filepath) {
 }
 
 //--------------------------------------------------------------
-void ofApp::playerEnded(size_t & id) {
-    // This function gets called when the player ends. You can do whatever you need to here.
-    // This event happens in the main thread, not in the audio thread.
-    cout << "the player's instance " << id << "finished playing" << endl;
-
-}
-
-//--------------------------------------------------------------
 void ofApp::update() {
 
-	//main video play
-	if (mDrawWarp || mSyncVideosDebug) {
-		//syncVideos();
-	}
+
 
     //set the master frame with the current change frame
-    //mMasterFrame.set(cur_frame);
+    mMasterFrame.set(cur_frame);
 
-   // updateOSC();
-}
+    updateOSC();
 
-
-
-//--------------------------------------------------------------
-void ofApp::syncVideos(){
-
-    if (playNewVideos) {
-
-        int loadeadAll = 0;
-        for (auto & video : mVideoWarps) {
-			ofLog(OF_LOG_NOTICE) << "Wiating to Load all the Videos "<< loadeadAll;
-            if (video->isLoaded()) {
-                loadeadAll++;
+    //if receiving udp then is a salve
+    if (mSlaveUDP) {
+        char udpMessage[100000];
+        udpReceiver.Receive(udpMessage, 100000);
+        string message = udpMessage;
+        if (message != "") {
+            if (message[0] == 's') {
+                common->startVideo = true;
             }
-         }
-
-        //all videos are loaded
-        if (loadeadAll  == 4 && player.isLoaded() ) {
-			ofLog(OF_LOG_NOTICE) << "Loaded 4 Videos Successfully";
-            ofLog(OF_LOG_NOTICE) << "Reset Videos";
-
-            player.setPosition(0.0);
-            player.play();
-            mPause = false;
-           // bool reset = true;
-           // resetMovies(reset);
-            
-			//reset
-           // bool play = false;
-           // playMovies(play);
-
-           // player.setPaused(false);
-            //player.play();
-
-			//go out side of the load video loop
-            //cur_frame = 0;
-            playNewVideos = false;
         }
-
     }
-    
-    //HAP and HD
-    if(mPlayerType == 0){
-        //if (!mPause) {
-            if (player.isPlaying()) {
-                if (player.isLoaded()) {
 
-                    //update video
-                    float audioPos = player.getPosition();
-                    for (auto& video : mVideoWarps) {
-                        video->setPosition(audioPos);
-                    }
-
-
-                }
-                else {
-                    ofLog(OF_LOG_NOTICE) << "Audio player not loaded";
-                }
-            }
-            else {
-                ofLog(OF_LOG_NOTICE) << "Audio player not playing";
-            }
-
-            //increase 
-            if (player.getPosition() >= 1.0) {
-
-                int doneMovies = 0;
-                for (auto& video : mVideoWarps) {
-                    if (video->isDone()) {
-                        doneMovies++;
-                    }
-                }
-
-                if (doneMovies >= 4) {
-                    player.play();
-                    player.setPosition(0.0);
-                    cout << "Reset Player : " << doneMovies;
-                }
-            }
-
-       // }
-    }else if(mPlayerType == 1){ // HPV
-        if (player.isPlaying()) {
-        
-
-                //update video frame
-            if (player.isLoaded()) {
-                float audioPos = player.getPosition();
-                for (auto& video : mVideoWarps) {
-                    video->setPosition(audioPos);
-                }
-            }
-            else {
-                ofLog(OF_LOG_NOTICE) << "Cannot play videos because audio is not loaded";
-            }
-
-        
-        }
-        else {
-           // ofLog(OF_LOG_NOTICE) << "Audio not  Playing";
-        }
-
-        if (player.getPosition() >= 1.0) {
-            player.setPosition(0.0);
-            ofLog(OF_LOG_NOTICE) << "Starting again";
-        }
-        
-        HPV::Update();
-    }else if(mPlayerType == 2){
-        
-        if(!mPause){
-            if (cur_frame != prev_frame){
-                
-                //update frame
-               for(auto & video : mVideoWarps){
-                   video->nextFrame();
-                }
-                    
-                //update video
-                for(auto & video : mVideoWarps){
-                    video->update();
-                }
-                prev_frame = cur_frame;
-            }
-            
-            //increase frame and reset when the current frame hits the min of all number of frame
-            cur_frame++;
-            if (cur_frame >= mMinFrame){
-                ofLog(OF_LOG_NOTICE)<<"Finishing";
-                //reset alll the videos:
-                
-                for(auto & video : mVideoWarps){
-                   video->goToFirstFrame();
-                }
-                cur_frame = 0;
-            }
-            
-        }else{
-            //update to the global frame
-            for(auto & video : mVideoWarps){
-                video->updateFrame(cur_frame);
-            }
-            
-            //update video
-            for(auto & video : mVideoWarps){
-                video->update();
-            }
-            
-            
-        }
-        
-    }
 }
 
 //--------------------------------------------------------------
 void ofApp::draw(){
-    //ofClear(mBkgColor);
     
-    //draw warps
-    /*
-    if (mDrawWarp) {
-        ofSetColor(255);
-
-        if (!mVideoWarps.empty()){
-            ofTexture tex = mVideoWarps.at(0)->getTexture();
-            tex.draw(1920 * 3, 0, 1920, 1080);
-        }
-   
-    }
-    
-    if (mSyncVideosDebug) {
-        drawSyncVideos();
-    }
-
- 
-    if (mDebugImgWarp) {
-        ofSetColor(255);
-    
-    }
-
-    if (!mInitialize) {
-        if (ofGetElapsedTimeMillis() > mInitTimer) {
-            ofLog(OF_LOG_NOTICE) << "Start movie ";
-
-            playNewVideos = true;
-            mInitialize = true;
-            player.setPaused(false);
-
-            mDrawWarp.set(true);
-            mDebugImgWarp.set(false);
-            mSyncVideosDebug.set(false);
-        }
-
-    }
-    
- 
-   */
-    //draw gui
-    ofSetColor(255);
-    ofDrawBitmapString("fps: " + to_string(ofGetFrameRate()), 10, 15);
-
-   // drawGui();
+    drawGui();
   
 }
 
@@ -481,33 +242,26 @@ void ofApp::draw(){
 void ofApp::setupGui(){
     //params
     parameters.setName("Param");
-    parameters.add(mBkgColor.set("bkg Color", ofColor(0, 0, 0)));
-    parameters.add(mPlayMovie.set("Toggle Pause", false));
-    parameters.add(mResetMovie.set("Reset Movies", false));
-    parameters.add(mDebugImgWarp.set("Debug Warp", true));
-    parameters.add(mSyncVideosDebug.set("Sync Debug", false));
-    parameters.add(mDrawWarp.set("Draw Warp", false));
+    parameters.add(mPlayVideos.set("Toggle Play", false));
+    parameters.add(mResetVideos.set("Reset Videos", false));
     parameters.add(mMasterFrame.set("Master Frame", 0, 0, mMinFrame));
   
     parameters.add(player.volume);
   
     
     //add listeners
-    mPlayMovie.addListener(this, &ofApp::playMovies);
-    mResetMovie.addListener(this, &ofApp::resetMovies);
-    //mDebugWarp.addListener(this, &ofApp::debugMovie);
+    mPlayVideos.addListener(this, &ofApp::playVideos);
+    mResetVideos.addListener(this, &ofApp::resetVideos);
     mMasterFrame.addListener(this, &ofApp::frameSlider);
-    ////mSyncVideosDebug.addListener(this, &ofApp::syncVideosDebug);
     
     //setup gui
     mGui.setup(parameters);
 
     //mGui.setSize(300, 200);
-    mGui.setPosition(30, 150);
+    mGui.setPosition(20, 70);
     
     //default values
     mDrawGUI = true;
-    mResetMovie.set(true);
     
     mGui.loadFromFile("settings.xml");
 }
@@ -515,137 +269,40 @@ void ofApp::setupGui(){
 //--------------------------------------------------------------
 void ofApp::frameSlider(int & value){
     int framePosition = int(value);
-    
-    //check if the movie is finished
-    if(framePosition >= mMinFrame){
-        for(auto & video : mVideoWarps){
-            video->goToFirstFrame();
-        }
-        cur_frame = 0;
-    }
-           
-    //reset alll the videos:
-    for(auto & video : mVideoWarps){
-        video->updateFrame(framePosition);
-    }
-        
-    //update video
-    for(auto & video : mVideoWarps){
-        video->update();
-    }
-
-    
+       
     //update frame
     cur_frame = framePosition;
-    ofLog(OF_LOG_NOTICE) <<framePosition;
+    //ofLog(OF_LOG_NOTICE) <<framePosition;
 }
 //--------------------------------------------------------------
-void ofApp::resetMovies(bool & value){
-    //  bool status = static_cast<ofParameter<bool>& >(e);
-    
-    if(value){
-        //reset to the begining of the video
-        for(auto & video : mVideoWarps){
-            video->goToFirstFrame();
-        }
-        
-    }
-
-    if (player.isLoaded()) {
-        player.setPositionMS(0);
-        player.play();
-    }
+void ofApp::resetVideos(bool & value){
     
     ofLog(OF_LOG_NOTICE) << "RESET MOVIE "<<value;
 }
 //--------------------------------------------------------------
-void ofApp::playMovies(bool & value){
-    
-    //stop movies
-    bool status = value;
-    
-    //stop videos:
-    for(auto & video : mVideoWarps){
-        video->setPaused(status);
-     }
-        
-    //update to the global frame
-    for(auto & video : mVideoWarps){
-        video->updateFrame(cur_frame);
-    }
-    
-    //update video
-    for(auto & video : mVideoWarps){
-        video->update();
-    }
-    
-    mPause = status;
-    if (status == false){
-
-        if (player.isLoaded()) {
-            player.setPaused(false);
-        }
-    }
-    else {
-        if (player.isLoaded()) {
-          player.setPaused(true);
-        }
-    }
-
-	if (value == false) {
-		ofLog(OF_LOG_NOTICE) << "Play MOVIE " << status;
-	}
-	else {
-		ofLog(OF_LOG_NOTICE) << "Pause MOVIE " << status;
-	}
+void ofApp::playVideos(bool & value){
+  
 
 }
 
 //--------------------------------------------------------------
-void ofApp::drawVideoTime(int id, int currentFrame, int totalFrame){
-    float wDisplay = ofGetWindowWidth()/(float)numDisplays;
-    float hDisplay = ofGetWindowHeight() /(float)numDisplays;
-    
-    ofPushStyle();
-    ofSetColor(255, 255, 255);
-    ofNoFill();
-    ofDrawRectangle(id * wDisplay, hDisplay + 5, wDisplay, 10);
-    
-    ofSetColor(255, 255, 255);
-    int mapFrame = ofMap(currentFrame, 0, totalFrame, 0, wDisplay);
-    ofFill();
-    ofDrawRectangle(id*wDisplay, hDisplay + 5, mapFrame, 10);
-    
-    ofPopStyle();
-}
+void ofApp::playerEnded(size_t& id) {
+    // This function gets called when the player ends. You can do whatever you need to here.
+    // This event happens in the main thread, not in the audio thread.
+    cout << "the player's instance " << id << "finished playing" << endl;
 
-//--------------------------------------------------------------
-void ofApp::drawVideoInfo(int id){
-    ofSetColor(255, 255, 255);
-    std::string infoName ="Video "+ to_string(id);
-    infoName += " :"+to_string(mVideoWarps.at(id)->getCurrentFrame())+" "+to_string(mVideoWarps.at(id)->getTotalNumFrames());
-    ofDrawBitmapString(infoName, 20, 50 + id * 20);
 }
 
 //--------------------------------------------------------------
 void ofApp::drawGui(){
     if (mDrawGUI) {
-        
-        //draw fps
-        //cur_frame = player.ge
         ofDrawBitmapString("fps: "+to_string(ofGetFrameRate()), 10, 15);
-       // ofDrawBitmapString("Frame: "+to_string(cur_frame)+" - "+to_string(mMinFrame), 10, 30);
+        ofDrawBitmapString("Frame: "+to_string(cur_frame)+" - "+to_string(mMinFrame), 10, 30);
         
-        //draw info videos;
-        int i = 0;
-        for(auto & video : mVideoWarps){
-            drawVideoInfo(i);
-            i++;
-        }
         
         ofDrawBitmapString(ofPath, 10, 250);
         
-        //mGui.draw();
+        mGui.draw();
     }
 }
 
@@ -654,33 +311,13 @@ void ofApp::drawGui(){
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
 
-    if (key == '1') {
-
-        playNewVideos = true;
-    
-        player.setPaused(false);
-       
-        mDrawWarp.set(true);
-        mDebugImgWarp.set(false);
-        mSyncVideosDebug.set(false);
-        ofLog(OF_LOG_NOTICE) << "start videos mode";
-    }
 
 
-    if (key == 'd'){
-
-        player.setPaused(true);
-
-        mDrawWarp.set(false);
-        mDebugImgWarp.set(true);
-        mSyncVideosDebug.set(false);
-        ofLog(OF_LOG_NOTICE) << "debug mode";
-    }
-
-
- 
     //audio
     if (key == ' ') {
+
+        common->startVideo = true;
+
         mInitialize = true;
         ofLog(OF_LOG_NOTICE) << "stop init mode";
     }
@@ -694,9 +331,15 @@ void ofApp::keyPressed(int key){
         ofLog(OF_LOG_NOTICE) << "gui";
     }
     
-    //save warps
+    //send start
     if (key == 's') {
-       
+        if (mMasterUDP) {
+            ofLog(OF_LOG_NOTICE) << "send Master";
+            common->startVideo = true;
+            string message = "s";
+            udpSendLeft.Send(message.c_str(), message.length());
+            udpSendCenter.Send(message.c_str(), message.length());
+        }
     }
     
     if(key == 'm'){
@@ -731,9 +374,9 @@ void ofApp::updateOSC() {
 
             player.stop();
 
-            for (auto& video : mVideoWarps) {
-                video->setPosition(time);
-            }
+            //for (auto& video : mVideoWarps) {
+            //    video->setPosition(time);
+            //}
 
             player.setPosition(time);
 
@@ -741,104 +384,19 @@ void ofApp::updateOSC() {
             ofLog(OF_LOG_NOTICE) << "updated time video: " << time;
         }
 
-        // check for mouse moved message
-        if (m.getAddress() == "/av") {
-            int id = m.getArgAsInt32(0);
-            if (id == 0) {
-                std::string avfile = "idle_00.json";
-                loadAV(avfile);
-                initVideos();
-
-                ofLog(OF_LOG_NOTICE) << "loaded new AV :" << avfile;
-                playNewVideos = true;
-            }
-            else if (id == 1) {
-                std::string avfile = "cai_00.json";
-                loadAV(avfile);
-                initVideos();
-
-                ofLog(OF_LOG_NOTICE) << "loaded new AV :" << avfile;
-                playNewVideos = true;
-            }
-            else if (id == 2) {
-                std::string avfile = "gld_00.json";
-                loadAV(avfile);
-                initVideos();
-
-                ofLog(OF_LOG_NOTICE) << "loaded new AV :" << avfile;
-                playNewVideos = true;
-            }
-            else if (id == 3) {
-                std::string avfile = "gld_01.json";
-                loadAV(avfile);
-                initVideos();
-
-                ofLog(OF_LOG_NOTICE) << "loaded new AV :" << avfile;
-                playNewVideos = true;
-            }
-            else if (id == 4) {
-                std::string avfile = "phc_00.json";
-                loadAV(avfile);
-                initVideos();
-
-                ofLog(OF_LOG_NOTICE) << "loaded new AV :" << avfile;
-                playNewVideos = true;
-            }
-            else if (id == 5) {
-                std::string avfile = "phc_01.json";
-                loadAV(avfile);
-                initVideos();
-
-                ofLog(OF_LOG_NOTICE) << "loaded new AV :" << avfile;
-                playNewVideos = true;
-            }
-            else if (id == 6) {
-                std::string avfile = "intro_00.json";
-                loadAV(avfile);
-                initVideos();
-
-                ofLog(OF_LOG_NOTICE) << "loaded new AV :" << avfile;
-                playNewVideos = true;
-            }
-            else if (id == 7) {
-                std::string avfile = "trade_00.json";
-                loadAV(avfile);
-                initVideos();
-
-                ofLog(OF_LOG_NOTICE) << "loaded new AV :" << avfile;
-                playNewVideos = true;
-            }
-            else if (id == 8) {
-                std::string avfile = "indoor_00.json";
-                loadAV(avfile);
-                initVideos();
-
-                ofLog(OF_LOG_NOTICE) << "loaded new AV :" << avfile;
-                playNewVideos = true;
-            }
-            else if (id == 9) {
-                std::string avfile = "festivity_00.json";
-                loadAV(avfile);
-                initVideos();
-
-                ofLog(OF_LOG_NOTICE) << "loaded new AV :" << avfile;
-                playNewVideos = true;
-            }
-        }
-
         if (m.getAddress() == "/stop") {
             bool play = true;
-            playMovies(play);
+            playVideos(play);
         }
 
         if (m.getAddress() == "/play") {
             bool play = false;
-            playMovies(play);
+            playVideos(play);
         }
 
         if (m.getAddress() == "/reset") {
             bool reset = true;
-            resetMovies(reset);
+            resetVideos(reset);
         }
     }
 }
@@ -894,12 +452,6 @@ void ofApp::dragEvent(ofDragInfo dragInfo){
 
 //--------------------------------------------------------------
 void ofApp::exit(){
-    for (auto & movie : mVideoWarps) {
-        movie->close();
-    }
-
-   // HPV::DestroyHPVEngine();
-
-   // player.unload();
-    //stream.close();
+    player.unload();
+    stream.close();
 }

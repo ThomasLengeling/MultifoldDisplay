@@ -4,8 +4,6 @@
 #include <stdint.h>
 
 #include "ofMain.h"
-#include "VideoWarp.h"
-#include "Mapping.h"
 #include "ofxHPVPlayer.h"
 
 #include "config.h"
@@ -15,6 +13,7 @@
 #include "ofParameter.h"
 #include "ofxGui.h"
 #include "ofxOsc.h"
+#include "ofxNetwork.h"
 
 #include "ofxAudioFile.h"
 #include "ofxSoundPlayerObject.h"
@@ -34,6 +33,8 @@
 
 #define WIDTH_HD    1920
 #define HEIGHT_HD   1080
+
+class Common;
 
 class ofApp : public ofBaseApp{
     
@@ -55,54 +56,27 @@ public:
     void dragEvent(ofDragInfo dragInfo);
     void gotMessage(ofMessage msg);
 
-    
-    //Video Warp
-    std::vector<inn::VideoWarpRef> mVideoWarps;
-
-    void loadAV(std::string jsonFile);
-
-    void initVideos();
-    
-    void syncVideos();
-    
-    
-    int mPlayerType;
-
-    //number of displays output
-    int numDisplays;
-    
-    //single mode display mode
-    int simpleMode;
-    
-    //multi display mode
-    int multiMode;
+    void loadAudio(std::string jsonFile);
+   
     
     //min frame of all the videos;
     int mMinFrame;
 
     //debug and release mode
-    ofParameterGroup      parameters;
-    ofParameter<ofColor>  mBkgColor;
-    ofParameter<bool>     mWarpSave;
-    ofParameter<bool>     mPlayMovie;
-    ofParameter<bool>     mResetMovie;
-    ofParameter<bool>     mDebugImgWarp;
-    ofParameter<bool>     mDrawWarp;
+    ofParameterGroup      parameters;     
+    ofParameter<bool>     mPlayVideos;
+    ofParameter<bool>     mResetVideos;
+    ofParameter<bool>     mStopVideos;
     ofParameter<int>      mMasterFrame;
-    
-    //sync video debug
-    ofParameter<bool>      mSyncVideosDebug;
-    
     
     ofxPanel mGui;
     bool mDrawGUI;
+
     void setupGui();
     void drawGui();
-    void drawVideoInfo(int id);
-    void drawVideoTime(int id, int currentFrame, int totalFrame);
     
-    void resetMovies(bool & value);
-    void playMovies(bool & value);
+    void resetVideos(bool & value);
+    void playVideos(bool & value);
     void frameSlider(int & value);
 
     
@@ -110,16 +84,33 @@ public:
     
     std::string             ofPath;
 
-
     void setupAudio(std::string audio);
-
-    ofEventListener playerEndListener;
-    void playerEnded(size_t  & id);
 
     ofSoundStream stream;
     ofxSoundOutput output;
     // these are all subclasses of ofSoundObject
     ofxSoundPlayerObject player;
+
+    ofEventListener playerEndListener;
+    void playerEnded(size_t& id);
+
+    //send recevied UDP
+    ofxUDPManager udpReceiver; //receiver
+
+    ofxUDPManager udpSendCenter; //send
+    ofxUDPManager udpSendLeft;   //send
+
+    //send = true, receiver = false;
+    bool mMasterUDP; //sender or receiver
+    bool mSlaveUDP;
+
+    //master send to center and left
+    int mUDPPortCenter;
+    int mUDPPortLeft;
+
+    int mUDPPortReceiver; //udp to send to center or left
+
+    void loadUDP();
 
     //osc
     int            mPort;
@@ -128,16 +119,18 @@ public:
 
     bool            playNewVideos;
 
-    std::vector <ofImage> mDebugImgs;
-   // ofImage         mDebugImgDisplay;
-
     bool            mInitialize;
     float           mInitTimer;
 
+
+    shared_ptr<Common> common;
 
 };
 
 //---------------------------
 class Common {
-
+public:
+    bool startVideo;
+    std::string mAlias;
+    int mId;
 };

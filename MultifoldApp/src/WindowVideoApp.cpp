@@ -23,7 +23,7 @@ void WindowVideoApp::setup() {
 	
 	mHPVPlayer.load("videos/test_w.hpv");
 	mHPVPlayer.play();
-	//mHPVPlayer.setPaused(true);
+	mHPVPlayer.setPaused(true);
 	mHPVPlayer.setLoopState(OF_LOOP_NORMAL);
 
 	ofLog(OF_LOG_NOTICE) << "Done Loading "<< mId;
@@ -31,6 +31,10 @@ void WindowVideoApp::setup() {
 }
 
 void WindowVideoApp::update() {
+
+	if (common->startVideo == true) {
+		mHPVPlayer.play();
+	}
 
 	//update sync
 	HPV::Update();

@@ -10,16 +10,10 @@
     <ClCompile Include="src\main.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\Mapping.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
     <ClCompile Include="src\ofApp.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\VideoWarp.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="src\VW.cpp">
+    <ClCompile Include="src\VideoPlayers.cpp">
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="..\..\openFrameworks\addons\ofxAudioFile\src\ofxAudioFile.cpp">
@@ -389,16 +383,10 @@
     <ClInclude Include="src\config.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="src\Mapping.h">
-      <Filter>src</Filter>
-    </ClInclude>
     <ClInclude Include="src\ofApp.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="src\VideoWarp.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="src\VW.h">
+    <ClInclude Include="src\VideoPlayers.h">
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="src\WindowVideoApp.h">

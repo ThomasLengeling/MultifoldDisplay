@@ -4,8 +4,9 @@
       "width": 3840,
       "height": 2160,
       "decorated": 0,
-      "numscreen": 5,
-      "alias": "individual",
+      "numscreen": 3,
+      "type": "individual",
+      "alias": "left",
       "id": 0,
       "posx": 1920
     },
@@ -14,14 +15,18 @@
       "height": 480,
       "decorated": 0,
       "numscreen": 1,
-      "alias": "main",
+      "type": "main",
+      "alias": "left",
       "id": 1,
       "posx": 0
     }
   ],
   "network": {
     "ip": "127.0.0.1",
-    "port": 32000
+    "port0": 11998,
+    "port1": 11999,
+    "type": "slave",
+    "id":1
   },
   "position": {
     "x": 0,

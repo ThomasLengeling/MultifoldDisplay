@@ -31,16 +31,16 @@
 
 namespace inn {
 
-class VideoWarp;
+class VideoPlayers;
 
-typedef std::shared_ptr<VideoWarp> VideoWarpRef;
+typedef std::shared_ptr<VideoPlayers> VideoPlayersRef;
 
-class VideoWarp{
+class VideoPlayers{
 public:
-    VideoWarp(int playerType, int id);
+    VideoPlayers(int playerType, int id);
     
-    static VideoWarpRef create(int playerType = 0, int id = 0) {
-        return std::make_shared<VideoWarp>(playerType, id);
+    static VideoPlayersRef create(int playerType = 0, int id = 0) {
+        return std::make_shared<VideoPlayers>(playerType, id);
         
     }
 
@@ -71,8 +71,6 @@ public:
     
     bool isDone();
 
-    ofParameterGroup & getParamGroup(){return mGroupParam;}
-    
    // bool isLoaded();
     
 private:
@@ -100,11 +98,6 @@ private:
     
     int mVideoId;
     
-    //video files
-    ofParameterGroup        mGroupParam;
-    ofParameter<glm::vec2>  mSizeParam;
-    ofParameter<string>     mVideoParam;
-    ofParameter<bool>        mLoadParam;
     
 };
 

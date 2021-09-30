@@ -8,6 +8,7 @@
 struct Display{
 	glm::vec2 pos;
 	glm::vec2 size;
+	std::string type;
 	std::string alias;
 	ofColor bkgColor;
 	int id;
@@ -48,7 +49,7 @@ int main( ){
 		orientation = js["video"]["orientation"].get<std::string>();
 
 		std::string ip = js["network"]["ip"].get<std::string>();
-		int port = js["network"]["port"];
+		int port = js["network"]["port0"];
 
 		ofLog(OF_LOG_NOTICE) << "Position: " << windwoPos.x<< ", " << windwoPos.y;
 		ofLog(OF_LOG_NOTICE) << "Network: " <<ip<< "  " << port;
@@ -65,15 +66,16 @@ int main( ){
 				d.size.y = windows["height"];
 				d.decorated = windows["decorated"];
 				d.numScreens = windows["numscreen"];
+				d.type = windows["type"].get<std::string>();
 				d.alias = windows["alias"].get<std::string>();
 				d.id = windows["id"];
 				d.bkgColor = colors[i];
 				d.posdisplay = windows["posx"];
 
-				ofLog(OF_LOG_NOTICE) << "Found  Window " << d.alias << " " << i;
+				ofLog(OF_LOG_NOTICE) << "Found  Window " << d.alias << " " <<d.id<<" "<< i;
 				ofLog(OF_LOG_NOTICE) << "Num Screens: " << d.numScreens << " size: " << d.size.x << ", " << d.size.y;
 
-				if (d.alias == "individual") {
+				if (d.type == "individual") {
 					for (int i = 0; i < d.numScreens; i++) {
 						displays.push_back(d);
 					}
@@ -103,7 +105,7 @@ int main( ){
 	int i = 0;
 	if (!displays.empty()) {
 		for (auto& d : displays) {
-			if (d.alias == "main") {
+			if (d.type == "main") {
 				ofLog(OF_LOG_NOTICE) << "Creating Main Window"; 
 				ofGLFWWindowSettings settings;
 				settings.setSize(d.size.x, d.size.y);
@@ -117,7 +119,7 @@ int main( ){
 
 			}
 			ofLog(OF_LOG_NOTICE) << " " << std::endl;
-			if (d.alias == "individual") {
+			if (d.type == "individual") {
 				if (i < d.numScreens) {
 					ofLog(OF_LOG_NOTICE) << "Creating inidivual windows: " << i << "....";
 					ofGLFWWindowSettings settings;
@@ -140,13 +142,6 @@ int main( ){
 					//settings.doubleBuffering = true;
 					settings.decorated = d.decorated;
 					settings.resizable = false;
-
-					//settings.shareContextWith = mainWindow;
-					//settings.windowMode = OF_FULLSCREEN;
-					//settings.monitor = 3;
-				
-					//settings.monitor = i;
-					//settings.multiMonitorFullScreen = true;
 					d.videoWindow = ofCreateWindow(settings);
 					d.videoWindow->setVerticalSync(false);
 					
@@ -163,17 +158,29 @@ int main( ){
     ofLog(OF_LOG_NOTICE) << "Creating Windows Events " <<std::endl;
 
 
+	shared_ptr<Common> commonState(new Common);
+	for (auto& d : displays) {
+		if (d.type != "main") {
+			commonState->mId = d.id;
+		}
+	}
+
 	shared_ptr<ofApp> mainApp(new ofApp);
+	mainApp->common = commonState;
+
 	ofRunApp(mainWindow, mainApp);
 
 
 	int j = 0;
 	for (auto& d : displays) {
-		if (d.alias != "main") {
+		if (d.type != "main") {
 			if (j < d.numScreens) {
 				shared_ptr<WindowVideoApp> videoApp(new WindowVideoApp);
 				videoApp->setId(j);
 				videoApp->setBackground(colors[0]);
+				videoApp->common = commonState;
+				videoApp->common->mAlias = d.alias;
+				videoApp->common->mId = d.id;
 				ofRunApp(d.videoWindow, videoApp);
 				j++;
 			}

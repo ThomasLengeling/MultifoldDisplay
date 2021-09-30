@@ -5,18 +5,18 @@
 //  Created by Thomas on 3/3/20.
 //
 
-#include "VideoWarp.h"
+#include "VideoPlayers.h"
 
 
 namespace inn {
 
 
-VideoWarp::VideoWarp(int playerType, int id){
+ VideoPlayers::VideoPlayers(int playerType, int id){
     mPlayerType = playerType;
     mVideoId = id;
     
     //gui
-    mGroupParam.setName("Video "+to_string(mVideoId));
+
    // mGroupParam.add(mVideoParam.set("Video Name", ""));
    // mGroupParam.add(mLoadParam.set("Load Video", false));
     
@@ -25,7 +25,7 @@ VideoWarp::VideoWarp(int playerType, int id){
 }
 
 //--------------------------------------------------------------
-void VideoWarp::loadPlayer(bool & value){
+void VideoPlayers::loadPlayer(bool & value){
 
   //  ofLog(OF_LOG_NOTICE)<<"load "<<mVideoId<<" "<<value;
     
@@ -34,7 +34,7 @@ void VideoWarp::loadPlayer(bool & value){
 }
 
 //--------------------------------------------------------------
-void VideoWarp::loadVideo(std::string & name){
+void VideoPlayers::loadVideo(std::string & name){
     mVideoName = name;
     
     if(mPlayerType == 1){
@@ -72,7 +72,7 @@ void VideoWarp::loadVideo(std::string & name){
     ofLog(OF_LOG_NOTICE)<<"Loaded Video "<<mVideoName<<std::endl;   
 }
 //--------------------------------------------------------------
-void VideoWarp::closeVideo() {
+void VideoPlayers::closeVideo() {
     if (mPlayerType == 0) {
         mHAPPlayer.close();    }
     else if (mPlayerType == 1) {
@@ -83,7 +83,7 @@ void VideoWarp::closeVideo() {
     }
 }
 
-void VideoWarp::setPosition(float value) {
+void VideoPlayers::setPosition(float value) {
     if (mPlayerType == 0) {
         mHAPPlayer.setPosition(value);
     }
@@ -96,7 +96,7 @@ void VideoWarp::setPosition(float value) {
 }
 
 //--------------------------------------------------------------
-void VideoWarp::updateFrame(int64_t currFrame){
+void VideoPlayers::updateFrame(int64_t currFrame){
     if(mPlayerType == 0){
         //mHAPPlayer.setFrame(currFrame);
         //float pos = mHAPPlayer.getPosition();
@@ -109,7 +109,7 @@ void VideoWarp::updateFrame(int64_t currFrame){
 }
 
 //--------------------------------------------------------------
-void VideoWarp::update(){
+void VideoPlayers::update(){
     if(mPlayerType == 0){
      //   mHAPPlayer.update();
     }else if(mPlayerType == 1){
@@ -120,7 +120,7 @@ void VideoWarp::update(){
 }
 //--------------------------------------------------------------
 
-bool VideoWarp::isLoaded() {
+bool VideoPlayers::isLoaded() {
     bool loaded = false;
     if (mPlayerType == 0) {
         loaded = mHAPPlayer.isLoaded();
@@ -135,7 +135,7 @@ bool VideoWarp::isLoaded() {
 }
 //--------------------------------------------------------------
 
-bool VideoWarp::isDone() {
+bool VideoPlayers::isDone() {
     bool done = false;
     if (mPlayerType == 0) {
         done = mHAPPlayer.getIsMovieDone();
@@ -149,7 +149,7 @@ bool VideoWarp::isDone() {
     return done;
 }
 //--------------------------------------------------------------
-int VideoWarp::getTotalNumFrames(){
+int VideoPlayers::getTotalNumFrames(){
     if(mPlayerType == 0){
         return mHAPPlayer.getTotalNumFrames();
     }else if(mPlayerType == 1){
@@ -161,7 +161,7 @@ int VideoWarp::getTotalNumFrames(){
 }
 
 //--------------------------------------------------------------
-void VideoWarp::startPlay(){
+void VideoPlayers::startPlay(){
     if(mPlayerType == 0){
         mHAPPlayer.play();
     }else if(mPlayerType == 1){
@@ -171,11 +171,11 @@ void VideoWarp::startPlay(){
     }
 }
 //--------------------------------------------------------------
-void VideoWarp::nextFrame(){
+void VideoPlayers::nextFrame(){
     mOFVideoPlayer.nextFrame();
 }
 //--------------------------------------------------------------
-void VideoWarp::setPaused(bool status){
+void VideoPlayers::setPaused(bool status){
     if(mPlayerType == 0){
         mHAPPlayer.setPaused(status);
     }else if(mPlayerType == 1){
@@ -186,7 +186,7 @@ void VideoWarp::setPaused(bool status){
 }
 
 //--------------------------------------------------------------
-int VideoWarp::getCurrentFrame(){
+int VideoPlayers::getCurrentFrame(){
     if(mPlayerType == 0){
        // return mHAPPlayer.getCurrentFrame();
     }else if(mPlayerType == 1 ){
@@ -198,7 +198,7 @@ int VideoWarp::getCurrentFrame(){
 }
 
 //--------------------------------------------------------------
-void VideoWarp::goToFirstFrame(){
+void VideoPlayers::goToFirstFrame(){
     if(mPlayerType == 0){
         mHAPPlayer.firstFrame();
     }else if(mPlayerType == 1 ){
@@ -209,7 +209,7 @@ void VideoWarp::goToFirstFrame(){
 }
 
 //--------------------------------------------------------------
-void VideoWarp::draw(int x, int y, int width, int height){
+void VideoPlayers::draw(int x, int y, int width, int height){
     if(mPlayerType == 0){
         mHAPPlayer.draw(x, y, width, height);
     }else if(mPlayerType == 1){
@@ -220,7 +220,7 @@ void VideoWarp::draw(int x, int y, int width, int height){
 }
 
 //--------------------------------------------------------------
-ofTexture  VideoWarp::getTexture(){
+ofTexture  VideoPlayers::getTexture(){
     if(mPlayerType == 0){
         if(mHAPPlayer.getTexture()->isAllocated())
             return * mHAPPlayer.getTexture();
@@ -236,7 +236,7 @@ ofTexture  VideoWarp::getTexture(){
     return  tex;
 }
 //--------------------------------------------------------------
-ofTexture * VideoWarp::getTexturePtr(){
+ofTexture * VideoPlayers::getTexturePtr(){
     if(mPlayerType == 0){
         if(mHAPPlayer.getTexture()->isAllocated())
             return mHAPPlayer.getTexture();
@@ -251,7 +251,7 @@ ofTexture * VideoWarp::getTexturePtr(){
     return new ofTexture;
 }
 
-void VideoWarp::close() {
+void VideoPlayers::close() {
     if (mPlayerType == 0) {
         mHAPPlayer.close();
     }
