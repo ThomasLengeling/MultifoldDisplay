@@ -158,29 +158,46 @@ int main( ){
     ofLog(OF_LOG_NOTICE) << "Creating Windows Events " <<std::endl;
 
 
-	shared_ptr<Common> commonState(new Common);
-	for (auto& d : displays) {
-		if (d.type != "main") {
-			commonState->mId = d.id;
-		}
-	}
+	shared_ptr<CommonState> commonState(new CommonState);
 
 	shared_ptr<ofApp> mainApp(new ofApp);
-	mainApp->common = commonState;
+	mainApp->mCommon = commonState;
 
 	ofRunApp(mainWindow, mainApp);
 
+	//video name files:
+	std::map<int, std::string> videoNamesMap;
+	std::string videoStr = "video.json";
+	ofFile videoFile(videoStr);
+	ofJson jsVideo;
+	if (videoFile.exists()) {
+		ofLog(OF_LOG_NOTICE) << " Reading Video File Names ";
+		videoFile >> jsVideo;
+		int j = 0;
+		for (auto & vName : jsVideo["videos"]) {
+			std::string name = vName["name"];
+			int id = vName["id"];
+			auto posIt = videoNamesMap.begin();
+			videoNamesMap.insert(std::pair<int, std::string>(id, name));
+		}
+	}
+	//
+	for (auto & files : videoNamesMap) {
+		cout << files.first <<" "<<files.second<<std::endl;
+	}
 
+	//create Displays with Videos
 	int j = 0;
 	for (auto& d : displays) {
 		if (d.type != "main") {
 			if (j < d.numScreens) {
 				shared_ptr<WindowVideoApp> videoApp(new WindowVideoApp);
 				videoApp->setId(j);
-				videoApp->setBackground(colors[0]);
-				videoApp->common = commonState;
-				videoApp->common->mAlias = d.alias;
-				videoApp->common->mId = d.id;
+				videoApp->setBackground(colors[0]); 
+				videoApp->setVideoName(videoNamesMap[j]);
+				videoApp->mCommon = commonState;
+				videoApp->mCommon->mAlias = d.alias;
+				videoApp->mCommon->mId = d.id;
 				ofRunApp(d.videoWindow, videoApp);
 				j++;
 			}

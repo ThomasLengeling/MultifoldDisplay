@@ -60,8 +60,6 @@ public:
     ofTexture  getTexture();
     ofTexture * getTexturePtr();
     
-    void loadPlayer(bool & value);
-    
     void nextFrame();
 
     void closeVideo();

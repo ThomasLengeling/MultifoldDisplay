@@ -14,23 +14,6 @@ namespace inn {
  VideoPlayers::VideoPlayers(int playerType, int id){
     mPlayerType = playerType;
     mVideoId = id;
-    
-    //gui
-
-   // mGroupParam.add(mVideoParam.set("Video Name", ""));
-   // mGroupParam.add(mLoadParam.set("Load Video", false));
-    
-    //params listeners
-    //mLoadParam.addListener(this, &VideoWarp::loadPlayer);
-}
-
-//--------------------------------------------------------------
-void VideoPlayers::loadPlayer(bool & value){
-
-  //  ofLog(OF_LOG_NOTICE)<<"load "<<mVideoId<<" "<<value;
-    
-  //  std::string videoName =  mVideoParam;
-  //  loadVideo(videoName);
 }
 
 //--------------------------------------------------------------
@@ -56,6 +39,7 @@ void VideoPlayers::loadVideo(std::string & name){
     if(mPlayerType == 2){
         ofLog(OF_LOG_NOTICE)<<"OF Native Player";
         mOFVideoPlayer.load(mVideoName);
+        mOFVideoPlayer.setPaused(true);
         mOFVideoPlayer.setLoopState(OF_LOOP_NONE);
         
         //set video name
@@ -111,11 +95,11 @@ void VideoPlayers::updateFrame(int64_t currFrame){
 //--------------------------------------------------------------
 void VideoPlayers::update(){
     if(mPlayerType == 0){
-     //   mHAPPlayer.update();
+        mHAPPlayer.update();
     }else if(mPlayerType == 1){
        //the is a global instance for updating the HPV render
     }else if(mPlayerType == 2){
-       // mOFVideoPlayer.update();
+        mOFVideoPlayer.update();
     }
 }
 //--------------------------------------------------------------
@@ -188,7 +172,7 @@ void VideoPlayers::setPaused(bool status){
 //--------------------------------------------------------------
 int VideoPlayers::getCurrentFrame(){
     if(mPlayerType == 0){
-       // return mHAPPlayer.getCurrentFrame();
+        return mHAPPlayer.getCurrentFrame();
     }else if(mPlayerType == 1 ){
         return mHPVPlayer.getCurrentFrame();
     }else if(mPlayerType == 2){

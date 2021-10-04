@@ -1,6 +1,9 @@
 #include "WindowVideoApp.h"
 
 
+void WindowVideoApp::setVideoName(std::string videoName) {
+	mVideoName = videoName;
+}
 
 void WindowVideoApp::setup() {
 
@@ -19,12 +22,24 @@ void WindowVideoApp::setup() {
 		//start HPV engine
 	ofLog(OF_LOG_NOTICE) << "Video ...."  << mId;
 
+	//0 -> HAP
+	//1 -> HPV
+	//2 -> MOV
+	//std::string tmpName = "videos/Sequence_05_1.mov";
+
+
+	mVideoPlayer = inn::VideoPlayers::create(2, 0);
+	mVideoPlayer->loadVideo(mVideoName);
+
+	/*
+
 	mHPVPlayer.init(HPV::NewPlayer());
 	
 	mHPVPlayer.load("videos/test_w.hpv");
 	mHPVPlayer.play();
 	mHPVPlayer.setPaused(true);
 	mHPVPlayer.setLoopState(OF_LOOP_NORMAL);
+	*/
 
 	ofLog(OF_LOG_NOTICE) << "Done Loading "<< mId;
 
@@ -32,12 +47,15 @@ void WindowVideoApp::setup() {
 
 void WindowVideoApp::update() {
 
-	if (common->startVideo == true) {
-		mHPVPlayer.play();
+	if (mCommon->startVideo == true) {
+		mVideoPlayer->setPosition(mCommon->mAudioPos);
+		//mHPVPlayer.setPosition(mCommon->mAudioPos);
 	}
 
+	mVideoPlayer->update();
+
 	//update sync
-	HPV::Update();
+	//HPV::Update();
 }
 
 //--------------------------------------------------------------
@@ -57,18 +75,19 @@ void WindowVideoApp::draw() {
 	ofSetColor(mBkgColor);
 	ofDrawCircle(glm::vec2(WIDTH_WINDOW / 2.0, HEIGHT_WINDOW / 2.0), inc);
 
-
 	ofSetColor(0);
 	ofDrawBitmapString("fps: " + to_string(ofGetFrameRate()), WIDTH_WINDOW / 2.0, HEIGHT_WINDOW / 2.0);
 
-	
 	inc += 2;
 	if (inc>=HEIGHT_WINDOW/1.5) {
 		inc = 0;
 	}
 
 	ofSetColor(255);
-	mHPVPlayer.draw(0, 0, ofGetWindowWidth(), ofGetWindowHeight());
+	mVideoPlayer->draw(0, 0, ofGetWindowWidth(), ofGetWindowHeight());
+
+	//
+	//mHPVPlayer.draw(0, 0, ofGetWindowWidth(), ofGetWindowHeight());
 
 }
 
@@ -79,5 +98,5 @@ void WindowVideoApp::setBackground(ofColor bkg) {
 
 //--------------------------------------------------------------
 void WindowVideoApp::exit() {
-	HPV::DestroyHPVEngine();
+	
 }

@@ -16,17 +16,17 @@
       "decorated": 0,
       "numscreen": 1,
       "type": "main",
-      "alias": "left",
-      "id": 1,
+      "alias": "main",
+      "id": -1,
       "posx": 0
     }
   ],
   "network": {
     "ip": "127.0.0.1",
-    "port0": 11998,
-    "port1": 11999,
-    "type": "slave",
-    "id":1
+    "port0": 15998,
+    "port1": 15999,
+    "type": "master",
+    "id": 0
   },
   "position": {
     "x": 0,

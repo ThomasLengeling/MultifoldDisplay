@@ -3,6 +3,7 @@
 #include "ofMain.h"
 #include "ofxHPVPlayer.h"
 #include "ofApp.h"
+#include "VideoPlayers.h"
 
 #define WIDTH_4K    3840
 #define HEIGHT_4K   2160
@@ -25,7 +26,9 @@ public:
 
 	void setId(int id) { mId = id; }
 
-	shared_ptr<Common> common;
+	void setVideoName(std::string name);
+
+	shared_ptr<CommonState> mCommon;
 
 private:
 	ofColor mBkgColor;
@@ -33,10 +36,14 @@ private:
 	int mNumDisplays;
 	float inc;
 
+	std::string mVideoName;
+
 	int mId;
 
 	ofImage         mDebugImg;
-	ofxHPVPlayer	mHPVPlayer;
+	
+
+	inn::VideoPlayersRef  mVideoPlayer;
 
 
 

@@ -34,7 +34,7 @@
 #define WIDTH_HD    1920
 #define HEIGHT_HD   1080
 
-class Common;
+class CommonState;
 
 class ofApp : public ofBaseApp{
     
@@ -67,7 +67,7 @@ public:
     ofParameter<bool>     mPlayVideos;
     ofParameter<bool>     mResetVideos;
     ofParameter<bool>     mStopVideos;
-    ofParameter<int>      mMasterFrame;
+    ofParameter<float>    mMasterAudio;
     
     ofxPanel mGui;
     bool mDrawGUI;
@@ -77,14 +77,14 @@ public:
     
     void resetVideos(bool & value);
     void playVideos(bool & value);
-    void frameSlider(int & value);
+    void audioSlider(float & value);
 
     
     bool                    mPause;
     
     std::string             ofPath;
 
-    void setupAudio(std::string audio);
+    void setupAudio(std::string jsonFile);
 
     ofSoundStream stream;
     ofxSoundOutput output;
@@ -93,6 +93,8 @@ public:
 
     ofEventListener playerEndListener;
     void playerEnded(size_t& id);
+
+
 
     //send recevied UDP
     ofxUDPManager udpReceiver; //receiver
@@ -110,26 +112,39 @@ public:
 
     int mUDPPortReceiver; //udp to send to center or left
 
-    void loadUDP();
+    void setupUDP();
+    void updateUDP();
+
+    //udp commands
+    void sendAudioPosUDP(float audioPos);
 
     //osc
-    int            mPort;
-    ofxOscReceiver receiver;
-    void           updateOSC();
+    int             mPort;
+    ofxOscReceiver  receiver;
+    void            setupOSC();
+    void            updateOSC();
 
     bool            playNewVideos;
 
     bool            mInitialize;
     float           mInitTimer;
 
+    //main states
+    bool            mStartVideoLoop;
 
-    shared_ptr<Common> common;
 
+    void setupCommonState();
+    shared_ptr<CommonState> mCommon;
+
+
+    //utilities
+    std::vector<std::string> string_split(const std::string& str);
 };
 
 //---------------------------
-class Common {
+class CommonState{
 public:
+    float mAudioPos;
     bool startVideo;
     std::string mAlias;
     int mId;

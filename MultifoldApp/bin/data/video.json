@@ -4,55 +4,51 @@
       "name": "audios/test_w_01.wav"
     }
   ],
-  "resolution": {
-    "height": 1080,
-    "width": 1920
-  },
   "videos": [
     {
       "alias": "left",
       "id": 0,
-      "name": "videos/test_w.hpv"
+      "name": "videos/Sequence_01.mov"
     },
     {
       "alias": "left",
       "id": 1,
-      "name": "videos/test_w.hpv"
+      "name": "videos/Sequence_02.mov"
     },
     {
       "alias": "left",
       "id": 2,
-      "name": "videos/test_w.hpv"
+      "name": "videos/Sequence_03.mov"
     },
     {
       "alias": "center",
       "id": 3,
-      "name": "videos/test_w.hpv"
+      "name": "videos/Sequence_04.mov"
     },
     {
       "alias": "center",
       "id": 4,
-      "name": "videos/test_w.hpv"
+      "name": "videos/Sequence_05.mov"
     },
     {
       "alias": "center",
       "id": 5,
-      "name": "videos/test_w.hpv"
+      "name": "videos/Sequence_06.mov"
     },
     {
       "alias": "right",
       "id": 6,
-      "name": "videos/test_w.hpv"
+      "name": "videos/Sequence_07.mov"
     },
     {
       "alias": "right",
       "id": 7,
-      "name": "videos/test_w.hpv"
+      "name": "videos/Sequence_08.mov"
     },
     {
       "alias": "right",
       "id": 8,
-      "name": "videos/test_w.hpv"
+      "name": "videos/Sequence_09.mov"
     }
   ],
   "videotype": 1
