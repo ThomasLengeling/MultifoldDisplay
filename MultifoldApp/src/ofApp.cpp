@@ -347,6 +347,12 @@ void ofApp::drawGui() {
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
 
+    if (key == '1') {
+        if (mMasterUDP) {
+            
+        }
+    }
+
 
 
     //audio

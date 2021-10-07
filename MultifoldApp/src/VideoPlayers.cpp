@@ -23,10 +23,13 @@ void VideoPlayers::loadVideo(std::string & name){
     if(mPlayerType == 1){
         ofLog(OF_LOG_NOTICE)<<"Player HPV";
         mHPVPlayer.init(HPV::NewPlayer());
-        mHPVPlayer.setDoubleBuffered(true);
-        mHPVPlayer.loadAsync(mVideoName);
-        mHPVPlayer.setLoopState(OF_LOOP_NONE);
+        mHPVPlayer.load(mVideoName);
+        mHPVPlayer.play();
+        mHPVPlayer.setPaused(true);
         //mHPVPlayer.setDoubleBuffered(true);
+      //  mHPVPlayer.loadAsync(mVideoName);
+        mHPVPlayer.setLoopState(OF_LOOP_NONE);
+        mHPVPlayer.setDoubleBuffered(true);
     }
     
     if(mPlayerType == 0){

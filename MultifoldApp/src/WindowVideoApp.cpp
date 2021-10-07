@@ -28,7 +28,7 @@ void WindowVideoApp::setup() {
 	//std::string tmpName = "videos/Sequence_05_1.mov";
 
 
-	mVideoPlayer = inn::VideoPlayers::create(2, 0);
+	mVideoPlayer = inn::VideoPlayers::create(1, 0);
 	mVideoPlayer->loadVideo(mVideoName);
 
 	/*
@@ -55,7 +55,7 @@ void WindowVideoApp::update() {
 	mVideoPlayer->update();
 
 	//update sync
-	//HPV::Update();
+	HPV::Update();
 }
 
 //--------------------------------------------------------------

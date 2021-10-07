@@ -1,54 +1,58 @@
 {
   "audios": [
     {
-      "name": "audios/test_w_01.wav"
+      "name": "videos/car_close/city_close_01.wav"
     }
   ],
+  "resolution": {
+    "height": 1080,
+    "width": 1920
+  },
   "videos": [
     {
       "alias": "left",
       "id": 0,
-      "name": "videos/Sequence_01.mov"
+      "name": "videos/car_close/city_close_01.hpv"
     },
     {
       "alias": "left",
       "id": 1,
-      "name": "videos/Sequence_02.mov"
+      "name": "videos/car_close/city_close_02.hpv"
     },
     {
       "alias": "left",
       "id": 2,
-      "name": "videos/Sequence_03.mov"
+      "name": "videos/car_close/city_close_03.hpv"
     },
     {
       "alias": "center",
       "id": 3,
-      "name": "videos/Sequence_04.mov"
+      "name": "videos/car_close/city_close_04.hpv"
     },
     {
       "alias": "center",
       "id": 4,
-      "name": "videos/Sequence_05.mov"
+      "name": "videos/car_close/city_close_05.hpv"
     },
     {
       "alias": "center",
       "id": 5,
-      "name": "videos/Sequence_06.mov"
+      "name": "videos/car_close/city_close_06.hpv"
     },
     {
       "alias": "right",
       "id": 6,
-      "name": "videos/Sequence_07.mov"
+      "name": "videos/car_close/city_close_07.hpv"
     },
     {
       "alias": "right",
       "id": 7,
-      "name": "videos/Sequence_08.mov"
+      "name": "videos/car_close/city_close_08.hpv"
     },
     {
       "alias": "right",
       "id": 8,
-      "name": "videos/Sequence_09.mov"
+      "name": "videos/car_close/city_close_09.hpv"
     }
   ],
   "videotype": 1
