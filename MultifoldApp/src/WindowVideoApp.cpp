@@ -60,18 +60,20 @@ void WindowVideoApp::update() {
 
 	if(mCommon->vNewVideos[mId]){
 		mCurrentSetId = mCommon->mSequenceId;
-		mVideoPlayer->close();
-		mVideoPlayer->loadVideo(mVideoSets[mCurrentSetId]);
-		mCommon->vNewVideos[mId] = false;
+		if (mCurrentSetId < mVideoSets.size()) {
+			mVideoPlayer->close();
+			mVideoPlayer->loadVideo(mVideoSets[mCurrentSetId]);
+			mCommon->vNewVideos[mId] = false;
+		}
 	}
 		
 	
 
 	//update sync
-	if (mCommon->startVideo) {
+	//if (mCommon->startVideo) {
 		mVideoPlayer->update();
 		HPV::Update();
-	}
+	//}
 
 }
 

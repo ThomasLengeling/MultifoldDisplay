@@ -82,8 +82,8 @@ public:
     
     std::string             ofPath;
 
-    void setupAudio(std::string jsonFile);
-    void getSequenceName(std::string jsonFile);
+    void setupAudioSystem();
+    void loadAudio(int seq);
 
     ofSoundStream stream;
     ofxSoundOutput output;
@@ -95,9 +95,12 @@ public:
 
     //sound path names
     void addSoundPath(std::string name) {
-        mSoundPaths.push_back(name);
+        mAudioPaths.push_back(name);
     }
-    std::vector<std::string> mSoundPaths;
+    std::vector<std::string> mAudioPaths;
+
+    //load a sequence
+    void loadSequence(int id);
 
 
     //send recevied UDP
@@ -170,5 +173,6 @@ public:
     int mId;
 
     int mSequenceId; //current sequence id
-    std::string mSequenceName; //sequence name
+    std::string mCurrentSeqName; //sequence name
+    std::vector<std::string> mSeqNames;
 };

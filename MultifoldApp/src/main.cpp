@@ -202,9 +202,15 @@ int main( ){
 	ofLog(OF_LOG_NOTICE) << "Creating Windows Events " << std::endl;
 
 	shared_ptr<CommonState> commonState(new CommonState);
-	commonState->mSequenceName = sequenceName[0];
+	commonState->mCurrentSeqName = sequenceName[0];
 	commonState->mSequenceId = 0;
 	commonState->mId = displayId;
+
+	std::vector<std::string> tmpNames;
+	for (auto& name : sequenceName) {
+		tmpNames.push_back(name.second);
+	}
+	commonState->mSeqNames = tmpNames;
 
 	shared_ptr<ofApp> mainApp(new ofApp);
 	mainApp->mCommon = commonState;
@@ -235,7 +241,7 @@ int main( ){
 
 				//add several sequences depending on how many sequences are available
 				
-				videoApp->mCommon->mSequenceName = sequenceName[0];
+				videoApp->mCommon->mCurrentSeqName = sequenceName[0];
 				videoApp->mCommon->mSequenceId = 0;
 				videoApp->mCommon->mAlias = d.alias;
 				videoApp->mCommon->mId = d.id;

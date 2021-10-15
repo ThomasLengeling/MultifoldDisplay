@@ -32,7 +32,7 @@ void ofApp::setup(){
     setupOSC();
 
     //audio
-    setupAudio("video.json");
+    setupAudioSystem();
     
     //commom state
     setupCommonState();
@@ -68,7 +68,7 @@ void ofApp::update() {
     }
 
     //update osc
-    updateOSC();
+   // updateOSC();
 
 
     //updateUDP(float audioPos);
@@ -105,6 +105,12 @@ void ofApp::updateUDP() {
         if (message[0] == 'a') {
             mCommon->startVideo = true;
         }
+        if (message[0] == 's') {
+            //send UDP start
+            mCommon->startVideo = false;
+            player.setPosition(0.0);
+            player.setPaused(true);
+        }
         // send time
         if (message[0] == 't') {
             auto smsg = string_split(message);
@@ -113,8 +119,11 @@ void ofApp::updateUDP() {
         }
         //load new video
         if (message[0] == 'n') {
+            ofLog(OF_LOG_NOTICE) << "Slave new video sequence ";
             auto smsg = string_split(message);
             mCommon->mSequenceId = std::stof(smsg[1]);
+
+            loadSequence(mCommon->mSequenceId);
         }
     }
 
@@ -198,49 +207,33 @@ void ofApp::setupOSC() {
 }
 
 //--------------------------------------------------------------
-void ofApp::setupAudio(std::string jsonFile) {
+void ofApp::loadAudio(int seqId) {
 
     //audio path;
     std::string audioPath = "";
 
-    getSequenceName(jsonFile);
-
-    //obtain file from the JSON File
-    ofJson avJs;
-    ofFile avFile(jsonFile);
-
-    //obtain file name
-    if (avFile.exists()) {
-        ofLog(OF_LOG_NOTICE) << "Reading JSON Audio File " << jsonFile;
-        avFile >> avJs;
-
-        ofLog(OF_LOG_NOTICE) << "Loading audio";
-        for (auto& audioNames : avJs["audios"]) {
-            if (!audioNames.empty()) {
-                std::string file = audioNames["name"];
-                audioPath = "video/" + mCommon->mSequenceName + "/" + mCommon->mSequenceName + "_" + file;
-                ofLog(OF_LOG_NOTICE) << "Found audio file " << " : " << audioPath;
-            }
-        }
-    }
-
-
     //load audio
-    ofLog(OF_LOG_NOTICE) << "Loading sound" << std::endl;
+    ofLog(OF_LOG_NOTICE) << "Loading sound.." << std::endl;
+    audioPath = mAudioPaths.at(seqId);
 
-    std::string soundfile = ofToDataPath(audioPath);
+    std::string audioDataPath = ofToDataPath(audioPath);
 
     //set the following to true if you want to stream the audio data from the disk on demand instead of
     //reading the whole file into memory. Default is false
-    player.load(soundfile, true);
+    player.load(audioDataPath, true);
 
     player.setPaused(true);
+}
+//--------------------------------------------------------------
+void ofApp::setupAudioSystem() {
+
+    loadAudio(mCommon->mSequenceId);
 
     ofxSoundUtils::printOutputSoundDevices();
     auto outDevices = ofxSoundUtils::getOutputSoundDevices();
 
     int outDeviceIndex = ofxSoundUtils::getOutputSoundDevices().size() - 1;
-    cout << ofxSoundUtils::getSoundDeviceString(outDevices[outDeviceIndex], false, true) << endl;
+    ofLog(OF_LOG_NOTICE) << ofxSoundUtils::getSoundDeviceString(outDevices[outDeviceIndex], false, true) << endl;
 
     // audio setup for testing audio file stream 
     ofSoundStreamSettings soundSettings;
@@ -249,8 +242,8 @@ void ofApp::setupAudio(std::string jsonFile) {
     soundSettings.sampleRate = player.getSoundFile().getSampleRate();
     soundSettings.setOutDevice(outDevices[outDeviceIndex]);
 
-    cout << " Sample Rate Sound File " << std::endl;
-    cout << player.getSoundFile().getSampleRate() << std::endl;
+    ofLog(OF_LOG_NOTICE) << " Sample Rate Sound File " << std::endl;
+    ofLog(OF_LOG_NOTICE) << player.getSoundFile().getSampleRate() << std::endl;
 
     soundSettings.bufferSize = 512;// 256
     soundSettings.numBuffers = 2; //2
@@ -278,30 +271,6 @@ void ofApp::setupAudio(std::string jsonFile) {
     }
 
     ofLog(OF_LOG_NOTICE) << "Finishing setup Audio";
-}
-
-//--------------------------------------------------------------
-void ofApp::getSequenceName(std::string jsonFile) {
-    //audio path;
-    std::string audioPath = "";
-
-    //obtain file from the JSON File
-    ofJson avJs;
-    ofFile avFile(jsonFile);
-
-    if (avFile.exists()) {
-        ofLog(OF_LOG_NOTICE) << "Reading JSON Audio File " << jsonFile;
-        avFile >> avJs;
-
-        //audio
-        //mCurrentSet
-        for (auto& audioSequence : avJs["sequence"]) {
-            if (int(audioSequence["id"]) == mCommon->mSequenceId) {
-                mCommon->mSequenceName = audioSequence["name"].get<std::string>();
-                ofLog(OF_LOG_NOTICE) << "Found audio seq: " << mCommon->mSequenceName << " " << mCommon->mSequenceId;
-            }
-        }
-    }
 }
 
 //--------------------------------------------------------------
@@ -372,14 +341,24 @@ void ofApp::drawGui() {
         ofDrawBitmapString("fps: " + to_string(ofGetFrameRate()), 10, 15);
         ofDrawBitmapString("Frame: " + to_string(cur_frame) + " - " + to_string(mMinFrame), 10, 30);
 
-        ofDrawBitmapString(ofPath, 10, 350);
-        ofDrawBitmapString("Sequence Name: "+mCommon->mSequenceName, 10, 250);
+        ofDrawBitmapString(ofPath, 10, 400);
+        ofDrawBitmapString("Current Sequence Name: "+mCommon->mCurrentSeqName, 10, 250);
+
+        int i = 0;
+        for (auto names : mCommon->mSeqNames) {
+            ofDrawBitmapString(names, 10, 280 + i*20);
+            i++;
+        }
 
         if (mMasterUDP) {
             ofSetColor(255, 0, 0);
             ofDrawBitmapString("Master "+to_string(mCommon->mId), 350, 100);
 
             ofDrawRectangle(355, 120, 30, 30);
+        }
+        if (mSlaveUDP) {
+            ofSetColor(255);
+            ofDrawBitmapString("Slave " + to_string(mUDPPortReceiver)+"   "+to_string(mCommon->mId), 350, 100);   
         }
         mGui.draw();
     }
@@ -412,9 +391,15 @@ void ofApp::stopAudio() {
 
 
 //--------------------------------------------------------------
-void ofApp::keyPressed(int key){
+void ofApp::loadSequence(int id) {
+    if (id < mCommon->mSeqNames.size()) {
+        ofLog(OF_LOG_NOTICE) << "Loading new sequence ";
 
-    if (key == '1') {
+        mCommon->mSequenceId = id;
+        loadAudio(mCommon->mSequenceId);
+        //update names
+        mCommon->mCurrentSeqName = mCommon->mSeqNames.at(mCommon->mSequenceId);
+        player.volume.setName(mCommon->mCurrentSeqName);
 
         //send to activate video 
         mStartVideoLoop = false;
@@ -425,29 +410,32 @@ void ofApp::keyPressed(int key){
         //sned to activate video 1
         //stop load playnew
         if (mMasterUDP) {
-            mCommon->mSequenceId = 0;
+
             string message = "n 0";
             udpSendLeft.Send(message.c_str(), message.length());
             udpSendCenter.Send(message.c_str(), message.length());
         }
     }
+}
 
+
+//--------------------------------------------------------------
+void ofApp::keyPressed(int key){
+
+    if (key == '1') {
+        loadSequence(0);
+    }
     if (key == '2') {
-
-        //send to activate video 
-        mStartVideoLoop = false;
-        mCommon->startVideo = false;
-
-        std::fill(mCommon->vNewVideos.begin(), mCommon->vNewVideos.end(), true);
-
-        //sned to activate video 1
-        //stop load play
-        if (mMasterUDP) {
-            mCommon->mSequenceId = 1;
-            string message = "n 1";
-            udpSendLeft.Send(message.c_str(), message.length());
-            udpSendCenter.Send(message.c_str(), message.length());
-        }
+        loadSequence(1);
+    }
+    if (key == '3') {
+        loadSequence(2);
+    }
+    if (key == '4') {
+        loadSequence(3);
+    }
+    if (key == '5') {
+        loadSequence(4);
     }
 
 
