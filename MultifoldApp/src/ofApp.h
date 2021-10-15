@@ -55,8 +55,6 @@ public:
     void windowResized(int w, int h);
     void dragEvent(ofDragInfo dragInfo);
     void gotMessage(ofMessage msg);
-
-    void loadAudio(std::string jsonFile);
    
     
     //min frame of all the videos;
@@ -85,6 +83,7 @@ public:
     std::string             ofPath;
 
     void setupAudio(std::string jsonFile);
+    void getSequenceName(std::string jsonFile);
 
     ofSoundStream stream;
     ofxSoundOutput output;
@@ -94,6 +93,11 @@ public:
     ofEventListener playerEndListener;
     void playerEnded(size_t& id);
 
+    //sound path names
+    void addSoundPath(std::string name) {
+        mSoundPaths.push_back(name);
+    }
+    std::vector<std::string> mSoundPaths;
 
 
     //send recevied UDP
@@ -115,8 +119,10 @@ public:
     void setupUDP();
     void updateUDP();
 
+
     //udp commands
     void sendAudioPosUDP(float audioPos);
+    void stopAudio();
 
     //osc
     int             mPort;
@@ -136,7 +142,6 @@ public:
     void setupCommonState();
     shared_ptr<CommonState> mCommon;
 
-
     //utilities
     std::vector<std::string> string_split(const std::string& str);
 };
@@ -144,8 +149,26 @@ public:
 //---------------------------
 class CommonState{
 public:
+
+    CommonState() {
+        mSequenceId = 0;
+        mAudioPos = 0;
+        vNewVideos.resize(3);
+    }
+
+    //video changes 
     float mAudioPos;
     bool startVideo;
+    bool mNewVideo;
+
+    vector<bool> vNewVideos;
+
+    //current window to activate
+
+    //window id and name
     std::string mAlias;
     int mId;
+
+    int mSequenceId; //current sequence id
+    std::string mSequenceName; //sequence name
 };

@@ -35,6 +35,7 @@ int main( ){
 	std::string orientation = "landscape";
     
     int numScreens = 1;
+	int displayId;
 
 	ofColor colors[] = {ofColor(200), ofColor(255), ofColor(150)};
     
@@ -79,6 +80,7 @@ int main( ){
 					for (int i = 0; i < d.numScreens; i++) {
 						displays.push_back(d);
 					}
+					displayId = d.id;
 				}
 				else {
 					displays.push_back(d);
@@ -154,19 +156,15 @@ int main( ){
 		}
 	}
 
-    
-    ofLog(OF_LOG_NOTICE) << "Creating Windows Events " <<std::endl;
-
-
-	shared_ptr<CommonState> commonState(new CommonState);
-
-	shared_ptr<ofApp> mainApp(new ofApp);
-	mainApp->mCommon = commonState;
-
-	ofRunApp(mainWindow, mainApp);
+	//set data path
+	ofLog(OF_LOG_NOTICE) << "Create Videos ";
+	ofSetDataPathRoot("C:/Users/Bizon/Desktop/App/data");
 
 	//video name files:
 	std::map<int, std::string> videoNamesMap;
+	std::map<int, std::string> sequenceName;
+	std::map<int, std::string> soundNameMap;
+
 	std::string videoStr = "video.json";
 	ofFile videoFile(videoStr);
 	ofJson jsVideo;
@@ -174,30 +172,95 @@ int main( ){
 		ofLog(OF_LOG_NOTICE) << " Reading Video File Names ";
 		videoFile >> jsVideo;
 		int j = 0;
+
+		//read sequence
+		for (auto& sequence : jsVideo["sequence"]) {
+			std::string name = sequence["name"];
+			int id = sequence["id"];
+			ofLog(OF_LOG_NOTICE) << " Loading video Sequence: " << name << " " << id << std::endl;
+			sequenceName.insert(std::pair<int, std::string>(id, name));
+		}
+
+		//load videos names
 		for (auto & vName : jsVideo["videos"]) {
 			std::string name = vName["name"];
-			int id = vName["id"];
-			auto posIt = videoNamesMap.begin();
+			int id = vName["id"];  
 			videoNamesMap.insert(std::pair<int, std::string>(id, name));
+		}
+		//load sound names
+		for (auto & vAudios : jsVideo["audios"]) {
+			std::string name = vAudios["name"];
+			int id = vAudios["id"];
+			soundNameMap.insert(std::pair<int, std::string>(id, name));
 		}
 	}
 	//
 	for (auto & files : videoNamesMap) {
-		cout << files.first <<" "<<files.second<<std::endl;
+		ofLog(OF_LOG_NOTICE) << files.first <<" "<<files.second<<std::endl;
 	}
 
+	ofLog(OF_LOG_NOTICE) << "Creating Windows Events " << std::endl;
+
+	shared_ptr<CommonState> commonState(new CommonState);
+	commonState->mSequenceName = sequenceName[0];
+	commonState->mSequenceId = 0;
+	commonState->mId = displayId;
+
+	shared_ptr<ofApp> mainApp(new ofApp);
+	mainApp->mCommon = commonState;
+
+	for (auto& seqName : sequenceName) {
+		for (auto& soundName : soundNameMap) {
+			std::string path = "video/" + seqName.second + "/" + seqName.second + "_" + soundName.second;
+			ofLog(OF_LOG_NOTICE) << "Adding sound file: " << " " << path;
+			mainApp->addSoundPath(path);
+		}
+	}
+
+	//run main Window
+	ofRunApp(mainWindow, mainApp);
+
+	ofLog(OF_LOG_NOTICE) << "Create Displays with videos "<<std::endl;
 	//create Displays with Videos
 	int j = 0;
 	for (auto& d : displays) {
 		if (d.type != "main") {
 			if (j < d.numScreens) {
+				ofLog(OF_LOG_NOTICE) <<std::endl<< "Display ... "<< j;
 				shared_ptr<WindowVideoApp> videoApp(new WindowVideoApp);
+				videoApp->mCommon = commonState;
 				videoApp->setId(j);
 				videoApp->setBackground(colors[0]); 
-				videoApp->setVideoName(videoNamesMap[j]);
-				videoApp->mCommon = commonState;
+				//videoApp->setVideoName(videoNamesMap[j]);
+
+				//add several sequences depending on how many sequences are available
+				
+				videoApp->mCommon->mSequenceName = sequenceName[0];
+				videoApp->mCommon->mSequenceId = 0;
 				videoApp->mCommon->mAlias = d.alias;
 				videoApp->mCommon->mId = d.id;
+
+				//add all the names types to each display
+				for (auto& seqNam : sequenceName) {
+					std::string seqName = seqNam.second;
+					
+					if (d.id == 0) {  //displays 1-3
+						std::string path = "video/" + seqName + "/" + seqName + "_" + videoNamesMap[j];
+						ofLog(OF_LOG_NOTICE) << "Adding file: " << seqNam.first << " " << seqNam.second << " " << j << " " << path;
+						videoApp->addSequence(path);
+					}
+					if (d.id == 1) { //diplays 4-6
+						std::string path = "video/" + seqName + "/" + seqName + "_" + videoNamesMap[j + 3];
+						ofLog(OF_LOG_NOTICE) << "Adding file: " << seqNam.first << " " << seqNam.second << " " << j + 3 << " " << path;
+						videoApp->addSequence(path);
+					}
+					if (d.id == 2) { //displays 7-9
+						std::string path = "video/" + seqName + "/" + seqName + "_" + videoNamesMap[j + 6];
+						ofLog(OF_LOG_NOTICE) << "Adding file: " << seqNam.first << " " << seqNam.second << " " << j + 6 << " " << path;
+						videoApp->addSequence(path);
+					}
+				}
+				
 				ofRunApp(d.videoWindow, videoApp);
 				j++;
 			}

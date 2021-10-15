@@ -16,11 +16,12 @@ void WindowVideoApp::setup() {
 
 	//load Videos
 	inc = 0;
+	mLoadVideo = false;
 
 	//ofSetCircleResolution(100);
 
 		//start HPV engine
-	ofLog(OF_LOG_NOTICE) << "Video ...."  << mId;
+	ofLog(OF_LOG_NOTICE) << "Video VW .... "  << mId;
 
 	//0 -> HAP
 	//1 -> HPV
@@ -28,9 +29,14 @@ void WindowVideoApp::setup() {
 	//std::string tmpName = "videos/Sequence_05_1.mov";
 
 
-	mVideoPlayer = inn::VideoPlayers::create(1, 0);
-	mVideoPlayer->loadVideo(mVideoName);
-
+	if(!mVideoSets.empty()){
+		mCurrentSetId = 0;
+		mVideoPlayer = inn::VideoPlayers::create(1, 0);
+		mVideoPlayer->loadVideo(mVideoSets[mCurrentSetId]);
+	}
+	else {
+		ofLog(OF_LOG_NOTICE) << "Video Set is empty " << mId;
+	}
 	/*
 
 	mHPVPlayer.init(HPV::NewPlayer());
@@ -41,7 +47,7 @@ void WindowVideoApp::setup() {
 	mHPVPlayer.setLoopState(OF_LOOP_NORMAL);
 	*/
 
-	ofLog(OF_LOG_NOTICE) << "Done Loading "<< mId;
+	ofLog(OF_LOG_NOTICE) << "Done Loading VW"<< mId;
 
 }
 
@@ -52,10 +58,21 @@ void WindowVideoApp::update() {
 		//mHPVPlayer.setPosition(mCommon->mAudioPos);
 	}
 
-	mVideoPlayer->update();
+	if(mCommon->vNewVideos[mId]){
+		mCurrentSetId = mCommon->mSequenceId;
+		mVideoPlayer->close();
+		mVideoPlayer->loadVideo(mVideoSets[mCurrentSetId]);
+		mCommon->vNewVideos[mId] = false;
+	}
+		
+	
 
 	//update sync
-	HPV::Update();
+	if (mCommon->startVideo) {
+		mVideoPlayer->update();
+		HPV::Update();
+	}
+
 }
 
 //--------------------------------------------------------------
@@ -83,9 +100,10 @@ void WindowVideoApp::draw() {
 		inc = 0;
 	}
 
-	ofSetColor(255);
-	mVideoPlayer->draw(0, 0, ofGetWindowWidth(), ofGetWindowHeight());
-
+	if (mCommon->startVideo) {
+		ofSetColor(255);
+		mVideoPlayer->draw(0, 0, ofGetWindowWidth(), ofGetWindowHeight());
+	}
 	//
 	//mHPVPlayer.draw(0, 0, ofGetWindowWidth(), ofGetWindowHeight());
 

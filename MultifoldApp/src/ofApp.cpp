@@ -9,18 +9,22 @@ void ofApp::setup(){
 
     ofLog(OF_LOG_NOTICE) << "Starting App" << std::endl;
     ofSetLogLevel("Logging items", OF_LOG_VERBOSE);
+
+    //change path
+    ofSetDataPathRoot("C:/Users/Bizon/Desktop/App/data/");
+    ofPath = ofFilePath::getAbsolutePath(ofToDataPath("C:/Users/Bizon/Desktop/App/data/"));
+    ofLog(OF_LOG_NOTICE) << " OF data path is: " << ofPath << endl;
     
     ofSetFrameRate(30);
     ofBackground(0);
     ofDisableArbTex();
-    
  
     //Video
     HPV::InitHPVEngine();
 
     //GUI
     setupGui();
-
+    
     //load UDP information
     setupUDP();
 
@@ -96,13 +100,21 @@ void ofApp::updateUDP() {
     udpReceiver.Receive(udpMessage, 1000);
     string message = udpMessage;
     if (message != "") {
+
+        //start
         if (message[0] == 'a') {
             mCommon->startVideo = true;
         }
+        // send time
         if (message[0] == 't') {
             auto smsg = string_split(message);
             mCommon->mAudioPos = std::stof(smsg[1]);
             mMasterAudio.set(mCommon->mAudioPos);
+        }
+        //load new video
+        if (message[0] == 'n') {
+            auto smsg = string_split(message);
+            mCommon->mSequenceId = std::stof(smsg[1]);
         }
     }
 
@@ -117,7 +129,7 @@ void ofApp::setupCommonState() {
 void ofApp::setupUDP() {
     ofLog(OF_LOG_NOTICE) << "Loading UDP info ";
     ofJson js;
-    std::string configFile = "config.json";
+    std::string configFile = "network.json";
     ofFile file(configFile);
 
     if (file.exists()) {
@@ -127,32 +139,27 @@ void ofApp::setupUDP() {
         std::string ip = js["network"]["ip"].get<std::string>();
         int port0 = js["network"]["port0"]; //center
         int port1 = js["network"]["port1"]; //left
-        std::string type = js["network"]["type"].get<std::string>();
-        int id = js["network"]["id"];
 
-        ofLog(OF_LOG_NOTICE) << "Network: " << port0 << "  " << port1 << " " << type << std::endl;
+        ofLog(OF_LOG_NOTICE) << "Network: " << port0 << "  " << port1 << " " << std::endl;
 
-        if (type == "master") {
+        if (mCommon->mId == 0) {
             ofLog(OF_LOG_NOTICE) << "Set Master UDP ";
             mMasterUDP = true;
             mSlaveUDP = false;
             mUDPPortCenter = port0; //center
             mUDPPortLeft = port1;  //left
-        }
-
-        if (type == "slave") {
-            ofLog(OF_LOG_NOTICE) << "Set Slave UDP " << id;
+        }else{
+            ofLog(OF_LOG_NOTICE) << "Set Slave UDP " << mCommon->mId;
             mMasterUDP = false;
             mSlaveUDP = true;
             //Center
-            if (id == 1) {
+            if (mCommon->mId == 1) {
                 mUDPPortReceiver = port0;
             }
             //Left
-            if (id == 2) {
+            if (mCommon->mId == 2) {
                 mUDPPortReceiver = port1;
             }
-
         }
     }
     else {
@@ -196,24 +203,22 @@ void ofApp::setupAudio(std::string jsonFile) {
     //audio path;
     std::string audioPath = "";
 
+    getSequenceName(jsonFile);
+
     //obtain file from the JSON File
     ofJson avJs;
     ofFile avFile(jsonFile);
 
-    ofPath = ofFilePath::getAbsolutePath(ofToDataPath(""));
-
-    ofLog(OF_LOG_NOTICE) << " OF data path is: " << ofPath << endl;
-
+    //obtain file name
     if (avFile.exists()) {
         ofLog(OF_LOG_NOTICE) << "Reading JSON Audio File " << jsonFile;
         avFile >> avJs;
 
-        //audio
         ofLog(OF_LOG_NOTICE) << "Loading audio";
         for (auto& audioNames : avJs["audios"]) {
             if (!audioNames.empty()) {
                 std::string file = audioNames["name"];
-                audioPath = file;
+                audioPath = "video/" + mCommon->mSequenceName + "/" + mCommon->mSequenceName + "_" + file;
                 ofLog(OF_LOG_NOTICE) << "Found audio file " << " : " << audioPath;
             }
         }
@@ -276,6 +281,30 @@ void ofApp::setupAudio(std::string jsonFile) {
 }
 
 //--------------------------------------------------------------
+void ofApp::getSequenceName(std::string jsonFile) {
+    //audio path;
+    std::string audioPath = "";
+
+    //obtain file from the JSON File
+    ofJson avJs;
+    ofFile avFile(jsonFile);
+
+    if (avFile.exists()) {
+        ofLog(OF_LOG_NOTICE) << "Reading JSON Audio File " << jsonFile;
+        avFile >> avJs;
+
+        //audio
+        //mCurrentSet
+        for (auto& audioSequence : avJs["sequence"]) {
+            if (int(audioSequence["id"]) == mCommon->mSequenceId) {
+                mCommon->mSequenceName = audioSequence["name"].get<std::string>();
+                ofLog(OF_LOG_NOTICE) << "Found audio seq: " << mCommon->mSequenceName << " " << mCommon->mSequenceId;
+            }
+        }
+    }
+}
+
+//--------------------------------------------------------------
 void ofApp::setupGui(){
     //params
     parameters.setName("Param");
@@ -306,7 +335,12 @@ void ofApp::audioSlider(float & value){
     float audioPosition = float(value);
 
     player.setPosition(value);
-    ofLog(OF_LOG_NOTICE) << "New Audio Position: "<< value;
+    //ofLog(OF_LOG_NOTICE) << "New Audio Position: "<< value;
+
+    //send new position to the slaves
+    if (mMasterUDP) {
+        sendAudioPosUDP(0.0);
+    }
        
     //update frame
     //cur_frame = framePosition;
@@ -334,24 +368,88 @@ void ofApp::playerEnded(size_t& id) {
 //--------------------------------------------------------------
 void ofApp::drawGui() {
     if (mDrawGUI) {
+        ofSetColor(255);
         ofDrawBitmapString("fps: " + to_string(ofGetFrameRate()), 10, 15);
         ofDrawBitmapString("Frame: " + to_string(cur_frame) + " - " + to_string(mMinFrame), 10, 30);
 
-        ofDrawBitmapString(ofPath, 10, 250);
+        ofDrawBitmapString(ofPath, 10, 350);
+        ofDrawBitmapString("Sequence Name: "+mCommon->mSequenceName, 10, 250);
+
+        if (mMasterUDP) {
+            ofSetColor(255, 0, 0);
+            ofDrawBitmapString("Master "+to_string(mCommon->mId), 350, 100);
+
+            ofDrawRectangle(355, 120, 30, 30);
+        }
         mGui.draw();
     }
 }
 
+//--------------------------------------------------------------
+void ofApp::stopAudio() {
+    if (mMasterUDP) {
+        ofLog(OF_LOG_NOTICE) << "Send Master Stop";
+
+        //reset audio pos
+        player.setPosition(0.0);
+        player.setPaused(true);
+
+        //start video loop
+        mStartVideoLoop = false;
+
+        //send UDP start
+        mCommon->startVideo = false;
+
+        string message = "s";
+        udpSendLeft.Send(message.c_str(), message.length());
+        udpSendCenter.Send(message.c_str(), message.length());
+
+        mMasterAudio.set(0.0);
+        sendAudioPosUDP(0.0);
+
+    }
+}
 
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
 
     if (key == '1') {
+
+        //send to activate video 
+        mStartVideoLoop = false;
+        mCommon->startVideo = false;
+
+        std::fill(mCommon->vNewVideos.begin(), mCommon->vNewVideos.end(), true);
+
+        //sned to activate video 1
+        //stop load playnew
         if (mMasterUDP) {
-            
+            mCommon->mSequenceId = 0;
+            string message = "n 0";
+            udpSendLeft.Send(message.c_str(), message.length());
+            udpSendCenter.Send(message.c_str(), message.length());
         }
     }
+
+    if (key == '2') {
+
+        //send to activate video 
+        mStartVideoLoop = false;
+        mCommon->startVideo = false;
+
+        std::fill(mCommon->vNewVideos.begin(), mCommon->vNewVideos.end(), true);
+
+        //sned to activate video 1
+        //stop load play
+        if (mMasterUDP) {
+            mCommon->mSequenceId = 1;
+            string message = "n 1";
+            udpSendLeft.Send(message.c_str(), message.length());
+            udpSendCenter.Send(message.c_str(), message.length());
+        }
+    }
+
 
 
 
@@ -394,22 +492,7 @@ void ofApp::keyPressed(int key){
         }
     }
     if (key == 's') {
-        if (mMasterUDP) {
-            ofLog(OF_LOG_NOTICE) << "send Master";
-
-            //reset audio pos
-            player.setPosition(0.0);
-            player.setPaused(true);
-
-            //start video loop
-            mStartVideoLoop = false;
-
-            //send UDP start
-            mCommon->startVideo = false;
-            string message = "s";
-            udpSendLeft.Send(message.c_str(), message.length());
-            udpSendCenter.Send(message.c_str(), message.length());
-        }
+        stopAudio();
     }
     
     if(key == 'm'){
@@ -468,6 +551,8 @@ void ofApp::updateOSC() {
             bool reset = true;
             resetVideos(reset);
         }
+
+
     }
 }
 //--------------------------------------------------------------

@@ -14,6 +14,11 @@ namespace inn {
  VideoPlayers::VideoPlayers(int playerType, int id){
     mPlayerType = playerType;
     mVideoId = id;
+    if (mPlayerType == 1) {
+        ofLog(OF_LOG_NOTICE) << "Init Player HPV";
+        mHPVPlayer.init(HPV::NewPlayer());
+    }
+
 }
 
 //--------------------------------------------------------------
@@ -22,7 +27,7 @@ void VideoPlayers::loadVideo(std::string & name){
     
     if(mPlayerType == 1){
         ofLog(OF_LOG_NOTICE)<<"Player HPV";
-        mHPVPlayer.init(HPV::NewPlayer());
+       /// mHPVPlayer.init(HPV::NewPlayer());
         mHPVPlayer.load(mVideoName);
         mHPVPlayer.play();
         mHPVPlayer.setPaused(true);
@@ -56,7 +61,7 @@ void VideoPlayers::loadVideo(std::string & name){
         }
     }
     
-    ofLog(OF_LOG_NOTICE)<<"Loaded Video "<<mVideoName<<std::endl;   
+    ofLog(OF_LOG_NOTICE)<<"Loaded Video "<<mVideoName;   
 }
 //--------------------------------------------------------------
 void VideoPlayers::closeVideo() {
@@ -245,6 +250,7 @@ void VideoPlayers::close() {
     else if (mPlayerType == 1) {
         mHPVPlayer.stop();
         mHPVPlayer.close();
+
      
     }
     else if (mPlayerType == 2) {

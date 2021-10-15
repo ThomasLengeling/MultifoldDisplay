@@ -30,6 +30,10 @@ public:
 
 	shared_ptr<CommonState> mCommon;
 
+	void addSequence(std::string sequence) {
+		mVideoSets.push_back(sequence);
+	}
+
 private:
 	ofColor mBkgColor;
 	int mDisplayId;
@@ -38,6 +42,8 @@ private:
 
 	std::string mVideoName;
 
+	bool mLoadVideo;
+
 	int mId;
 
 	ofImage         mDebugImg;
@@ -45,7 +51,10 @@ private:
 
 	inn::VideoPlayersRef  mVideoPlayer;
 
+	int mCurrentSetId;
 
+	//set of sequences to plays
+	std::vector<std::string> mVideoSets;
 
 };
 

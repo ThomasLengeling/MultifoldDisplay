@@ -1,0 +1,57 @@
+{
+  "path": "C:/Users/Bizon/Desktop/App/",
+  "videotype": 1,
+  "sequence": [
+    {
+      "id": 1,
+      "name": "metro"
+    },
+    {
+      "id": 2,
+      "name": "walk"
+    }
+  ],
+  "audio": [
+    {
+      "name": "sequence_01.wav"
+    }
+  ],
+  "videos": [
+    {
+      "id": 0,
+      "name": "sequence_01.hpv"
+    },
+    {
+      "id": 1,
+      "name": "sequence_02.hpv"
+    },
+    {
+      "id": 2,
+      "name": "sequence_03.hpv"
+    },
+    {
+      "id": 3,
+      "name": "sequence_04.hpv"
+    },
+    {
+      "id": 4,
+      "name": "sequence_05.hpv"
+    },
+    {
+      "id": 5,
+      "name": "sequence_06.hpv"
+    },
+    {
+      "id": 6,
+      "name": "sequence_07.hpv"
+    },
+    {
+      "id": 7,
+      "name": "sequence_08.hpv"
+    },
+    {
+      "id": 8,
+      "name": "sequence_09.hpv"
+    }
+  ]
+}
