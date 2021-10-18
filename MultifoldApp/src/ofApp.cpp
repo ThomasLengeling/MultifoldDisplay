@@ -21,12 +21,12 @@ void ofApp::setup(){
  
     //Video
     HPV::InitHPVEngine();
-
-    //GUI
-    setupGui();
     
     //load UDP information
     setupUDP();
+
+    //GUI
+    setupGui();
 
     //OSC
     setupOSC();
@@ -40,6 +40,7 @@ void ofApp::setup(){
     ofResetElapsedTimeCounter();
     mInitTimer = 14000;//seconds
     mStartVideoLoop = false;
+    mHandshakeUDP = false;
 
     ofLog(OF_LOG_NOTICE) << "Finishing setup";
     ofLog(OF_LOG_NOTICE) << "Size" << ofGetWindowWidth() << " " << ofGetWindowHeight();
@@ -96,15 +97,21 @@ void ofApp::sendAudioPosUDP(float audioPos) {
 //--------------------------------------------------------------
 void ofApp::updateUDP() {
 
-    char udpMessage[1000];
-    udpReceiver.Receive(udpMessage, 1000);
+    char udpMessage[100];
+    udpReceiver.Receive(udpMessage, 100);
     string message = udpMessage;
     if (message != "") {
+       // ofLog(OF_LOG_NOTICE) << "GOT UDP MSG : " << message.size() << " " << message;
 
+        //handshake
+        if (message[0] == 'h') {
+            mHandshakeUDP = true;
+        }
         //start
         if (message[0] == 'a') {
             mCommon->startVideo = true;
         }
+        //stop
         if (message[0] == 's') {
             //send UDP start
             mCommon->startVideo = false;
@@ -277,14 +284,20 @@ void ofApp::setupAudioSystem() {
 void ofApp::setupGui(){
     //params
     parameters.setName("Param");
-    parameters.add(mPlayVideos.set("Toggle Play", false));
-    parameters.add(mResetVideos.set("Reset Videos", false));
+    if (mMasterUDP) {
+        parameters.add(mPlayVideos.set("Toggle Play", false));
+        parameters.add(mResetVideos.set("Reset Videos", false));
+    }
+    
     parameters.add(mMasterAudio.set("Master Audio", 0, 0, 1.0));
+    
     parameters.add(player.volume);
   
     //add listeners
-    mPlayVideos.addListener(this, &ofApp::playVideos);
-    mResetVideos.addListener(this, &ofApp::resetVideos);
+    if (mMasterUDP) {
+        mPlayVideos.addListener(this, &ofApp::playVideos);
+        mResetVideos.addListener(this, &ofApp::resetVideos);
+    }
     mMasterAudio.addListener(this, &ofApp::audioSlider);
     
     //setup gui
@@ -307,9 +320,9 @@ void ofApp::audioSlider(float & value){
     //ofLog(OF_LOG_NOTICE) << "New Audio Position: "<< value;
 
     //send new position to the slaves
-    if (mMasterUDP) {
-        sendAudioPosUDP(0.0);
-    }
+    //if (mMasterUDP) {
+    //    sendAudioPosUDP(0.0);
+    //}
        
     //update frame
     //cur_frame = framePosition;
@@ -358,7 +371,12 @@ void ofApp::drawGui() {
         }
         if (mSlaveUDP) {
             ofSetColor(255);
-            ofDrawBitmapString("Slave " + to_string(mUDPPortReceiver)+"   "+to_string(mCommon->mId), 350, 100);   
+            ofDrawBitmapString("Slave " + to_string(mUDPPortReceiver)+"   "+to_string(mCommon->mId), 350, 100);
+            if (mHandshakeUDP) {
+                ofSetColor(200);
+                ofDrawBitmapString("Connected", 350, 130);
+
+            }
         }
         mGui.draw();
     }
@@ -393,7 +411,7 @@ void ofApp::stopAudio() {
 //--------------------------------------------------------------
 void ofApp::loadSequence(int id) {
     if (id < mCommon->mSeqNames.size()) {
-        ofLog(OF_LOG_NOTICE) << "Loading new sequence ";
+        ofLog(OF_LOG_NOTICE) << "Loading new sequence " << id;
 
         mCommon->mSequenceId = id;
         loadAudio(mCommon->mSequenceId);
@@ -410,8 +428,7 @@ void ofApp::loadSequence(int id) {
         //sned to activate video 1
         //stop load playnew
         if (mMasterUDP) {
-
-            string message = "n 0";
+            string message = "n " + to_string(id);
             udpSendLeft.Send(message.c_str(), message.length());
             udpSendCenter.Send(message.c_str(), message.length());
         }
@@ -483,8 +500,14 @@ void ofApp::keyPressed(int key){
         stopAudio();
     }
     
-    if(key == 'm'){
-      //  mGui.saveToFile("settings.xml");
+    //handshake
+    if(key == 'h'){
+
+        if (mMasterUDP) {
+            string message = "h";
+            udpSendLeft.Send(message.c_str(), message.length());
+            udpSendCenter.Send(message.c_str(), message.length());
+        }
     }
     
     if (key == 'z') {
@@ -514,10 +537,6 @@ void ofApp::updateOSC() {
             float time = m.getArgAsFloat(0);
 
             player.stop();
-
-            //for (auto& video : mVideoWarps) {
-            //    video->setPosition(time);
-            //}
 
             player.setPosition(time);
 

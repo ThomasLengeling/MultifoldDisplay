@@ -206,6 +206,10 @@ int main( ){
 	commonState->mSequenceId = 0;
 	commonState->mId = displayId;
 
+	for (int i = 0; i < 3; i++) {
+		commonState->vNewVideos.push_back(false);
+	}
+
 	std::vector<std::string> tmpNames;
 	for (auto& name : sequenceName) {
 		tmpNames.push_back(name.second);

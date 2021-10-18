@@ -116,6 +116,7 @@ public:
     //master send to center and left
     int mUDPPortCenter;
     int mUDPPortLeft;
+    bool mHandshakeUDP;
 
     int mUDPPortReceiver; //udp to send to center or left
 
@@ -147,6 +148,8 @@ public:
 
     //utilities
     std::vector<std::string> string_split(const std::string& str);
+
+
 };
 
 //---------------------------
@@ -156,7 +159,6 @@ public:
     CommonState() {
         mSequenceId = 0;
         mAudioPos = 0;
-        vNewVideos.resize(3);
     }
 
     //video changes 

@@ -53,7 +53,7 @@ void WindowVideoApp::setup() {
 
 void WindowVideoApp::update() {
 
-	if (mCommon->startVideo == true) {
+	if (mCommon->startVideo) {
 		mVideoPlayer->setPosition(mCommon->mAudioPos);
 		//mHPVPlayer.setPosition(mCommon->mAudioPos);
 	}
@@ -70,10 +70,10 @@ void WindowVideoApp::update() {
 	
 
 	//update sync
-	//if (mCommon->startVideo) {
+	if (mCommon->startVideo) {
 		mVideoPlayer->update();
 		HPV::Update();
-	//}
+	}
 
 }
 
